@@ -12,7 +12,7 @@
 - You can choose different icons shapes while installing.
 - Material You At A Glance greetings
 - [Pixel Launcher Mods](https://github.com/KieronQuinn/PixelLauncherMods) by KieronQuinn. It has many cool features such as icon pack changer, recent section blur, etc.
-- Add-ons, which can enhance more functionality
+- Add-ons, which can enhance and add more functionality
 
 ### Compatibility
 This module is expected to work on ROMs which are based on fairly unmodified Android source code.
