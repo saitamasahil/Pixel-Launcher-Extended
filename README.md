@@ -6,7 +6,7 @@
 **Pixel Launcher Extended** is a Magisk module with many cool features compared to original Pixel Launcher by Google.
 
 ### Features
-- Extra themed icons support. Total of 1200+ themed icons for your favourite apps and games
+- Extra themed icons support. Total of 1200+ themed icons for your favourite apps and games.
 - More grids options, total of 14 grids. You can select these extra grids by going to **Wallpaper & style** > **App grid**.
 - Double tap to sleep *(LSPosed required)*.
 - You can choose different icons shapes while installing.
@@ -16,14 +16,14 @@
 
 ### Compatibility
 This module is expected to work on ROMs which are based on fairly unmodified Android source code.
-- Android 13 AOSP-based ROMs
+- Android 13 AOSP-based ROMs.
 
 > WARNING: It may not work on some LOS-based ROMs like RiceDroid. If you face any crashes on these ROMs, please look through the [troubleshooting section](#troubleshooting).
 
 ### Prerequisites
 - Compatible ROMs (**AOSP-based custom ROMs** or **Google Pixel stock ROM**) based on Android 13.
 - Device rooted by [Magisk latest stable](https://github.com/topjohnwu/Magisk/releases/latest).
-- [LSPosed](https://github.com/LSPosed/LSPosed) *(Optional, if you want to use double tap to sleep feature)*
+- [LSPosed](https://github.com/LSPosed/LSPosed) *(Optional, if you want to use double tap to sleep feature)*.
 
 **Disclaimer**
 - Make sure you flashed the **Bootloop saver** module before flashing **Pixel Launcher Extended**. We **WON'T** be responsible if anything happens with your device. Bootloops are not expected, but you should always be prepared for the worst!
