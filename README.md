@@ -98,3 +98,19 @@ su -c settings delete secure theme_customization_overlay_packages
 - If pixel launcher mods app stucked at loading screen or it's saying root not found even if you gave it root permission then force stop this app once to fix this issue.
 - If pixel launcher crashes while going to recent tab then turn off Overview suggestions from pixel launcher's settings.
 - If you don't see Pixel Launcher Extended in default home settings & only launcher showing there is Original pixel launcher then uninstall updates of original pixel launcher.
+
+### Credits/Thanks
+- Google
+- [LiArch55](http://telegram.me/LiArch55)
+- [iamlooper](https://github.com/iamlooper/)
+- [KieronQuinn](https://github.com/KieronQuinn)
+- [uragiristereo](https://github.com/uragiristereo)
+- [Monet Icons Team](https://teamfiles.net/about_monet-team.html)
+- [siavash79](https://github.com/siavash79)
+- [Kingsman44](https://github.com/Kingsman44)
+- [anarchist22](https://telegram.me/anarchist22)
+- [WaifuPX-DG](https://github.com/WaifuPX-DG)
+- [LawnchairLauncher](https://github.com/LawnchairLauncher)
+- [RadekBledowski](https://github.com/RadekBledowski)
+
+Brought to you by [saitamasahil](https://github.com/saitamasahil)
