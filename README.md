@@ -32,11 +32,12 @@ This module is expected to work on ROMs which are based on fairly unmodified And
 - Uninstall any other launcher if you're using one. Only keep the default launcher
 - Download the module installation file from [download links](#download-links) available
 - Flash the file in Magisk and select your desired modifications using volume keys
-- Reboot your device and go to **Settings** > **Apps** > ** Default apps** > **Home app** and make sure **Pixel Launcher Extended** is selected
+- Reboot your device and go to **Settings** > **Apps** > **Default apps** > **Home app** and make sure **Pixel Launcher Extended** is selected
 
 #### Variants
 **Offline installer**
   It doesn't require internet while flashing, but it's 60+ MB in size.
+
 **Online installer**
   It requires internet while flashing and downloads selected files by user during installation. It's less in size.
 
