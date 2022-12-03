@@ -10,6 +10,7 @@ Pixel Launcher Extended is a magisk module. It has many cool features compared t
 - You can choose different icons shapes while installing.
 - Material you At A Glance Greetings available.
 - Includes [Pixel Launcher Mods App By KieronQuinn](https://github.com/KieronQuinn/PixelLauncherMods). It has many cool features such as Icon pack changer, Recent section blur etc.
+- Add-ons, which can enhance more functionality.
 
 **Compatibility:**
 This module is expected to work on Roms (Firmwares) which are built based on fairly unmodified Android source code.
@@ -42,7 +43,7 @@ The module is released in 2 following variants:
 ## Add-ons
 These add-ons are optional & add extra functionality to Pixel Launcher Extended.
 
-#### At A Glance Enhancer
+#### 1.) At A Glance Enhancer Add-on
 This Add-On will Enhance "At A Glance" and will enable new settings like Doorbell, Timer, Stopwatch, Bedtime, Fitness Tracker, Torch Suggestion, Connected Devices and much more. It's made by [Pixelify](https://github.com/Kingsman44/Pixelify) developer, Kingsmanz. Also besides these features it fixes select feature, At A Glance weather if your rom doesn't have proper gapps or due to some other reasons if you faced these errors.
 - [Download Link](https://www.pling.com/p/1938895/)
 - Installation
@@ -55,3 +56,10 @@ This Add-On will Enhance "At A Glance" and will enable new settings like Doorbel
 - [GitHub Link](https://github.com/Kingsman44/At-A-Glance-Enhancer)
 - [Video Showcase](https://graph.org/file/5cd90b41ec3563e69c62f.mp4)
 - Screenshots: [Click Here](https://graph.org/At-A-Glance-Enhancer-Screenshots-11-16)
+#### 2.) Auto Universal Search Bar Enabler Add-on
+If you don't get unified & universal search bar in pixel launcher extended like shown in these screenshots([Screenshot 1](https://graph.org/file/ee8e311942af77de891c8.jpg), [Screenshot 2](https://graph.org/file/dfe907c4aa1283a535aee.jpg)) then flash this module in magisk. It will permanently enable unified & universal search bar.
+Please note that you will get this feature by default in many roms after flashing pixel launcher extended. Only in some roms you won't get it. Flash only & only if you don't get this feature.
+- [Download Link](https://pling.com/p/1898907/)
+- Installation
+  - Flash in magisk & reboot device.
+- Credits: [Looper](https://github.com/iamlooper)
