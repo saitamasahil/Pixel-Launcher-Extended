@@ -83,3 +83,18 @@ If you don't get unified & universal search bar in Pixel Launcher Extended shown
 - Mirror 3
 
 **Download links will be available soon!**
+
+
+### Troubleshooting
+If you face any issues while using Pixel Launcher Extended then look into this section first before asking in support group at telegram.
+- Weather widget on "At A Glance" or "Select Feature" of Pixel Launcher is not working? Then try updating Google App, Google Play Services, Android System Intelligence (ASI), Android System Webview, Google Calendar, Google Lens and all other Google apps from PlayStore. I will suggest you to use those roms that have pixel gapps by default.
+- After trying above solution if it still doesn't work or if you are facing random crashes in launcher then download Add-On At [A Glance Enhancer](#Add-ons). It contains Android System Intelligence(Which will fix all these issues).
+- If your rom has their own implementation of Monet/"Material You" and it's interfering with Pixel Launcher's Monet/Material You & due to it Material You isn't working properly & it's not changing color according to wallpaper then follow this:
+  - [Download Termux](https://f-droid.org/en/packages/com.termux/). Open it & type the command given below & press enter. Give root access. After finishing this process, reboot the device once.
+```bash
+su -c settings delete secure theme_customization_overlay_packages
+``` 
+- You enabled “Hide Clock” from the Pixel Launcher Mods app? And now the clock isn't returning after disabling it. [Check this video](https://index.teamfiles.workers.dev/0:/clock%20fix.mp4) to fix this issue.
+- If pixel launcher mods app stucked at loading screen or it's saying root not found even if you gave it root permission then force stop this app once to fix this issue.
+- If pixel launcher crashes while going to recent tab then turn off Overview suggestions from pixel launcher's settings.
+- If you don't see Pixel Launcher Extended in default home settings & only launcher showing there is Original pixel launcher then uninstall updates of original pixel launcher.
