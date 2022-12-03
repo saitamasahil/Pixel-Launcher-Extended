@@ -35,6 +35,23 @@ The module is released in 2 following variants:
 - Online installer:  
   It requires internet while flashing. It downloads selected files by user during installation. It's less in size.
 
-**How to activate Double Tap to Sleep**
+**How to activate Double Tap to Sleep:**
 - First, make sure you installed dt2s while flashing module
 - After rebooting device, open LSPosed & enable pixel launcher dt2s. Now force stop pixel launcher app from settings (Or simply reboot device) and double tap 'once' on Homescreen. It will ask for root permission. Give it & enjoy dt2s.
+
+## Add-ons
+These add-ons are optional & add extra functionality to Pixel Launcher Extended.
+
+#### At A Glance Enhancer
+This Add-On will Enhance "At A Glance" and will enable new settings like Doorbell, Timer, Stopwatch, Bedtime, Fitness Tracker, Torch Suggestion, Connected Devices and much more. It's made by [Pixelify](https://github.com/Kingsman44/Pixelify) developer, Kingsmanz. Also besides these features it fixes select feature, At A Glance weather if your rom doesn't have proper gapps or due to some other reasons if you faced these errors.
+- [Download Link](https://www.pling.com/p/1938895/)
+- Installation
+  - Flash in magisk.
+  - Reboot Device.
+  - Check if you got new at a glance settings. In most roms this will be the final step.
+  - If you didn't get those new settings then force stop Google App & reboot device.
+  - If you still didn't get those settings then uninstall updates of Google App and reinstall it from play store & reboot device once.
+- Credits: [Kingsmanz](https://github.com/Kingsman44)
+- [GitHub Link](https://github.com/Kingsman44/At-A-Glance-Enhancer)
+- [Video Showcase](https://graph.org/file/5cd90b41ec3563e69c62f.mp4)
+- Screenshots: [Click Here](https://graph.org/At-A-Glance-Enhancer-Screenshots-11-16)
