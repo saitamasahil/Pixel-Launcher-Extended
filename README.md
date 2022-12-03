@@ -16,9 +16,9 @@
 
 ### Compatibility
 This module is expected to work on ROMs which are based on fairly unmodified Android source code.
-- Android 13 AOSP Based Roms
+- Android 13 AOSP-based ROMs
 
-> WARNING: It may not work on some LOS Based Roms like RiceDroid. If you face any crashes on these ROMs, please look thru the [troubleshooting section](#troubleshooting).
+> WARNING: It may not work on some LOS-based ROMs like RiceDroid. If you face any crashes on these ROMs, please look thru the [troubleshooting section](#troubleshooting).
 
 ### Prerequisites
 - Compatible ROMs (**AOSP-based custom ROMs** or **Google Pixel stock ROM**) based on Android 13.
