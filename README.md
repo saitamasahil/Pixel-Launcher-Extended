@@ -88,7 +88,7 @@ If you don't get unified & universal search bar in Pixel Launcher Extended shown
 ### Troubleshooting
 If you face any issues while using Pixel Launcher Extended then look into this section first before asking in support group at telegram.
 - Weather widget on "At A Glance" or "Select Feature" of Pixel Launcher is not working? Then try updating Google App, Google Play Services, Android System Intelligence (ASI), Android System Webview, Google Calendar, Google Lens and all other Google apps from PlayStore. I will suggest you to use those roms that have pixel gapps by default.
-- After trying above solution if it still doesn't work or if you are facing random crashes in launcher then download Add-On At [A Glance Enhancer](#Add-ons). It contains Android System Intelligence(Which will fix all these issues).
+- After trying above solution if it still doesn't work or if you are facing random crashes in launcher then download [Add-On At A Glance Enhancer](#Add-ons). It contains Android System Intelligence(Which will fix all these issues).
 - If your rom has their own implementation of Monet/"Material You" and it's interfering with Pixel Launcher's Monet/Material You & due to it Material You isn't working properly & it's not changing color according to wallpaper then follow this:
   - [Download Termux](https://f-droid.org/en/packages/com.termux/). Open it & type the command given below & press enter. Give root access. After finishing this process, reboot the device once.
 ```bash
