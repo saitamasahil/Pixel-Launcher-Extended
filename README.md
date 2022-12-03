@@ -23,3 +23,18 @@ Note: It may not work on some LOS Based Roms like Ricedroid. If you face any crs
 
 **Disclaimer:**
 - Make sure you flashed Bootloop Saver Module before flashing it. I won't be responsible if anything happens with your device. Bootloops are not expected, but user should always be prepared for the worst
+
+**How to install:**
+- Uninstall any other launcher if you're using. Keep only default launcher.
+- Download module zip from Download Links available below.
+- Flash this zip in magisk & select your desired modifications using volume keys.
+- Reboot device & Go to Settings>Apps>Default apps>Home app & make sure Pixel Launcher Extended is selected.
+The module is released in 2 following variants:
+- Offline installer:  
+  It doesn't require internet while flashing. It's above 60+ mb in size.
+- Online installer:  
+  It requires internet while flashing. It downloads selected files by user during installation. It's less in size.
+
+**How to activate Double Tap to Sleep**
+- First, make sure you installed dt2s while flashing module
+- After rebooting device, open LSPosed & enable pixel launcher dt2s. Now force stop pixel launcher app from settings (Or simply reboot device) and double tap 'once' on Homescreen. It will ask for root permission. Give it & enjoy dt2s.
