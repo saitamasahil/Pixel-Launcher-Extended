@@ -47,6 +47,7 @@ REPLACE="
 /system/system_ext/priv-app/PixelLauncherRelease
 /system/system_ext/priv-app/Launcher3QuickStep
 /system/system_ext/priv-app/ThemePicker
+/system/product/overlay/ThemedIconsOverlay.apk
 "
 
 ############
