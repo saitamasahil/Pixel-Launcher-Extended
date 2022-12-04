@@ -85,6 +85,15 @@ You can enable the app hide feature in Pixel Launcher by using a third party app
 - Reboot Device
 - You can access  **Hide Apps Feature** by pressing hold on empty space on Homescreen
 
+#### Wallpaper Zoom Effect Enabler & Disabler
+If you want to enable or disable wallpaer zoom effect then use this add-on.
+- [Download](https://index.teamfiles.workers.dev/0:/WallZoomAddon/)
+- Flash in Magisk
+- Reboot device
+
+**Credits**
+- [xdsolraC](https://telegram.me/xdsolraC)
+
 ## Download Links
 - Mirror 1
 - Mirror 2
