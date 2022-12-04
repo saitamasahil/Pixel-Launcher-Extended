@@ -6,13 +6,13 @@
 **Pixel Launcher Extended** is a Magisk module with many cool features compared to original Pixel Launcher by Google.
 
 ### Features
-- Extra themed icons support. Total of 1200+ themed icons for your favourite apps and games
-- More grids options, total of 14 grids. You can select these extra grids by going to **Wallpaper & style** > **App grid**
-- Double tap to sleep *(LSPosed required)*
-- You can choose different icons shapes while installing.
-- Material You At A Glance greetings
+- Extra themed icon packs support. Total of 6 icon packs for your favourite apps and games. This feature is currently in beta due to Android 13 restrictions. Android 13 prefers themed icons made by apps and then it looks for themed icons overlay(which we use). TeamFiles icons are very closed to stock themed icons. So, we recommend using them.
+- More grids options, total of 14 grids. You can select these extra grids by going to **Wallpaper & style** > **App grid**.
+- Double tap to sleep *(LSPosed required)*.
+- You can choose different icons shapes while installing. Total of 16 icons shapes.
+- Material You At A Glance greetings.
 - [Pixel Launcher Mods](https://github.com/KieronQuinn/PixelLauncherMods) by KieronQuinn. It has many cool features such as icon pack changer, recent section blur, etc.
-- Add-ons, which can enhance and add more functionality
+- Add-ons, which can enhance and add more functionality.
 
 ### Compatibility
 This module is expected to work on ROMs which are based on fairly unmodified Android source code.
