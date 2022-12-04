@@ -17,12 +17,14 @@
 This module is expected to work on ROMs which are based on fairly unmodified Android source code.
 - Android 13 AOSP-based ROMs
 
-> WARNING: It may not work on some LOS-based ROMs like RiceDroid. If you face any crashes on these ROMs, please look thru the [troubleshooting section](#troubleshooting).
+> WARNING: It may not work on some LOS-based ROMs like RiceDroid. If you face any crashes on these ROMs, please look through the [troubleshooting section](#troubleshooting).
 
 ### Prerequisites
 - Compatible ROMs (**AOSP-based custom ROMs** or **Google Pixel stock ROM**) based on Android 13.
 - Device rooted by [Magisk latest stable](https://github.com/topjohnwu/Magisk/releases/latest).
 - [LSPosed](https://github.com/LSPosed/LSPosed) *(optional, if you want to use double tap to sleep feature)*
+##### Note
+- The module isn't compatiable with **Android 13 QPR Beta Builds** yet. Soon we will add support for it.
 
 **Disclaimer**
 - Make sure you flashed the **Bootloop saver** module before flashing **Pixel Launcher Extended**. We **WON'T** be responsible if anything happens with your device. Bootloops are not expected, but you should always be prepared for the worst!
@@ -75,6 +77,13 @@ If you don't get unified & universal search bar in Pixel Launcher Extended shown
 
 **Credits**
 - [Looper](https://github.com/iamlooper)
+
+#### Enable App Hide Feature
+You can enable the app hide feature in Pixel Launcher by using a third party app called **Pixel Mods**. **LSPosed** is required for this add-on.
+- Install [Pixel Mods App](https://play.google.com/store/apps/details?id=com.metris.xposed.pmods) from here
+- Open LSPosed and click **Pixel Mods** from modules section. Toggle **Enable Module** & make sure **Pixel Launcher** has ticked
+- Reboot Device
+- You can access  **Hide Apps Feature** by pressing hold on empty space on Homescreen
 
 ## Download Links
 - Mirror 1
