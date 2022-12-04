@@ -792,9 +792,8 @@ init_main() {
   ui_print ""
   ui_print "[*] Reboot is required"
   ui_print ""
-  ui_print "[*] Make sure to read Documentation Properly"
-  ui_print "On @modulesrepo Telegram Channel"
-  ui_print "If you wanna enable Double Tap To Sleep Feature"
+  ui_print "[*] Make sure to read Documentation Properly on Github"
+  ui_print "if you wanna enable Double Tap To Sleep Feature"
   ui_print ""
   ui_print "[*] Report issues to @fileschat on Telegram"
 
