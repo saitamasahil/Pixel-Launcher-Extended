@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+    <hidden-api-whitelisted-app package="com.google.android.apps.nexuslauncher"/>
+</config>

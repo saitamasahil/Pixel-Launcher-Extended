@@ -1,0 +1,164 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+
+<!-- Copyright (C) 2019 Google Inc.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+-->
+
+<!--
+    This file contains permissions to be granted by default. Default
+    permissions are granted to special platform components and to apps
+    that are approved to get default grants. The special components
+    are apps that are expected tto work out-of-the-box as they provide
+    core use cases such as default dialer, default email, etc. These
+    grants are managed by the platform. The apps that are additionally
+    approved for default grants are ones that provide carrier specific
+    functionality, ones legally required at some location, ones providing
+    alternative disclosure and opt-out UI, ones providing highlight features
+    of a dedicated device, etc. This file contains only the latter exceptions.
+    Fixed permissions cannot be controlled by the user and need a special
+    approval. Typically these are to ensure either legally mandated functions
+    or the app is considered a part of the OS.
+-->
+
+<exceptions>
+
+    <!-- This is an example of an exception:
+    <exception
+        package="foo.bar.permission"
+      <permission name="android.permission.READ_CONTACTS" fixed="true"/>
+      <permission name="android.permission.READ_CALENDAR" fixed="false"/>
+    </exception>
+    -->
+
+    <exception package="com.google.android.settings.intelligence">
+        <!-- Calendar -->
+        <permission name="android.permission.READ_CALENDAR" fixed="true"/>
+        <!-- Location -->
+        <permission name="android.permission.ACCESS_FINE_LOCATION" fixed="false"/>
+        <permission name="android.permission.ACCESS_BACKGROUND_LOCATION" fixed="false"/>
+        <!-- Battery Widget -->
+        <permission name="android.permission.BLUETOOTH_CONNECT" fixed="false"/>
+    </exception>
+
+    <exception package="com.google.android.apps.camera.services">
+        <!-- Camera -->
+        <permission name="android.permission.CAMERA" fixed="false"/>
+    </exception>
+
+    <exception package="com.google.android.apps.cbrsnetworkmonitor">
+        <!-- Location access to create CBRS geofences-->
+        <permission name="android.permission.ACCESS_FINE_LOCATION" fixed="true"/>
+        <permission name="android.permission.ACCESS_COARSE_LOCATION" fixed="true"/>
+        <permission name="android.permission.ACCESS_BACKGROUND_LOCATION" fixed="true"/>
+    </exception>
+
+    <exception package="com.google.android.apps.scone">
+        <!-- Used to call ActivityTransition API for Smart PNO -->
+        <permission name="android.permission.ACTIVITY_RECOGNITION" fixed="false"/>
+        <!-- Notifications -->
+        <permission name="android.permission.POST_NOTIFICATIONS" fixed="false"/>
+    </exception>
+
+    <exception
+            package="com.google.android.apps.restore">
+        <!-- External storage -->
+        <permission name="android.permission.READ_EXTERNAL_STORAGE" fixed="false"/>
+        <permission name="android.permission.WRITE_EXTERNAL_STORAGE" fixed="false"/>
+        <!-- Contacts -->
+        <permission name="android.permission.READ_CONTACTS" fixed="false"/>
+        <permission name="android.permission.WRITE_CONTACTS" fixed="false"/>
+        <!-- Call logs -->
+        <permission name="android.permission.READ_CALL_LOG" fixed="false"/>
+        <permission name="android.permission.WRITE_CALL_LOG" fixed="false"/>
+        <!-- Used to set up a Wi-Fi P2P network -->
+        <!-- TODO(b/231966826): Remove the location permission after Restore targets to T. -->
+        <permission name="android.permission.ACCESS_FINE_LOCATION" fixed="false"/>
+        <permission name="android.permission.NEARBY_WIFI_DEVICES" fixed="false"/>
+        <!-- Notifications -->
+        <permission name="android.permission.POST_NOTIFICATIONS" fixed="false"/>
+    </exception>
+
+    <exception
+            package="com.verizon.mips.services">
+        <!-- Call -->
+        <permission name="android.permission.PROCESS_OUTGOING_CALLS" fixed="false"/>
+        <!-- Phone -->
+        <permission name="android.permission.READ_PHONE_STATE" fixed="false"/>
+        <!-- SMS -->
+        <permission name="android.permission.RECEIVE_SMS" fixed="false"/>
+    </exception>
+
+    <exception
+        package="com.google.android.factorytest">
+        <!-- Camera -->
+        <permission name="android.permission.CAMERA" fixed="false"/>
+        <!-- Microphone -->
+        <permission name="android.permission.RECORD_AUDIO" fixed="false"/>
+        <!-- Storage -->
+        <permission name="android.permission.READ_EXTERNAL_STORAGE" fixed="false"/>
+        <permission name="android.permission.WRITE_EXTERNAL_STORAGE" fixed="false"/>
+    </exception>
+
+    <exception package="com.google.android.wfcactivation">
+        <!-- SMS -->
+        <permission name="android.permission.RECEIVE_WAP_PUSH" fixed="false"/>
+    </exception>
+
+    <exception package="com.google.android.apps.accessibility.voiceaccess">
+        <!-- Voice Access: A11y app to allow users to setup & control their devices with voice -->
+        <!-- Approved android bug for pregrant permissions: b/182307492 -->
+
+        <!-- Phone state to turn off Voice Access when user is in a phone call -->
+        <permission name="android.permission.READ_PHONE_STATE" fixed="false"/>
+
+        <!-- Microphone: To hear user's voice commands -->
+        <permission name="android.permission.RECORD_AUDIO" fixed="false"/>
+    </exception>
+    <exception
+        package="com.google.android.deskclock">
+        <!-- Notifications -->
+        <permission name="android.permission.POST_NOTIFICATIONS" fixed="false"/>
+    </exception>
+    <exception
+        package="com.google.android.apps.tips">
+        <!-- Notifications -->
+        <permission name="android.permission.POST_NOTIFICATIONS" fixed="false"/>
+    </exception>
+    <exception
+        package="com.google.android.adservices">
+        <!-- Notifications -->
+        <permission name="android.permission.POST_NOTIFICATIONS" fixed="false"/>
+    </exception>
+    <exception
+        package="com.google.android.apps.mediashell">
+        <!-- Notifications -->
+        <permission name="android.permission.POST_NOTIFICATIONS" fixed="false"/>
+    </exception>
+    <exception
+        package="com.google.android.apps.pixelmigrate">
+        <!-- Notifications -->
+        <permission name="android.permission.POST_NOTIFICATIONS" fixed="false"/>
+    </exception>
+    <exception
+        package="com.google.android.apps.work.oobconfig">
+        <!-- Notifications -->
+        <permission name="android.permission.POST_NOTIFICATIONS" fixed="true"/>
+    </exception>
+    <exception
+        package="com.google.android.apps.turbo">
+        <!-- Notifications -->
+        <permission name="android.permission.POST_NOTIFICATIONS" fixed="false"/>
+    </exception>
+</exceptions>
+

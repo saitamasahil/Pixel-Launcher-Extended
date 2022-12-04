@@ -1,0 +1,132 @@
+#!/sbin/sh
+
+######
+# INIT
+######
+
+umask 0022
+
+# Global vars
+TMPDIR="/dev/tmp"
+PERSISTDIR="/sbin/.magisk/mirror/persist"
+
+# Echo before loading util_functions
+ui_print() { echo "$@"; }
+
+load_vksel() { source "$MODPATH/addon/Volume-Key-Selector/install.sh"; }
+
+rmtouch() { [[ -e "$1" ]] && rm -rf "$1" 2>/dev/null; }
+
+rmtouch "$TMPDIR"
+mkdir -p "$TMPDIR"
+
+####################
+# SETUP ENVIRONMENT
+####################
+
+OUTFD="$2"
+ZIPFILE="$3"
+
+mount /data 2>/dev/null
+
+# Load utility functions
+source "/data/adb/magisk/util_functions.sh"
+
+# Preperation for flashable zips
+setup_flashable
+
+# Mount partitions
+mount_partitions
+
+# Detect version and architecture
+api_level_arch_detect
+
+# Setup busybox and binaries
+"$BOOTMODE" && boot_actions || recovery_actions
+
+##############
+# PREPARATION
+##############
+
+# Extract prop file
+unzip -o "$ZIPFILE" module.prop -d "$TMPDIR" >&2
+[[ ! -f "$TMPDIR/module.prop" ]] && abort "[!] Unable to extract zip file!"
+
+# Mod vars
+NVBASE="/data/adb"
+$BOOTMODE && MODDIRNAME=modules_update || MODDIRNAME=modules
+MODULEROOT="$NVBASE/$MODDIRNAME"
+MODID="$(grep_prop "id" "$TMPDIR/module.prop")"
+MODPATH="$MODULEROOT/$MODID"
+MODNAME="$(grep_prop "name" "$TMPDIR/module.prop")"
+
+# Create mod paths
+rmtouch "$MODPATH"
+mkdir -p "$MODPATH"
+
+##############
+# INSTALLATION
+##############
+
+# Extract to $MODPATH
+unzip -o "$ZIPFILE" -d "$MODPATH" >&2
+
+# Load install script
+source "$MODPATH/setup.sh"
+
+# Remove all old files before doing installation if want to
+"$CLEANSERVICE" && rm -rf "/data/adb/modules/$MODID"
+
+# Enable debugging if true
+"$DEBUG" && set -x || set +x
+
+# Print mod info
+info_print
+
+# Auto vskel load
+"$AUTOVKSEL" && load_vksel
+
+# Main
+init_main
+
+# Skip mount
+"$SKIPMOUNT" && touch "$MODPATH/skip_mount"
+
+# Set permissions
+set_permissions
+
+# Handle replace folders
+for TARGET in $REPLACE; do
+#  ui_print "[*] Replace target: $TARGET"
+  mktouch "$MODPATH$TARGET/.replace"
+done
+
+"$BOOTMODE" && {
+  # Update info for Magisk app
+  mktouch "$NVBASE/modules/$MODID/update"
+  cp -af "$MODPATH/module.prop" "$NVBASE/modules/$MODID/module.prop"
+}
+
+# Copy over custom sepolicy rules
+[[ -f "$MODPATH/sepolicy.rule" ]] && {
+  ui_print "[*] Installing custom sepolicy rules..."
+  copy_sepolicy_rules
+}
+
+# Remove stuffs that don't belong to modules
+rmtouch "$MODPATH/META-INF"
+rmtouch "$MODPATH/addon"
+rmtouch "$MODPATH/setup.sh"
+rmtouch "$MODPATH/LICENSE"
+rmtouch "$MODPATH/README.md"
+rmtouch "$MODPATH/system/bin/placeholder"
+rmtouch "$MODPATH/zygisk/placeholder"
+
+##############
+# Finalizing
+##############
+
+cd /
+"$BOOTMODE" || recovery_cleanup
+rmtouch "$TMPDIR"
+exit 0

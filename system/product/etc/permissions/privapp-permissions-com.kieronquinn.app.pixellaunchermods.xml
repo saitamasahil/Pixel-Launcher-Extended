@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+	Made by @saitama_96 Telegram
+-->
+<permissions>
+    <privapp-permissions package="com.kieronquinn.app.pixellaunchermods">
+        <permission name="android.permission.ACCESS_NETWORK_STATE"/>
+        <permission name="android.permission.FOREGROUND_SERVICE"/>
+        <permission name="android.permission.INTERNET"/>
+        <permission name="android.permission.POST_NOTIFICATIONS"/>
+        <permission name="android.permission.QUERY_ALL_PACKAGES"/>
+        <permission name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+        <permission name="android.permission.REQUEST_INSTALL_PACKAGES"/>
+        <permission name="android.permission.WAKE_LOCK"/>
+        <permission name="com.kieronquinn.app.pixellaunchermods.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"/>
+    </privapp-permissions>
+</permissions>

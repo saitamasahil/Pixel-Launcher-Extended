@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+	Made by @saitama_96 Telegram.
+-->
+<permissions>
+    <privapp-permissions package="com.uragiristereo.pldt2s">
+        <permission name="com.uragiristereo.pldt2s.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"/>
+    </privapp-permissions>
+</permissions>
