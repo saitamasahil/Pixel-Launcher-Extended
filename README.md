@@ -2,7 +2,7 @@
 
 ![Header Image](https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/banner.jpg)
 
-**Pixel Launcher Extended** is a Magisk module with many cool features compared to original Pixel Launcher by Google.
+**Pixel Launcher Extended** is a Magisk module by **TeamFiles** with many cool features compared to original Pixel Launcher by Google.
 
 ### Features
 - Extra themed icon packs support. Total of 6 icon packs for your favourite apps and games. This feature is currently in beta due to Android 13 restrictions. Android 13 prefers themed icons made by apps and then it looks for themed icons overlay(which we use). TeamFiles icons are very closed to stock themed icons. So, we recommend using them.
@@ -136,6 +136,7 @@ Uninstall updates of the Pixel Launcher app and reboot your device.
 ### Credits/Thanks
 - Google
 - [LiArch55](http://telegram.me/LiArch55)
+- [saitamasahil](https://github.com/saitamasahil)
 - [iamlooper](https://github.com/iamlooper/)
 - [KieronQuinn](https://github.com/KieronQuinn)
 - [uragiristereo](https://github.com/uragiristereo)
@@ -147,7 +148,7 @@ Uninstall updates of the Pixel Launcher app and reboot your device.
 - [LawnchairLauncher](https://github.com/LawnchairLauncher)
 - [RadekBledowski](https://github.com/RadekBledowski)
 
-Brought to you by [saitamasahil](https://github.com/saitamasahil), Founder of TeamFiles
+Brought to you by TeamFiles
 
 
 ### Contact us
