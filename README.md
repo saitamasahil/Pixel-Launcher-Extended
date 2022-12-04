@@ -1,6 +1,5 @@
 ## Pixel Launcher Extended Documentation
 
-[![Telegram URL](https://img.shields.io/twitter/url?label=Telegram&logo=telegram&style=social&url=https%3A%2F%2Ft.me%2)](https://telegram.me/modulesrepo)
 ![Header Image](https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/banner.jpg)
 
 **Pixel Launcher Extended** is a Magisk module with many cool features compared to original Pixel Launcher by Google.
@@ -130,4 +129,12 @@ Uninstall updates of the Pixel Launcher app and reboot your device.
 - [LawnchairLauncher](https://github.com/LawnchairLauncher)
 - [RadekBledowski](https://github.com/RadekBledowski)
 
-Brought to you by [saitamasahil](https://github.com/saitamasahil)!
+Brought to you by [saitamasahil](https://github.com/saitamasahil), Founder of TeamFiles
+
+
+### Contact us
+[![TeamFiles Telegram](https://img.shields.io/badge/Telegram-TeamFiles-%2326A5E4?logo=Telegram)](https://telegram.me/filesfederation)
+
+[![Modules Repository](https://img.shields.io/badge/Telegram-Modules%20Repository-%2326A5E4?logo=Telegram)](https://telegram.me/modulesrepo)
+
+[![Support Group](https://img.shields.io/badge/Telegram-Support%20Group-%2326A5E4?logo=Telegram)](https://telegram.me/fileschat)
