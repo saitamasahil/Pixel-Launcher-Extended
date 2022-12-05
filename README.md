@@ -48,6 +48,13 @@ It requires internet while flashing and downloads selected files by user during 
 - Force-stop Pixel Launcher from Settings (or reboot device again)
 - Double-tap once on home screen. Grant superuser permissions and enjoy
 
+### Uninstallation
+- Simply uninstall module from magisk
+
+### How to update
+- When there is new update available simply flash new version in magisk without removing previous version.
+- If you have flashed latest version already & now wanna select different choices while flashing. You can flash module again without removing/uninstalling existed module.
+
 ### Add-ons
 These add-ons are optional & add extra functionality to Pixel Launcher Extended.
 
@@ -101,6 +108,47 @@ If you want to enable or disable wallpaer zoom effect then use this add-on.
 
 **Download links will be available soon!**
 
+### How To Build
+
+If you don't wanna download direct module zip from above links then you can make your own module zip.
+
+#### For Windows
+- Make sure 7-Zip is installed in your windows pc. [Download 7-Zip](https://www.7-zip.org/) from here if you haven't already.
+- Clone Repo.
+- Run autobuild.bat.
+
+#### For Ubuntu, Debian & Other Linux Based Operating Systems
+- First install zip tool. On Ubuntu & Debian you can use following command to install it.
+```sh
+sudo apt-get install zip
+```
+- Now clone the repo using git.
+```sh
+git clone https://github.com/saitamasahil/Pixel-Launcher-Extended
+```
+- Now go to **Pixel-Launcher-Extended** folder.
+```sh
+cd Pixel-Launcher-Extended
+```
+- Run autobuild.sh.
+```sh
+bash autobuild.sh
+```
+
+#### For Termux
+If you are using Termux on Android then
+- Clone the repo using git.
+```sh
+git clone https://github.com/saitamasahil/Pixel-Launcher-Extended
+```
+- Now go to **Pixel-Launcher-Extended** folder.
+```sh
+cd Pixel-Launcher-Extended
+```
+- Run autobuild.sh.
+```sh
+bash autobuild.sh
+```
 
 ## Troubleshooting
 If you face any issues while using Pixel Launcher Extended then look into this section first before asking in support group on Telegram.
@@ -147,8 +195,12 @@ Uninstall updates of the Pixel Launcher app and reboot your device.
 - [WaifuPX-DG](https://github.com/WaifuPX-DG)
 - [LawnchairLauncher](https://github.com/LawnchairLauncher)
 - [RadekBledowski](https://github.com/RadekBledowski)
+- [PalmDevs](https://github.com/PalmDevs)
+- [agam778](https://github.com/agam778)
+- [atharvap8](https://github.com/atharvap8)
+- [jaaat4u](https://github.com/jaaat4u)
 
-Brought to you by TeamFiles
+Brought to you by [TeamFiles](https://github.com/TeamFiles)
 
 
 ### Contact us
