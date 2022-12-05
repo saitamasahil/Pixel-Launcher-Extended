@@ -139,11 +139,21 @@ bash autobuild.sh
 If you are using Termux on Android then
 - Open Termux. Copy paste this command
 ```sh
-pkg install zip git
+yes|pkg upgrade
+
+yes|apt update
+
+apt install -y zip git
+
 git clone https://github.com/saitamasahil/Pixel-Launcher-Extended
+
 cd Pixel-Launcher-Extended
+
 bash autobuild.sh
-mv PixelLauncherExtended.zip /storage/emulated/0
+
+termux-setup-storage
+
+mv PixelLauncherExtended.zip /sdcard
 ```
 - You will get magisk module in internal storage.
 
