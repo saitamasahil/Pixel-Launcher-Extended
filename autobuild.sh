@@ -1,25 +1,16 @@
 #!/usr/bin/bash
 # Setup script
 
-# Install requirements
-sudo apt-get install zip
+# Install zip
+apt-get install zip
 
-# Make autobuild.sh executable
-chmod +x autobuild.sh
+# Create directory if it doesn't exist
+mkdir -p "$HOME/Pixel-Launcher-Extended"
 
-# Give permission
-sudo ./autobuild.sh
+# Make sure the script has the correct permissions to access the directory
+chmod a+rwx "$HOME/Pixel-Launcher-Extended"
 
-# Check if the Pixel-Launcher-Extended directory exists and contains files
-if [ ! -d Pixel-Launcher-Extended ] || [ -z "$(ls -A Pixel-Launcher-Extended)" ]; then
-    echo ">> Pixel-Launcher-Extended directory not found or is empty"
-    exit
-else
-    # Make sure the script has the correct permissions to access the directory
-    chmod u+rwx Pixel-Launcher-Extended
-
-    # Create zip file
-    echo ">> Creating zip file"
-    zip -r PixelLauncherExtended.zip Pixel-Launcher-Extended
-    echo ">> Done! You can find the zip file in the current directory - $(pwd)/PixelLauncherExtended.zip"
-fi
+# Create zip file
+echo ">> Creating zip file"
+zip -r PixelLauncherExtended.zip "$HOME/Pixel-Launcher-Extended"
+echo ">> Done! You can find the zip file in the current directory - $(pwd)/PixelLauncherExtended.zip"
