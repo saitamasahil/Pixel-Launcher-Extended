@@ -137,6 +137,10 @@ bash autobuild.sh
 
 #### For Termux
 If you are using Termux on Android then
+- Install zip tool
+```sh
+pkg install zip
+```
 - Clone the repo using git.
 ```sh
 git clone https://github.com/saitamasahil/Pixel-Launcher-Extended
