@@ -139,6 +139,8 @@ bash autobuild.sh
 If you are using Termux on Android then
 - Open Termux. Copy paste this command
 ```sh
+pkg upgrade 
+pkg update
 pkg install zip git
 git clone https://github.com/saitamasahil/Pixel-Launcher-Extended
 cd Pixel-Launcher-Extended
