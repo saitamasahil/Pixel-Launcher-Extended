@@ -19,9 +19,7 @@
 ### Compatibility
 This module is expected to work on ROMs which are based on fairly unmodified Android source code.
 - Android 13 AOSP-based ROMs
-
-#### Warning
-This module has not yet support the new **Android 13 QPR beta builds**. Support for these will be added soon.
+- Android 13 QPR AOSP-based ROMs
 
 > WARNING: It may not work on some LOS-based ROMs like RiceDroid. If you face any crashes on these ROMs, please look through the [troubleshooting section](#troubleshooting).
 
