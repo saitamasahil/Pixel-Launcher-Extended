@@ -140,7 +140,7 @@ cd Pixel-Launcher-Extended
 ```
 - Run autobuild.sh.
 ```sh
-./autobuild.sh
+bash autobuild.sh
 ```
 
 ### For Termux
