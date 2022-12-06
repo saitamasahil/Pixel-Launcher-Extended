@@ -155,6 +155,10 @@ mv PixelLauncherExtended.zip /sdcard
 - Please make sure to grant storage permissions, if Termux asks you to do so
 - You will get Magisk module in your internal storage
 - Use [Termux From F-Droid](https://f-droid.org/en/packages/com.termux/) to perform these tasks.
+- If you get this warning "It appears that directory '~/storage' already exists.
+This script is going to rebuild its structure from
+scratch, wiping all dangling files. The actual storage
+content IS NOT going to be deleted" then just do press "y". It won't do any harm to your device.
 
 ## Troubleshooting
 If you face any issues while using Pixel Launcher Extended then look into this section first before asking in support group on Telegram.
