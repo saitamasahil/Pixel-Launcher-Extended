@@ -84,6 +84,8 @@ info_print() {
 init_main() {  
   ui_print ""
   ui_print "[*] Which Android Version are you using?"
+  ui_print "[*] Press volume up to switch to another choice"
+  ui_print "[*] Press volume down to continue with that choice"
   ui_print ""
   
   sleep 0.5

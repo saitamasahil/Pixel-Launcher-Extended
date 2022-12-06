@@ -116,12 +116,13 @@ If you don't want to download built module from mirrors above, then you can buil
 
 ### For Windows
 - Make sure 7-Zip is installed in your Windows PC. Download [7-Zip](https://www.7-zip.org/) from here
-- Clone the repository with [GitHub Desktop](https://desktop.github.com) or via `git` in command-line
+- Clone the repository with [GitHub Desktop](https://desktop.github.com) or using git clone on WSL 2
 ```bat
 :: ONLY RUN THIS IF YOU USE GIT AND HAVE IT INSTALLED
 git clone https://github.com/saitamasahil/Pixel-Launcher-Extended
 ```
 - Run `autobuild.bat`
+- Don't use git in command-line or powershell to clone repo. Some users reported that it's corrupting contents.
 
 ### For Ubuntu, Debian, and other Linux distributions
 - Install the required packages. On Ubuntu or Debian you can use following command to install it.
