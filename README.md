@@ -39,7 +39,7 @@ This module is expected to work on ROMs which are based on fairly unmodified And
 
 #### Variants
 **Offline installer**  
-It doesn't require internet while flashing, but it's 60+ MB in size.
+It doesn't require internet while flashing, but it's 100+ MB in size.
 
 **Online installer**  
 It requires internet while flashing and downloads selected files by user during installation. It's less in size.
@@ -148,12 +148,13 @@ pkg upgrade || true
 pkg install -y zip git
 git clone https://github.com/saitamasahil/Pixel-Launcher-Extended
 cd Pixel-Launcher-Extended
-./autobuild.sh
+bash autobuild.sh
 termux-setup-storage
 mv PixelLauncherExtended.zip /sdcard
 ```
 - Please make sure to grant storage permissions, if Termux asks you to do so
 - You will get Magisk module in your internal storage
+- Use [Termux From F-Droid](https://f-droid.org/en/packages/com.termux/) to perform these tasks.
 
 ## Troubleshooting
 If you face any issues while using Pixel Launcher Extended then look into this section first before asking in support group on Telegram.
