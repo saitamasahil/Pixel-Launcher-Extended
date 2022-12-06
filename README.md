@@ -1,11 +1,14 @@
-## Pixel Launcher Extended Documentation
+# Pixel Launcher Extended
 
 ![Header Image](https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/banner.jpg)
 
 **Pixel Launcher Extended** is a Magisk module by **TeamFiles** with many cool features compared to original Pixel Launcher by Google.
 
 ### Features
-- Extra themed icon packs support. Total of 6 icon packs for your favourite apps and games. This feature is currently in beta due to Android 13 restrictions. Android 13 prefers themed icons made by apps and then it looks for themed icons overlay(which we use). TeamFiles icons are very closed to stock themed icons. So, we recommend using them.
+- Extra themed icon packs support. Total of 6 icon packs for your favourite apps and games **(BETA)**.
+> **This feature is currently in beta due to Android 13 restrictions**  
+> Android 13 prefers themed icons made by apps, it looks thru the apps first, only then it looks for themed icons overlay (which we use).  
+> TeamFiles icons are very closed to stock themed icons, so we recommend using them.
 - More grids options, total of 14 grids. You can select these extra grids by going to **Wallpaper & style** > **App grid**.
 - Double tap to sleep *(LSPosed required)*.
 - You can choose different icons shapes while installing. Total of 16 icons shapes.
@@ -17,14 +20,15 @@
 This module is expected to work on ROMs which are based on fairly unmodified Android source code.
 - Android 13 AOSP-based ROMs
 
+#### Warning
+This module has not yet support the new **Android 13 QPR beta builds**. Support for these will be added soon.
+
 > WARNING: It may not work on some LOS-based ROMs like RiceDroid. If you face any crashes on these ROMs, please look through the [troubleshooting section](#troubleshooting).
 
 ### Prerequisites
 - Compatible ROMs (**AOSP-based custom ROMs** or **Google Pixel stock ROM**) based on Android 13.
 - Device rooted by [Magisk latest stable](https://github.com/topjohnwu/Magisk/releases/latest).
 - [LSPosed](https://github.com/LSPosed/LSPosed) *(optional, if you want to use double tap to sleep feature)*
-##### Note
-- The module isn't compatiable with **Android 13 QPR Beta Builds** yet. Soon we will add support for it.
 
 **Disclaimer**
 - Make sure you flashed the **Bootloop saver** module before flashing **Pixel Launcher Extended**. We **WON'T** be responsible if anything happens with your device. Bootloops are not expected, but you should always be prepared for the worst!
@@ -49,14 +53,14 @@ It requires internet while flashing and downloads selected files by user during 
 - Double-tap once on home screen. Grant superuser permissions and enjoy
 
 ### Uninstallation
-- Simply uninstall module from magisk
+- Simply uninstall module from Magisk
 
-### How to update
-- When there is new update available simply flash new version in magisk without removing previous version.
-- If you have flashed latest version already & now wanna select different choices while flashing. You can flash module again without removing/uninstalling existed module.
+### Updating
+- When there is new update available, simply flash newer version in Magisk without removing previous version
+- If you have flashed latest version already and want to select different choices while flashing, you can always flash module again without removing/uninstalling existing module
 
 ### Add-ons
-These add-ons are optional & add extra functionality to Pixel Launcher Extended.
+These are optional add-ons, they add extra functionality to Pixel Launcher Extended.
 
 #### At A Glance Enhancer
 This addon will enhance **At A Glance** and will enable new settings such as Doorbell, Timer, Stopwatch, Bedtime, Fitness tracker, Torch suggestion, Connected devices and much more.  
@@ -85,12 +89,12 @@ If you don't get unified & universal search bar in Pixel Launcher Extended shown
 **Credits**
 - [Looper](https://github.com/iamlooper)
 
-#### Enable App Hide Feature
-You can enable the app hide feature in Pixel Launcher by using a third party app called **Pixel Mods**. **LSPosed** is required for this add-on.
-- Install [Pixel Mods App](https://play.google.com/store/apps/details?id=com.metris.xposed.pmods) from here
-- Open LSPosed and click **Pixel Mods** from modules section. Toggle **Enable Module** & make sure **Pixel Launcher** has ticked
-- Reboot Device
-- You can access  **Hide Apps Feature** by pressing hold on empty space on Homescreen
+#### Hide Apps Feature
+You can enable the hide app feature in Pixel Launcher by using a third-party app called **Pixel Mods**. *(**LSPosed** is required for this add-on)*.
+- Install the [Pixel Mods App](https://play.google.com/store/apps/details?id=com.metris.xposed.pmods)
+- Open LSPosed and click **Pixel Mods** from modules section. Toggle **Enable Module** and make sure **Pixel Launcher** has ticked
+- Reboot device
+- Check out the **Hide Apps Feature** by pressing hold on empty space on home screen
 
 #### Wallpaper Zoom Effect Enabler & Disabler
 If you want to enable or disable wallpaer zoom effect then use this add-on.
@@ -108,54 +112,50 @@ If you want to enable or disable wallpaer zoom effect then use this add-on.
 
 **Download links will be available soon!**
 
-### How To Build
+## Building from source
 
-If you don't wanna download direct module zip from above links then you can make your own module zip.
+If you don't want to download built module from mirrors above, then you can build it yourself.
 
-#### For Windows
-- Make sure 7-Zip is installed in your windows pc. [Download 7-Zip](https://www.7-zip.org/) from here if you haven't already.
-- Clone Repo.
-- Run autobuild.bat.
+### For Windows
+- Make sure 7-Zip is installed in your Windows PC. Download [7-Zip](https://www.7-zip.org/) from here
+- Clone the repository with [GitHub Desktop](https://desktop.github.com) or via `git` in command-line
+```bat
+:: ONLY RUN THIS IF YOU USE GIT AND HAVE IT INSTALLED
+git clone https://github.com/saitamasahil/Pixel-Launcher-Extended
+```
+- Run `autobuild.bat`
 
-#### For Ubuntu, Debian & Other Linux Based Operating Systems
-- First install zip tool. On Ubuntu & Debian you can use following command to install it.
+### For Ubuntu, Debian, and other Linux distributions
+- Install the required packages. On Ubuntu or Debian you can use following command to install it.
 ```sh
-sudo apt-get install zip
+sudo apt install zip git
 ```
 - Now clone the repo using git.
 ```sh
 git clone https://github.com/saitamasahil/Pixel-Launcher-Extended
 ```
-- Now go to **Pixel-Launcher-Extended** folder.
+- Navigate to the **Pixel-Launcher-Extended** folder.
 ```sh
 cd Pixel-Launcher-Extended
 ```
 - Run autobuild.sh.
 ```sh
-bash autobuild.sh
+./autobuild.sh
 ```
 
-#### For Termux
-If you are using Termux on Android then
-- Open Termux. Copy paste this command
+### For Termux
+- Open Termux, and copy and paste this command
 ```sh
-yes|pkg upgrade
-
-yes|apt update
-
-apt install -y zip git
-
+pkg upgrade || true
+pkg install -y zip git
 git clone https://github.com/saitamasahil/Pixel-Launcher-Extended
-
 cd Pixel-Launcher-Extended
-
-bash autobuild.sh
-
+./autobuild.sh
 termux-setup-storage
-
 mv PixelLauncherExtended.zip /sdcard
 ```
-- You will get magisk module in internal storage.
+- Please make sure to grant storage permissions, if Termux asks you to do so
+- You will get Magisk module in your internal storage
 
 ## Troubleshooting
 If you face any issues while using Pixel Launcher Extended then look into this section first before asking in support group on Telegram.
@@ -188,7 +188,7 @@ Turn off **Overview suggestions** from Pixel Launcher's settings.
 ### Pixel Launcher Extended not showing in default home settings
 Uninstall updates of the Pixel Launcher app and reboot your device.
 
-### Credits/Thanks
+## Credits/Thanks
 - Google
 - [LiArch55](http://telegram.me/LiArch55)
 - [saitamasahil](https://github.com/saitamasahil)
@@ -207,10 +207,10 @@ Uninstall updates of the Pixel Launcher app and reboot your device.
 - [atharvap8](https://github.com/atharvap8)
 - [jaaat4u](https://github.com/jaaat4u)
 
-Brought to you by [TeamFiles](https://github.com/TeamFiles)
+Brought to you by [TeamFiles](https://github.com/TeamFiles)!
 
 
-### Contact us
+## Contact us
 [![TeamFiles Telegram](https://img.shields.io/badge/Telegram-TeamFiles-%2326A5E4?logo=Telegram)](https://telegram.me/filesfederation)
 
 [![Modules Repository](https://img.shields.io/badge/Telegram-Modules%20Repository-%2326A5E4?logo=Telegram)](https://telegram.me/modulesrepo)
