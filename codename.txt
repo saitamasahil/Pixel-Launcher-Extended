@@ -1,0 +1,21 @@
+#NexusLauncherRelease Codes:
+NexusLauncherRelease(xyz) format is used. xyz are variables, where each different values of these variables define something.
+
+• If x=0, then launcher doesn't have extra grids.
+• If x=1, then launcher have extra grids.
+
+• If y=0, then launcher doesn't have any material you greetings.
+• If y=1, then launcher contains material you greetings style 1.
+• If y=2, then launcher contains material you greetings style 2.
+
+• If z doesn't exist in codename then launcher is for Android 13.
+• If z exists in codename then launcher is for Android 13 QPR.
+
+• Example Of Style 1
+Line 1 - Material You Greetings
+Line 2 - Day & Date
+Line 3 - Weather Information
+
+• Example Of Style 2
+Line 1 - Material You Greetings, Day & Date
+Line 2 - Weather Information
