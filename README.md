@@ -210,6 +210,7 @@ Uninstall updates of the Pixel Launcher app and reboot your device.
 - [agam778](https://github.com/agam778)
 - [atharvap8](https://github.com/atharvap8)
 - [jaaat4u](https://github.com/jaaat4u)
+- [selfmusing](https://github.com/selfmusing)
 
 Brought to you by [TeamFiles](https://github.com/TeamFiles)!
 
