@@ -1,6 +1,6 @@
 # Pixel Launcher Extended
 
-![Header Image](https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/banner.jpg)
+![Header Image](https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/Banner2.jpg)
 
 **Pixel Launcher Extended** is a Magisk module by **TeamFiles** with many cool features compared to original Pixel Launcher by Google.
 
