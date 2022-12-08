@@ -7,7 +7,7 @@
 ### Features
 - Extra themed icon packs support. Total of 6 icon packs for your favourite apps and games **(BETA)**.
 > **This feature is currently in beta due to Android 13 restrictions**  
-> Android 13 prefers themed icons made by apps, it looks thru the apps first, only then it looks for themed icons overlay (which we use).  
+> Android 13 prefers themed icons made by apps, it looks through the apps first, only then it looks for themed icons overlay (which we use).  
 > TeamFiles icons are very closed to stock themed icons, so we recommend using them.
 - More grids options, total of 14 grids. You can select these extra grids by going to **Wallpaper & style** > **App grid**.
 - Double tap to sleep *(LSPosed required)*.
@@ -178,7 +178,7 @@ To fix this issue, please follow these steps:
 su -c settings delete secure theme_customization_overlay_packages
 ``` 
 - Grant superuser permissions
-- Reboot your device
+- Don't reboot as after reboot you will have to apply these changes again(blame your rom)
 
 ### Enabled “Hide Clock” from the Pixel Launcher Mods app and now the clock isn't returning
 [Watch this video](https://index.teamfiles.workers.dev/0:/clock%20fix.mp4) for instructions to fix this issue.
