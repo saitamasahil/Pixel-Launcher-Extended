@@ -14,6 +14,6 @@
         [[ "$(ls -A $LINE 2>/dev/null)" ]] && break 1 || rm -rf "$LINE"
       done
     fi
-  done < "$INFO"
+  done <"$INFO"
   rm -rf "$INFO"
 }
