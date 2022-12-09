@@ -42,7 +42,7 @@ This module is expected to work on ROMs which are based on fairly unmodified And
 It doesn't require internet while flashing, but it's 100+ MB in size.
 
 **Online installer**  
-It requires internet while flashing and downloads selected files by user during installation. It's less than 5 MB in size. Depending upon your internet this variant may take more time compared to offline installer.
+It requires internet while flashing and downloads only selected files by user during installation. It's less than 5 MB in size. Depending upon your internet this variant may take more time in flashing compared to offline installer.
 
 ### Activating Double Tap to Sleep
 - Make sure you installed DT2S while flashing the module
