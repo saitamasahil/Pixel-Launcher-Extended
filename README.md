@@ -42,7 +42,7 @@ This module is expected to work on ROMs which are based on fairly unmodified And
 It doesn't require internet while flashing, but it's 100+ MB in size.
 
 **Online installer**  
-It requires internet while flashing and downloads selected files by user during installation. It's less in size.
+It requires internet while flashing and downloads selected files by user during installation. It's less than 5 MB in size. Depending upon your internet this variant may take more time compared to offline installer.
 
 ### Activating Double Tap to Sleep
 - Make sure you installed DT2S while flashing the module
@@ -112,7 +112,7 @@ If you want to enable or disable wallpaer zoom effect then use this add-on.
 
 ## Building from source
 
-If you don't want to download built module from mirrors above, then you can build it yourself.
+If you don't want to download built module from mirrors above, then you can build magisk module(offline installer) yourself.
 
 ### For Windows
 - Make sure 7-Zip is installed in your Windows PC. Download [7-Zip](https://www.7-zip.org/) from here

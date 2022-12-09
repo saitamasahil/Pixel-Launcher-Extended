@@ -19,3 +19,10 @@ Line 3 - Weather Information
 • Example Of Style 2
 Line 1 - Material You Greetings, Day & Date
 Line 2 - Weather Information
+
+
+What things are excluded in the online installer version?
+• NexusLauncherRelease all apk files
+• Pixel Launcher Mods apk
+• ThemedIconsOverlay all apk files
+• Styles & wallpaper apk
