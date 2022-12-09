@@ -105,7 +105,7 @@ If you want to enable or disable wallpaer zoom effect then use this add-on.
 
 ## Download Links
 - [Mirror 1](https://www.pling.com/p/1952604)
-- [Mirror 2](https://store.kde.org/p/195260)
+- [Mirror 2](https://store.kde.org/p/1952604)
 - [Mirror 3](https://www.opendesktop.org/p/1952604)
 
 ## Building from source
