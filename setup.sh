@@ -76,6 +76,17 @@ info_print() {
   sleep 2
 }
 
+# Web fetch tool for files & media by iamlooper @ telegram
+# curl: Silent mode (-fsS), redirect to STDOUT (-L) & contents to a file (-o)
+# wget: Silent mode (-q), redirect to STDOUT (-O-) & contents to a file (-O)
+web_fetch() {
+  [[ ! -z "$(command -v wget)" ]] && tool="wget" || tool="curl"
+  case "$1" in
+    "-d" | "--download") [[ "$tool" == "wget" ]] && wget "$2" -qO "$3" || curl "$2" -fsSo "$3" ;;
+    "-p" | "--print") [[ "$tool" == "wget" ]] && wget -qO- "$2" || curl -fsSL "$2" ;;
+  esac  
+}
+
 ############
 # Main
 ############

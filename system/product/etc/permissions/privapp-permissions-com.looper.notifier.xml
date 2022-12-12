@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+	Made by @saitama_96 Telegram.
+-->
+<permissions>
+    <privapp-permissions package="com.looper.notifier">
+        <permission name="android.permission.POST_NOTIFICATIONS"/>
+    </privapp-permissions>
+</permissions>
