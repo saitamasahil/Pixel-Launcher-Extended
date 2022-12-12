@@ -749,6 +749,8 @@ init_main() {
   ui_print "--------------------------------"
   ui_print "[17] Vessel"
   ui_print "--------------------------------"
+  ui_print "[18] Samsung(One UI Like)"
+  ui_print "--------------------------------"
 
   ui_print ""
   ui_print "[*] Select which of the icon shape you want:"
@@ -757,7 +759,7 @@ init_main() {
   while true; do
     ui_print "  $SM"
     "$VKSEL" && SM="$((SM + 1))" || break
-    [[ "$SM" -gt "17" ]] && SM=1
+    [[ "$SM" -gt "18" ]] && SM=1
   done
 
   case "$SM" in
@@ -778,6 +780,7 @@ init_main() {
   "15") FCTEXTAD1="Tapered Rectangular" ;;
   "16") FCTEXTAD1="Teardrops" ;;
   "17") FCTEXTAD1="Vessel" ;;
+  "18") FCTEXTAD1="Samsung" ;;
   esac
 
   ui_print "[*] Selected: $FCTEXTAD1"
@@ -803,6 +806,7 @@ init_main() {
     rm -rf "$MODPATH/system/product/overlay/IconShape/TaperedRectangular.apk"
     rm -rf "$MODPATH/system/product/overlay/IconShape/Teardrops.apk"
     rm -rf "$MODPATH/system/product/overlay/IconShape/Vessel.apk"
+    rm -rf "$MODPATH/system/product/overlay/IconShape/Samsung.apk"
 
   elif [[ "$FCTEXTAD1" == "Cylinder" ]]; then
     mv -f "$MODPATH/system/product/overlay/IconShape/Cylinder.apk" "$MODPATH/system/product/overlay/IconShape/IconShape.apk"
@@ -821,6 +825,7 @@ init_main() {
     rm -rf "$MODPATH/system/product/overlay/IconShape/TaperedRectangular.apk"
     rm -rf "$MODPATH/system/product/overlay/IconShape/Teardrops.apk"
     rm -rf "$MODPATH/system/product/overlay/IconShape/Vessel.apk"
+    rm -rf "$MODPATH/system/product/overlay/IconShape/Samsung.apk"
 
   elif [[ "$FCTEXTAD1" == "Flower" ]]; then
     mv -f "$MODPATH/system/product/overlay/IconShape/Flower.apk" "$MODPATH/system/product/overlay/IconShape/IconShape.apk"
@@ -839,6 +844,7 @@ init_main() {
     rm -rf "$MODPATH/system/product/overlay/IconShape/TaperedRectangular.apk"
     rm -rf "$MODPATH/system/product/overlay/IconShape/Teardrops.apk"
     rm -rf "$MODPATH/system/product/overlay/IconShape/Vessel.apk"
+    rm -rf "$MODPATH/system/product/overlay/IconShape/Samsung.apk"
 
   elif [[ "$FCTEXTAD1" == "Heart" ]]; then
     mv -f "$MODPATH/system/product/overlay/IconShape/Heart.apk" "$MODPATH/system/product/overlay/IconShape/IconShape.apk"
@@ -857,6 +863,7 @@ init_main() {
     rm -rf "$MODPATH/system/product/overlay/IconShape/TaperedRectangular.apk"
     rm -rf "$MODPATH/system/product/overlay/IconShape/Teardrops.apk"
     rm -rf "$MODPATH/system/product/overlay/IconShape/Vessel.apk"
+    rm -rf "$MODPATH/system/product/overlay/IconShape/Samsung.apk"
 
   elif [[ "$FCTEXTAD1" == "Hexagon" ]]; then
     mv -f "$MODPATH/system/product/overlay/IconShape/Hexagon.apk" "$MODPATH/system/product/overlay/IconShape/IconShape.apk"
@@ -875,6 +882,7 @@ init_main() {
     rm -rf "$MODPATH/system/product/overlay/IconShape/TaperedRectangular.apk"
     rm -rf "$MODPATH/system/product/overlay/IconShape/Teardrops.apk"
     rm -rf "$MODPATH/system/product/overlay/IconShape/Vessel.apk"
+    rm -rf "$MODPATH/system/product/overlay/IconShape/Samsung.apk"
 
   elif [[ "$FCTEXTAD1" == "Leaf" ]]; then
     mv -f "$MODPATH/system/product/overlay/IconShape/Leaf.apk" "$MODPATH/system/product/overlay/IconShape/IconShape.apk"
@@ -893,6 +901,7 @@ init_main() {
     rm -rf "$MODPATH/system/product/overlay/IconShape/TaperedRectangular.apk"
     rm -rf "$MODPATH/system/product/overlay/IconShape/Teardrops.apk"
     rm -rf "$MODPATH/system/product/overlay/IconShape/Vessel.apk"
+    rm -rf "$MODPATH/system/product/overlay/IconShape/Samsung.apk"
 
   elif [[ "$FCTEXTAD1" == "Mallow" ]]; then
     mv -f "$MODPATH/system/product/overlay/IconShape/Mallow.apk" "$MODPATH/system/product/overlay/IconShape/IconShape.apk"
@@ -911,6 +920,7 @@ init_main() {
     rm -rf "$MODPATH/system/product/overlay/IconShape/TaperedRectangular.apk"
     rm -rf "$MODPATH/system/product/overlay/IconShape/Teardrops.apk"
     rm -rf "$MODPATH/system/product/overlay/IconShape/Vessel.apk"
+    rm -rf "$MODPATH/system/product/overlay/IconShape/Samsung.apk"
 
   elif [[ "$FCTEXTAD1" == "Pebble" ]]; then
     mv -f "$MODPATH/system/product/overlay/IconShape/Pebble.apk" "$MODPATH/system/product/overlay/IconShape/IconShape.apk"
@@ -929,6 +939,7 @@ init_main() {
     rm -rf "$MODPATH/system/product/overlay/IconShape/TaperedRectangular.apk"
     rm -rf "$MODPATH/system/product/overlay/IconShape/Teardrops.apk"
     rm -rf "$MODPATH/system/product/overlay/IconShape/Vessel.apk"
+    rm -rf "$MODPATH/system/product/overlay/IconShape/Samsung.apk"
 
   elif [[ "$FCTEXTAD1" == "Rounded Hexagon" ]]; then
     mv -f "$MODPATH/system/product/overlay/IconShape/RoundedHexagon.apk" "$MODPATH/system/product/overlay/IconShape/IconShape.apk"
@@ -947,6 +958,7 @@ init_main() {
     rm -rf "$MODPATH/system/product/overlay/IconShape/TaperedRectangular.apk"
     rm -rf "$MODPATH/system/product/overlay/IconShape/Teardrops.apk"
     rm -rf "$MODPATH/system/product/overlay/IconShape/Vessel.apk"
+    rm -rf "$MODPATH/system/product/overlay/IconShape/Samsung.apk"
 
   elif [[ "$FCTEXTAD1" == "Rounded Rectangle" ]]; then
     mv -f "$MODPATH/system/product/overlay/IconShape/RoundedRectangle.apk" "$MODPATH/system/product/overlay/IconShape/IconShape.apk"
@@ -965,6 +977,7 @@ init_main() {
     rm -rf "$MODPATH/system/product/overlay/IconShape/TaperedRectangular.apk"
     rm -rf "$MODPATH/system/product/overlay/IconShape/Teardrops.apk"
     rm -rf "$MODPATH/system/product/overlay/IconShape/Vessel.apk"
+    rm -rf "$MODPATH/system/product/overlay/IconShape/Samsung.apk"
 
   elif [[ "$FCTEXTAD1" == "Square" ]]; then
     mv -f "$MODPATH/system/product/overlay/IconShape/Square.apk" "$MODPATH/system/product/overlay/IconShape/IconShape.apk"
@@ -983,6 +996,7 @@ init_main() {
     rm -rf "$MODPATH/system/product/overlay/IconShape/TaperedRectangular.apk"
     rm -rf "$MODPATH/system/product/overlay/IconShape/Teardrops.apk"
     rm -rf "$MODPATH/system/product/overlay/IconShape/Vessel.apk"
+    rm -rf "$MODPATH/system/product/overlay/IconShape/Samsung.apk"
 
   elif [[ "$FCTEXTAD1" == "Squircle" ]]; then
     mv -f "$MODPATH/system/product/overlay/IconShape/Squircle.apk" "$MODPATH/system/product/overlay/IconShape/IconShape.apk"
@@ -1001,6 +1015,7 @@ init_main() {
     rm -rf "$MODPATH/system/product/overlay/IconShape/TaperedRectangular.apk"
     rm -rf "$MODPATH/system/product/overlay/IconShape/Teardrops.apk"
     rm -rf "$MODPATH/system/product/overlay/IconShape/Vessel.apk"
+    rm -rf "$MODPATH/system/product/overlay/IconShape/Samsung.apk"
 
   elif [[ "$FCTEXTAD1" == "Stretched" ]]; then
     mv -f "$MODPATH/system/product/overlay/IconShape/Stretched.apk" "$MODPATH/system/product/overlay/IconShape/IconShape.apk"
@@ -1019,6 +1034,7 @@ init_main() {
     rm -rf "$MODPATH/system/product/overlay/IconShape/TaperedRectangular.apk"
     rm -rf "$MODPATH/system/product/overlay/IconShape/Teardrops.apk"
     rm -rf "$MODPATH/system/product/overlay/IconShape/Vessel.apk"
+    rm -rf "$MODPATH/system/product/overlay/IconShape/Samsung.apk"
 
   elif [[ "$FCTEXTAD1" == "Tapered Rectangular" ]]; then
     mv -f "$MODPATH/system/product/overlay/IconShape/TaperedRectangular.apk" "$MODPATH/system/product/overlay/IconShape/IconShape.apk"
@@ -1037,6 +1053,7 @@ init_main() {
     rm -rf "$MODPATH/system/product/overlay/IconShape/Stretched.apk"
     rm -rf "$MODPATH/system/product/overlay/IconShape/Teardrops.apk"
     rm -rf "$MODPATH/system/product/overlay/IconShape/Vessel.apk"
+    rm -rf "$MODPATH/system/product/overlay/IconShape/Samsung.apk"
 
   elif [[ "$FCTEXTAD1" == "Teardrops" ]]; then
     mv -f "$MODPATH/system/product/overlay/IconShape/Teardrops.apk" "$MODPATH/system/product/overlay/IconShape/IconShape.apk"
@@ -1055,6 +1072,7 @@ init_main() {
     rm -rf "$MODPATH/system/product/overlay/IconShape/Stretched.apk"
     rm -rf "$MODPATH/system/product/overlay/IconShape/TaperedRectangular.apk"
     rm -rf "$MODPATH/system/product/overlay/IconShape/Vessel.apk"
+    rm -rf "$MODPATH/system/product/overlay/IconShape/Samsung.apk"
 
   elif [[ "$FCTEXTAD1" == "Vessel" ]]; then
     mv -f "$MODPATH/system/product/overlay/IconShape/Vessel.apk" "$MODPATH/system/product/overlay/IconShape/IconShape.apk"
@@ -1073,6 +1091,26 @@ init_main() {
     rm -rf "$MODPATH/system/product/overlay/IconShape/Stretched.apk"
     rm -rf "$MODPATH/system/product/overlay/IconShape/TaperedRectangular.apk"
     rm -rf "$MODPATH/system/product/overlay/IconShape/Teardrops.apk"
+    rm -rf "$MODPATH/system/product/overlay/IconShape/Samsung.apk"
+
+  elif [[ "$FCTEXTAD1" == "Samsung" ]]; then
+    mv -f "$MODPATH/system/product/overlay/IconShape/Samsung.apk" "$MODPATH/system/product/overlay/IconShape/IconShape.apk"
+    rm -rf "$MODPATH/system/product/overlay/IconShape/Cloudy.apk"
+    rm -rf "$MODPATH/system/product/overlay/IconShape/Cylinder.apk"
+    rm -rf "$MODPATH/system/product/overlay/IconShape/Flower.apk"
+    rm -rf "$MODPATH/system/product/overlay/IconShape/Heart.apk"
+    rm -rf "$MODPATH/system/product/overlay/IconShape/Hexagon.apk"
+    rm -rf "$MODPATH/system/product/overlay/IconShape/Leaf.apk"
+    rm -rf "$MODPATH/system/product/overlay/IconShape/Mallow.apk"
+    rm -rf "$MODPATH/system/product/overlay/IconShape/Pebble.apk"
+    rm -rf "$MODPATH/system/product/overlay/IconShape/RoundedHexagon.apk"
+    rm -rf "$MODPATH/system/product/overlay/IconShape/RoundedRectangle.apk"
+    rm -rf "$MODPATH/system/product/overlay/IconShape/Square.apk"
+    rm -rf "$MODPATH/system/product/overlay/IconShape/Squircle.apk"
+    rm -rf "$MODPATH/system/product/overlay/IconShape/Stretched.apk"
+    rm -rf "$MODPATH/system/product/overlay/IconShape/TaperedRectangular.apk"
+    rm -rf "$MODPATH/system/product/overlay/IconShape/Teardrops.apk"
+    rm -rf "$MODPATH/system/product/overlay/IconShape/Vessel.apk"
   fi
 
   ui_print "[*] Clearing system cache to make it work properly..."

@@ -11,7 +11,7 @@
 > TeamFiles icons are very closed to stock themed icons, so we recommend using them.
 - More grids options, total of 14 grids. You can select these extra grids by going to **Wallpaper & style** > **App grid**.
 - Double tap to sleep *(LSPosed required)*.
-- You can choose different icons shapes while installing. Total of 16 icons shapes.
+- You can choose different icons shapes while installing. Total of 17 icons shapes.
 - Material You At A Glance greetings.
 - [Pixel Launcher Mods](https://github.com/KieronQuinn/PixelLauncherMods) by KieronQuinn. It has many cool features such as icon pack changer, recent section blur, etc.
 - Add-ons, which can enhance and add more functionality.
