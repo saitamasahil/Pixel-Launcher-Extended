@@ -102,11 +102,13 @@ init_main() {
   sleep 0.5
 
   ui_print "--------------------------------"
-  ui_print "[1] Android 13(November SP or Below)"
+  ui_print "[1] Android 13"
   ui_print "--------------------------------"
-  ui_print "[2] Android 13 QPR(December SP or Above)"
+  ui_print "[2] Android 13 QPR"
   ui_print "--------------------------------"
-  ui_print "[*] SP means: Security Patch"
+  ui_print "[*] If you're not sure about 'which version to flash' then"
+  ui_print "ask in your rom community"
+  ui_print "to know about current version of your rom"
 
   ui_print ""
   ui_print "[*] Select your desired option:"
