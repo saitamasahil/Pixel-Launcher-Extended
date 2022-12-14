@@ -82,9 +82,9 @@ info_print() {
 web_fetch() {
   [[ ! -z "$(command -v wget)" ]] && tool="wget" || tool="curl"
   case "$1" in
-    "-d" | "--download") [[ "$tool" == "wget" ]] && wget "$2" -qO "$3" || curl "$2" -fsSo "$3" ;;
-    "-p" | "--print") [[ "$tool" == "wget" ]] && wget -qO- "$2" || curl -fsSL "$2" ;;
-  esac  
+  "-d" | "--download") [[ "$tool" == "wget" ]] && wget "$2" -qO "$3" || curl "$2" -fsSo "$3" ;;
+  "-p" | "--print") [[ "$tool" == "wget" ]] && wget -qO- "$2" || curl -fsSL "$2" ;;
+  esac
 }
 
 ############
@@ -919,7 +919,7 @@ init_main() {
   sleep 2
 
   touch "$MODPATH/first"
-  
+
   # Don't add libc++_shared.so if it already exists
   [[ -e "/system/lib64/libc++_shared.so" ]] && {
     rm -rf "$MODPATH/system/lib64/libc++_shared.so"

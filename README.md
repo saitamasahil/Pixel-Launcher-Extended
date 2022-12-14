@@ -9,7 +9,7 @@
 > **This feature is currently in beta due to Android 13 restrictions**  
 > Android 13 prefers themed icons made by apps, it looks through the apps first, only then it looks for themed icons overlay (which we use).  
 > TeamFiles icons are very closed to stock themed icons, so we recommend using them.
-- More grids options, total of 14 grids. You can select these extra grids by going to **Wallpaper & style** > **App grid**.
+- More grids options, total of 14 grids. You can select these extra grids by going to **Wallpaper & style** > **App grid**. These are available for **Phones** only. Not available for **Tablets**.
 - Double tap to sleep *(LSPosed required)*.
 - You can choose different icons shapes while installing. Total of 17 icons shapes.
 - Material You At A Glance greetings.
