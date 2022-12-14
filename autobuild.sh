@@ -1,5 +1,17 @@
 #!/usr/bin/bash
-# Setup script
+
+# Check for the Distro Type
+
+which "apt"
+
+RESULT=$?
+if [ $RESULT -eq 0 ]; then
+  sudo apt-get install zip
+fi
+
+if [ $RESULT -eq 1 ]; then
+  sudo pacman -S zip
+fi
 
 if ! command -v zip >/dev/null; then
   echo "Error: zip is not installed. Please install it manually and try again."
