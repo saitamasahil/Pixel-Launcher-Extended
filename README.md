@@ -149,7 +149,7 @@ git clone https://github.com/saitamasahil/Pixel-Launcher-Extended
 cd Pixel-Launcher-Extended
 bash autobuild.sh
 termux-setup-storage
-mv PixelLauncherExtended.zip /sdcard
+mv Pixel\ Launcher\ Extended* /sdcard
 ```
 - Please make sure to grant storage permissions, if Termux asks you to do so
 - You will get Magisk module in your internal storage
