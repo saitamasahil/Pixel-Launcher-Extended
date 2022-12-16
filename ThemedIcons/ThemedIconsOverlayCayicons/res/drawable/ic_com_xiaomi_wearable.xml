@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector
+    android:height="24.0dip"
+    android:width="24.0dip"
+    android:viewportWidth="240.0"
+    android:viewportHeight="240.0"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M120,120m-81,0a81,81 0,1 1,162 0a81,81 0,1 1,-162 0"
+        android:strokeColor="@drawable/$ic_com_xiaomi_wearable__0"
+        android:strokeWidth="38.0"
+        android:fillType="evenOdd" />
+</vector>

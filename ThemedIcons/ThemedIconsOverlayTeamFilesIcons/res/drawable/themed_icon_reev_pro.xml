@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector
+    android:height="1080.0dip"
+    android:width="1080.0dip"
+    android:viewportWidth="1080.0"
+    android:viewportHeight="1080.0"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt">
+    <group
+        android:translateX="144.0"
+        android:translateY="94.0">
+        <path
+            android:fillColor="#ffffffff"
+            android:pathData="M35.5 0L571.5 0L578.5 2L585.5 2L597.5 6L613.5 9L628.5 14L661.5 29Q699.6 50.4 728 81.5Q756.9 114.1 775 157.5L786 193.5L786 198.5L790 217.5L791 235.5L793 242.5L793 257.5L791 262.5L791 272.5L790 273.5L786 304.5L778 331.5L770 348.5L769 353.5L746 393.5Q731 414 712.5 431L682.5 456L647.5 476L633.5 482L630.5 482L601.5 492L588.5 493L571.5 497L566 501.5L563 509.5L768 821.5L776 835.5L779 846.5L779 854.5Q774.7 874.2 760.5 884L751.5 889L738.5 893L55.5 893L35.5 886L24 875.5L18 866.5L14 853.5L14 669.5Q18.2 648.2 33.5 638L46.5 631L61.5 630Q77.5 634 87 644.5Q94.8 652.7 97 666.5L97 800.5L102.5 807L107.5 810L647.5 810L653 805.5L655 799.5L448 485.5L439 467.5L437 454.5Q440.6 436.1 452.5 426Q460.2 418.2 473.5 416L557.5 416L577.5 411L587.5 410L602.5 405L630.5 391Q651.5 378 667 359.5L685 335.5L699 307.5L703 295.5L704 285.5L709 268.5Q707.5 263 710 261.5L710 235.5L704 212.5L702 199.5L693 176.5Q678.9 149.1 658.5 128L635.5 110L608.5 95L580.5 86L571.5 84L562.5 84L561.5 83L92.5 83L85 89.5L83 93.5L83 169.5Q79.6 186.6 67.5 195Q57.5 205.5 35.5 204L23.5 200L9 186.5L4 177.5L2 167.5L0 165.5L0 38.5L2 36.5L4 25.5L15.5 10L20.5 6L35.5 0Z"
+            android:strokeColor="#ffffffff"
+            android:strokeWidth="1.0"
+            android:strokeAlpha="0.9921569"
+            android:fillAlpha="0.9921569" />
+        <path
+            android:fillColor="#ffffffff"
+            android:pathData="M41.5 395L220.5 395Q237.5 399 246 411.5L253 426.5L254 437.5Q251.5 439 253 444.5L248 455.5L236.5 468L224.5 475L212.5 478L49.5 478Q29.1 474.4 18 461.5Q8.9 452.1 7 435.5Q11 413.5 25.5 402Q31.9 396.9 41.5 395Z"
+            android:strokeColor="#ffffffff"
+            android:strokeWidth="1.0"
+            android:strokeAlpha="0.9921569"
+            android:fillAlpha="0.9921569" />
+    </group>
+</vector>

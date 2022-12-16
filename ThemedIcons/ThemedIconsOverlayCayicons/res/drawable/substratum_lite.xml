@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector
+    android:height="24.0dip"
+    android:width="24.0dip"
+    android:viewportWidth="240.0"
+    android:viewportHeight="240.0"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <path
+        android:fillColor="#ff000000"
+        android:pathData="M210,140C215.523,140 220,144.477 220,150L220,210C220,215.523 215.523,220 210,220L60.781,220C67.338,219.885 73.957,218.152 80.038,214.641L80.038,214.641L209.322,140L210,140ZM41.264,144.65L40.038,145.359C20.907,156.405 14.352,180.868 25.397,200C32.243,211.858 44.244,218.884 56.934,219.883C36.275,218.318 20,201.06 20,180C20,164.678 28.614,151.369 41.264,144.65Z"
+        android:strokeColor="#00000000"
+        android:strokeWidth="1.0"
+        android:fillAlpha="0.4"
+        android:fillType="evenOdd" />
+    <path
+        android:fillColor="#ff000000"
+        android:pathData="M183.603,74.019L213.603,125.981C216.364,130.764 214.725,136.88 209.942,139.641L80.038,214.641C64.06,223.866 44.362,220.814 31.868,208.411C34.249,210.762 36.966,212.851 40,214.603C59.132,225.648 83.595,219.093 94.641,199.962L94.641,199.962L169.23,70.77L169.942,70.359C174.725,67.598 180.841,69.236 183.603,74.019Z"
+        android:strokeColor="#00000000"
+        android:strokeWidth="1.0"
+        android:fillAlpha="0.6"
+        android:fillType="evenOdd" />
+    <path
+        android:fillColor="#ff000000"
+        android:pathData="M114.019,26.397L165.981,56.397C170.764,59.159 172.402,65.275 169.641,70.058L94.641,199.962C83.595,219.093 59.132,225.648 40,214.603C20.868,203.557 14.313,179.093 25.359,159.962L100.359,30.058C103.12,25.275 109.236,23.636 114.019,26.397ZM60,160C48.954,160 40,168.954 40,180C40,191.046 48.954,200 60,200C71.046,200 80,191.046 80,180C80,168.954 71.046,160 60,160Z"
+        android:strokeColor="#00000000"
+        android:strokeWidth="1.0"
+        android:fillAlpha="0.8"
+        android:fillType="evenOdd" />
+    <path
+        android:fillColor="#ff000000"
+        android:pathData="M90,20C95.523,20 100,24.477 100,30L100,180C100,202.091 82.091,220 60,220C37.909,220 20,202.091 20,180L20,30C20,24.477 24.477,20 30,20L90,20ZM60,160C48.954,160 40,168.954 40,180C40,191.046 48.954,200 60,200C71.046,200 80,191.046 80,180C80,168.954 71.046,160 60,160Z"
+        android:strokeColor="#00000000"
+        android:strokeWidth="1.0"
+        android:fillType="evenOdd" />
+</vector>

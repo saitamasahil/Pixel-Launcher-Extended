@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector
+    android:height="192.0dip"
+    android:width="192.0dip"
+    android:viewportWidth="192.0"
+    android:viewportHeight="192.0"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <path
+        android:fillColor="#61000000"
+        android:pathData="M159.42,126.42C159.83,147.57,150.11,158.44,132.46,158.78L63.91,158.78C44.72,158.78,32.96,146.53,33.66,126.42L33.64,64.94C32.83,46.18,44.23,33.13,59.14,32.66L77.53,32.66Q87.98,32.66,95.25,40.30L108.99,53.45Q113.15,56.26,122.13,56.26L132.64,56.26C145.34,56.26,158.80,67.69,159.41,80.21L159.42,126.42z"
+        android:strokeColor="#ff000000"
+        android:strokeWidth="11.5199995"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:fillType="nonZero" />
+    <path
+        android:fillColor="#61000000"
+        android:pathData="M85.32,87.18L107.11,87.18"
+        android:strokeColor="#ff000000"
+        android:strokeWidth="11.519999"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:fillType="nonZero" />
+    <path
+        android:fillColor="#61000000"
+        android:pathData="M85.32,87.18L85.32,122.14"
+        android:strokeColor="#ff000000"
+        android:strokeWidth="11.519999"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:fillType="nonZero" />
+    <path
+        android:fillColor="#61000000"
+        android:pathData="M85.32,106.89L99.85,106.89"
+        android:strokeColor="#ff000000"
+        android:strokeWidth="11.519999"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:fillType="nonZero" />
+    <path
+        android:fillColor="#61000000"
+        android:pathData="M37.16,56.26L132.14,56.26"
+        android:strokeColor="#90000000"
+        android:strokeWidth="11.519999"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:fillType="nonZero" />
+</vector>

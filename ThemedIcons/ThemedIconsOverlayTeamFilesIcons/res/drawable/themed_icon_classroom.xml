@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector
+    android:height="@dimen/theme_icon_size"
+    android:width="@dimen/theme_icon_size"
+    android:viewportWidth="36.0"
+    android:viewportHeight="36.0"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <path
+        android:fillColor="@android:color/white"
+        android:pathData="M22.95 22.0499C22.95 20.3999 20.7 19.0499 18 19.0499C15.3 19.0499 13.05 20.3999 13.05 22.0499V23.0999H22.95V22.0499Z" />
+    <path
+        android:fillColor="@android:color/white"
+        android:pathData="M24 18.7499C24.9941 18.7499 25.8 17.944 25.8 16.9499C25.8 15.9558 24.9941 15.1499 24 15.1499C23.0058 15.1499 22.2 15.9558 22.2 16.9499C22.2 17.944 23.0058 18.7499 24 18.7499Z" />
+    <path
+        android:fillColor="@android:color/white"
+        android:pathData="M28.05 22.0501C28.05 21.0001 26.25 20.1001 24 20.1001C23.7 20.1001 23.55 20.1001 23.25 20.1001C23.7 20.7001 24 21.3001 24 22.0501V23.1001H28.05V22.0501Z" />
+    <path
+        android:fillColor="@android:color/white"
+        android:pathData="M12.75 20.1001C12.45 20.1001 12.3 20.1001 12 20.1001C9.74995 20.1001 7.94995 21.0001 7.94995 22.0501V23.1001H12V22.0501C12 21.3001 12.3 20.5501 12.75 20.1001Z" />
+    <path
+        android:fillColor="@android:color/white"
+        android:pathData="M12 18.7499C12.9941 18.7499 13.8 17.944 13.8 16.9499C13.8 15.9558 12.9941 15.1499 12 15.1499C11.0058 15.1499 10.2 15.9558 10.2 16.9499C10.2 17.944 11.0058 18.7499 12 18.7499Z" />
+    <path
+        android:fillColor="@android:color/white"
+        android:pathData="M33 4.04993H3.00005C1.95005 4.04993 1.05005 4.94993 1.05005 5.99993V29.9999C1.05005 31.0499 1.95005 31.9499 3.00005 31.9499H33C34.05 31.9499 34.95 31.0499 34.95 29.9999V5.99993C34.95 4.94993 34.05 4.04993 33 4.04993ZM31.95 28.9499H27.9V26.9999H21V28.9499H4.05005V7.04993H32.1V28.9499H31.95Z" />
+    <path
+        android:fillColor="@android:color/white"
+        android:pathData="M18 17.5501C19.4083 17.5501 20.5499 16.4084 20.5499 15.0001C20.5499 13.5917 19.4083 12.4501 18 12.4501C16.5916 12.4501 15.45 13.5917 15.45 15.0001C15.45 16.4084 16.5916 17.5501 18 17.5501Z" />
+</vector>

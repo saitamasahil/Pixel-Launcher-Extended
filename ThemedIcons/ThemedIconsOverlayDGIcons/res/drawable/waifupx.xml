@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector
+    android:height="192.0dip"
+    android:width="192.0dip"
+    android:viewportWidth="192.0"
+    android:viewportHeight="192.0"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <path
+        android:fillColor="#00ffffff"
+        android:pathData="M87.82,135.50C88.84,138.44,89.86,141.37,88.69,145.54C87.52,149.70,84.16,155.09,79.48,157.39C74.81,159.68,68.81,158.89,64.83,157.38C60.86,155.87,58.90,153.64,56.94,151.41L11.83,57.50C10.67,54.10,9.51,50.69,10.47,46.50C11.44,42.30,14.52,37.32,19.20,34.95C23.89,32.57,30.16,32.79,34.34,34.37C38.52,35.94,40.59,38.87,42.66,41.79L87.82,135.50z"
+        android:strokeColor="#ff000000"
+        android:strokeWidth="12.0"
+        android:strokeLineCap="square"
+        android:strokeLineJoin="miter"
+        android:fillType="nonZero" />
+    <path
+        android:fillColor="#00ffffff"
+        android:pathData="M148.85,135.50C149.87,138.44,150.90,141.37,149.73,145.54C148.56,149.70,145.20,155.09,140.52,157.39C135.84,159.68,129.84,158.89,125.86,157.38C121.89,155.87,119.93,153.64,117.97,151.41L72.86,57.50C71.70,54.10,70.54,50.69,71.51,46.50C72.47,42.30,75.56,37.32,80.24,34.95C84.92,32.57,91.20,32.79,95.37,34.37C99.55,35.94,101.62,38.87,103.69,41.79L148.85,135.50z"
+        android:strokeColor="#ff000000"
+        android:strokeWidth="12.0"
+        android:strokeLineCap="square"
+        android:strokeLineJoin="miter"
+        android:fillType="nonZero" />
+    <path
+        android:fillColor="#00ffffff"
+        android:pathData="M181.07,81.12C181.78,83.65,182.49,86.19,181.07,89.76C179.65,93.33,176.11,97.94,171.68,99.88C167.26,101.81,161.95,101.07,158.63,99.88C155.32,98.68,153.99,97.03,152.67,95.37L132.13,52.48C131.58,50.19,131.04,47.89,132.13,44.66C133.22,41.43,135.96,37.26,139.98,35.22C144.01,33.18,149.34,33.27,152.96,34.15C156.59,35.02,158.53,36.69,160.46,38.35L181.07,81.12z"
+        android:strokeColor="#ff000000"
+        android:strokeWidth="12.0"
+        android:strokeLineCap="square"
+        android:strokeLineJoin="miter"
+        android:fillType="nonZero" />
+</vector>

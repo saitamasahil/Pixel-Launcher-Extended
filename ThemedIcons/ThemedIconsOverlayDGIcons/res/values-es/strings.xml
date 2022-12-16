@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="about">Acerca de</string>
+    <string name="acknowledgements">Acknowledgements</string>
+    <string name="androidx_startup">androidx.startup</string>
+    <string name="app_name">DGicons</string>
+    <string name="close_drawer">Close navigation menu</string>
+    <string name="close_sheet">Close sheet</string>
+    <string name="collapsed">Collapsed</string>
+    <string name="contributors">Colaboradores</string>
+    <string name="core_contributors">Colaboradores Principales</string>
+    <string name="default_error_message">Invalid input</string>
+    <string name="default_popup_window_title">Pop-Up Window</string>
+    <string name="dialog">Dialog</string>
+    <string name="dropdown_menu">Dropdown menu</string>
+    <string name="expanded">Expanded</string>
+    <string name="in_progress">In progress</string>
+    <string name="indeterminate">Partially checked</string>
+    <string name="navigation_menu">Navigation menu</string>
+    <string name="not_selected">Not selected</string>
+    <string name="off">Off</string>
+    <string name="on">On</string>
+    <string name="range_end">Range end</string>
+    <string name="range_start">Range start</string>
+    <string name="search_bar_hint">Search %d Icons</string>
+    <string name="see_all_contributors">Ver todos los colaboradores</string>
+    <string name="selected">Selected</string>
+    <string name="special_thanks">Acerca de DGicons</string>
+    <string name="special_thanks_icon">Actualizaciones y mas en este canal.</string>
+    <string name="special_thanks_name">Creador de este Fork.</string>
+    <string name="status_bar_notification_info_overflow">999+</string>
+    <string name="tab">Tab</string>
+    <string name="template_percent">%1$d percent.</string>
+    <string name="version_x">Version %s</string>
+</resources>

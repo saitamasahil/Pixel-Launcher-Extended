@@ -1,0 +1,1811 @@
+Signature-Version: 1.0
+Created-By: Apktool M
+SHA1-Digest-Manifest: im+0UujLDrrAAVwAD5uNa9EbT5Y=
+X-Android-APK-Signed: 2
+
+Name: AndroidManifest.xml
+SHA1-Digest: yibq9fjYqUNrfA9CNpKq9ekx9Vw=
+
+Name: res/anim/fragment_fast_out_extra_slow_in.xml
+SHA1-Digest: 3PEmHY775+r/tusqCkKVHD5fdqY=
+
+Name: res/animator/fragment_close_enter.xml
+SHA1-Digest: RlD8vqhzbzTIHJPV4L629RG1w80=
+
+Name: res/animator/fragment_close_exit.xml
+SHA1-Digest: GKIeOfV7azbQAW1oj008zItJlpY=
+
+Name: res/animator/fragment_fade_enter.xml
+SHA1-Digest: 5vmObB+PWnMqcKgowtwEQTJ2Z9c=
+
+Name: res/animator/fragment_fade_exit.xml
+SHA1-Digest: +AEfHOZxQvS0u58w2VWgzQRtw4s=
+
+Name: res/animator/fragment_open_enter.xml
+SHA1-Digest: Pr39uct+JYWe/hZxbYiM9QhpSk0=
+
+Name: res/animator/fragment_open_exit.xml
+SHA1-Digest: 89gsj6TU0dd+OROdlemRa9nqa1s=
+
+Name: res/color/vector_tint_color.xml
+SHA1-Digest: P4wRbKHfut6r7CzqnUfjqa4Y7Ws=
+
+Name: res/color/vector_tint_theme_color.xml
+SHA1-Digest: GkXKrs+4nMUai3EnrC892rfbRdo=
+
+Name: res/drawable-hdpi/notification_bg_low_normal.9.png
+SHA1-Digest: 9e+GoCiKMLL+nuiJDhNaQ2617ik=
+
+Name: res/drawable-hdpi/notification_bg_low_pressed.9.png
+SHA1-Digest: x1mGBRikEqghSxJeJufKfYT+wWo=
+
+Name: res/drawable-hdpi/notification_bg_normal.9.png
+SHA1-Digest: +O1e4ipcZ1Xjcoxd7VYu0jUGmbc=
+
+Name: res/drawable-hdpi/notification_bg_normal_pressed.9.png
+SHA1-Digest: 0ay6itdFsfv7R/7srPvufRFHGYk=
+
+Name: res/drawable-hdpi/notify_panel_notification_icon_bg.png
+SHA1-Digest: +Cuu3pCfG2H409SXxhqfzzY9o+Y=
+
+Name: res/drawable-mdpi/notification_bg_low_normal.9.png
+SHA1-Digest: SSQCn1YyUn7+fgA2loPMzBeNjHk=
+
+Name: res/drawable-mdpi/notification_bg_low_pressed.9.png
+SHA1-Digest: Xezlrz7EX3ScnS5DvdR2LiBFAWU=
+
+Name: res/drawable-mdpi/notification_bg_normal.9.png
+SHA1-Digest: NKta2J0AzPO3v2Ht8+lzZ+QL0mo=
+
+Name: res/drawable-mdpi/notification_bg_normal_pressed.9.png
+SHA1-Digest: DJgVxUVvKXtz+huXmV8LNT7MBRk=
+
+Name: res/drawable-mdpi/notify_panel_notification_icon_bg.png
+SHA1-Digest: Nv9DOasml9H0+3C2ihqcT1hRYlg=
+
+Name: res/drawable-xhdpi/notification_bg_low_normal.9.png
+SHA1-Digest: Wq32UxSATpzcyZFwSmCbX5kE55w=
+
+Name: res/drawable-xhdpi/notification_bg_low_pressed.9.png
+SHA1-Digest: HtVFxVZKQ3TxSrk7XLELWV6Mox4=
+
+Name: res/drawable-xhdpi/notification_bg_normal.9.png
+SHA1-Digest: fpjJNvbobD5cvWx5cchvSr4nHMs=
+
+Name: res/drawable-xhdpi/notification_bg_normal_pressed.9.png
+SHA1-Digest: FxHyiyiMoMaUs+J1wVzc3Dzv4vE=
+
+Name: res/drawable-xhdpi/notify_panel_notification_icon_bg.png
+SHA1-Digest: LgWW4AbtHEapOZk21ssGL13Gnk8=
+
+Name: res/drawable/$ic_launcher_foreground__0.xml
+SHA1-Digest: 5tMP4zys+ZtMkn7zZBWkLNfBQUc=
+
+Name: res/drawable/$kfc__0.xml
+SHA1-Digest: reli0i7pYBzG1u+TTDwRNmNP89Q=
+
+Name: res/drawable/$kfc__1.xml
+SHA1-Digest: AI4HTTmqBzSgnuc8mTs1bK9UnVk=
+
+Name: res/drawable/$kfc__2.xml
+SHA1-Digest: x+G1RYt2vCLzON2Tc1VlP6oGmiQ=
+
+Name: res/drawable/abc_vector_test.xml
+SHA1-Digest: kW2EeuVSimoQZJfTV8SWvhyZ918=
+
+Name: res/drawable/abstruct.xml
+SHA1-Digest: Q2HrW9wxPsMFd5jEO+bRTLn62RU=
+
+Name: res/drawable/activitylauncher.xml
+SHA1-Digest: Kv+6/znie42+KfzQSj9GAxyYPyc=
+
+Name: res/drawable/adaway.xml
+SHA1-Digest: OUKfC9IGAgUITeNvXYY16aFRK6Q=
+
+Name: res/drawable/adm.xml
+SHA1-Digest: XmRJtdnCghnhi76E61fc8jBgDzc=
+
+Name: res/drawable/admin_hands.xml
+SHA1-Digest: HGBrwVxql1OxLWN987/AHiZ3iVc=
+
+Name: res/drawable/adobepdf.xml
+SHA1-Digest: /cWsMNvi4rM6iYHH/uvQCGkJRLE=
+
+Name: res/drawable/adobescan.xml
+SHA1-Digest: rHLB2nEbMxYy1ga6jIeAdZvNkTM=
+
+Name: res/drawable/aegis_authenticator.xml
+SHA1-Digest: orF5FAoO9jIoCjQpZ75RwYuLxpY=
+
+Name: res/drawable/aimp.xml
+SHA1-Digest: psW9i2trUdiMzIw9URSFS5e3/lY=
+
+Name: res/drawable/airasia.xml
+SHA1-Digest: 4Ja5+CWnMOnzPGHYFsy7anvuJ04=
+
+Name: res/drawable/aldiko.xml
+SHA1-Digest: bnP0rac3cbb0KwW5O/DVIz44NjI=
+
+Name: res/drawable/aliexpress.xml
+SHA1-Digest: rIqmqWzSN88aSh6OK6uhUO1h+Dg=
+
+Name: res/drawable/amaze.xml
+SHA1-Digest: 8Db+5Pbhk5cF87g5Xjvg3N9Kqdk=
+
+Name: res/drawable/amazon_alexa.xml
+SHA1-Digest: CnvQZXoKOJB/Au6zu+CrpZK8VEk=
+
+Name: res/drawable/amazon_music.xml
+SHA1-Digest: lakRpR1qDQ30+pGKED6R5GjjC3c=
+
+Name: res/drawable/amazon_prime_video.xml
+SHA1-Digest: IxYA/Z4XB6eZ/bEThtg5vIN6gac=
+
+Name: res/drawable/amazon_shopping.xml
+SHA1-Digest: lmP4XEP9GWjnmOzoqsR7QKGWIek=
+
+Name: res/drawable/android_auto.xml
+SHA1-Digest: O1v3zwnEcKkQMmC842xVLY88feE=
+
+Name: res/drawable/aniyomi.xml
+SHA1-Digest: YX1jAaAtFcEc0NFECUcX3dEManQ=
+
+Name: res/drawable/another_notes.xml
+SHA1-Digest: V9W3U7L2ekF1RymyDulARyIJDCo=
+
+Name: res/drawable/antennapod.xml
+SHA1-Digest: 6nooQgCxYeVWX+jqE78kXvvRNnY=
+
+Name: res/drawable/anydesk.xml
+SHA1-Digest: zJDWMVOMJo6kXq7oZdpJ0JPjGPY=
+
+Name: res/drawable/aosp_cam.xml
+SHA1-Digest: ENjRmfXQ0giTseBIby3y9Gvk0L4=
+
+Name: res/drawable/apex_legends.xml
+SHA1-Digest: l0PWm42lkZOkMizBVN3c9PRhKq4=
+
+Name: res/drawable/apkextractor.xml
+SHA1-Digest: D1e+C0LS2J/mDY7BRq4sx0tE1JQ=
+
+Name: res/drawable/apkmirror_installer.xml
+SHA1-Digest: C7aywwWEjeIHmnK75fOyCOYzn/o=
+
+Name: res/drawable/app_lounge.xml
+SHA1-Digest: e27gpZARhGxFeIDs4zHze0eW+Xw=
+
+Name: res/drawable/appgallery.xml
+SHA1-Digest: yojvI/93JL6JgfYnkYShaFV5Wi0=
+
+Name: res/drawable/apple_music.xml
+SHA1-Digest: pQxAlrAUzpY4yacWVG7jvkgf4wk=
+
+Name: res/drawable/appmanager.xml
+SHA1-Digest: xqlzYvwM96alUdi6wkcCSqvTbjQ=
+
+Name: res/drawable/artflow.xml
+SHA1-Digest: XUex86QHC7xLqnW0dlEwrZtSqKI=
+
+Name: res/drawable/asuscalc.xml
+SHA1-Digest: gOGTFdnPGOm8Fg4ZQF1Zsqwbj2k=
+
+Name: res/drawable/asuscamera.xml
+SHA1-Digest: //O75k6ls7XpKEqgICO4ivLELGo=
+
+Name: res/drawable/asusclock.xml
+SHA1-Digest: cE3BmtBqvuaO3ssR7AlZ7G6iX2g=
+
+Name: res/drawable/asuscontacts.xml
+SHA1-Digest: 2XYNSbsWc0+L1ekCT7Hs4bnlWew=
+
+Name: res/drawable/asusfiles.xml
+SHA1-Digest: lgZOdbo2l9GLfF1nHdG1ORN9yjM=
+
+Name: res/drawable/asusrecorder.xml
+SHA1-Digest: J7pVZdLj4zArIUnQFJEZP6bBtCI=
+
+Name: res/drawable/audiobooklite.xml
+SHA1-Digest: J/xIwp539tWrX7t15YLam35gr9g=
+
+Name: res/drawable/aurora_store.xml
+SHA1-Digest: lN+2JBQ4sc2SH8GP6YNeXvvpbvw=
+
+Name: res/drawable/authy.xml
+SHA1-Digest: RAdtvHATcH7MOmCLIczK9aJ4sYU=
+
+Name: res/drawable/auxio.xml
+SHA1-Digest: sH9wPJc/Fryra3seceAB7VcJze4=
+
+Name: res/drawable/aves_gallery.xml
+SHA1-Digest: XP73Y/zhEaTZVaf7X/lgoCB9K+A=
+
+Name: res/drawable/avito.xml
+SHA1-Digest: hA7XYOVQ1feBggcNhL/gxMowX8U=
+
+Name: res/drawable/bankru.xml
+SHA1-Digest: LLh5XSyGMh8x8eDHu1lCQx4+5qw=
+
+Name: res/drawable/bereal.xml
+SHA1-Digest: OCUeM/Hhhn6Oytg0W3UHzUSAjKo=
+
+Name: res/drawable/bgram.xml
+SHA1-Digest: Fy2vJQUh0e/NMnNMsDWH1SLBCts=
+
+Name: res/drawable/binance.xml
+SHA1-Digest: Be9G9Q3et6xNCcqy6dWN/TFYJvU=
+
+Name: res/drawable/bitwarden.xml
+SHA1-Digest: GcRuISyBZ0PlqoiFa9symV2piSs=
+
+Name: res/drawable/blokada.xml
+SHA1-Digest: SoY+MWK0yxd7xMBgWw9gwtfDRHo=
+
+Name: res/drawable/boom_and_megaboom.xml
+SHA1-Digest: GstFDf5XLEqAD8UQt3ztOIxgpbg=
+
+Name: res/drawable/boost.xml
+SHA1-Digest: y8A/49diLwfLb02HLXZFcge4SX8=
+
+Name: res/drawable/boost_for_reddit.xml
+SHA1-Digest: rpKa2GI1FMX5yI+/EAh+//ysGOY=
+
+Name: res/drawable/brave_browser.xml
+SHA1-Digest: 9qPleY76qDQHPcgtaI5yLfkHOq4=
+
+Name: res/drawable/briar.xml
+SHA1-Digest: yfLt7VAs4QOph08d3iqWty2MEvk=
+
+Name: res/drawable/bromite.xml
+SHA1-Digest: idj6vJuCPRAZf0w46JmhRtDqsOY=
+
+Name: res/drawable/browser.xml
+SHA1-Digest: v0e2y2FA8TPgbWEjmu11gORfjrU=
+
+Name: res/drawable/bundle.xml
+SHA1-Digest: cCnXqxDz6LaalOhkboUd0h4/FQ0=
+
+Name: res/drawable/burgerking.xml
+SHA1-Digest: 4336HxAPfIX+qri54QmIfSsJDqQ=
+
+Name: res/drawable/calculator.xml
+SHA1-Digest: TJfq39/pDqLl1jojs4Xf3e9MS2M=
+
+Name: res/drawable/calendar.xml
+SHA1-Digest: u2Im3fWbSnoBY5jYQO4r0gbD6Lk=
+
+Name: res/drawable/call_of_duty.xml
+SHA1-Digest: PYwvSYDNS4VMGR804iQUAO4yvEk=
+
+Name: res/drawable/camera.xml
+SHA1-Digest: xaI4IQNuUie/F2qFutaBCuhhJfE=
+
+Name: res/drawable/camera_moto.xml
+SHA1-Digest: BkIexb28tMndLpggjuWmb8Za6FM=
+
+Name: res/drawable/camera_moto2.xml
+SHA1-Digest: Ha+ibGVqYfZieuXoUF6vYsORX5g=
+
+Name: res/drawable/camera_moto3.xml
+SHA1-Digest: H4Ii+CuXr0W1NzAjz62EC6/bYi0=
+
+Name: res/drawable/camera_nothing.xml
+SHA1-Digest: yp5CPxC13owiAdKSKIg4OzzlBjQ=
+
+Name: res/drawable/cameraxinfo.xml
+SHA1-Digest: iJR2LpPrDfjW50Bcq8JPbY355DY=
+
+Name: res/drawable/canva.xml
+SHA1-Digest: CUdZLH5y2q7eLwYBINEojK1RMaY=
+
+Name: res/drawable/catogram.xml
+SHA1-Digest: EB/rh2woIcDbE4iwEg0qXn3mbqA=
+
+Name: res/drawable/catogram_x.xml
+SHA1-Digest: n5qLFKrU/2MDjstctR1CGNLIPEg=
+
+Name: res/drawable/chrome_remote.xml
+SHA1-Digest: bbBaNQ/P7iCk2YHdAOVVZnt1NeA=
+
+Name: res/drawable/chromium.xml
+SHA1-Digest: bwPPCoLoZDC/Wohmwne/WHoP6ps=
+
+Name: res/drawable/citymapper.xml
+SHA1-Digest: a1BBcCE/UAwc7OASMEV2cbYK85I=
+
+Name: res/drawable/clock.xml
+SHA1-Digest: otgJoiBbQGXIPOV5P7ORP+M1wp0=
+
+Name: res/drawable/cloudstream.xml
+SHA1-Digest: YREPc2TERKqEYZ0/tyejXa9Vzpc=
+
+Name: res/drawable/codecademy_go.xml
+SHA1-Digest: iX3LtNdoHHR6pGGI8AsvK0RfPLI=
+
+Name: res/drawable/coffee.xml
+SHA1-Digest: HmpSiN8f1XQOtDfYM6OS8UZuG3U=
+
+Name: res/drawable/coinbase.xml
+SHA1-Digest: VvWHf9mhthMCeLTZeaWp318qk3o=
+
+Name: res/drawable/coins_ph.xml
+SHA1-Digest: z3RxCgIpVvTC5iSjGKKkfXwVc5c=
+
+Name: res/drawable/coinvero.xml
+SHA1-Digest: yEqqSKbvQGq+Xx/0C5nWoLKxvlk=
+
+Name: res/drawable/collabora_office.xml
+SHA1-Digest: wnfnzaAcWdK7eHxNtLDMM/arWXw=
+
+Name: res/drawable/compass.xml
+SHA1-Digest: c4syTTdZa5OTirB2gdh3412pXRQ=
+
+Name: res/drawable/contacts.xml
+SHA1-Digest: nBs7eTf9P0HJdi0vdva7OYpUEe0=
+
+Name: res/drawable/corona_warn.xml
+SHA1-Digest: j8XCu3KyZOYnUQJPDO4IAn3rAho=
+
+Name: res/drawable/coronacheck.xml
+SHA1-Digest: Vk/KX8wM3vKHJZ2jZbuQn7/qMik=
+
+Name: res/drawable/coronacheck_scanner.xml
+SHA1-Digest: OkMajTcK66LeyJTVk23n2Els3JM=
+
+Name: res/drawable/covpass.xml
+SHA1-Digest: IIulrYqYMIlh5PC47KtL7SDQKWc=
+
+Name: res/drawable/cpu_z.xml
+SHA1-Digest: dbpdrFl32/NQFYxZveUUCsAVQ4M=
+
+Name: res/drawable/crunchyroll.xml
+SHA1-Digest: dFIPZn2sVvVWzoVqfc9VG5DfluA=
+
+Name: res/drawable/curve.xml
+SHA1-Digest: 0bS0fPlVn/VId0/smHBstV35b+E=
+
+Name: res/drawable/darkpapers.xml
+SHA1-Digest: dYW/wQkyO8bWzDKLusDUD8t8eD0=
+
+Name: res/drawable/darq.xml
+SHA1-Digest: cHbXINiDOZ8rRamBi89A4iee4CI=
+
+Name: res/drawable/dashlane.xml
+SHA1-Digest: mtKFdx+fX+gTTDemyfgSQgCsHE8=
+
+Name: res/drawable/data_monitor.xml
+SHA1-Digest: oxu/ZOxEzFGZPa+xLQnvkH+3zYU=
+
+Name: res/drawable/deepl.xml
+SHA1-Digest: mSWb+pn6AfHl/Qg8p4YZIPGepaQ=
+
+Name: res/drawable/deezer.xml
+SHA1-Digest: f7lWABsd3p8N9Vnr2m+/+uWbvHs=
+
+Name: res/drawable/delta_icons.xml
+SHA1-Digest: BvVm5IPQ5UvWXDndJLPqvhppzUo=
+
+Name: res/drawable/deviantart.xml
+SHA1-Digest: KxyJLnL4JLHz/d+dNUedlxFX7PM=
+
+Name: res/drawable/deviceinfohw.xml
+SHA1-Digest: OTjNmz7c/ZtH/yDjvIbfWrhkXAE=
+
+Name: res/drawable/dialer.xml
+SHA1-Digest: wcJnD3Ff6qaqu2KsiaKXrTzWSBg=
+
+Name: res/drawable/digital_wellbeing.xml
+SHA1-Digest: tnG5UF+kbBOVIWme7G1uuOnk+Es=
+
+Name: res/drawable/discord.xml
+SHA1-Digest: s3kSI+Mjni5tu70LNBFlYvE0au0=
+
+Name: res/drawable/disneyplus.xml
+SHA1-Digest: fp/dpVJ985ywXlI8Se0s9ObFTbw=
+
+Name: res/drawable/dodocodes.xml
+SHA1-Digest: C+jawYDaO0R9e7q26ydIhsUofzA=
+
+Name: res/drawable/dominos.xml
+SHA1-Digest: vftKwHB7N66MVaGXLxL8o6w9zAw=
+
+Name: res/drawable/doodle.xml
+SHA1-Digest: A80RPT+PAaIfCmCnTsBPwvNdnCI=
+
+Name: res/drawable/drivedroid.xml
+SHA1-Digest: /UP91MKRJz9u4kqrEuL4IUdhybw=
+
+Name: res/drawable/drm_info.xml
+SHA1-Digest: XHFu8N8qIk6kaCJEa88uT6rMvzE=
+
+Name: res/drawable/droid_ify.xml
+SHA1-Digest: J1ZW2Iz3OsokAhkxhRLtHeMZVcU=
+
+Name: res/drawable/duckduckgo.xml
+SHA1-Digest: B2KXh5Bt5iY7iJ4DfVJVcm7VJAY=
+
+Name: res/drawable/duolingo.xml
+SHA1-Digest: P8IoELWb35GzCil3PVB3Dzhw17s=
+
+Name: res/drawable/ebay.xml
+SHA1-Digest: /L01YmRPsve6vrrqmgYD5NP5KYk=
+
+Name: res/drawable/ebay_kleinanzeigen.xml
+SHA1-Digest: 90bcci2wE9S+Qx4lgGyRue8C+xE=
+
+Name: res/drawable/element.xml
+SHA1-Digest: 46EwksfGaTpHic1T7RYbiRcsrSY=
+
+Name: res/drawable/exteragram.xml
+SHA1-Digest: xFpGIj88VDeN3tJaKRulETRvn9A=
+
+Name: res/drawable/facebook.xml
+SHA1-Digest: 0sSqZ4r57gkKA1CePZsII1oxa9k=
+
+Name: res/drawable/fairemail.xml
+SHA1-Digest: 3c/Ri4AQwmisoz+DG9wiV8XiUTw=
+
+Name: res/drawable/fdroid.xml
+SHA1-Digest: 1RHIrpTHWOr+j8t1ysYtqzf/+Ks=
+
+Name: res/drawable/feeder.xml
+SHA1-Digest: P9IcG/7gH3g0pzQ1+7lpaeASwB8=
+
+Name: res/drawable/fenix.xml
+SHA1-Digest: 1SVIQV5rZ4PDq7I3yEStY9zlRjg=
+
+Name: res/drawable/fennec.xml
+SHA1-Digest: 0VNHNrTapg8EcCR7gxVh+APrQKo=
+
+Name: res/drawable/ffupdater.xml
+SHA1-Digest: pAGZRFmBWC5wgA+F95O9l911sfY=
+
+Name: res/drawable/fi_money.xml
+SHA1-Digest: 590Wjg7SG8Uw0gIO+0yT4NlV53A=
+
+Name: res/drawable/files.xml
+SHA1-Digest: Y/YpNx5puMnJj95MPf8YAb9KNZ0=
+
+Name: res/drawable/files_by_google.xml
+SHA1-Digest: SYMf4D2uq8RHfBtujnuDJdh53NI=
+
+Name: res/drawable/filesplus.xml
+SHA1-Digest: GLcaCVdPbN0eC9qpf76MgIaCXdc=
+
+Name: res/drawable/find_my_device.xml
+SHA1-Digest: Egh0hTcuFgjz74pjepIlRHTqAiU=
+
+Name: res/drawable/firefox.xml
+SHA1-Digest: DGalP6vqlj/0WMTQ/GcHBSJxPjw=
+
+Name: res/drawable/firefox_beta.xml
+SHA1-Digest: pP2n/06lJBjaOGq7bbYm5ajDjsg=
+
+Name: res/drawable/fl_studio_mobile.xml
+SHA1-Digest: N0Ka/S/7M4JFAZFIXKFLy80NZqw=
+
+Name: res/drawable/flamingo.xml
+SHA1-Digest: scScE8VM0+b7FGs0JBePi9daZ2w=
+
+Name: res/drawable/flex.xml
+SHA1-Digest: 6KatGvoFkyjN43OxAi1fOaEjCY8=
+
+Name: res/drawable/float_tube.xml
+SHA1-Digest: /u+JkATAPuSIOQ1jgoXB0NJ3/VY=
+
+Name: res/drawable/floccus.xml
+SHA1-Digest: JFrgbnTuRCWg1MGwoFANHKk8FvU=
+
+Name: res/drawable/florisboard.xml
+SHA1-Digest: cnb3OY69C+eVRrxO3b7h3I6eT8I=
+
+Name: res/drawable/fm_radio.xml
+SHA1-Digest: cMAkPdcLeuzUywr9SJtO45712pI=
+
+Name: res/drawable/focus_todo.xml
+SHA1-Digest: S1RTwxWsKgr46BQvXUxAptZDRSQ=
+
+Name: res/drawable/foxmmm.xml
+SHA1-Digest: yj+WDCAjVicTt+HZu61K0h6ZQdc=
+
+Name: res/drawable/francokernel.xml
+SHA1-Digest: m5L6wFIUJ3OAFxMTwfRk2uH80mc=
+
+Name: res/drawable/galaxy_store.xml
+SHA1-Digest: W1FeOiiMPrsS7JS/4BaBNTloONg=
+
+Name: res/drawable/gallery.xml
+SHA1-Digest: 05O4aGDfv05Kp+rchyBwROFB3+0=
+
+Name: res/drawable/gallery_go.xml
+SHA1-Digest: WFf/2SFNBYOjc868yfY4ZARUoE0=
+
+Name: res/drawable/gamespace.xml
+SHA1-Digest: qTR+izChghtgt8UhZQDED0RpD2k=
+
+Name: res/drawable/gboard.xml
+SHA1-Digest: evI/lRaEWH8Ghq4VtkPscQ2KBUc=
+
+Name: res/drawable/gcam.xml
+SHA1-Digest: rsyti51CiFpQ/M+PKudL/u9q7NI=
+
+Name: res/drawable/gcash.xml
+SHA1-Digest: CJIwhEy8hIL9IIPfugqBWBMddq8=
+
+Name: res/drawable/genius.xml
+SHA1-Digest: WSwwtzdRkpz3LawFAhCA4WtzT0I=
+
+Name: res/drawable/geo_gebra.xml
+SHA1-Digest: IM/tTlWqw4DaFe5H4YVFvgtDr7k=
+
+Name: res/drawable/geometricweather.xml
+SHA1-Digest: 971mk6PtWWsqFmrktIWKpZQZnpI=
+
+Name: res/drawable/github.xml
+SHA1-Digest: 0UEpFy6PrFRDjenc6+awjl32f0g=
+
+Name: res/drawable/glider.xml
+SHA1-Digest: goJID9OtUKmE+uv1LQTNZb9nKRo=
+
+Name: res/drawable/globeone.xml
+SHA1-Digest: GToHEyo8wlmsMsO5mlemGUX0jLg=
+
+Name: res/drawable/gmail.xml
+SHA1-Digest: ha3016cUUc7LVN7rLDXIlwXn1dw=
+
+Name: res/drawable/google.xml
+SHA1-Digest: tcBobG2itbyhdN5ad+5JG60XLgs=
+
+Name: res/drawable/google_assistant.xml
+SHA1-Digest: l2li3awSFl5es9Fqj8Suh4QeoZM=
+
+Name: res/drawable/google_authenticator.xml
+SHA1-Digest: +WMCctaOpIODDRD2s/dsFJq/EQQ=
+
+Name: res/drawable/google_chat.xml
+SHA1-Digest: ZD+8WqqSCtKSEGdtyEC1B4JXsUw=
+
+Name: res/drawable/google_chrome.xml
+SHA1-Digest: j0UwfVitSwXzaA8zdy/X2OcdKso=
+
+Name: res/drawable/google_chrome_beta.xml
+SHA1-Digest: G9WxCyBXcYZABLPYeA0lAyQX1J4=
+
+Name: res/drawable/google_chrome_canary.xml
+SHA1-Digest: /3NAtK2f239KiA209qc21UduIYs=
+
+Name: res/drawable/google_chrome_dev.xml
+SHA1-Digest: 2z7s8TwzqBR+3dgOT4sWcTnxTTk=
+
+Name: res/drawable/google_classroom.xml
+SHA1-Digest: 5Jp8QJMfPSdm+XMd0slWXJrdYD4=
+
+Name: res/drawable/google_contacts.xml
+SHA1-Digest: PHxL3+rZfl9cbhRuhjy38fFDEgs=
+
+Name: res/drawable/google_docs.xml
+SHA1-Digest: 290gHv6AKUewB9so3cKOsq9CuvY=
+
+Name: res/drawable/google_drive.xml
+SHA1-Digest: veTxXJ03xhvVOEUoVJqmqY50wKQ=
+
+Name: res/drawable/google_fi.xml
+SHA1-Digest: wHcxBPJNF1DProtIqLKnKaacOK8=
+
+Name: res/drawable/google_fit.xml
+SHA1-Digest: hTXHDDTlmti/7+yBHLi36+hrojI=
+
+Name: res/drawable/google_home.xml
+SHA1-Digest: qHbM8Afw48WVL+5kNAmWibT/jo4=
+
+Name: res/drawable/google_keep.xml
+SHA1-Digest: aMfIavt0X27vBB1xEobpqmflAj4=
+
+Name: res/drawable/google_lens.xml
+SHA1-Digest: Pa5TTVQPofC7/51eGjuRxhJgqtI=
+
+Name: res/drawable/google_meet.xml
+SHA1-Digest: pgKtPvFXCq6K6QBNqqo/bq9Neyw=
+
+Name: res/drawable/google_news.xml
+SHA1-Digest: ggSCbOgq0Rw9wL2gobngJas7yKk=
+
+Name: res/drawable/google_one.xml
+SHA1-Digest: qEq9ku8JyXWEeRDedY8vVARB4Jk=
+
+Name: res/drawable/google_pay.xml
+SHA1-Digest: xNnRPTrq6qSmsVvNdHrlBW6c0kU=
+
+Name: res/drawable/google_photos.xml
+SHA1-Digest: AuuqkV+jqkybg9kZCH5xHIre7H0=
+
+Name: res/drawable/google_play_books.xml
+SHA1-Digest: CHQc6z8fwCnfFFprhVnQuSLb3SI=
+
+Name: res/drawable/google_play_games.xml
+SHA1-Digest: 0c+7ogAa87dfJOGPhE4xrNdaENg=
+
+Name: res/drawable/google_play_store.xml
+SHA1-Digest: dinlLjV+geRXh3mPBv1s/sYKRO4=
+
+Name: res/drawable/google_podcasts.xml
+SHA1-Digest: RDpWSahlhNvadyqidXzE5XHopl8=
+
+Name: res/drawable/google_remote_tv.xml
+SHA1-Digest: wV6G4nELXMxtL5sF0YiqJN7I5rk=
+
+Name: res/drawable/google_sheets.xml
+SHA1-Digest: ZktG59T1RLzBYtFRUrmO1Fhk9vs=
+
+Name: res/drawable/google_slides.xml
+SHA1-Digest: Ofsnq6mAEPGsHaat0VJJQwdyzLw=
+
+Name: res/drawable/google_tasks.xml
+SHA1-Digest: W9//CxnKlf3Nx4pCN5PJhTiNBLU=
+
+Name: res/drawable/google_translate.xml
+SHA1-Digest: SU3U2wgadXLGcGqYGIki7FKth4g=
+
+Name: res/drawable/google_tv.xml
+SHA1-Digest: 6U3u1sGUcFylJw61ILQr8732AGM=
+
+Name: res/drawable/google_voice.xml
+SHA1-Digest: X5ChIbme6jzW4Z+knn8tRJT4dTg=
+
+Name: res/drawable/govee_home.xml
+SHA1-Digest: HfczxSZl61OeLJRbTLI9v8jjP2s=
+
+Name: res/drawable/grab.xml
+SHA1-Digest: gSYkppyV0UNShCKU5DQ79oPdIE8=
+
+Name: res/drawable/greenify.xml
+SHA1-Digest: eeS8rf+5LBCG/mxVCgkcKU2UUNc=
+
+Name: res/drawable/grewards.xml
+SHA1-Digest: 38TEfn7F41pbTOxUVLwHROzBrz4=
+
+Name: res/drawable/hail.xml
+SHA1-Digest: Pz9rWkH8qYUECT56Fl+erK8BSXs=
+
+Name: res/drawable/home_assistant.xml
+SHA1-Digest: ugE5R84HQAXLsuIS1IKdqbnx//I=
+
+Name: res/drawable/hotstar.xml
+SHA1-Digest: IRikPugVfpSeaoEzxRHDL6sNNFQ=
+
+Name: res/drawable/ibispaint_x.xml
+SHA1-Digest: Hmd7hsVFl84VLv543p+DuTSSbyU=
+
+Name: res/drawable/ic_launcher_background.xml
+SHA1-Digest: IyG78j6UFvVpvTuaI38hKmO8Jzw=
+
+Name: res/drawable/ic_launcher_foreground.xml
+SHA1-Digest: ej0n3WsP0G0cbLBJLgf7qV2Ja48=
+
+Name: res/drawable/idm.xml
+SHA1-Digest: JGaSJPbWmlF3b4biuc2KysW+ut8=
+
+Name: res/drawable/idm_plus.xml
+SHA1-Digest: YjQgD6l+USYFAF89SpMGk2Hl5o4=
+
+Name: res/drawable/imdb.xml
+SHA1-Digest: 4gsGx6NDDIT/tpKQ2U8NKN5QIas=
+
+Name: res/drawable/ime.xml
+SHA1-Digest: SdwynFVcFHMBaS9B/pRE1G3gB8A=
+
+Name: res/drawable/infinity_for_reddit.xml
+SHA1-Digest: XSh3PRPyHY70qW8hvX0h2bMw9Rc=
+
+Name: res/drawable/infinity_loop.xml
+SHA1-Digest: 2OWFXpABFMUxcvSoGYAkTylfv4s=
+
+Name: res/drawable/inpocasi.xml
+SHA1-Digest: TGC7sec4NL1PFRw4b5NlVsp7GMg=
+
+Name: res/drawable/inpost.xml
+SHA1-Digest: XiC9TmaZFdl2/sJXek0ADjtlpeM=
+
+Name: res/drawable/instagram.xml
+SHA1-Digest: oSB6VO+rPUo3WITf77q7xaqpUiU=
+
+Name: res/drawable/instapaper.xml
+SHA1-Digest: 1tUUMXutELfIhBXfrB5G7Lq5EVw=
+
+Name: res/drawable/insular.xml
+SHA1-Digest: 58bpN2nYI/mq+ioqpBPiVqg6hBY=
+
+Name: res/drawable/inware.xml
+SHA1-Digest: bRRTWptd0JL6lv//Vaxys9InBVo=
+
+Name: res/drawable/irctc.xml
+SHA1-Digest: i+vUi7t6pkDNGSSWP5OnEvgNeRk=
+
+Name: res/drawable/island.xml
+SHA1-Digest: W0ZxMzOSDafENWKxM2YjbtOXQoc=
+
+Name: res/drawable/ivoox.xml
+SHA1-Digest: AyOxjzRcw0I0AlXheR+kfx8vSo0=
+
+Name: res/drawable/jellyfin.xml
+SHA1-Digest: SF5DJHXjiJXD5cmtciY7I2H7zvg=
+
+Name: res/drawable/joplin.xml
+SHA1-Digest: 1+eeqlyTpoyYnpEiz3Zxt/hjeN4=
+
+Name: res/drawable/juicessh.xml
+SHA1-Digest: xo7g/dgrjkQPYaXNhhxR3eJYT40=
+
+Name: res/drawable/k9.xml
+SHA1-Digest: Xpm/jfd7prveSEmRkVIOBlQDl1c=
+
+Name: res/drawable/kakaotalk.xml
+SHA1-Digest: zcxpQtwFamodCsC6fcep3K41o3s=
+
+Name: res/drawable/karwei.xml
+SHA1-Digest: UOnEARpBCPdx6N5r24KA3So4jrg=
+
+Name: res/drawable/kde.xml
+SHA1-Digest: VoHQXFNoFtDdMYUVi/1ViDsRts0=
+
+Name: res/drawable/kdeconnect.xml
+SHA1-Digest: b1SasH5/rMSVbav9PlteeG1tcO0=
+
+Name: res/drawable/keep.xml
+SHA1-Digest: aFAguvMHmXiGZ67Qqy/5YHlsWls=
+
+Name: res/drawable/keepass.xml
+SHA1-Digest: k0Kiuv9x8J2hmsoJ2JLsY2QeftY=
+
+Name: res/drawable/keepass2android.xml
+SHA1-Digest: fF3QJdeCpc30ycqcAcBlZ1JXAxc=
+
+Name: res/drawable/kfc.xml
+SHA1-Digest: /X8B2Ei211auOjJ1xAUx41+Cgd4=
+
+Name: res/drawable/khan_academy.xml
+SHA1-Digest: 04kMzpAbLyXSNYeLC+OU1J1vrd0=
+
+Name: res/drawable/kiwi.xml
+SHA1-Digest: nB1sYsJ66nyUqnAd9drQYJ4s8Pw=
+
+Name: res/drawable/komoot.xml
+SHA1-Digest: fXoVLn2wwu8Ntf+f5GHOWrXjUy4=
+
+Name: res/drawable/kucoin.xml
+SHA1-Digest: vKl2oa8PcXrDHaM9iVcteTltS7g=
+
+Name: res/drawable/kustom.xml
+SHA1-Digest: 1y6lhdYCHQdaAKjA5mnu+TtF4ns=
+
+Name: res/drawable/kustompro.xml
+SHA1-Digest: OnGtDOdpW9DIHKx9hzlwJLxLBGg=
+
+Name: res/drawable/lawncons.xml
+SHA1-Digest: R0/zVTc1SnTJgQZuJ5AiCLDsKYE=
+
+Name: res/drawable/leaflet.xml
+SHA1-Digest: C/DAptP90pV3vId5zvuB5R5FU3s=
+
+Name: res/drawable/libretorrent.xml
+SHA1-Digest: ILaPeMxyW7Q27b1l2nFbPDSHQtY=
+
+Name: res/drawable/libretube.xml
+SHA1-Digest: qyG+RtHhBVdRnM+0gZX9Cr7LSkE=
+
+Name: res/drawable/librus.xml
+SHA1-Digest: Aet9AMTkX9WHoJPQmJLrV2O8Bf0=
+
+Name: res/drawable/lightroom.xml
+SHA1-Digest: Spmt8H9XMBSRFKqPwnB9HuQVkd4=
+
+Name: res/drawable/line.xml
+SHA1-Digest: iFlH7OgKn33NUM3o9ABWJKpKZyI=
+
+Name: res/drawable/linkedin.xml
+SHA1-Digest: CkfxBdJUAkPE0cnPDmhZb/sCm+M=
+
+Name: res/drawable/lsposed.xml
+SHA1-Digest: 1Ga7YKmNSYHwap3UcH604Lf9MPA=
+
+Name: res/drawable/magic_earth.xml
+SHA1-Digest: Oxx+a3ac0Hn9QfG/Ot8oulbMBbI=
+
+Name: res/drawable/magisk.xml
+SHA1-Digest: KQMqE9fp/yYPHaZaN62YeWz3pVs=
+
+Name: res/drawable/maps.xml
+SHA1-Digest: 1H/lSDXGTsfDqDbOmWa1DJPKxA8=
+
+Name: res/drawable/marindeck.xml
+SHA1-Digest: XqqOV9euKOBzAGX6qg6nm0qL9EQ=
+
+Name: res/drawable/mastodon.xml
+SHA1-Digest: oqdIiu94jz4ZCwrl9ldzy57gs5E=
+
+Name: res/drawable/matlog.xml
+SHA1-Digest: SxiOwWUl+ZUBm/Ihe4J1d75pkRo=
+
+Name: res/drawable/mbank.xml
+SHA1-Digest: pBQSpWaEeTrJSILM2QNpaFPQGt4=
+
+Name: res/drawable/mcdonalds.xml
+SHA1-Digest: i1yqzZKcnCYob5mSGG51brTNvBY=
+
+Name: res/drawable/mcpro24fps.xml
+SHA1-Digest: RKpMPkFioqn1Ls8fiQOG4yYBg+E=
+
+Name: res/drawable/mdgram.xml
+SHA1-Digest: 6L/XzCFavKy40AIgacm9YsVCU+Q=
+
+Name: res/drawable/mega.xml
+SHA1-Digest: uroGS/ZmPtbBVzkFDtm6q3PwFys=
+
+Name: res/drawable/messages.xml
+SHA1-Digest: QWSPftQY1sVZEOM9DRXUuR7+ECw=
+
+Name: res/drawable/messages_aosp.xml
+SHA1-Digest: rbtAiUF6/kpOl8MbR3CklWTz/ok=
+
+Name: res/drawable/messages_oneplus.xml
+SHA1-Digest: eWhWn0kfqUjlNPai3ly1S+oy0rU=
+
+Name: res/drawable/messenger.xml
+SHA1-Digest: fev1zCYrEAnUiWvLX6b4TYTcj+U=
+
+Name: res/drawable/metro.xml
+SHA1-Digest: 4FlQy3948m7pONqutWk6UG6Pd8I=
+
+Name: res/drawable/mi_files.xml
+SHA1-Digest: aLcCSidAx2/ZDLroCMCHxz+oMUM=
+
+Name: res/drawable/microsoft365_admin.xml
+SHA1-Digest: lOXki3FI9jEbUrVentNIuh9r62Q=
+
+Name: res/drawable/microsoft_authenticator.xml
+SHA1-Digest: EHKwy0fe8d+mlRAArcrZlM1LCoY=
+
+Name: res/drawable/microsoft_edge.xml
+SHA1-Digest: IdPHXoxn+/J9FCR/TUOLHuUh4qE=
+
+Name: res/drawable/microsoft_excel.xml
+SHA1-Digest: oxsnn5FE92Kdqe7s6/Ep+Z8sYIE=
+
+Name: res/drawable/microsoft_office.xml
+SHA1-Digest: kR/z5kBfX/Q5fPGMefJXJrsX7Fw=
+
+Name: res/drawable/microsoft_onenote.xml
+SHA1-Digest: prCg4Z50f7mVfOL86ip0t4+KXgQ=
+
+Name: res/drawable/microsoft_outlook.xml
+SHA1-Digest: sVnQPYvnq/jFVANZL1PD2Bk0Uyo=
+
+Name: res/drawable/microsoft_teams.xml
+SHA1-Digest: fYjjaGRWw65fG8z6C5OdxkPGbFw=
+
+Name: res/drawable/microsoft_todo.xml
+SHA1-Digest: hPajW1ehytEnJpHpw1wXdQJiwIk=
+
+Name: res/drawable/microsoft_word.xml
+SHA1-Digest: tQYQc5IgiaIFJJd34OKx1pQ1lMU=
+
+Name: res/drawable/mijn_hr.xml
+SHA1-Digest: 2VGloj6sYS3NqWNktqsTBVRC704=
+
+Name: res/drawable/minecraft.xml
+SHA1-Digest: SIROoPowOD3GQxdhZL2jNi4J4aQ=
+
+Name: res/drawable/mixplorer.xml
+SHA1-Digest: 00KNj5PIQnfXfZSXijXj6jKMlbQ=
+
+Name: res/drawable/mlmanager.xml
+SHA1-Digest: 0YN3Qx12KlYNvCFNc+9mJvf22tU=
+
+Name: res/drawable/mobikwik.xml
+SHA1-Digest: KCLCLiS1FN02bac/H6QmemO8Zao=
+
+Name: res/drawable/mobile_legends.xml
+SHA1-Digest: Rtb0ZGZe8HOtvkOInnz0g7kn85k=
+
+Name: res/drawable/moneta.xml
+SHA1-Digest: OroIpVDHt3Ip5za1p2s/18VuUTg=
+
+Name: res/drawable/mozilla_vpn.xml
+SHA1-Digest: elsiyDG+cqkiXBzNFWAgMvbJiSw=
+
+Name: res/drawable/mtmanager.xml
+SHA1-Digest: 2NwKAbWsbiNeSAjD8rW8/ghwojE=
+
+Name: res/drawable/mull.xml
+SHA1-Digest: 9Nm8KeLl5h6CdK4+EOXCcWM/OF0=
+
+Name: res/drawable/music.xml
+SHA1-Digest: KVvEAa/yR+m4AGG+ii2jUPZ95cY=
+
+Name: res/drawable/musicolet.xml
+SHA1-Digest: vTeSRADDINehWY2apG56pszEuYQ=
+
+Name: res/drawable/must.xml
+SHA1-Digest: WLLPG0BasxCvy7ybIvCiVzCf+C4=
+
+Name: res/drawable/muzei.xml
+SHA1-Digest: ThzGC3hgVOFpooFzHeCkOYjYfTE=
+
+Name: res/drawable/mx_player.xml
+SHA1-Digest: o0MTlmxSUryKmgoSbN7nrG9nVbs=
+
+Name: res/drawable/myairtel.xml
+SHA1-Digest: AdjkkKlzCxoS9EHRzfT4c+AfRLE=
+
+Name: res/drawable/mydealz.xml
+SHA1-Digest: 5zo2LFNuP1JsNcPYx84RArXx1Go=
+
+Name: res/drawable/myjio.xml
+SHA1-Digest: pZ3HOZusyMRfkcNqA1KLOSFafBk=
+
+Name: res/drawable/negentwee.xml
+SHA1-Digest: YJuWB+0TlyM32Z4f7JwJbKRG7KI=
+
+Name: res/drawable/nekogram.xml
+SHA1-Digest: f8NR1k/nlG0ov6hlGVrZcUAS4g4=
+
+Name: res/drawable/neo_backup.xml
+SHA1-Digest: zOQ0poDjFbZHwIWTsAbZDECy88c=
+
+Name: res/drawable/neo_store.xml
+SHA1-Digest: 87Gx5KCNi168aFKo+HJw9WyFiqw=
+
+Name: res/drawable/netflix.xml
+SHA1-Digest: lJULLJiTZeiLmfv0sGEFewpQ9TE=
+
+Name: res/drawable/newpipe.xml
+SHA1-Digest: NhdRKyMMOpmEpZVHcR6zlfljA2M=
+
+Name: res/drawable/nextcloud.xml
+SHA1-Digest: Oy/AEw9gIqS3iuzjrJXI53GPHdA=
+
+Name: res/drawable/nightwaveplaza.xml
+SHA1-Digest: YfcAv5zFj5bB7+FGK4ZnmZsF2us=
+
+Name: res/drawable/ninegag.xml
+SHA1-Digest: KsftSOgD2cpVDCYUB4VYYRWRF8s=
+
+Name: res/drawable/nodevideo.xml
+SHA1-Digest: AxJ+lj+jmrImAkHFhZMUibc9qgw=
+
+Name: res/drawable/nokia_camera.xml
+SHA1-Digest: XAQZ/SLm7u6KtnoiFAT+YLCFsTs=
+
+Name: res/drawable/notally.xml
+SHA1-Digest: 6kEo5/Gr/c6HbsBLGS9o2PVShbs=
+
+Name: res/drawable/notenapp.xml
+SHA1-Digest: WR6C/6dljDbHh69Ekn0rBmKyT3c=
+
+Name: res/drawable/notes.xml
+SHA1-Digest: KMQrMpty+AUyS8+WN2pW1dMqOEY=
+
+Name: res/drawable/nothing_recorder.xml
+SHA1-Digest: ZCzctGyQ9hkCM3hKEkvcxV91dvY=
+
+Name: res/drawable/notification_action_background.xml
+SHA1-Digest: MdMSaFA3fWxcP8c7tbSNFoh3dRA=
+
+Name: res/drawable/notification_bg.xml
+SHA1-Digest: Igcrj0Lqkd215VoiK8OuarHb+GY=
+
+Name: res/drawable/notification_bg_low.xml
+SHA1-Digest: GE13D70zYvNI9JkBfy9pJJoKCUE=
+
+Name: res/drawable/notification_icon_background.xml
+SHA1-Digest: httWKHldmxsKEQtTh5cY3K3h9Tg=
+
+Name: res/drawable/notification_tile_bg.xml
+SHA1-Digest: xO5QOfwOw29bfWHteXfqGWg7FhM=
+
+Name: res/drawable/notify.xml
+SHA1-Digest: +mvgyNSwog5qE1Vxi3w+KFGuJ2s=
+
+Name: res/drawable/notion.xml
+SHA1-Digest: cyVHZoh21O8ROVXFPbS2GJ3B8wA=
+
+Name: res/drawable/noto.xml
+SHA1-Digest: 7UQN7ncrpk63zWlsiewbzV75tHo=
+
+Name: res/drawable/ns.xml
+SHA1-Digest: Atg8cnbcRlgWOhon7dD6qAES5Ig=
+
+Name: res/drawable/nubank.xml
+SHA1-Digest: pyv8K+hOllwfL7a3Ufj/WIWyuNQ=
+
+Name: res/drawable/o2tv.xml
+SHA1-Digest: pLsHu6BXdM5tsnmj69nM4XraT/o=
+
+Name: res/drawable/oculus.xml
+SHA1-Digest: wjSs3Cx0GwnsU0Grkk3f2YrVmlw=
+
+Name: res/drawable/ola.xml
+SHA1-Digest: pCsG5vybFns6rXYJOENJRjdsUY0=
+
+Name: res/drawable/oledbuddy.xml
+SHA1-Digest: hkUpIgH202+KL16s3u4Dbk6w+zA=
+
+Name: res/drawable/olx.xml
+SHA1-Digest: 04Ih1TsHLGNEWVrjFKsD6AUA/YM=
+
+Name: res/drawable/onedotonedotonedotone.xml
+SHA1-Digest: fiREQna+VgH/6KKdkzLhT8IaxTA=
+
+Name: res/drawable/onedrive.xml
+SHA1-Digest: wnmex3h46LETmOGkErU+wbxg6TM=
+
+Name: res/drawable/oneplus_cam.xml
+SHA1-Digest: K0haUrHm1mw529tn8LYPLaj0Fcw=
+
+Name: res/drawable/opentracks.xml
+SHA1-Digest: lsjgjBqFuDsxHr4kYf/dRrmJjQ0=
+
+Name: res/drawable/opera_browser.xml
+SHA1-Digest: 5emtW9zaqyGE56GGAxOE4Mzck/o=
+
+Name: res/drawable/opera_gx.xml
+SHA1-Digest: 8kEH2LWqzJKFZLOqccyXK9CCiO0=
+
+Name: res/drawable/organic_maps.xml
+SHA1-Digest: fO+hYbEp0DpXAs56/Oc9ClI3Qyg=
+
+Name: res/drawable/osmand.xml
+SHA1-Digest: Ks+f6qPkt5KIWggdscTsWKz3shU=
+
+Name: res/drawable/osmand_plus.xml
+SHA1-Digest: Itsb1j8v19pt6TVoEAkLVr/RF5c=
+
+Name: res/drawable/oto_music.xml
+SHA1-Digest: uEpKBPnwlstlQK6b7LMrGjq/Tm4=
+
+Name: res/drawable/overlayer.xml
+SHA1-Digest: wmpX/vi8NJq8RY2cTNVG+0N+uSE=
+
+Name: res/drawable/ovinfo.xml
+SHA1-Digest: lIelKGqbmaCpXuwZsdwzMOeik3o=
+
+Name: res/drawable/owlgram.xml
+SHA1-Digest: aoa1uxZBq6P0hPqQjr8SLuEWL5Y=
+
+Name: res/drawable/ozon.xml
+SHA1-Digest: v+bKyHfUdONSDIfIqkeSrV936lw=
+
+Name: res/drawable/parsec.xml
+SHA1-Digest: 0HbIpyLY1gYfXTOAtBC+mFzTF0M=
+
+Name: res/drawable/patreon.xml
+SHA1-Digest: 8WQmAfVBRr/ardAbWWq+RmM3U5E=
+
+Name: res/drawable/paypal.xml
+SHA1-Digest: GtszsWPPEWmVkmrUlGQfw3VfhnY=
+
+Name: res/drawable/paytm.xml
+SHA1-Digest: 7T1P7yWzi4DpMDaJzDF07jWsxqU=
+
+Name: res/drawable/pda.xml
+SHA1-Digest: cXqLQu/2yP+Pgx7XB20WjsmJZ44=
+
+Name: res/drawable/pdf_viewer.xml
+SHA1-Digest: ZpTYdu8A0gAjWI7JgIsH+xYcCPU=
+
+Name: res/drawable/pekao.xml
+SHA1-Digest: SLXnxGm8yK3aA53Nf5AyOM8rpbA=
+
+Name: res/drawable/pepper.xml
+SHA1-Digest: qsImHh7ep1fP+Zk+YoDpNzDV7KU=
+
+Name: res/drawable/personal_safety.xml
+SHA1-Digest: 1mWFN5v77LZoSP7og/R+2zIn4p0=
+
+Name: res/drawable/pharmeasy.xml
+SHA1-Digest: pFhwg4aoBthBVFmlf7SAJ+EqYKE=
+
+Name: res/drawable/phone_aosp.xml
+SHA1-Digest: M+gI0OsFF2eC7Ud14Y1u8DUctkY=
+
+Name: res/drawable/phonepe.xml
+SHA1-Digest: QBq6lqbO6sRys+2CFGXcrlUEhyg=
+
+Name: res/drawable/photolayers.xml
+SHA1-Digest: tqDQpOxLsfCmX30jdWqcceY5nSc=
+
+Name: res/drawable/photomath.xml
+SHA1-Digest: QUBZ+R8dF9+4fCQhGw9OUqXK2Dw=
+
+Name: res/drawable/photon.xml
+SHA1-Digest: Tlb4mWiSGBjDMVNoOSoOMApmP38=
+
+Name: res/drawable/picpay.xml
+SHA1-Digest: uSzwWCDdMeXxpexjZW6kPm28Vlo=
+
+Name: res/drawable/picsart.xml
+SHA1-Digest: DWNG1pCxvrbC2CRm92BfpOuM4VM=
+
+Name: res/drawable/pinnit.xml
+SHA1-Digest: 2tJBiOA4ZA/NaXJNLHQB9vbqelg=
+
+Name: res/drawable/pinterest.xml
+SHA1-Digest: Lu2oEeNWf7c3842+VqWgoAluCOA=
+
+Name: res/drawable/pixel_heroes.xml
+SHA1-Digest: thDOQI8j6Sb5SUSUXUGDTqsMjSw=
+
+Name: res/drawable/pixel_tips.xml
+SHA1-Digest: FveUDuu1OclPFGMnIZ3DZTOr8hI=
+
+Name: res/drawable/pixel_wallpapers.xml
+SHA1-Digest: 9jGkQKm0UkKyF2XyBQSlzpQkmGs=
+
+Name: res/drawable/pizza_hut.xml
+SHA1-Digest: N0W5z4YcuMiXjf/GDy8lqfiy4/M=
+
+Name: res/drawable/plus_messenger.xml
+SHA1-Digest: vG4YyYy0kKogW/dwJSrdw+HNCtc=
+
+Name: res/drawable/pocket_casts.xml
+SHA1-Digest: WP2+VF2AuwNxKqPY0WTap1LWAuM=
+
+Name: res/drawable/pokemongo.xml
+SHA1-Digest: Jg75hruK5JdRaFioZXRBZ33sVkk=
+
+Name: res/drawable/pou.xml
+SHA1-Digest: 7XL1EjXB2K8izeYPi9o0VTR4lgw=
+
+Name: res/drawable/poweramp.xml
+SHA1-Digest: Oz7C2Py3a2gNn3gPBCHd/Wa2cZA=
+
+Name: res/drawable/powerampeq.xml
+SHA1-Digest: SiHDk1yR9hQWca7wNdQuUNxSf5k=
+
+Name: res/drawable/ppsspp.xml
+SHA1-Digest: edvvtWMY91BX5WHxq28UEy9B9Qg=
+
+Name: res/drawable/printer.xml
+SHA1-Digest: PzH1yrAsd3XqR8T5QCd7z+usITc=
+
+Name: res/drawable/progressbar95.xml
+SHA1-Digest: FYvVYyiEh41riLdQ03CHfCm9fus=
+
+Name: res/drawable/protoncalendar.xml
+SHA1-Digest: ed7cZsOzVq+f9kDEJxzalSvw//M=
+
+Name: res/drawable/protondrive.xml
+SHA1-Digest: TQsho3bC71Z5T4GyTHoufTtRPGk=
+
+Name: res/drawable/protonmail.xml
+SHA1-Digest: tXUFnE5z5ogJOwwi3ptEvtdgB/U=
+
+Name: res/drawable/protonvpn.xml
+SHA1-Digest: 7Bl73k3fwADLANFKfS0Rq3xq9JQ=
+
+Name: res/drawable/pushbullet.xml
+SHA1-Digest: fcAK0lfQbRZVZLFEzeP4+jDlVl4=
+
+Name: res/drawable/qksms.xml
+SHA1-Digest: 2pOB0jKlWQ2mY4ujzPuEcGfo4qg=
+
+Name: res/drawable/qr_reader.xml
+SHA1-Digest: 0KQ2hJS3B2izn3nDVnT1KLrpBrE=
+
+Name: res/drawable/quickedit.xml
+SHA1-Digest: /HNmpdbhquFmT7xvff4PNt89zvg=
+
+Name: res/drawable/quickpic.xml
+SHA1-Digest: JF0y8SFH/VWE/M3sobhYnzedyd0=
+
+Name: res/drawable/quickpic_mod.xml
+SHA1-Digest: lXMWVWfzqOhiIsJY/uUIuV+k0Us=
+
+Name: res/drawable/quickswitch.xml
+SHA1-Digest: W7AeWUl5EWul7psRQu5WZOWhKa0=
+
+Name: res/drawable/quora.xml
+SHA1-Digest: u0khthkIn9XNIw8sshmbgH6x5fo=
+
+Name: res/drawable/rabo_wallet.xml
+SHA1-Digest: d4m6gT0XvbsmCmu00feMRSDNKW0=
+
+Name: res/drawable/rabobank.xml
+SHA1-Digest: 1XoRVLG6CSe3KBffwpk9hm3Z37U=
+
+Name: res/drawable/radio.xml
+SHA1-Digest: MBxjEID19gEge9UjRSc3xYXBa1w=
+
+Name: res/drawable/razer_camera.xml
+SHA1-Digest: LhPoWIw6XHGgRxgyhJCCJQLKSj8=
+
+Name: res/drawable/rboard.xml
+SHA1-Digest: tOdwA5M/42ZS28VlvncY2lno75U=
+
+Name: res/drawable/rboard_creator.xml
+SHA1-Digest: orOjVS7YRsKjuApNoZFrYCg9/UU=
+
+Name: res/drawable/rboard_ime_test.xml
+SHA1-Digest: A22zODnCLAIy23JgBd5u0p41Yr0=
+
+Name: res/drawable/rboard_patcher.xml
+SHA1-Digest: IpqwxbibAsQAQ/jfu4FerylDJ6k=
+
+Name: res/drawable/read_you.xml
+SHA1-Digest: c+m1syqhooum2sXN22mtoP06KmQ=
+
+Name: res/drawable/realmelink.xml
+SHA1-Digest: vwBQAcZZc6kcdZoOY4gTl+L1Y8I=
+
+Name: res/drawable/recorder.xml
+SHA1-Digest: HXOknYTQwfx4oR7ao3BiaKplpvQ=
+
+Name: res/drawable/reddit.xml
+SHA1-Digest: P9uuEzT8h2iEqof9eylIrNR1Jtk=
+
+Name: res/drawable/relay.xml
+SHA1-Digest: K4ygy8A2vXoDgwk6Uub6WDQ1Hes=
+
+Name: res/drawable/remini.xml
+SHA1-Digest: TRbAimKYewNFiulowHyN6yYTJ1Q=
+
+Name: res/drawable/remotefingerauth.xml
+SHA1-Digest: VoNfuSCKUU+ERbjDBjqv7lUHxhc=
+
+Name: res/drawable/renr.xml
+SHA1-Digest: 7J9YsFFXEQd97z1mumJoL3Oe5cI=
+
+Name: res/drawable/repainter.xml
+SHA1-Digest: 1+SfN9xlSNFOq643rXc810nTQ74=
+
+Name: res/drawable/resplash.xml
+SHA1-Digest: 9xbosrxi+GsxWMj/7sSh+YIsGWk=
+
+Name: res/drawable/retro_music.xml
+SHA1-Digest: KE6xuiLuLhgPBBgBJ0qMvXnFIb8=
+
+Name: res/drawable/reverso_context.xml
+SHA1-Digest: e4uDxas5z5OHcFh9MOEOsf4A0F8=
+
+Name: res/drawable/revolt.xml
+SHA1-Digest: zzuRoFQoN7UQIgWMyt4b/3LlDk0=
+
+Name: res/drawable/revolut.xml
+SHA1-Digest: 2Vb3GSZAlFrdSYfWq88MN/POGW4=
+
+Name: res/drawable/riot_games.xml
+SHA1-Digest: E4+fPJv+TZyPxEW0l8PmkoYFAQg=
+
+Name: res/drawable/roku.xml
+SHA1-Digest: FCkl7KFsjupUwLuqb+ITlSuD2VE=
+
+Name: res/drawable/rustdesk.xml
+SHA1-Digest: rr+FjfXl2DqI7GzqvlFwGIzGNlc=
+
+Name: res/drawable/sai.xml
+SHA1-Digest: 7dOxlcRmHCXbRDxN8izvjaj/8Fo=
+
+Name: res/drawable/saikou.xml
+SHA1-Digest: nUr+nguo0LuHfBj3Jy+drEH27Jk=
+
+Name: res/drawable/samsung_health.xml
+SHA1-Digest: bflhGF5nSNsqq3eEUxFQUN4+1jM=
+
+Name: res/drawable/samsung_internet_browser.xml
+SHA1-Digest: dAIgMmpMrkSr9X8xi34gMm0zum4=
+
+Name: res/drawable/samsung_internet_browser_beta.xml
+SHA1-Digest: qYWDJoX1HlH6e+AuRHtj885Xutg=
+
+Name: res/drawable/samsung_pay.xml
+SHA1-Digest: UkvDD15sRXyPPyTj4ujyZWn2qsU=
+
+Name: res/drawable/samsung_wear.xml
+SHA1-Digest: PHkIdMj4vFrekV8mGyXY8e213zc=
+
+Name: res/drawable/samsungcalculator.xml
+SHA1-Digest: Af7ccC0h/684iC8KeywK1LUmUUQ=
+
+Name: res/drawable/samsungcalendar.xml
+SHA1-Digest: ji6+Jb+ox73+pIzwSH6lNe+qt5Q=
+
+Name: res/drawable/samsungclock.xml
+SHA1-Digest: 71CSxn1l1Rz0cvrJ40uZPAy9Ev4=
+
+Name: res/drawable/samsungcontacts.xml
+SHA1-Digest: GMaVDrzJHWmaRx70q521Bvi5xSM=
+
+Name: res/drawable/samsungemail.xml
+SHA1-Digest: D/Ps82TftSl+Kbz7ZRFFueARvLw=
+
+Name: res/drawable/samsungfiles.xml
+SHA1-Digest: eKRPPTluwh2igkEUytTrvkPDXZU=
+
+Name: res/drawable/samsunggallery.xml
+SHA1-Digest: Y6Z21eZteDa4EsAcquf78OmAXAU=
+
+Name: res/drawable/samsungmusic.xml
+SHA1-Digest: WtFplK9AOofyQCX9G40FVBHNEwc=
+
+Name: res/drawable/samsungnotes.xml
+SHA1-Digest: jjNpH34vKLZ9hQxSNinWhaGNQWw=
+
+Name: res/drawable/samsungphone.xml
+SHA1-Digest: Pd3V8YXd/5eIoPgCTPH/YTD/5Jo=
+
+Name: res/drawable/samsungsms.xml
+SHA1-Digest: UUvCOTIl60Re5sHPHcY3xHwW3Q0=
+
+Name: res/drawable/schoolplanner.xml
+SHA1-Digest: 25Wj35jNrdKX8YdKjAS/qZ5jRF0=
+
+Name: res/drawable/scoop.xml
+SHA1-Digest: gqQMrVWePVdsxs3coTOdkH5f7a0=
+
+Name: res/drawable/screenrecorder.xml
+SHA1-Digest: MfO3lyIV2c+8KdJnp4W/qGSZJ8w=
+
+Name: res/drawable/sd_maid.xml
+SHA1-Digest: SicA7zR7iDnV5vquxTk5FExIup4=
+
+Name: res/drawable/session.xml
+SHA1-Digest: PpGPUgs4OhC6lOJ3YMlmsuZIujQ=
+
+Name: res/drawable/settings.xml
+SHA1-Digest: Wpj53GrEUuRX5LvBQ1j4Unw/JYw=
+
+Name: res/drawable/shareme.xml
+SHA1-Digest: xjFBX36VXJWthrpX3u1zaOQNEUs=
+
+Name: res/drawable/shazam.xml
+SHA1-Digest: 8ZoTOmqCnEy33qoWVeYCx/VqnoY=
+
+Name: res/drawable/shopee.xml
+SHA1-Digest: AVJCln2U6dmnDr9z6sXyqDMWD9g=
+
+Name: res/drawable/signal.xml
+SHA1-Digest: RDlr2zGZDZk5YVur2ahcu9Mc4Uo=
+
+Name: res/drawable/sim_toolkit.xml
+SHA1-Digest: IuDlOn/5xxBIo9Gz+MUinq49W7Q=
+
+Name: res/drawable/simple_gallery_pro.xml
+SHA1-Digest: Hu98gTBWg1q48HTTOSD8i5pQfME=
+
+Name: res/drawable/simplenote.xml
+SHA1-Digest: 5xrc3hri/GiaczZCheOoqA7wG/E=
+
+Name: res/drawable/sky_children_of_the_light.xml
+SHA1-Digest: BtmD3lKVG0M44z7x/WXAGGbCt6w=
+
+Name: res/drawable/skype.xml
+SHA1-Digest: mRFztpKoeZ/EWrB1p67RhNYRiLw=
+
+Name: res/drawable/slack.xml
+SHA1-Digest: Qi30zmihmqk77ZOEf1ZbbdTPagM=
+
+Name: res/drawable/sleep.xml
+SHA1-Digest: TDVgkpNzQ95hFBx3ow3pSrFPhLk=
+
+Name: res/drawable/sleep_as_android.xml
+SHA1-Digest: s0bGop7/XREBmsvhM1UyItnktzA=
+
+Name: res/drawable/smartlife.xml
+SHA1-Digest: OcLf1XdaRM8xi+zOEWGMWiexbcA=
+
+Name: res/drawable/smarty.xml
+SHA1-Digest: wF+tf4rOGBceAcYjJOsMlE3zM2I=
+
+Name: res/drawable/sms_organizer.xml
+SHA1-Digest: 5kDfakF+X9bbPW3BtgoUXUZSNK0=
+
+Name: res/drawable/snapchat.xml
+SHA1-Digest: bjelNMyJmZR8A2UxK3Z277k0d3Y=
+
+Name: res/drawable/snapdrop.xml
+SHA1-Digest: vZBhMPQ75kT6ByOH9muoubZ51E4=
+
+Name: res/drawable/snapseed.xml
+SHA1-Digest: V1CFOEenAalkPANaRIM+hvs96Uw=
+
+Name: res/drawable/solid_explorer.xml
+SHA1-Digest: QCkzJ+xbfhY7cBRkE1L5vPECVw4=
+
+Name: res/drawable/solitaire.xml
+SHA1-Digest: 2v+YdDhriymSX9S2AtDSkvVYlKg=
+
+Name: res/drawable/sony_headphonesconnect.xml
+SHA1-Digest: l4ykIKNJgKX3HGWE7Pbpq5Jf6bc=
+
+Name: res/drawable/sonymusic.xml
+SHA1-Digest: clqTQEGMJ/fIZcKtSC3yMQ9bKCs=
+
+Name: res/drawable/soundcloud.xml
+SHA1-Digest: v3rgKzAvsYaRMcHFeKaHYCkdbws=
+
+Name: res/drawable/sova.xml
+SHA1-Digest: mg++W9APl7pablQnF+4Ft7h6JKs=
+
+Name: res/drawable/spark_email.xml
+SHA1-Digest: vv7iEcxjuMygf9WKycgx5Dup+Pw=
+
+Name: res/drawable/speedtest_by_ookla.xml
+SHA1-Digest: 5WRTf2XEmmBOi3oRa1UUr+oG/64=
+
+Name: res/drawable/spotify.xml
+SHA1-Digest: 99VVEVcQQKRJ//3/26QH+YacXto=
+
+Name: res/drawable/spotistats.xml
+SHA1-Digest: HQSR1A+3LT9KVs4lvg4EO8BHX2I=
+
+Name: res/drawable/squircle.xml
+SHA1-Digest: rnVgU1q+WUkoA0dynNdWQPYXXzs=
+
+Name: res/drawable/steam.xml
+SHA1-Digest: BWA0GfGOb3giqFnQ3WxtrkJA0K4=
+
+Name: res/drawable/stellio.xml
+SHA1-Digest: fbl5TGtb8/pljpATpUxayRwoKjE=
+
+Name: res/drawable/strava.xml
+SHA1-Digest: 0T3Rfj/Or3+9BJSz58qXEzcu4o4=
+
+Name: res/drawable/stremio.xml
+SHA1-Digest: TP100XIW4uXHNSW6IWxP+Ijbifk=
+
+Name: res/drawable/substratum_lite.xml
+SHA1-Digest: VLZRW88Mk/TpqAiEVQmbboOqpzA=
+
+Name: res/drawable/sudoku.xml
+SHA1-Digest: wCabuXZXL6/CuwJsW9Va7cMDfKM=
+
+Name: res/drawable/sweech.xml
+SHA1-Digest: /REDRmOHZGl3KFpjJO7P4+cLS5E=
+
+Name: res/drawable/swift_backup.xml
+SHA1-Digest: HjDqi2PHiN00SgON5zLew/2QsOE=
+
+Name: res/drawable/swiggy.xml
+SHA1-Digest: Zx1e4sYVied3SfJ+EarOTu4u8B8=
+
+Name: res/drawable/sync.xml
+SHA1-Digest: kHg1ZXeCiAy8hHCvdINJ2BdQloc=
+
+Name: res/drawable/syncthing.xml
+SHA1-Digest: yo79O4CV3yahUWNpyN0llh1PBSM=
+
+Name: res/drawable/tachiyomi.xml
+SHA1-Digest: /c+Z9qGPjLakzOeyaEv4L+2J6tI=
+
+Name: res/drawable/tachiyomisy.xml
+SHA1-Digest: 9DRIa863M0YbX6zV5muj+CoeeVo=
+
+Name: res/drawable/tailscale.xml
+SHA1-Digest: io9yFYvohBEoeMGZdxUfpMk3smw=
+
+Name: res/drawable/talon.xml
+SHA1-Digest: Jv1kF2pHBxSvXXo+9b0dYVwW5OE=
+
+Name: res/drawable/tapatalk_pro.xml
+SHA1-Digest: mDVYg0IG21+Dpd7jvBX4GQ/l7Yk=
+
+Name: res/drawable/tasker.xml
+SHA1-Digest: 6froC+DuczStBkkHAFYXXPoYbuw=
+
+Name: res/drawable/tasks.xml
+SHA1-Digest: jSN0K1wii0kS44TjQLM8XSyH1Fo=
+
+Name: res/drawable/tele2.xml
+SHA1-Digest: 7c2fzeJJY4Bad7cImB8a7XUGjgA=
+
+Name: res/drawable/telegram.xml
+SHA1-Digest: iwKMzJPfVehdtGzuQa+5IY6w8v8=
+
+Name: res/drawable/telegram_x.xml
+SHA1-Digest: AABD82mmEEMzBczKwVN0i3xM7a0=
+
+Name: res/drawable/terabox.xml
+SHA1-Digest: Fi/HVSXxZsM0Y66vJ/ZbB1QDlPs=
+
+Name: res/drawable/termux.xml
+SHA1-Digest: Efh4zg2PLMU8L7lg6/5L46ByASA=
+
+Name: res/drawable/theathletic.xml
+SHA1-Digest: j/Tvum4ihwsDbIok5QxnHdRKZ9g=
+
+Name: res/drawable/threema.xml
+SHA1-Digest: Km2lRb7V8spHCtmzeunEhMOr5Do=
+
+Name: res/drawable/ticktick.xml
+SHA1-Digest: A+8w/+kObGG4WYmhUOzYsmAEbKc=
+
+Name: res/drawable/tidal.xml
+SHA1-Digest: H5MFPCgUu6vLuBwAkyYkBoWhX8c=
+
+Name: res/drawable/tiktok.xml
+SHA1-Digest: DK5rSyaVVBJ4cyvp6QkkgaKYWuk=
+
+Name: res/drawable/todoist.xml
+SHA1-Digest: nDQr6YrnHTkKTwq3XDR4/3AswgA=
+
+Name: res/drawable/tor_browser.xml
+SHA1-Digest: i7s2vhujbRDjst66hTrPGHyVjr0=
+
+Name: res/drawable/trail_sense.xml
+SHA1-Digest: J+bPRwAIDs2FkjX6uB5HBxEaIWA=
+
+Name: res/drawable/traveloka.xml
+SHA1-Digest: /SJky1IeS5aMyEVeXTsF/M4nHcg=
+
+Name: res/drawable/trust_wallet.xml
+SHA1-Digest: iAQqvr7SFbyzPwYH+gKnbmN/WVk=
+
+Name: res/drawable/tumblr.xml
+SHA1-Digest: Ts1JRMW15+K8z1OSfHAVNm2JUeQ=
+
+Name: res/drawable/tuya_smart.xml
+SHA1-Digest: 6AcA7lFoQIAyUS9b5SXkqT56vN4=
+
+Name: res/drawable/tv_time.xml
+SHA1-Digest: plSbq5ko1i+czMHmWnpc8Lsxxys=
+
+Name: res/drawable/twire.xml
+SHA1-Digest: FZ+qTw9eZjAgncWokc8uskUol+E=
+
+Name: res/drawable/twitch.xml
+SHA1-Digest: RNzC2kAZNzWzkT9bZyPmuUe/DSk=
+
+Name: res/drawable/twitter.xml
+SHA1-Digest: AP9uDp6c1kjtNb1GIzfuCp/DVXU=
+
+Name: res/drawable/tyra.xml
+SHA1-Digest: EGU50z+G31jSlhdk1DDBcT69OJM=
+
+Name: res/drawable/uber.xml
+SHA1-Digest: LzRecceE/um+SUu+oisK2xfhQtk=
+
+Name: res/drawable/unicode_pad.xml
+SHA1-Digest: Zde5s4sKx4wC5GC/MieK93vLDZg=
+
+Name: res/drawable/unifi_network.xml
+SHA1-Digest: ScWDvjqMuWL9UvCvNbtbyDVSiZc=
+
+Name: res/drawable/uphold.xml
+SHA1-Digest: j9lETVtXmVE1o6yw6Sn+zWNu5jU=
+
+Name: res/drawable/vanced_youtube_music.xml
+SHA1-Digest: mz82bCR22yxwNWgp7dRfEkHJZJw=
+
+Name: res/drawable/vi.xml
+SHA1-Digest: 9gR8wrPweDpk30OETNTiyKnxbXk=
+
+Name: res/drawable/via_browser.xml
+SHA1-Digest: brM2ZpDoV6JuoFiKCg9NewnZT4A=
+
+Name: res/drawable/viber.xml
+SHA1-Digest: tHVTzDx8SM9V7UoxmBMHW5awH3s=
+
+Name: res/drawable/viper4android.xml
+SHA1-Digest: g1q4SQImZ9biwmojeoEMoaga8gE=
+
+Name: res/drawable/vivaldi.xml
+SHA1-Digest: 49K14MocFwAgXydoZu3wkXNkK7U=
+
+Name: res/drawable/vk.xml
+SHA1-Digest: OqjSDA7hzoPoJkijp1U9UJl2DOs=
+
+Name: res/drawable/vlc.xml
+SHA1-Digest: nIV3tW23DnnWebh92+VyhuEyejA=
+
+Name: res/drawable/vodafone.xml
+SHA1-Digest: MYbHst4HNmCOGzr6zCEzV30UrLI=
+
+Name: res/drawable/waze.xml
+SHA1-Digest: SlIy9NBXMg1xv44ezyWJWQejpoo=
+
+Name: res/drawable/wear_os.xml
+SHA1-Digest: MuMQdpWGbogxMsBZAWZDEaALg80=
+
+Name: res/drawable/webcam.xml
+SHA1-Digest: 3RkqA5OnQvVLHPisueIoBU33Mm0=
+
+Name: res/drawable/webweaver.xml
+SHA1-Digest: /BplSTNJXlfklvB/lRd6GkjyooU=
+
+Name: res/drawable/whatsapp.xml
+SHA1-Digest: t6nhVGEIzKpo3tpIMIRqoP5VU7M=
+
+Name: res/drawable/whatsapp_business.xml
+SHA1-Digest: O83d3jvCVt9omj7mQW6pkqmdc/Y=
+
+Name: res/drawable/where_is_my_train.xml
+SHA1-Digest: Ylp4ZjjHnn0gAfPsUp/CIFIwzOE=
+
+Name: res/drawable/wifiman.xml
+SHA1-Digest: GqnyXP3+zn3nnRFuyHUvWqOuVJc=
+
+Name: res/drawable/wikipedia.xml
+SHA1-Digest: Co5poQxxic/Isn7Ldi5K65+SQIM=
+
+Name: res/drawable/wildberries.xml
+SHA1-Digest: eFHEcq1CJO6ChQAIk3w69IW1xCo=
+
+Name: res/drawable/windscribe_vpn.xml
+SHA1-Digest: KX/Bh5DWqNlueLmtoGtKNcWAKL4=
+
+Name: res/drawable/wordweb.xml
+SHA1-Digest: WlmUZvqmZ7r4ItA5jifkvlxA5JA=
+
+Name: res/drawable/wulkanowy.xml
+SHA1-Digest: MRWtJjjfGzF86NsoS8t1Xv7QL9Q=
+
+Name: res/drawable/xda.xml
+SHA1-Digest: rckvAS1j8Sfmu3LWCBIpbveBVCk=
+
+Name: res/drawable/xiaomi_fit.xml
+SHA1-Digest: QEGTP4sYkg+9wtIZNK1j92feEFs=
+
+Name: res/drawable/xiaomi_remote.xml
+SHA1-Digest: IYEVATugNRSnIoBU2hcJscQM0zs=
+
+Name: res/drawable/xkom.xml
+SHA1-Digest: nmkaF9oicgmNs3kAqWSAH3J1lFs=
+
+Name: res/drawable/xplayer.xml
+SHA1-Digest: EdaWb66BWUPhmGbEIGaNj6HsytY=
+
+Name: res/drawable/yandex_keyboard.xml
+SHA1-Digest: HVHk4zmMMsMCkfLIjqFGX8njU6E=
+
+Name: res/drawable/yandex_mail.xml
+SHA1-Digest: b4K9DqIWXWFxO4ovIXcFH5F+c20=
+
+Name: res/drawable/yandex_metro.xml
+SHA1-Digest: p1r3O+d2JsCycKQWYptXpd5ORe8=
+
+Name: res/drawable/yandexmaps.xml
+SHA1-Digest: YjtYf4OsH8HpWein00UWZj+uOMg=
+
+Name: res/drawable/yasnac.xml
+SHA1-Digest: 95Hau999fBSXE0Qm2HyT0wvgZr4=
+
+Name: res/drawable/yeelight.xml
+SHA1-Digest: bhKLDvkXcJ46IBIcYXobYmJ5rDw=
+
+Name: res/drawable/ymusic.xml
+SHA1-Digest: l8EPzQaxvpyleKR/GZz62rWVB/Y=
+
+Name: res/drawable/youtube.xml
+SHA1-Digest: d4OY1dDxOQayV/E/om6v/HNPZ0E=
+
+Name: res/drawable/youtube_music.xml
+SHA1-Digest: XmVih8Uz778J6YmRQGBNOcy0bKg=
+
+Name: res/drawable/youtube_tv.xml
+SHA1-Digest: iQD4YPOhaQ+ZoRM1ydmhCqoCTOQ=
+
+Name: res/drawable/youtube_vanced.xml
+SHA1-Digest: MN9RsymnYFgYci384E84wifUtUw=
+
+Name: res/drawable/youtube_vanced_manager.xml
+SHA1-Digest: q28fWNIiTZTomTeuNVVDXKzLYMo=
+
+Name: res/drawable/ytstudio.xml
+SHA1-Digest: 08WGzDezG/rICOd+a0UUSmhgx8g=
+
+Name: res/drawable/zappka.xml
+SHA1-Digest: Ltedj3yJrrIiIr05UhvtbZ08Xvc=
+
+Name: res/drawable/zarchiver.xml
+SHA1-Digest: 4YTtghFQkxPdGtYlJ7+xZHlhz5A=
+
+Name: res/drawable/zomato.xml
+SHA1-Digest: B4xRdTkl2nOxW9JLLWja89JLk9A=
+
+Name: res/drawable/zulip.xml
+SHA1-Digest: wMxqaxi2yvq3c8igMKUO2WsZdpA=
+
+Name: res/layout/custom_dialog.xml
+SHA1-Digest: TZ/AmXq5QeW2OBcoZ+Euir5hyB8=
+
+Name: res/layout/notification_action.xml
+SHA1-Digest: 2J6BxxMkw1cTXqz8uU017fIoY8Y=
+
+Name: res/layout/notification_action_tombstone.xml
+SHA1-Digest: ei6KWnQx8twKPoqztgJTJ5lcWDQ=
+
+Name: res/layout/notification_template_custom_big.xml
+SHA1-Digest: hVoCe9iJ+BcDT6rPHAkam0cPRg0=
+
+Name: res/layout/notification_template_icon_group.xml
+SHA1-Digest: 64L2hp0SO2jeyVmyiFEEnYQ0d8E=
+
+Name: res/layout/notification_template_part_chronometer.xml
+SHA1-Digest: Y33bKrN9O6PqwZKxoLQ2Pg2XjuQ=
+
+Name: res/layout/notification_template_part_time.xml
+SHA1-Digest: 7SJohJKM4mduCZaCdICsgUjmusA=
+
+Name: res/menu/example_menu.xml
+SHA1-Digest: dwt8ljW/LHkk2n91HFFeRN3wrPo=
+
+Name: res/menu/example_menu2.xml
+SHA1-Digest: Qxd/WuiYP96yDEYYapnFNDVsAhE=
+
+Name: res/mipmap-anydpi/ic_launcher.xml
+SHA1-Digest: yIzuyWQq6HBVb+zigi7aD/Bg6QM=
+
+Name: res/mipmap-anydpi/ic_launcher_round.xml
+SHA1-Digest: 33601T76h0w0MfA81ZZDeDya5+Q=
+
+Name: res/mipmap-hdpi/ic_launcher.png
+SHA1-Digest: fF6teorh6wHi/SKd9x/X8aUV6ic=
+
+Name: res/mipmap-hdpi/ic_launcher_background.png
+SHA1-Digest: DxeBhqjb38F4rQ4J5VpU9feYS4g=
+
+Name: res/mipmap-hdpi/ic_launcher_foreground.png
+SHA1-Digest: kw/vQRkr43Jl2Hf84Rvyy8DZWtE=
+
+Name: res/mipmap-hdpi/ic_launcher_round.png
+SHA1-Digest: t3f476ZQK/73aL/1h8UGuTWEjw4=
+
+Name: res/mipmap-mdpi/ic_launcher.png
+SHA1-Digest: BgLkOjx7MFohl6WkMItB/KY6Nvw=
+
+Name: res/mipmap-mdpi/ic_launcher_background.png
+SHA1-Digest: kcl6ROjDvyHYsL9OcBjyj2tGaf8=
+
+Name: res/mipmap-mdpi/ic_launcher_foreground.png
+SHA1-Digest: eazyjTwumOShQYJD2fs2LNGWEno=
+
+Name: res/mipmap-mdpi/ic_launcher_round.png
+SHA1-Digest: wVrtju/rhfCSwuDAlrfY21NvrhM=
+
+Name: res/mipmap-xhdpi/ic_launcher.png
+SHA1-Digest: zRtNSRaSzNsSgRQegO9zZyZJ8Bo=
+
+Name: res/mipmap-xhdpi/ic_launcher_background.png
+SHA1-Digest: XnygC4ey+Q1+nkj9nfKe3oGldtQ=
+
+Name: res/mipmap-xhdpi/ic_launcher_foreground.png
+SHA1-Digest: vxcmuNVpJaPcsNPhtKuWOuMXuLE=
+
+Name: res/mipmap-xhdpi/ic_launcher_round.png
+SHA1-Digest: HYf8FqD5gM8C5QhzjLDPYFdboIA=
+
+Name: res/mipmap-xxhdpi/ic_launcher.png
+SHA1-Digest: vKXgGnH0o2Me0jHUdAGwYqB1eTc=
+
+Name: res/mipmap-xxhdpi/ic_launcher_background.png
+SHA1-Digest: Dw9scf3Y7AN00dDYLVl9CqADdcA=
+
+Name: res/mipmap-xxhdpi/ic_launcher_foreground.png
+SHA1-Digest: ZIrxegwBS1viwh4BquwxeApLy0Q=
+
+Name: res/mipmap-xxhdpi/ic_launcher_round.png
+SHA1-Digest: 3dzJO7d8+6hWTgiKYPX2xnNAU8c=
+
+Name: res/mipmap-xxxhdpi/ic_launcher.png
+SHA1-Digest: fBd0UnA+rKJutpkw4DTR/V2h36g=
+
+Name: res/mipmap-xxxhdpi/ic_launcher_background.png
+SHA1-Digest: HYrjtuAPWX6+4RD4c2ea8NT70PU=
+
+Name: res/mipmap-xxxhdpi/ic_launcher_foreground.png
+SHA1-Digest: QkeIaEyKoKs6znAJp/Lg4D1maA0=
+
+Name: res/mipmap-xxxhdpi/ic_launcher_round.png
+SHA1-Digest: barkrPcyIxvZaLBzsghmOtFgWuI=
+
+Name: res/raw/third_party_license_metadata
+SHA1-Digest: dFkj7OgkCQrrFrYoanwPa3yoG0M=
+
+Name: res/raw/third_party_licenses
+SHA1-Digest: a7yksMf8067dOf7RxE2GrIJ4F1I=
+
+Name: res/xml/grayscale_icon_map.xml
+SHA1-Digest: Fe4MjWdhj98xNhDALpRjg3cXSi8=
+
+Name: resources.arsc
+SHA1-Digest: WGr3LJhkzi7Kg37r5Xz92+IwgWM=
+

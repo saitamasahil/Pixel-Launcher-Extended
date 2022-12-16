@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector
+    android:height="192.0dip"
+    android:width="192.0dip"
+    android:viewportWidth="192.0"
+    android:viewportHeight="192.0"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <path
+        android:fillColor="#00ffffff"
+        android:pathData="M34.00,40.00L158.00,40.00A14.00 14.00 0 0 1 172.00,54.00L172.00,138.00A14.00 14.00 0 0 1 158.00,152.00L34.00,152.00A14.00 14.00 0 0 1 20.00,138.00L20.00,54.00A14.00 14.00 0 0 1 34.00,40.00z"
+        android:strokeColor="#ff000000"
+        android:strokeWidth="12.0"
+        android:strokeLineCap="square"
+        android:strokeLineJoin="miter"
+        android:fillType="nonZero" />
+    <path
+        android:fillColor="#ffffffff"
+        android:pathData="M21.39,128.77L139.26,128.87"
+        android:strokeColor="#ff000000"
+        android:strokeWidth="12.0"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="bevel"
+        android:fillType="nonZero" />
+    <path
+        android:fillColor="#00ffffff"
+        android:pathData="M77.29,101.49C79.26,104.01,81.23,106.52,86.47,107.71C91.70,108.90,100.21,108.76,105.48,107.71C110.75,106.65,112.79,104.68,113.90,101.49C115.01,98.31,115.18,93.92,113.13,90.66C111.09,87.40,106.82,85.28,103.44,84.30C100.05,83.31,97.56,83.46,93.47,83.46C89.39,83.46,83.72,83.30,80.73,79.76C77.74,76.22,77.43,69.30,79.33,65.27C81.23,61.23,85.34,60.09,89.01,59.50C92.68,58.91,95.90,58.88,99.57,59.14C103.24,59.40,107.35,59.96,109.82,61.03C112.28,62.10,113.09,63.68,113.90,65.27"
+        android:strokeColor="#ff000000"
+        android:strokeWidth="12.0"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:fillType="nonZero" />
+    <path
+        android:fillColor="#00ffffff"
+        android:pathData="M155.32,127.88L155.32,127.88z"
+        android:strokeColor="#ff000000"
+        android:strokeWidth="12.0"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:fillType="nonZero" />
+</vector>

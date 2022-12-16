@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector
+    android:height="36.0dip"
+    android:width="36.0dip"
+    android:viewportWidth="36.0"
+    android:viewportHeight="36.0"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <path
+        android:fillColor="#ff000000"
+        android:pathData="M18.34,9.14V4.05h-6.92c-0.79,0-1.44,0.64-1.44,1.44v3.34h7.09C17.52,8.83,17.95,8.94,18.34,9.14z" />
+    <path
+        android:fillColor="#ff000000"
+        android:pathData="M9.98,27.17v3.34c0,0.8,0.65,1.44,1.44,1.44h6.92v-5.09c-0.39,0.2-0.83,0.31-1.27,0.31H9.98z" />
+    <path
+        android:fillColor="#ff000000"
+        android:pathData="M 19.84 4.05 H 25.64 V 10.38 H 19.84 V 4.05 Z" />
+    <path
+        android:fillColor="#ff000000"
+        android:pathData="M 19.85 11.88 H 25.64 V 17.25 H 19.85 V 11.88 Z" />
+    <path
+        android:fillColor="#ff000000"
+        android:pathData="M 19.85 18.75 H 25.64 V 24.11 H 19.85 V 18.75 Z" />
+    <path
+        android:fillColor="#ff000000"
+        android:pathData="M 19.84 25.61 H 25.64 V 31.95 H 19.84 V 25.61 Z" />
+    <path
+        android:fillColor="#ff000000"
+        android:pathData="M31.56,4.05h-4.42v6.33H33V5.49C33,4.69,32.35,4.05,31.56,4.05z" />
+    <path
+        android:fillColor="#ff000000"
+        android:pathData="M 27.14 11.88 H 33 V 17.25 H 27.14 V 11.88 Z" />
+    <path
+        android:fillColor="#ff000000"
+        android:pathData="M 27.14 18.75 H 33 V 24.12 H 27.14 V 18.75 Z" />
+    <path
+        android:fillColor="#ff000000"
+        android:pathData="M27.14,31.95h4.42c0.79,0,1.44-0.64,1.44-1.44v-4.89h-5.86V31.95z" />
+    <path
+        android:fillColor="#ff000000"
+        android:pathData="M17.07,10.32H4.28c-0.34,0-0.66,0.14-0.9,0.38C3.13,10.94,3,11.26,3,11.6v12.8c0,0.34,0.14,0.66,0.38,0.9 s0.57,0.37,0.9,0.37h12.79c0.34,0,0.66-0.13,0.9-0.37c0.24-0.24,0.38-0.57,0.38-0.9V11.6c0-0.34-0.14-0.66-0.38-0.9 C17.73,10.46,17.4,10.33,17.07,10.32z M12.44,22.2l-1.77-2.76L8.9,22.2H6.67l2.87-4.39l-2.61-4.03h2.17l0.03,0.05l1.57,2.51 l1.56-2.56h2.15l-2.62,4.09l2.87,4.33H12.44z" />
+</vector>

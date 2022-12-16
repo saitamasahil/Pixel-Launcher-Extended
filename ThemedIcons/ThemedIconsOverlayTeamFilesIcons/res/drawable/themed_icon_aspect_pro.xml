@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector
+    android:height="36.0dip"
+    android:width="36.0dip"
+    android:viewportWidth="36.0"
+    android:viewportHeight="36.0"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt">
+    <path
+        android:fillColor="#ff000000"
+        android:pathData="M31.568,2.878H4.432c-1.528,0 -2.767,1.147 -2.767,2.561v25.121c0,1.415 1.239,2.561 2.767,2.561h27.136c1.528,0 2.767,-1.147 2.767,-2.561V5.439C34.335,4.025 33.096,2.878 31.568,2.878zM26.301,5.801v0.131v25.134h-0.497h-0.337H4.928H4.804H4.113V5.932V5.801V5.144h22.188V5.801zM30.291,31.065h-1.809V5.144h1.809V31.065zM33.563,31.065h-1.951v-0.484h1.951V31.065zM33.563,26.424h-1.951V25.94h1.951V26.424zM33.563,22.266h-1.951v-0.484h1.951V22.266zM33.563,17.339h-1.951v-0.484h1.951V17.339zM33.563,13.048h-1.951v-0.484h1.951V13.048zM33.563,9.131h-1.951V8.647h1.951V9.131zM33.563,5.628h-1.951V5.144h1.951V5.628z" />
+    <path
+        android:fillColor="@drawable/$themed_icon_aspect_pro__0"
+        android:pathData="M28.482,5.144h1.809v25.922h-1.809z" />
+    <path
+        android:fillColor="@drawable/$themed_icon_aspect_pro__1"
+        android:pathData="M4.893,5.866h20.574v24.366h-20.574z"
+        android:fillType="evenOdd" />
+</vector>

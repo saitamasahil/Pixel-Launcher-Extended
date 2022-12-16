@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector
+    android:height="32.0dip"
+    android:width="32.0dip"
+    android:viewportWidth="32.0"
+    android:viewportHeight="32.0"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt">
+    <path
+        android:fillColor="@drawable/$themed_icon_exodus_crypto__0"
+        android:pathData="M24.416,17.824h-6.604V14.21h6.619c0.29,-0.913 0.579,-1.82 0.879,-2.765l-7.57,-4.948V2.16l11.891,7.756L27.658,16l1.953,6.122L17.82,29.84v-4.345c2.459,-1.611 4.968,-3.227 7.496,-4.879L24.416,17.824z" />
+    <path
+        android:fillColor="@drawable/$themed_icon_exodus_crypto__1"
+        android:pathData="M7.584,17.824h6.604V14.21H7.569c-0.29,-0.913 -0.579,-1.82 -0.879,-2.765l7.57,-4.948V2.16L2.368,9.916L4.342,16l-1.953,6.122L14.18,29.84v-4.345c-2.459,-1.611 -4.968,-3.227 -7.496,-4.879L7.584,17.824z" />
+</vector>

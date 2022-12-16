@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector
+    android:height="32.0dip"
+    android:width="32.0dip"
+    android:viewportWidth="32.0"
+    android:viewportHeight="32.0"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt">
+    <path
+        android:fillColor="@drawable/$themed_icon_walldrobe_wallpapers__0"
+        android:pathData="M16.032,6.926c0,0 -3.412,6.168 -5.344,9.078c-0.919,-1.372 -1.544,-2.842 -2.495,-4.206c-2.555,4.46 -7.637,13.274 -7.637,13.274l2.715,0.001l4.88,-8.355l-0.013,3.589c0,0 -1.701,3.138 -2.594,4.766c0.916,0 1.78,0 2.651,0l7.789,-13.351c0,0 0.106,8.96 0.121,13.347l5.235,-9.082L16.032,6.926z" />
+    <path
+        android:fillColor="#ff000000"
+        android:pathData="M23.712,11.873l-2.371,4.114l-5.235,9.082c0,0 1.797,0 2.681,0c1.648,-2.816 4.923,-8.451 4.923,-8.451l0.119,8.449h7.614L23.712,11.873z" />
+</vector>

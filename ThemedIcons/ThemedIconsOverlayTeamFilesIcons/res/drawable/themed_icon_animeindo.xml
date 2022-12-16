@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector
+    android:height="36.0dip"
+    android:width="36.0dip"
+    android:viewportWidth="36.0"
+    android:viewportHeight="36.0"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt">
+    <path
+        android:fillColor="@drawable/$themed_icon_animeindo__0"
+        android:pathData="M0.562,33.179c1.102,0 2.139,0 3.171,0c3.561,-6.154 7.11,-12.284 10.715,-18.513c3.617,6.24 7.17,12.371 10.728,18.511c1.031,0 2.045,0 3.14,0c-4.626,-8.055 -9.221,-16.057 -13.867,-24.148C9.791,17.129 5.184,25.14 0.562,33.179z" />
+    <path
+        android:fillColor="@drawable/$themed_icon_animeindo__1"
+        android:pathData="M18.006,2.812c-0.649,1.121 -1.235,2.132 -1.818,3.14c5.268,9.107 10.518,18.184 15.754,27.235c1.187,0 2.303,0 3.496,0C29.627,23.039 23.861,12.957 18.006,2.812z" />
+    <path
+        android:fillColor="@drawable/$themed_icon_animeindo__2"
+        android:pathData="M7.479,33.159c4.691,0 9.31,0 13.972,0c-2.332,-4.059 -4.633,-8.064 -6.982,-12.153C12.11,25.105 9.802,29.119 7.479,33.159z" />
+</vector>
