@@ -63,6 +63,6 @@ fi
 # Create zip file
 echo ">> Creating zip file"
 echo "" # make the output look easier to read
-zip -r PixelLauncherExtended.zip . -x .git/\* # Ignore .git folder because it's not needed for the module
+zip -r PixelLauncherExtended.zip . -x .git/\* ThemedIcons/\* screenshots/\* autobuild.sh autobuild.bat banner.jpg Banner2.jpg codename.txt logo.png online\ installer\ setup.sh README.md # Ignore specified files and folders because they are not needed for the module
 echo "" # make the output look easier to read
 echo ">> Done! You can find the zip file in the current directory - '$(pwd)/PixelLauncherExtended.zip'"
