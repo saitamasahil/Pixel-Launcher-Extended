@@ -60,9 +60,12 @@ if [ ! -d "system" ] || [ ! -f "setup.sh" ]; then
   exit 1
 fi
 
+# Read version from module.prop file
+version=$(grep "version=" module.prop | cut -d "=" -f 2)
+
 # Create zip file
 echo ">> Creating zip file"
 echo "" # make the output look easier to read
-zip -r PixelLauncherExtended.zip . -x .git/\* ThemedIcons/\* screenshots/\* autobuild.sh autobuild.bat banner.jpg banner2.jpg codename.txt logo.png online_installer_setup.sh README.md # Ignore specified files and folders because they are not needed for the module
+zip -r "Pixel Launcher Extended $version.zip" . -x .git/\* ThemedIcons/\* screenshots/\* autobuild.sh autobuild.bat banner.jpg banner2.jpg codename.txt logo.png online_installer_setup.sh README.md # Ignore specified files and folders because they are not needed for the module
 echo "" # make the output look easier to read
-echo ">> Done! You can find the zip file in the current directory - '$(pwd)/PixelLauncherExtended.zip'"
+echo ">> Done! You can find the zip file in the current directory - '$(pwd)/Pixel Launcher Extended $version.zip'"
