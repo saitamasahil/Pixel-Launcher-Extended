@@ -123,9 +123,9 @@ git clone https://github.com/saitamasahil/Pixel-Launcher-Extended
 - Don't use git in command-line or powershell to clone repo. Some users reported that it's corrupting contents.
 
 ### For Ubuntu, Debian, and other Linux distributions
-- Install the required packages. On Ubuntu or Debian you can use following command to install it.
+- Required **zip** package install command is in the script itself. Still, If you face any error then install **zip** manually. On Ubuntu or Debian you can use the following command to install it.
 ```sh
-sudo apt install zip git
+sudo apt install zip
 ```
 - Now clone the repo using git.
 ```sh
