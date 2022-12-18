@@ -136,38 +136,26 @@ git clone https://github.com/saitamasahil/Pixel-Launcher-Extended
 ```sh
 cd Pixel-Launcher-Extended
 ```
-- Run autobuild.sh for making offline installer.
+- Run autobuild.sh.
 ```sh
 bash autobuild.sh
 ```
-- Run autobuild_online.sh for making online installer.
-```sh
-bash autobuild_online.sh
-```
+- Choose Offline Installer or Online Installer using number keys.
 
 ### For Termux
-- Open Termux, copy & paste this command to make offline installer
+- Open Termux, copy & paste this command
 ```sh
 pkg upgrade || true
 pkg install -y zip git
+rm -rf Pixel-Launcher-Extended
 git clone https://github.com/saitamasahil/Pixel-Launcher-Extended
 cd Pixel-Launcher-Extended
 bash autobuild.sh
 termux-setup-storage
 mv Pixel\ Launcher\ Extended* /sdcard
 ```
-- To make online installer, copy & paste this command
-```sh
-pkg upgrade || true
-pkg install -y zip git
-git clone https://github.com/saitamasahil/Pixel-Launcher-Extended
-cd Pixel-Launcher-Extended
-bash autobuild_online.sh
-termux-setup-storage
-mv Pixel\ Launcher\ Extended* /sdcard
-```
-- Please make sure to grant storage permissions, if Termux asks you to do so
-- You will get Magisk module in your internal storage
+- Please make sure to grant storage permissions, if Termux asks you to do so, you will get Magisk module in your internal storage.
+- Choose Offline Installer or Online Installer using number keys.
 - Use [Termux From F-Droid](https://f-droid.org/en/packages/com.termux/) to perform these tasks.
 - If you get this warning "It appears that directory '~/storage' already exists.
 This script is going to rebuild its structure from
