@@ -15,6 +15,9 @@
 - Material You At A Glance greetings.
 - [Pixel Launcher Mods](https://github.com/KieronQuinn/PixelLauncherMods) by KieronQuinn. It has many cool features such as icon pack changer, recent section blur, etc.
 - Add-ons, which can enhance and add more functionality.
+- Push Notification Services
+> Please note that this feature requires internet to provide you update & support related notifications.
+> We don't take any data or logs from your phone to provide you these notifications.
 
 ### Compatibility
 This module is expected to work on ROMs which are based on fairly unmodified Android source code.
