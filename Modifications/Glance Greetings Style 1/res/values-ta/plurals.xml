@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="abc_slice_duration_days">
+        <item quantity="other">%d நா முன்பு</item>
+        <item quantity="one">%d நா முன்பு</item>
+    </plurals>
+    <plurals name="abc_slice_duration_min">
+        <item quantity="other">%d நிமி முன்பு</item>
+        <item quantity="one">%d நிமி முன்பு</item>
+    </plurals>
+    <plurals name="abc_slice_duration_years">
+        <item quantity="other">%d ஆண்டுக்கு முன்</item>
+        <item quantity="one">%d ஆண்டுக்கு முன்</item>
+    </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="other">%d புதிய அறிவிப்புகள்</item>
+        <item quantity="one">%d புதிய அறிவிப்பு</item>
+    </plurals>
+    <plurals name="smartspace_hours">
+        <item quantity="other">%d ம.நே</item>
+        <item quantity="one">%d ம.நே</item>
+    </plurals>
+    <plurals name="smartspace_minutes">
+        <item quantity="other">%d நிமி.</item>
+        <item quantity="one">%d நிமி.</item>
+    </plurals>
+</resources>

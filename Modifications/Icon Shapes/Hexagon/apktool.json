@@ -1,0 +1,26 @@
+{
+  "apkFileName": "Hexagon_src.apk",
+  "VersionInfo": {
+    "versionName": "12",
+    "versionCode": "12"
+  },
+  "UsesFramework": {
+    "ids": [1],
+    "tag": null
+  },
+  "unknownFiles": {},
+  "PackageInfo": {
+    "forcedPackageId": "127",
+    "renameManifestPackage": null
+  },
+  "doNotCompress": ["resources.arsc"],
+  "isFrameworkApk": false,
+  "compressionType": false,
+  "sparseResources": false,
+  "version": "2.4.0-221119",
+  "sharedLibrary": false,
+  "sdkInfo": {
+    "minSdkVersion": "29",
+    "targetSdkVersion": "31"
+  }
+}

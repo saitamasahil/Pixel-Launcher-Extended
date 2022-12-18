@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="abc_slice_duration_days">
+        <item quantity="other">%d na araw ang nakalipas</item>
+        <item quantity="one">%d araw ang nakalipas</item>
+    </plurals>
+    <plurals name="abc_slice_duration_min">
+        <item quantity="other">%d na min ang nakalipas</item>
+        <item quantity="one">%d min ang nakalipas</item>
+    </plurals>
+    <plurals name="abc_slice_duration_years">
+        <item quantity="other">%d na taon ang nakalipas</item>
+        <item quantity="one">%d taon ang nakalipas</item>
+    </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="other">%d na bagong notification</item>
+        <item quantity="one">%d bagong notification</item>
+    </plurals>
+    <plurals name="smartspace_hours">
+        <item quantity="other">%d na oras</item>
+        <item quantity="one">%d oras</item>
+    </plurals>
+    <plurals name="smartspace_minutes">
+        <item quantity="other">%d na min</item>
+        <item quantity="one">%d min</item>
+    </plurals>
+</resources>

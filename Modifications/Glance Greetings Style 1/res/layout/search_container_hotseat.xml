@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.apps.nexuslauncher.qsb.SearchDelegateView
+    android:layout_gravity="center|top"
+    android:id="@id/search_container_hotseat"
+    android:background="@drawable/bg_google_qsb"
+    android:layout_width="fill_parent"
+    android:layout_height="@dimen/qsb_widget_height"
+    android:layout_alignParentTop="true"
+    android:layout_centerHorizontal="true"
+    android:contentDescription="@string/label_search"
+    android:backgroundTint="@color/hotseat_qsb_bg_color"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView
+        android:layout_gravity="start|center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_super_g"
+        android:layout_marginStart="8.0dip" />
+    <ImageView
+        android:layout_gravity="start|center"
+        android:id="@id/g_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_super_g_color"
+        android:layout_marginStart="14.0dip" />
+    <TextView
+        android:textSize="13.0sp"
+        android:textColor="?android:textColorTertiary"
+        android:gravity="start|center"
+        android:id="@id/hint"
+        android:clickable="false"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:text="@string/qsb_greeting"
+        android:scrollHorizontally="true"
+        android:singleLine="true"
+        android:textDirection="locale"
+        android:layout_marginStart="50.0dip"
+        android:layout_marginEnd="28.0dip"
+        android:letterSpacing="0.0" />
+    <LinearLayout
+        android:layout_gravity="end|center"
+        android:orientation="horizontal"
+        android:id="@id/end_part"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="-6.0dip"
+        android:layout_marginBottom="-6.0dip"
+        android:layout_marginEnd="@dimen/qsb_marginEnd">
+        <com.google.android.apps.nexuslauncher.qsb.AssistantIconView
+            android:id="@id/mic_icon"
+            android:background="?android:selectableItemBackgroundBorderless"
+            android:focusable="false"
+            android:clickable="true"
+            android:layout_width="@dimen/qsb_icon_tap_size"
+            android:layout_height="fill_parent"
+            android:contentDescription="@string/label_voice_search" />
+        <ImageButton
+            android:id="@id/lens_icon"
+            android:background="?android:selectableItemBackgroundBorderless"
+            android:padding="@dimen/qsb_lens_padding"
+            android:focusable="false"
+            android:clickable="true"
+            android:layout_width="@dimen/qsb_icon_tap_size"
+            android:layout_height="fill_parent"
+            android:src="@drawable/ic_lens_color"
+            android:scaleType="fitCenter"
+            android:contentDescription="@string/label_lens" />
+    </LinearLayout>
+</com.google.android.apps.nexuslauncher.qsb.SearchDelegateView>

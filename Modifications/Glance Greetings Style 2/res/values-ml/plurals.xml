@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="abc_slice_duration_days">
+        <item quantity="other">%d ദിവസം മുമ്പ്</item>
+        <item quantity="one">%d ദിവസം മുമ്പ്</item>
+    </plurals>
+    <plurals name="abc_slice_duration_min">
+        <item quantity="other">%d മിനിറ്റ് മുമ്പ്</item>
+        <item quantity="one">%d മിനിറ്റ് മുമ്പ്</item>
+    </plurals>
+    <plurals name="abc_slice_duration_years">
+        <item quantity="other">%d വർഷം മുമ്പ്</item>
+        <item quantity="one">%d വർഷം മുമ്പ്</item>
+    </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="other">%d പുതിയ അറിയിപ്പുകൾ</item>
+        <item quantity="one">%d പുതിയ അറിയിപ്പ്</item>
+    </plurals>
+    <plurals name="smartspace_hours">
+        <item quantity="other">%d മണിക്കൂർ</item>
+        <item quantity="one">%d മണിക്കൂർ</item>
+    </plurals>
+    <plurals name="smartspace_minutes">
+        <item quantity="other">%d മിനിറ്റ്</item>
+        <item quantity="one">%d മിനിറ്റ്</item>
+    </plurals>
+</resources>

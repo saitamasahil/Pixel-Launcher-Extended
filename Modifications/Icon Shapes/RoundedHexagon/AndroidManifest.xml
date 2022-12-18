@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest
+    android:compileSdkVersion="33"
+    android:compileSdkVersionCodename="13"
+    package="RHexa.overlay"
+    platformBuildVersionCode="33"
+    platformBuildVersionName="13"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <application
+        android:name="RHexa.overlay"
+        android:hasCode="true"
+        android:debuggable="true"
+        android:testOnly="true"
+        android:allowBackup="true"
+        android:supportsRtl="true"
+        android:extractNativeLibs="true" />
+    <overlay
+        android:priority="1000"
+        android:targetPackage="android"
+        android:isStatic="true" />
+</manifest>

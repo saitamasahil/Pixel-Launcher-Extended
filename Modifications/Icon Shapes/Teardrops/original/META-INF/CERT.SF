@@ -1,0 +1,18 @@
+Signature-Version: 1.0
+Created-By: Apktool M
+SHA1-Digest-Manifest: 3JUv1ekhSxZey7hN4lDJuSEXFiU=
+X-Android-APK-Signed: 2
+
+Name: AndroidManifest.xml
+SHA1-Digest: K6iyzlQfxHseTg4bR977bwwslfo=
+
+Name: META-INF/services/kotlinx.coroutines.CoroutineExceptionHandler
+SHA1-Digest: rTqMXgU9P79c5e7wvXKJTavShao=
+
+Name: META-INF/services/kotlinx.coroutines.internal.MainDispatcherFact
+ ory
+SHA1-Digest: spNZBImwLy1WEMXjdtoaKcPKRcc=
+
+Name: resources.arsc
+SHA1-Digest: d8MIddn85UIi9BfANJmqIU8iYfI=
+

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="abc_slice_duration_days">
+        <item quantity="other">%d hr lalu</item>
+        <item quantity="one">%d hr lalu</item>
+    </plurals>
+    <plurals name="abc_slice_duration_min">
+        <item quantity="other">%d mnt lalu</item>
+        <item quantity="one">%d mnt lalu</item>
+    </plurals>
+    <plurals name="abc_slice_duration_years">
+        <item quantity="other">%d thn lalu</item>
+        <item quantity="one">%d thn lalu</item>
+    </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="other">%d notifikasi baru</item>
+        <item quantity="one">%d notifikasi baru</item>
+    </plurals>
+    <plurals name="smartspace_hours">
+        <item quantity="other">%d jam</item>
+        <item quantity="one">%d jam</item>
+    </plurals>
+    <plurals name="smartspace_minutes">
+        <item quantity="other">%d mnt</item>
+        <item quantity="one">%d mnt</item>
+    </plurals>
+</resources>

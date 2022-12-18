@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.systemui.smartspace.BcSmartspaceCard
+    android:paddingTop="@dimen/enhanced_smartspace_padding_top"
+    android:layout_width="fill_parent"
+    android:layout_height="@dimen/enhanced_smartspace_card_height"
+    android:baselineAligned="false"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout
+        android:id="@id/text_group"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textSize="20.599976sp"
+                android:textColor="@android:color/system_accent1_100"
+                android:id="@id/hint"
+                android:focusable="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/hello_greeting"
+                android:shadowColor="#ff000000"
+                android:shadowDx="1.0"
+                android:shadowDy="1.0"
+                android:shadowRadius="1.0"
+                android:layout_marginEnd="5.0dip"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true" />
+            <com.google.android.systemui.smartspace.IcuDateTextView
+                android:id="@id/date"
+                android:focusable="true"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                style="@style/EnhancedSmartspaceTextTitle" />
+        </LinearLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@id/smartspace_subtitle_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32.0dip"
+            android:layout_below="@id/date">
+            <include
+                layout="@layout/smartspace_subtitle_pane" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:id="@id/smartspace_extras_group"
+            android:visibility="invisible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8.0dip"
+            android:layout_below="@id/smartspace_subtitle_group">
+            <include
+                layout="@layout/smartspace_extras" />
+        </LinearLayout>
+    </RelativeLayout>
+</com.google.android.systemui.smartspace.BcSmartspaceCard>

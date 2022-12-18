@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="abc_slice_duration_days">
+        <item quantity="other">%d দিন আগে</item>
+        <item quantity="one">%d দিন আগে</item>
+    </plurals>
+    <plurals name="abc_slice_duration_min">
+        <item quantity="other">%d মিনিট আগে</item>
+        <item quantity="one">%d মিনিট আগে</item>
+    </plurals>
+    <plurals name="abc_slice_duration_years">
+        <item quantity="other">%d বছর আগে</item>
+        <item quantity="one">%d বছর আগে</item>
+    </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="other">%dটি নতুন বিজ্ঞপ্তি</item>
+        <item quantity="one">%dটি নতুন বিজ্ঞপ্তি</item>
+    </plurals>
+    <plurals name="smartspace_hours">
+        <item quantity="other">%d ঘণ্টা</item>
+        <item quantity="one">%d ঘণ্টা</item>
+    </plurals>
+    <plurals name="smartspace_minutes">
+        <item quantity="other">%d মিনিট</item>
+        <item quantity="one">%d মিনিট</item>
+    </plurals>
+</resources>

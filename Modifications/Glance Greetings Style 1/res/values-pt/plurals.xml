@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="abc_slice_duration_days">
+        <item quantity="other">%d dias atrás</item>
+        <item quantity="one">%d dia atrás</item>
+    </plurals>
+    <plurals name="abc_slice_duration_min">
+        <item quantity="other">Há %dmin</item>
+        <item quantity="one">Há %dmin</item>
+    </plurals>
+    <plurals name="abc_slice_duration_years">
+        <item quantity="other">Há %d anos</item>
+        <item quantity="one">Há %d ano</item>
+    </plurals>
+    <plurals name="smartspace_hours">
+        <item quantity="other">%d h</item>
+        <item quantity="one">%d h</item>
+    </plurals>
+    <plurals name="smartspace_minutes">
+        <item quantity="other">%d min</item>
+        <item quantity="one">%d min</item>
+    </plurals>
+</resources>

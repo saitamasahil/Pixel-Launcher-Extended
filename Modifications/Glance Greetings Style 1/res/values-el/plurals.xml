@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="abc_slice_duration_days">
+        <item quantity="other">%d ημ. πριν</item>
+        <item quantity="one">%d ημ. πριν</item>
+    </plurals>
+    <plurals name="abc_slice_duration_min">
+        <item quantity="other">%d λ. πριν</item>
+        <item quantity="one">%d λ. πριν</item>
+    </plurals>
+    <plurals name="abc_slice_duration_years">
+        <item quantity="other">%d έτη πριν</item>
+        <item quantity="one">%d έτος πριν</item>
+    </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="other">%d νέες ειδοποιήσεις</item>
+        <item quantity="one">%d νέα ειδοποίηση</item>
+    </plurals>
+    <plurals name="smartspace_hours">
+        <item quantity="other">%d ώ.</item>
+        <item quantity="one">%d ώ.</item>
+    </plurals>
+    <plurals name="smartspace_minutes">
+        <item quantity="other">%d λ.</item>
+        <item quantity="one">%d λ.</item>
+    </plurals>
+</resources>

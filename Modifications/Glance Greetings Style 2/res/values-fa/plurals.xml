@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="abc_slice_duration_days">
+        <item quantity="other">%d روز قبل</item>
+        <item quantity="one">%d روز قبل</item>
+    </plurals>
+    <plurals name="abc_slice_duration_min">
+        <item quantity="other">%d دقیقه قبل</item>
+        <item quantity="one">%d دقیقه قبل</item>
+    </plurals>
+    <plurals name="abc_slice_duration_years">
+        <item quantity="other">%d سال قبل</item>
+        <item quantity="one">%d سال قبل</item>
+    </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="other">%d اعلان جدید</item>
+        <item quantity="one">%d اعلان جدید</item>
+    </plurals>
+    <plurals name="smartspace_hours">
+        <item quantity="other">‏%d ساعت</item>
+        <item quantity="one">‏%d ساعت</item>
+    </plurals>
+    <plurals name="smartspace_minutes">
+        <item quantity="other">‏%d دقیقه</item>
+        <item quantity="one">‏%d دقیقه</item>
+    </plurals>
+</resources>
