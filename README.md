@@ -124,7 +124,7 @@ git clone https://github.com/saitamasahil/Pixel-Launcher-Extended
 - Currently it supports making of **offline installer**. Making of **online installer** will be added later.
 
 ### For Ubuntu, Debian, and other Linux distributions
-- Required **zip** package install command is in the script itself. Still, If you face any error then install **zip** manually. On Ubuntu or Debian you can use the following command to install it.
+- The required zip package install command is in the script itself. However, if you encounter any errors, you can install **zip** manually. On Ubuntu or Debian, use the following command to do so."
 ```sh
 sudo apt install zip
 ```
