@@ -65,7 +65,7 @@ read -p "Enter your choice: " choice
 
 if [ $choice -eq 1 ]; then
 
-  # Rename offline_setup.sh to setup.sh
+  # Copy & Rename offline_setup.sh to setup.sh
   cp offline_setup.sh setup.sh
 
   # Check if the current directory has system folder and setup.sh to verify that current directory is valid
@@ -82,7 +82,8 @@ if [ $choice -eq 1 ]; then
   echo ">> Done! You can find the zip file in the current directory - '$(pwd)/Pixel Launcher Extended Offline Installer $version.zip'"
 
 elif [ $choice -eq 2 ]; then
-  # Rename online_setup.sh to setup.sh
+
+  # Copy & Rename online_setup.sh to setup.sh
   cp online_setup.sh setup.sh
 
   # Check if the current directory has system folder and setup.sh to verify that current directory is valid
