@@ -110,7 +110,7 @@ If you want to enable or disable wallpaer zoom effect then use this add-on.
 
 ## Building from source
 
-If you don't want to download built module from mirrors above, then you can build magisk module(offline installer) yourself.
+If you don't want to download built module from mirrors above, then you can build magisk module yourself.
 
 ### For Windows
 - Make sure 7-Zip is installed in your Windows PC. Download [7-Zip](https://www.7-zip.org/) from here
@@ -121,6 +121,7 @@ git clone https://github.com/saitamasahil/Pixel-Launcher-Extended
 ```
 - Run `autobuild.bat`
 - Don't use git in command-line or powershell to clone repo. Some users reported that it's corrupting contents.
+- Currently it supports making of **offline installer**. Making of **online installer** will be added later.
 
 ### For Ubuntu, Debian, and other Linux distributions
 - Required **zip** package install command is in the script itself. Still, If you face any error then install **zip** manually. On Ubuntu or Debian you can use the following command to install it.
@@ -135,19 +136,33 @@ git clone https://github.com/saitamasahil/Pixel-Launcher-Extended
 ```sh
 cd Pixel-Launcher-Extended
 ```
-- Run autobuild.sh.
+- Run autobuild.sh for making offline installer.
 ```sh
 bash autobuild.sh
 ```
+- Run autobuild_online.sh for making online installer.
+```sh
+bash autobuild_online.sh
+```
 
 ### For Termux
-- Open Termux, and copy and paste this command
+- Open Termux, copy & paste this command to make offline installer
 ```sh
 pkg upgrade || true
 pkg install -y zip git
 git clone https://github.com/saitamasahil/Pixel-Launcher-Extended
 cd Pixel-Launcher-Extended
 bash autobuild.sh
+termux-setup-storage
+mv Pixel\ Launcher\ Extended* /sdcard
+```
+- To make online installer, copy & paste this command
+```sh
+pkg upgrade || true
+pkg install -y zip git
+git clone https://github.com/saitamasahil/Pixel-Launcher-Extended
+cd Pixel-Launcher-Extended
+bash autobuild_online.sh
 termux-setup-storage
 mv Pixel\ Launcher\ Extended* /sdcard
 ```
