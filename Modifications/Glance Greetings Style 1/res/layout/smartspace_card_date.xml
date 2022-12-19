@@ -53,7 +53,7 @@
             <com.google.android.systemui.smartspace.IcuDateTextView
                 android:id="@id/date"
                 android:focusable="true"
-                android:layout_width="0.0dip"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentEnd="true"
