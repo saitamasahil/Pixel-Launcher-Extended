@@ -97,5 +97,8 @@ if [ -f $MODDIR/first ]; then
     rm -rf $MODDIR/first
 fi
 
+# Delete the theme_customization_overlay_packages setting
+su -c "settings delete secure theme_customization_overlay_packages"
+
 # Initialize system
 "$MODDIR/cns" &
