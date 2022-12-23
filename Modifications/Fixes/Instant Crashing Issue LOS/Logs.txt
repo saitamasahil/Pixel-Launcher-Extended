@@ -1,0 +1,22 @@
+time: 1668171214558
+device fp:asus/ASUS_X00TD/ASUS_X00TD:10/QKQ1/17.2017.2012.438-20201203:user/release-keys
+ricedroid ver:Lomi
+msg: java.lang.NoSuchMethodError: No interface method enableBinderTracing()V in class Landroid/app/IActivityManager; or its super classes (declaration of 'android.app.IActivityManager' appears in /system/framework/framework.jar)
+stacktrace: java.lang.NoSuchMethodError: No interface method enableBinderTracing()V in class Landroid/app/IActivityManager; or its super classes (declaration of 'android.app.IActivityManager' appears in /system/framework/framework.jar)
+	at com.android.quickstep.QuickstepProcessInitializer.init(Unknown Source:47)
+	at com.android.launcher3.MainProcessInitializer.initialize(Unknown Source:10)
+	at com.android.launcher3.LauncherProvider.onCreate(Unknown Source:8)
+	at android.content.ContentProvider.attachInfo(ContentProvider.java:2451)
+	at android.content.ContentProvider.attachInfo(ContentProvider.java:2421)
+	at android.app.ActivityThread.installProvider(ActivityThread.java:7492)
+	at android.app.ActivityThread.installContentProviders(ActivityThread.java:7007)
+	at android.app.ActivityThread.handleBindApplication(ActivityThread.java:6778)
+	at android.app.ActivityThread.-$$Nest$mhandleBindApplication(Unknown Source:0)
+	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:2138)
+	at android.os.Handler.dispatchMessage(Handler.java:106)
+	at android.os.Looper.loopOnce(Looper.java:201)
+	at android.os.Looper.loop(Looper.java:288)
+	at android.app.ActivityThread.main(ActivityThread.java:7902)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:553)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:946)
