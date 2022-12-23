@@ -18,39 +18,6 @@ AUTOVKSEL="true"
 DEBUG="true"
 
 ############
-# Replace List
-############
-
-# List all directories you want to directly replace in the system
-# Construct your list in the following example format
-REPLACE_EXAMPLE="
-/system/app/Youtube
-/system/priv-app/SystemUI
-/system/priv-app/Settings
-/system/framework
-"
-# Construct your own list here
-REPLACE="
-/system/priv-app/AsusLauncherDev
-/system/priv-app/Lawnchair
-/system/priv-app/NexusLauncherPrebuilt
-/system/product/priv-app/ParanoidQuickStep
-/system/product/priv-app/ShadyQuickStep
-/system/product/priv-app/TrebuchetQuickStep
-/system/product/priv-app/NexusLauncherRelease
-/system/product/overlay/PixelLauncherIconsOverlay
-/system/product/overlay/CustomPixelLauncherOverlay
-/system/system_ext/priv-app/NexusLauncherRelease
-/system/system_ext/priv-app/DerpLauncherQuickStep
-/system/system_ext/priv-app/TrebuchetQuickStep
-/system/system_ext/priv-app/Lawnchair
-/system/system_ext/priv-app/PixelLauncherRelease
-/system/system_ext/priv-app/Launcher3QuickStep
-/system/system_ext/priv-app/ThemePicker
-/system/product/overlay/ThemedIconsOverlay.apk
-"
-
-############
 # Permissions
 ############
 
@@ -130,6 +97,38 @@ init_main() {
   ui_print ""
 
   if [[ "$FCTEXTAD1" == "Android 13" ]]; then
+    ############
+    # Replace List
+    ############
+
+    # List all directories you want to directly replace in the system
+    # Construct your list in the following example format
+    REPLACE_EXAMPLE="
+    /system/app/Youtube
+    /system/priv-app/SystemUI
+    /system/priv-app/Settings
+    /system/framework
+    "
+    # Construct your own list here
+    REPLACE="
+    /system/priv-app/AsusLauncherDev
+    /system/priv-app/Lawnchair
+    /system/priv-app/NexusLauncherPrebuilt
+    /system/product/priv-app/ParanoidQuickStep
+    /system/product/priv-app/ShadyQuickStep
+    /system/product/priv-app/TrebuchetQuickStep
+    /system/product/priv-app/NexusLauncherRelease
+    /system/product/overlay/PixelLauncherIconsOverlay
+    /system/product/overlay/CustomPixelLauncherOverlay
+    /system/system_ext/priv-app/NexusLauncherRelease
+    /system/system_ext/priv-app/DerpLauncherQuickStep
+    /system/system_ext/priv-app/TrebuchetQuickStep
+    /system/system_ext/priv-app/Lawnchair
+    /system/system_ext/priv-app/PixelLauncherRelease
+    /system/system_ext/priv-app/Launcher3QuickStep
+    /system/system_ext/priv-app/ThemePicker
+    /system/product/overlay/ThemedIconsOverlay.apk
+    "
     ui_print ""
     ui_print "[*] Do you want to install Extra Grids in Launcher?"
     ui_print "[*] Extra Grids will enable more Grids Options in App Grid"
@@ -339,6 +338,37 @@ init_main() {
     fi
 
   elif [[ "$FCTEXTAD1" == "Android 13 QPR" ]]; then
+    ############
+    # Replace List
+    ############
+
+    # List all directories you want to directly replace in the system
+    # Construct your list in the following example format
+    REPLACE_EXAMPLE="
+    /system/app/Youtube
+    /system/priv-app/SystemUI
+    /system/priv-app/Settings
+    /system/framework
+    "
+    # Construct your own list here
+    REPLACE="
+    /system/priv-app/AsusLauncherDev
+    /system/priv-app/Lawnchair
+    /system/priv-app/NexusLauncherPrebuilt
+    /system/product/priv-app/ParanoidQuickStep
+    /system/product/priv-app/ShadyQuickStep
+    /system/product/priv-app/TrebuchetQuickStep
+    /system/product/priv-app/NexusLauncherRelease
+    /system/product/overlay/PixelLauncherIconsOverlay
+    /system/product/overlay/CustomPixelLauncherOverlay
+    /system/system_ext/priv-app/NexusLauncherRelease
+    /system/system_ext/priv-app/TrebuchetQuickStep
+    /system/system_ext/priv-app/Lawnchair
+    /system/system_ext/priv-app/PixelLauncherRelease
+    /system/system_ext/priv-app/Launcher3QuickStep
+    /system/system_ext/priv-app/ThemePicker
+    /system/product/overlay/ThemedIconsOverlay.apk
+    "
     ui_print ""
     ui_print "[*] Do you want to install Extra Grids in Launcher?"
     ui_print "[*] Extra Grids will enable more Grids Options in App Grid"
