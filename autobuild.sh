@@ -48,8 +48,8 @@ if [ -f /etc/fedora-release ]; then
   sudo dnf install zip
 fi
 
-# Define an array of rainbow colors
-colors=("\033[38;5;196m" "\033[38;5;202m" "\033[38;5;208m" "\033[38;5;214m" "\033[38;5;220m" "\033[38;5;226m" "\033[38;5;190m" "\033[38;5;154m" "\033[38;5;118m" "\033[38;5;82m" "\033[38;5;46m" "\033[38;5;47m" "\033[38;5;48m" "\033[38;5;49m" "\033[38;5;50m")
+# Define an array of colors
+colors=("\033[38;5;9m" "\033[38;5;202m" "\033[38;5;226m" "\033[38;5;10m" "\033[38;5;21m" "\033[38;5;55m")
 
 # Display "Pixel Launcher Extended" in each rainbow color
 for color in "${colors[@]}"; do
