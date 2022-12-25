@@ -48,6 +48,17 @@ if [ -f /etc/fedora-release ]; then
   sudo dnf install zip
 fi
 
+# Define an array of rainbow colors
+colors=("\033[38;5;196m" "\033[38;5;202m" "\033[38;5;208m" "\033[38;5;214m" "\033[38;5;220m" "\033[38;5;226m" "\033[38;5;190m" "\033[38;5;154m" "\033[38;5;118m" "\033[38;5;82m" "\033[38;5;46m" "\033[38;5;47m" "\033[38;5;48m" "\033[38;5;49m" "\033[38;5;50m")
+
+# Display "Pixel Launcher Extended" in each rainbow color
+for color in "${colors[@]}"; do
+    echo -e "${color}Pixel Launcher Extended By TeamFiles"
+done
+
+# Reset the color to the default
+echo -e "\033[0m"
+
 # Check if zip is installed
 if ! command -v zip >/dev/null; then
   echo "Error: zip is not installed. Please install it manually and try again."
