@@ -49,7 +49,7 @@ if [ -f /etc/fedora-release ]; then
 fi
 
 # Define an array of colors
-colors=("\033[38;5;9m" "\033[38;5;202m" "\033[38;5;226m" "\033[38;5;10m" "\033[38;5;21m" "\033[38;5;55m")
+colors=("\033[38;5;196m" "\033[38;5;202m" "\033[38;5;226m" "\033[38;5;82m" "\033[38;5;21m" "\033[38;5;55m")
 
 # Display "Pixel Launcher Extended" in each rainbow color
 for color in "${colors[@]}"; do
