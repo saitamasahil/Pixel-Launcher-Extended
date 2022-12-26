@@ -156,6 +156,7 @@ cd Pixel-Launcher-Extended
 bash autobuild.sh
 termux-setup-storage
 mv Pixel\ Launcher\ Extended* /sdcard
+echo "Your magisk module is available in Internal Storage"
 ```
 - Please make sure to grant storage permissions, if Termux asks you to do so, you will get Magisk module in your internal storage.
 - Choose Offline Installer or Online Installer using number keys.

@@ -90,7 +90,7 @@ if [ $choice -eq 1 ]; then
   echo "" # make the output look easier to read
   zip -r -q "Pixel Launcher Extended Offline Installer $version.zip" . -x .git/\* Modifications/\* ThemedIcons/\* screenshots/\* autobuild.sh autobuild.bat banner.jpg banner2.jpg changelog.md codename.txt logo.png online_setup.sh offline_setup.sh customize.sh README.md Pixel\ Launcher\ Extended* # Ignore specified files and folders because they are not needed for the module
   echo "" # make the output look easier to read
-  echo ">> Done! You can find the zip file in the current directory - '$(pwd)/Pixel Launcher Extended Offline Installer $version.zip'"
+  echo ">> Done! You can find the module zip file in the current directory - '$(pwd)/Pixel Launcher Extended Offline Installer $version.zip'"
 
 elif [ $choice -eq 2 ]; then
 
@@ -108,7 +108,7 @@ elif [ $choice -eq 2 ]; then
   echo "" # make the output look easier to read
   zip -r -q "Pixel Launcher Extended Online Installer $version.zip" . -x .git/\* Modifications/\* ThemedIcons/\* screenshots/\* autobuild.sh autobuild.bat banner.jpg banner2.jpg changelog.md codename.txt logo.png offline_setup.sh online_setup.sh README.md system/product/priv-app/NexusLauncherRelease/*\* system/product/priv-app/PixelLauncherMods/PixelLauncherMods.apk system/product/overlay/ThemedIconsOverlay/*\* system/system_ext/priv-app/WallpaperPickerGoogleRelease/WallpaperPickerGoogleRelease.apk Pixel\ Launcher\ Extended* # Ignore specified files and folders because they are not needed for the module
   echo "" # make the output look easier to read
-  echo ">> Done! You can find the zip file in the current directory - '$(pwd)/Pixel Launcher Extended Online Installer $version.zip'"
+  echo ">> Done! You can find the module zip file in the current directory - '$(pwd)/Pixel Launcher Extended Online Installer $version.zip'"
 
 else # if user enters invalid choice
   echo "Error: Invalid choice. Please try again."
