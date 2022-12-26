@@ -128,6 +128,8 @@ init_main() {
     /system/system_ext/priv-app/Launcher3QuickStep
     /system/system_ext/priv-app/ThemePicker
     /system/product/overlay/ThemedIconsOverlay.apk
+    /system/product/overlay/PixelLauncherIconsOverlay.apk
+    /system/product/overlay/CustomPixelLauncherOverlay.apk
     "
     ui_print ""
     ui_print "[*] Do you want to install Extra Grids in Launcher?"
@@ -368,6 +370,8 @@ init_main() {
     /system/system_ext/priv-app/Launcher3QuickStep
     /system/system_ext/priv-app/ThemePicker
     /system/product/overlay/ThemedIconsOverlay.apk
+    /system/product/overlay/PixelLauncherIconsOverlay.apk
+    /system/product/overlay/CustomPixelLauncherOverlay.apk
     "
     ui_print ""
     ui_print "[*] Do you want to install Extra Grids in Launcher?"
