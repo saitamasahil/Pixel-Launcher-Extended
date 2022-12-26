@@ -128,6 +128,8 @@ init_main() {
     /system/system_ext/priv-app/Launcher3QuickStep
     /system/system_ext/priv-app/ThemePicker
     /system/product/overlay/ThemedIconsOverlay.apk
+    /system/product/overlay/PixelLauncherIconsOverlay.apk
+    /system/product/overlay/CustomPixelLauncherOverlay.apk
     "
     rm -rf "$MODPATH/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease00z.apk"
     rm -rf "$MODPATH/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease01z.apk"
@@ -167,6 +169,8 @@ init_main() {
     /system/system_ext/priv-app/Launcher3QuickStep
     /system/system_ext/priv-app/ThemePicker
     /system/product/overlay/ThemedIconsOverlay.apk
+    /system/product/overlay/PixelLauncherIconsOverlay.apk
+    /system/product/overlay/CustomPixelLauncherOverlay.apk
     "
     rm -rf "$MODPATH/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease00.apk"
     rm -rf "$MODPATH/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease01.apk"
