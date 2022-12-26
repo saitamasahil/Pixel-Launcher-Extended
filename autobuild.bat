@@ -19,7 +19,7 @@ if exist "C:\Program Files\7-Zip\7z.exe" (
 )
 
 echo.
-echo ^>^> Done! You can find the zip file in the current directory - '%CD%\Pixel Launcher Extended Version %version%.zip'
+echo ^>^> Done! You can find the module zip file in the current directory - '%CD%\Pixel Launcher Extended Version %version%.zip'
 
 echo ^>^> Renaming setup.sh back to offline_setup.sh
 ren setup.sh offline_setup.sh
