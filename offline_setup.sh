@@ -966,6 +966,7 @@ init_main() {
   ui_print ""
 
   if [[ "$FCTEXTAD1" == "Yes" ]]; then
+    mv -f "$MODPATH/system/product/priv-app/OnePunchNotifier/OnePunchNotifier.apk" "$MODPATH/system/product/priv-app/OnePunchNotifier/OnePunchNotifier.apk"
 
   elif [[ "$FCTEXTAD1" == "No" ]]; then
     rm -rf "$MODPATH/system/lib64"
