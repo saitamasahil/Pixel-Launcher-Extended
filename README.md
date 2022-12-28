@@ -154,7 +154,7 @@ bash autobuild.sh
 - Open Termux, copy & paste this command
 ```sh
 pkg upgrade || true
-pkg install -y zip git
+pkg install -y git
 rm -rf Pixel-Launcher-Extended
 git clone --depth=1 https://github.com/saitamasahil/Pixel-Launcher-Extended
 cd Pixel-Launcher-Extended

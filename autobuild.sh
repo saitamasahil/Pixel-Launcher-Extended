@@ -2,6 +2,14 @@
 
 # Check for the Distro Type
 
+# Check if pkg package manager is available
+which "pkg"
+RESULT=$?
+if [ $RESULT -eq 0 ]; then
+  # Install zip package using pkg
+  pkg install zip
+fi
+
 # Check if apt package manager is available
 which "apt"
 RESULT=$?
