@@ -36,16 +36,19 @@ This module is expected to work on ROMs which are based on fairly unmodified And
 
 ### Installation
 - Uninstall any other launcher if you're using one. Only keep the default launcher
-- Download the module installation file from [download links](#download-links) available
+- Download the module installation file from [Download Links](#download-links) available
 - Flash the file in Magisk and select your desired modifications using volume keys
 - Reboot your device and go to **Settings** > **Apps** > **Default apps** > **Home app** and make sure **Pixel Launcher Extended** is selected
 
 #### Variants
-**Offline installer**  
-It doesn't require internet while flashing, but it's 100+ MB in size.
+**Offline Installer**  
+It doesn't require internet while flashing, but it's 100+ MB in size. It's available for download from Download Links below. You can build it yourself too by following instructions from Build from source section.
 
-**Online installer**  
-It requires internet while flashing and downloads only selected files by user during installation. It's less than 5 MB in size. Depending upon your internet this variant may take more time in flashing compared to offline installer.
+**Online Installer**  
+It requires internet while flashing and downloads only selected files by user during installation. It's less than 5 MB in size. Depending upon your internet this variant may take more time in flashing compared to offline installer. It's available for download from Download Links below. You can build it yourself too by following instructions from Build from source section.
+
+**Customize Installer**
+It's like offline installer but less in size. Installer zip size depends upon the modifications a user chooses while making the zip. It's not available for download from download links below. However, You can build it yourself by following instructions from Build from source section. This variant is good for those whose phone's volume keys are broken or if they don't want to follow long instructions involving volume key presses(multiple times) while flashing in Magisk.
 
 ### Activating Double Tap to Sleep
 - Make sure you installed DT2S while flashing the module
@@ -124,7 +127,7 @@ git clone --depth=1 https://github.com/saitamasahil/Pixel-Launcher-Extended
 ```
 - Run `autobuild.bat`
 - Don't use git in command-line or powershell to clone repo. Some users reported that it's corrupting contents.
-- Currently it supports making of **offline installer**. Making of **online installer** will be added later.
+- It supports making of **Offline Installer** only.
 
 ### For Ubuntu, Debian, and other Linux distributions
 - The required zip package install command is in the script itself. However, if you encounter any errors, you can install **zip** manually. On Ubuntu or Debian, use the following command to do so."
@@ -143,7 +146,7 @@ cd Pixel-Launcher-Extended
 ```sh
 bash autobuild.sh
 ```
-- Choose Offline Installer or Online Installer using number keys.
+- Choose Offline Installer, Online Installer or Customize Installer using number keys.
 
 ### For Termux
 - Open Termux, copy & paste this command
@@ -159,7 +162,7 @@ mv Pixel\ Launcher\ Extended* /sdcard
 echo "Your magisk module is available in Internal Storage"
 ```
 - Please make sure to grant storage permissions, if Termux asks you to do so, you will get Magisk module in your internal storage.
-- Choose Offline Installer or Online Installer using number keys.
+- Choose Offline Installer, Online Installer or Customize Installer using number keys.
 - Use [Termux From F-Droid](https://f-droid.org/en/packages/com.termux/) to perform these tasks.
 - If you get this warning "It appears that directory '~/storage' already exists.
 This script is going to rebuild its structure from

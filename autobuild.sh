@@ -501,7 +501,7 @@ elif [ $choice -eq 3 ]; then
     rm -rf "system/product/overlay/IconShape/Teardrops.apk"
     rm -rf "system/product/overlay/IconShape/Vessel.apk"
     rm -rf "system/product/overlay/IconShape/Samsung.apk"
-  
+
   elif [ $choice -eq 12 ]; then
     rm -rf "system/product/overlay/IconShape/Cloudy.apk"
     rm -rf "system/product/overlay/IconShape/Cylinder.apk"
@@ -519,7 +519,6 @@ elif [ $choice -eq 3 ]; then
     rm -rf "system/product/overlay/IconShape/Teardrops.apk"
     rm -rf "system/product/overlay/IconShape/Vessel.apk"
     rm -rf "system/product/overlay/IconShape/Samsung.apk"
-
 
   elif [ $choice -eq 13 ]; then
     rm -rf "system/product/overlay/IconShape/Cloudy.apk"
