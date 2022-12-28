@@ -120,7 +120,7 @@ If you don't want to download built module from mirrors above, then you can buil
 - Clone the repository with [GitHub Desktop](https://desktop.github.com) or using git clone on WSL 2
 ```bat
 :: ONLY RUN THIS IF YOU USE GIT AND HAVE IT INSTALLED
-git clone https://github.com/saitamasahil/Pixel-Launcher-Extended
+git clone --depth=1 https://github.com/saitamasahil/Pixel-Launcher-Extended
 ```
 - Run `autobuild.bat`
 - Don't use git in command-line or powershell to clone repo. Some users reported that it's corrupting contents.
@@ -133,7 +133,7 @@ sudo apt install zip
 ```
 - Now clone the repo using git.
 ```sh
-git clone https://github.com/saitamasahil/Pixel-Launcher-Extended
+git clone --depth=1 https://github.com/saitamasahil/Pixel-Launcher-Extended
 ```
 - Navigate to the **Pixel-Launcher-Extended** folder.
 ```sh
@@ -151,7 +151,7 @@ bash autobuild.sh
 pkg upgrade || true
 pkg install -y zip git
 rm -rf Pixel-Launcher-Extended
-git clone https://github.com/saitamasahil/Pixel-Launcher-Extended
+git clone --depth=1 https://github.com/saitamasahil/Pixel-Launcher-Extended
 cd Pixel-Launcher-Extended
 bash autobuild.sh
 termux-setup-storage
