@@ -219,8 +219,8 @@ init_main() {
         ui_print "Line 1 - Material You Greetings, Day & Date"
         ui_print "Line 2 - Weather Information"
         ui_print "--------------------------------"
-        ui_print "You Can Check Preview Of These Two Styles"
-        ui_print "In Pixel Launcher MOD Post On GitHub Repo"
+        ui_print "You can check preview of these two styles"
+        ui_print "in Pixel Launcher Extended post on GitHub Repo"
 
         ui_print ""
         ui_print "[*] Select your desired option:"
