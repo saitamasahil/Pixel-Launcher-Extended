@@ -50,6 +50,8 @@ It requires internet while flashing and downloads only selected files by user du
 **Customize Installer**  
 It's like offline installer but less in size. Installer zip size depends upon the modifications a user chooses while making the zip. It's not available for download from download links below. However, You can build it yourself by following instructions from [Building from source](#building-from-source) section. This variant is good for those whose phone's volume keys are broken or if they don't want to follow long instructions involving volume key presses(multiple times) while flashing in Magisk.
 
+> WARNING: If you are making all the installers by following instructions then first make offline & online installer before making customize installer as customize installer deletes some files in order to fulfil it's desired output magisk zip installer.
+
 ### Activating Double Tap to Sleep
 - Make sure you installed DT2S while flashing the module
 - After rebooting device, open LSPosed and enable **Pixel Launcher DT2S**
