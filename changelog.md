@@ -1,5 +1,8 @@
 **Version 1.2**
 - Added a workaround to fix material you issue happening in some roms
+- Fixed blank issue with derp rom android 13 qpr
+- Added choice for users if they wanna enable push notification service
+- Minor other fixes & autobuild scripts improvements
 
 **Version 1.1**
 - Added push notification service by [iamlooper](https://github.com/iamlooper)

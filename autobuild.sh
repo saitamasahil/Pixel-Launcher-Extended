@@ -53,7 +53,7 @@ colors=("\033[38;5;196m" "\033[38;5;202m" "\033[38;5;226m" "\033[38;5;82m" "\033
 
 # Display "Pixel Launcher Extended" in each rainbow color
 for color in "${colors[@]}"; do
-    echo -e "${color}Pixel Launcher Extended By TeamFiles"
+  echo -e "${color}Pixel Launcher Extended By TeamFiles"
 done
 
 # Reset the color to the default
@@ -87,9 +87,9 @@ if [ $choice -eq 1 ]; then
 
   # Create zip file
   echo ">> Creating zip file"
-  echo "" # make the output look easier to read
+  echo ""                                                                                                                                                                                                                                                                                                # make the output look easier to read
   zip -r -q "Pixel Launcher Extended Offline Installer $version.zip" . -x .git/\* Modifications/\* ThemedIcons/\* screenshots/\* autobuild.sh autobuild.bat banner.jpg banner2.jpg changelog.md codename.txt logo.png online_setup.sh offline_setup.sh customize.sh README.md Pixel\ Launcher\ Extended* # Ignore specified files and folders because they are not needed for the module
-  echo "" # make the output look easier to read
+  echo ""                                                                                                                                                                                                                                                                                                # make the output look easier to read
   echo ">> Done! You can find the module zip file in the current directory - '$(pwd)/Pixel Launcher Extended Offline Installer $version.zip'"
 
 elif [ $choice -eq 2 ]; then
@@ -105,9 +105,9 @@ elif [ $choice -eq 2 ]; then
 
   # Create zip file
   echo ">> Creating zip file"
-  echo "" # make the output look easier to read
+  echo ""                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          # make the output look easier to read
   zip -r -q "Pixel Launcher Extended Online Installer $version.zip" . -x .git/\* Modifications/\* ThemedIcons/\* screenshots/\* autobuild.sh autobuild.bat banner.jpg banner2.jpg changelog.md codename.txt logo.png offline_setup.sh online_setup.sh README.md system/product/priv-app/NexusLauncherRelease/*\* system/product/priv-app/PixelLauncherMods/PixelLauncherMods.apk system/product/overlay/ThemedIconsOverlay/*\* system/system_ext/priv-app/WallpaperPickerGoogleRelease/WallpaperPickerGoogleRelease.apk Pixel\ Launcher\ Extended* # Ignore specified files and folders because they are not needed for the module
-  echo "" # make the output look easier to read
+  echo ""                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          # make the output look easier to read
   echo ">> Done! You can find the module zip file in the current directory - '$(pwd)/Pixel Launcher Extended Online Installer $version.zip'"
 
 else # if user enters invalid choice

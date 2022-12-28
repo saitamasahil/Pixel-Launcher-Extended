@@ -197,6 +197,13 @@ Turn off **Overview suggestions** from Pixel Launcher's settings.
 ### Pixel Launcher Extended not showing in default home settings
 Uninstall updates of the Pixel Launcher app and reboot your device.
 
+## Donation Links
+If you have found this project helpful and would like to support its ongoing development, please consider making a donation. Your support is greatly appreciated and will help to ensure that this project can continue to be maintained and improved.
+
+Thank you for your generosity!
+- [Paypal](https://www.paypal.com/paypalme/sahilsaitama96)
+- UPI(Google Pay): `sahilmanchanda1996@okaxis`
+
 ## Credits/Thanks
 - Google
 - [LiArch55](http://telegram.me/LiArch55)
