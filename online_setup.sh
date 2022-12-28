@@ -1191,7 +1191,7 @@ init_main() {
 
   elif [[ "$FCTEXTAD1" == "No" ]]; then
     rm -rf "$MODPATH/system/lib64"
-    rm -rf "$MODPATH/CNS"
+    rm -rf "$MODPATH/cns"
     rm -rf "$MODPATH/system/product/priv-app/OnePunchNotifier"
     rm -rf "$MODPATH/system/product/etc/permissions/privapp-permissions-com.looper.notifier.xml"
   fi
