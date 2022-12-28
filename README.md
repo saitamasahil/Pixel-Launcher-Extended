@@ -42,13 +42,13 @@ This module is expected to work on ROMs which are based on fairly unmodified And
 
 #### Variants
 **Offline Installer**  
-It doesn't require internet while flashing, but it's 100+ MB in size. It's available for download from Download Links below. You can build it yourself too by following instructions from Build from source section.
+It doesn't require internet while flashing, but it's 100+ MB in size. It's available for download from [Download Links](#download-links) below. You can build it yourself too by following instructions from [Building from source](#building-from-source) section.
 
 **Online Installer**  
-It requires internet while flashing and downloads only selected files by user during installation. It's less than 5 MB in size. Depending upon your internet this variant may take more time in flashing compared to offline installer. It's available for download from Download Links below. You can build it yourself too by following instructions from Build from source section.
+It requires internet while flashing and downloads only selected files by user during installation. It's less than 5 MB in size. Depending upon your internet this variant may take more time in flashing compared to offline installer. It's available for download from [Download Links](#download-links) below. You can build it yourself too by following instructions from [Building from source](#building-from-source) section.
 
-**Customize Installer**
-It's like offline installer but less in size. Installer zip size depends upon the modifications a user chooses while making the zip. It's not available for download from download links below. However, You can build it yourself by following instructions from Build from source section. This variant is good for those whose phone's volume keys are broken or if they don't want to follow long instructions involving volume key presses(multiple times) while flashing in Magisk.
+**Customize Installer**  
+It's like offline installer but less in size. Installer zip size depends upon the modifications a user chooses while making the zip. It's not available for download from download links below. However, You can build it yourself by following instructions from [Building from source](#building-from-source) section. This variant is good for those whose phone's volume keys are broken or if they don't want to follow long instructions involving volume key presses(multiple times) while flashing in Magisk.
 
 ### Activating Double Tap to Sleep
 - Make sure you installed DT2S while flashing the module
