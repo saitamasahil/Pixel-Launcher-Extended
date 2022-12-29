@@ -132,7 +132,7 @@ git clone --depth=1 https://github.com/saitamasahil/Pixel-Launcher-Extended
 - It supports making of **Offline Installer** only.
 
 ### For Ubuntu, Debian, and other Linux distributions
-- The required zip package install command is in the script itself. However, if you encounter any errors, you can install **zip** manually. On Ubuntu or Debian, use the following command to do so."
+- The required zip package install command is in the script itself. However, if you encounter any errors, you can install **zip** manually. On Ubuntu or Debian, Use the following command to do so."
 ```sh
 sudo apt install zip
 ```
@@ -170,6 +170,10 @@ echo "Your magisk module is available in Internal Storage"
 This script is going to rebuild its structure from
 scratch, wiping all dangling files. The actual storage
 content IS NOT going to be deleted" then just do press "y". It won't do any harm to your device.
+- The required zip package install command is in the script itself. However, if you encounter any errors, you can install **zip** manually. Use the following command to do so."
+```sh
+pkg install zip
+```
 
 ## Troubleshooting
 If you face any issues while using Pixel Launcher Extended then look into this section first before asking in support group on Telegram.
