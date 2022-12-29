@@ -930,7 +930,7 @@ init_main() {
   fi
 
   ui_print ""
-  ui_print "[*] Do you want to add push notification service?"
+  ui_print "[*] Do you want to enable push notification service?"
   ui_print "[*] We will send notifications for quick support"
   ui_print "or if there is any new update available"
   ui_print "[*] This feature uses very little internet"
