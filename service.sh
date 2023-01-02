@@ -55,7 +55,7 @@ PL_PREF=/data/data/com.google.android.apps.nexuslauncher/shared_prefs/com.androi
 
 if [ -f $MODDIR/first ]; then
     if [ -d /data/data/com.google.android.apps.nexuslauncher ]; then
-        pm install $MODDIR/system/**/priv-app/WallpaperPickerGoogleRelease/WallpaperPickerGoogleRelease.apk
+        : # Add pm install command with proper $MODDIR
         if [ ! -f $PL_PREF ]; then
             echo "<?xml version='1.0' encoding='utf-8' standalone='yes' ?>" >>$PL_PREF
             echo '<map>
