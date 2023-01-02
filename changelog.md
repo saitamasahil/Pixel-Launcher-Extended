@@ -1,5 +1,6 @@
 **Version 1.3**
 - Updated recent provider overlay
+- Fixed wallpaper app crashing issue after installing launcher for the first time
 
 **Version 1.2**
 - Added a workaround to fix material you issue happening in some roms
