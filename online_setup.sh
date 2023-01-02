@@ -143,7 +143,7 @@ init_main() {
     ui_print "--------------------------------"
     ui_print "[1] Yes"
     ui_print "--------------------------------"
-    ui_print "[2] NO"
+    ui_print "[2] No"
     ui_print "--------------------------------"
 
     ui_print ""
@@ -385,7 +385,7 @@ init_main() {
     ui_print "--------------------------------"
     ui_print "[1] Yes"
     ui_print "--------------------------------"
-    ui_print "[2] NO"
+    ui_print "[2] No"
     ui_print "--------------------------------"
 
     ui_print ""
@@ -598,7 +598,7 @@ init_main() {
   ui_print "--------------------------------"
   ui_print "[1] Yes"
   ui_print "--------------------------------"
-  ui_print "[2] NO"
+  ui_print "[2] No"
   ui_print "--------------------------------"
 
   ui_print ""
@@ -1165,7 +1165,7 @@ init_main() {
   ui_print "--------------------------------"
   ui_print "[1] Yes"
   ui_print "--------------------------------"
-  ui_print "[2] NO"
+  ui_print "[2] No"
   ui_print "--------------------------------"
 
   ui_print ""
