@@ -1,3 +1,6 @@
+**Version 1.3**
+- Updated recent provider overlay
+
 **Version 1.2**
 - Added a workaround to fix material you issue happening in some roms
 - Fixed blank issue with derp rom android 13 qpr
