@@ -4398,7 +4398,6 @@
     <public type="drawable" name="work_apps_toggle_background" id="0x7f080378" />
     <public type="drawable" name="work_card" id="0x7f080379" />
     <public type="drawable" name="ic_super_g" id="0x7f08037b" />
-    <public type="drawable" name="user_icon_background" id="0x7f08037c" />
     <public type="drawable" name="abc_ic_arrow_forward" id="0x7f0801ba" />
     <public type="drawable" name="abc_ic_permission" id="0x7f0801c4" />
     <public type="drawable" name="abc_ic_slice_send" id="0x7f0801c6" />
