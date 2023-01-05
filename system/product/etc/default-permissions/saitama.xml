@@ -41,6 +41,12 @@
     </exception>
     -->
 
+    <exception
+            package="com.google.android.apps.camera.services">
+        <!-- Camera -->
+        <permission name="android.permission.CAMERA" fixed="false"/>
+    </exception>
+
     <exception package="com.google.android.settings.intelligence">
         <!-- Calendar -->
         <permission name="android.permission.READ_CALENDAR" fixed="true"/>
@@ -51,19 +57,16 @@
         <permission name="android.permission.BLUETOOTH_CONNECT" fixed="false"/>
     </exception>
 
-    <exception package="com.google.android.apps.camera.services">
-        <!-- Camera -->
-        <permission name="android.permission.CAMERA" fixed="false"/>
-    </exception>
-
     <exception package="com.google.android.apps.cbrsnetworkmonitor">
         <!-- Location access to create CBRS geofences-->
         <permission name="android.permission.ACCESS_FINE_LOCATION" fixed="true"/>
-        <permission name="android.permission.ACCESS_COARSE_LOCATION" fixed="true"/>
         <permission name="android.permission.ACCESS_BACKGROUND_LOCATION" fixed="true"/>
     </exception>
 
     <exception package="com.google.android.apps.scone">
+        <!-- NLP Location access to determine proximity to country border -->
+        <permission name="android.permission.ACCESS_COARSE_LOCATION" fixed="false"/>
+        <permission name="android.permission.ACCESS_BACKGROUND_LOCATION" fixed="false"/>
         <!-- Used to call ActivityTransition API for Smart PNO -->
         <permission name="android.permission.ACTIVITY_RECOGNITION" fixed="false"/>
         <!-- Notifications -->
@@ -113,6 +116,8 @@
     <exception package="com.google.android.wfcactivation">
         <!-- SMS -->
         <permission name="android.permission.RECEIVE_WAP_PUSH" fixed="false"/>
+        <!-- Notifications -->
+        <permission name="android.permission.POST_NOTIFICATIONS" fixed="false"/>
     </exception>
 
     <exception package="com.google.android.apps.accessibility.voiceaccess">
@@ -157,6 +162,11 @@
     </exception>
     <exception
         package="com.google.android.apps.turbo">
+        <!-- Notifications -->
+        <permission name="android.permission.POST_NOTIFICATIONS" fixed="false"/>
+    </exception>
+    <exception
+        package="com.google.android.euicc">
         <!-- Notifications -->
         <permission name="android.permission.POST_NOTIFICATIONS" fixed="false"/>
     </exception>
