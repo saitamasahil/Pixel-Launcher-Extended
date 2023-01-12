@@ -670,6 +670,7 @@ elif [ $choice -eq 3 ]; then
     cp system1.prop system.prop
     rm -rf "system1.prop"
     rm -rf "system2.prop"
+    rm -rf "sepolicy.rule"
   fi
 
   # Create zip file
