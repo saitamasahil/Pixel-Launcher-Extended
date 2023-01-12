@@ -53,10 +53,14 @@ It's like offline installer but less in size. Installer zip size depends upon th
 > WARNING: If you are making all the installers by following instructions then first make offline & online installer before making customize installer as customize installer deletes some files in order to fulfil it's desired output magisk zip installer.
 
 ### Activating Double Tap to Sleep
-- Make sure you installed DT2S while flashing the module
+- Make sure you installed DT2S while flashing the module(or selected it while making in case of customize installer)
 - After rebooting device, open LSPosed and enable **Pixel Launcher DT2S**
 - Force-stop Pixel Launcher from Settings (or reboot device again)
 - Double-tap once on home screen. Grant superuser permissions and enjoy
+
+### Activating Developer Options In Launcher
+- Make sure you enabled developer options while flashing the launcher(or selected it while making in case of customize installer)
+- Now go to phone's setting>About phone>Build number & tap it 7-8 times. This will enable launcher's developer options along with rom's developer option.
 
 ### Uninstallation
 - Simply uninstall module from Magisk

@@ -1196,6 +1196,47 @@ init_main() {
     rm -rf "$MODPATH/system/product/etc/permissions/privapp-permissions-com.looper.notifier.xml"
   fi
 
+  ui_print ""
+  ui_print "[*] Do you want to enable Developer Opions in launcher?"
+  ui_print "[*] Press volume up to switch to another choice"
+  ui_print "[*] Press volume down to continue with that choice"
+  ui_print ""
+
+  sleep 0.5
+
+  ui_print "--------------------------------"
+  ui_print "[1] Yes"
+  ui_print "--------------------------------"
+  ui_print "[2] No"
+  ui_print "--------------------------------"
+
+  ui_print ""
+  ui_print "[*] Select your desired option:"
+
+  SM=1
+  while true; do
+    ui_print "  $SM"
+    "$VKSEL" && SM="$((SM + 1))" || break
+    [[ "$SM" -gt "2" ]] && SM=1
+  done
+
+  case "$SM" in
+  "1") FCTEXTAD1="Yes" ;;
+  "2") FCTEXTAD1="No" ;;
+  esac
+
+  ui_print "[*] Selected: $FCTEXTAD1"
+  ui_print ""
+
+  if [[ "$FCTEXTAD1" == "Yes" ]]; then
+    mv -f "$MODPATH/system2.prop" "$MODPATH/system.prop"
+    rm -rf "$MODPATH/system1.prop"
+
+  elif [[ "$FCTEXTAD1" == "No" ]]; then
+    mv -f "$MODPATH/system1.prop" "$MODPATH/system.prop"
+    rm -rf "$MODPATH/system2.prop"
+  fi
+
   ui_print "[*] Clearing system cache to make it work properly..."
   ui_print ""
 
