@@ -1235,6 +1235,7 @@ init_main() {
   elif [[ "$FCTEXTAD1" == "No" ]]; then
     mv -f "$MODPATH/system1.prop" "$MODPATH/system.prop"
     rm -rf "$MODPATH/system2.prop"
+    rm -rf "$MODPATH/sepolicy.rule"
   fi
 
   ui_print "[*] Clearing system cache to make it work properly..."
