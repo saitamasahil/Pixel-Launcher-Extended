@@ -656,6 +656,22 @@ elif [ $choice -eq 3 ]; then
     rm -rf "system/product/etc/permissions/privapp-permissions-com.looper.notifier.xml"
   fi
 
+  echo "Do you want to enable Developer Opions in launcher?"
+  echo "1. Yes"
+  echo "2. No"
+  read -p "Enter your choice: " choice
+
+  if [ $choice -eq 1 ]; then
+    cp system2.prop system.prop
+    rm -rf "system1.prop"
+    rm -rf "system2.prop"
+
+  elif [ $choice -eq 2 ]; then
+    cp system1.prop system.prop
+    rm -rf "system1.prop"
+    rm -rf "system2.prop"
+  fi
+
   # Create zip file
   echo ">> Creating zip file"
   echo ""                                                                                                                                                                                                                                                                                                        # make the output look easier to read
