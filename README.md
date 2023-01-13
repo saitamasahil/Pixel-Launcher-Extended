@@ -26,6 +26,9 @@ This module is expected to work on ROMs which are based on fairly unmodified And
 
 > WARNING: It may not work on some LOS-based ROMs like RiceDroid. If you face any crashes on these ROMs, please look through the [troubleshooting section](#troubleshooting).
 
+### Implement In Custom ROMs
+If you wanna implement Pixel Launcher Extended in your custom rom then [visit here](https://github.com/StudioKeys/vendor_PixelLauncherExtended).
+
 ### Prerequisites
 - Compatible ROMs (**AOSP-based custom ROMs** or **Google Pixel stock ROM**) based on Android 13.
 - Device rooted by [Magisk latest stable](https://github.com/topjohnwu/Magisk/releases/latest).
@@ -157,7 +160,12 @@ bash autobuild.sh
 ```
 
 ### For Termux
-- Open Termux, copy & paste this command
+- Open Termux, copy & paste this command:
+```sh
+termux-setup-storage
+```
+and give Termux storage access. If you get this warning "It appears that directory '~/storage' already exists. This script is going to rebuild its structure from scratch, wiping all dangling files. The actual storage content is not going to be deleted" then just do press "y". It won't do any harm to your device.
+- Now copy & paste this command:
 ```sh
 pkg upgrade || true
 pkg install -y git
@@ -165,22 +173,17 @@ rm -rf Pixel-Launcher-Extended
 git clone --depth=1 https://github.com/saitamasahil/Pixel-Launcher-Extended
 cd Pixel-Launcher-Extended
 bash autobuild.sh
-termux-setup-storage
 mv Pixel\ Launcher\ Extended* /sdcard
 echo "Your magisk module is available in Internal Storage"
 ```
 - Please make sure to grant storage permissions, if Termux asks you to do so, you will get Magisk module in your internal storage.
 - Choose Offline Installer, Online Installer or Customize Installer using number keys.
 - Use [Termux From F-Droid](https://f-droid.org/en/packages/com.termux/) to perform these tasks.
-- If you get this warning "It appears that directory '~/storage' already exists.
-This script is going to rebuild its structure from
-scratch, wiping all dangling files. The actual storage
-content IS NOT going to be deleted" then just do press "y". It won't do any harm to your device.
 - The required zip package install command is in the script itself. However, if you encounter any errors, you can install **zip** manually. Use the following command to do so."
 ```sh
 pkg install zip
 ```
-- If you wanna make the module again & this time **Different Installer Magisk Module zip** then close Termux. Open new session & type the following commands.
+- If you wanna make the module again & this time **Different Installer Magisk Module zip** then close Termux. Open new session and copy & paste the following command:
 ```sh
 cd Pixel-Launcher-Extended
 bash autobuild.sh
@@ -190,6 +193,9 @@ echo "Your magisk module is available in Internal Storage"
 
 ## Troubleshooting
 If you face any issues while using Pixel Launcher Extended then look into this section first before asking in support group on Telegram.
+
+### Overview suggestions & other hints like sharing images or links aren't showing in recent tabs
+Enable Overview suggestions from pixel launher extended's settings.
 
 ### Weather widget in At A Glance or Select feature in recent tabs not working
 Try updating Google App, Google Play Services, Android System Intelligence (ASI), Android System Webview, Google Calendar, Google Lens and all other Google apps from Play Store. We suggest you to use ROMs that have stock Pixel GApps by default.
@@ -233,7 +239,7 @@ Thank you for your generosity!
 - [iamlooper](https://github.com/iamlooper/)
 - [KieronQuinn](https://github.com/KieronQuinn)
 - [uragiristereo](https://github.com/uragiristereo)
-- [Monet Icons Team](https://teamfiles.net/about_monet-team.html)
+- [Monet Icons Team](https://teamfiles.github.io/about_monet-team.html)
 - [siavash79](https://github.com/siavash79)
 - [Kingsman44](https://github.com/Kingsman44)
 - [anarchist22](https://telegram.me/anarchist22)
