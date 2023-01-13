@@ -50,8 +50,6 @@ It requires internet while flashing and downloads only selected files by user du
 **Customize Installer**  
 It's like offline installer but less in size. Installer zip size depends upon the modifications a user chooses while making the zip. It's not available for download from download links below. However, You can build it yourself by following instructions from [Building from source](#building-from-source) section. This variant is good for those whose phone's volume keys are broken or if they don't want to follow long instructions involving volume key presses(multiple times) while flashing in Magisk.
 
-> WARNING: If you are making all the installers by following instructions then first make offline & online installer before making customize installer as customize installer deletes some files in order to fulfil it's desired output magisk zip installer.
-
 ### Activating Double Tap to Sleep
 - Make sure you installed DT2S while flashing the module(or selected it while making in case of customize installer)
 - After rebooting device, open LSPosed and enable **Pixel Launcher DT2S**
@@ -153,6 +151,10 @@ cd Pixel-Launcher-Extended
 bash autobuild.sh
 ```
 - Choose Offline Installer, Online Installer or Customize Installer using number keys.
+- If you wanna make the module again & this time **Different Installer Magisk Module zip** then run autobuild.sh again.
+```sh
+bash autobuild.sh
+```
 
 ### For Termux
 - Open Termux, copy & paste this command
@@ -177,6 +179,13 @@ content IS NOT going to be deleted" then just do press "y". It won't do any harm
 - The required zip package install command is in the script itself. However, if you encounter any errors, you can install **zip** manually. Use the following command to do so."
 ```sh
 pkg install zip
+```
+- If you wanna make the module again & this time **Different Installer Magisk Module zip** then close Termux. Open new session & type the following commands.
+```sh
+cd Pixel-Launcher-Extended
+bash autobuild.sh
+mv Pixel\ Launcher\ Extended* /sdcard
+echo "Your magisk module is available in Internal Storage"
 ```
 
 ## Troubleshooting

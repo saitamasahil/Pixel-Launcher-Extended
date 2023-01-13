@@ -3,6 +3,7 @@
 - Fixed wallpaper app crashing issue after installing launcher for the first time
 - Updated apks & permissions
 - Added developer options
+- fixed directory & files deleting issue while making customize installer module zip
 
 **Version 1.2**
 - Added a workaround to fix material you issue happening in some roms
