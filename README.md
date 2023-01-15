@@ -15,7 +15,9 @@
 - Material You At A Glance greetings.
 - [Pixel Launcher Mods](https://github.com/KieronQuinn/PixelLauncherMods) by KieronQuinn. It has many cool features such as icon pack changer, recent section blur, etc.
 - Add-ons, which can enhance and add more functionality.
-- Push Notification Services
+- Enable hidden flags & developer options.
+> These flags can enable some subtle features & bring improvements in launcher. [Some of the flags usage with detailed explanation](https://sameerasw.notion.site/Pixel-Launcher-Flags-0068085015c646dda6210b02a6f719a9).
+- Push Notification Services.
 > Please note that this feature requires internet to provide you update & support related notifications.
 > We don't take any data or logs from your phone to provide you these notifications.
 
@@ -194,7 +196,7 @@ echo "Your magisk module is available in Internal Storage"
 ## Troubleshooting
 If you face any issues while using Pixel Launcher Extended then look into this section first before asking in support group on Telegram.
 
-### Overview suggestions & other hints like sharing images or links aren't showing in recent tabs
+### Overview suggestions & other hints like sharing images or links aren't visible in recent tabs
 Enable Overview suggestions from pixel launher extended's settings.
 
 ### Weather widget in At A Glance or Select feature in recent tabs not working
@@ -251,6 +253,7 @@ Thank you for your generosity!
 - [atharvap8](https://github.com/atharvap8)
 - [jaaat4u](https://github.com/jaaat4u)
 - [selfmusing](https://github.com/selfmusing)
+- [Sameera](https://telegram.me/sameera_s_w)
 
 Brought to you by [TeamFiles](https://github.com/TeamFiles)!
 
