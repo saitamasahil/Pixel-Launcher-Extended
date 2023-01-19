@@ -25,6 +25,7 @@
 This module is expected to work on ROMs which are based on fairly unmodified Android source code.
 - Android 13 AOSP-based ROMs
 - Android 13 QPR AOSP-based ROMs
+> Ensure your ROM is equipped with the necessary GApps, including Google apps and services. Without them, certain features may not function optimally on vanilla ROM. Make sure to flash proper GApps Package for your rom if you are using vanilla rom.
 
 ### Implement In Custom ROMs
 If you wanna implement Pixel Launcher Extended in your custom rom then [visit here](https://github.com/StudioKeys/vendor_PixelLauncherExtended).
@@ -221,6 +222,9 @@ Force-stop the app and relaunch.
 
 ### Pixel Launcher Extended crashes while going to recent tab
 Turn off **Overview suggestions** from Pixel Launcher's settings.
+
+### Quick Search Bar not opening
+Make sure your rom has proper GApps. Also if your rom doesn't have Google App then download it from play store.
 
 ### Pixel Launcher Extended not showing in default home settings
 Uninstall updates of the Pixel Launcher app and reboot your device.
