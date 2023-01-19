@@ -331,13 +331,15 @@ init_main() {
     rm -rf "$MODPATH/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease11z.apk"
     rm -rf "$MODPATH/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease12z.apk"
     rm -rf "$MODPATH/system/product/overlay/TeamFiles_Pill_Dark.apk"
+    rm -rf "$MODPATH/system/product/overlay/TeamFiles_Pill_Dark2.apk"
     rm -rf "$MODPATH/system/product/overlay/TeamFiles_Pill_Empty.apk"
+    rm -rf "$MODPATH/system/product/overlay/TeamFiles_Pill_Empty2.apk"
     rm -rf "$MODPATH/system/product/overlay/TeamFiles_Pill_Light.apk"
+    rm -rf "$MODPATH/system/product/overlay/TeamFiles_Pill_Light2.apk"
     rm -rf "$MODPATH/system/product/overlay/TeamFiles_Pill_Light_Accent.apk"
-    rm -rf "$MODPATH/system/product/overlay/TeamFiles_QSB_Circular.apk"
-    rm -rf "$MODPATH/system/product/overlay/TeamFiles_QSB_Rectangular.apk"
+    rm -rf "$MODPATH/system/product/overlay/TeamFiles_Pill_Light_Accent2.apk"
     rm -rf "$MODPATH/system/product/priv-app/ExtendedSettings"
-    rm -rf "$MODPATH/system/product/etc/permissions/privapp_permissions_com_domain_liranazuz5_weatherpillbackground.xml"
+    rm -rf "$MODPATH/system/product/etc/permissions/privapp-permissions-com.domain.liranazuz5.extendedsettings.xml"
   fi
 
   ui_print ""
