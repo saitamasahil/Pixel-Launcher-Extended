@@ -726,7 +726,7 @@ elif [ $choice -eq 3 ]; then
   mv "system/product/priv-app/temp/PixelLauncherDT2S" "system/product/priv-app/$folder"
   mv "system/product/overlay/temp/ThemedIconsOverlay" "system/product/overlay/$folder" 2>/dev/null || true
   mv "system/product/priv-app/temp/PixelLauncherMods" "system/product/priv-app/$folder"
-  mv "system/product/overlay/temp/PixelLauncherModsOverlay" "system/product/overlay/$folder"
+  mv "system/product/overlay/temp/PixelLauncherModsOverlay" "system/product/overlay/$folder" 2>/dev/null || true
   mv "system/product/overlay/temp/IconShape" "system/product/overlay/$folder" 2>/dev/null || true
   mv "system/temp/lib64" "system/$folder"
   mv "system/product/priv-app/temp/OnePunchNotifier" "system/product/priv-app/$folder"
