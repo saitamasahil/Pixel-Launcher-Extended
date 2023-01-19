@@ -230,13 +230,15 @@ elif [ $choice -eq 3 ]; then
     mv -f "system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease11z.apk" "system/product/priv-app/NexusLauncherRelease/temp/$file" 2>/dev/null || true
     mv -f "system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease12z.apk" "system/product/priv-app/NexusLauncherRelease/temp/$file" 2>/dev/null || true
     mv -f "system/product/overlay/TeamFiles_Pill_Dark.apk" "system/product/overlay/temp/$file"
+    mv -f "system/product/overlay/TeamFiles_Pill_Dark2.apk" "system/product/overlay/temp/$file"
     mv -f "system/product/overlay/TeamFiles_Pill_Empty.apk" "system/product/overlay/temp/$file"
+    mv -f "system/product/overlay/TeamFiles_Pill_Empty2.apk" "system/product/overlay/temp/$file"
     mv -f "system/product/overlay/TeamFiles_Pill_Light.apk" "system/product/overlay/temp/$file"
+    mv -f "system/product/overlay/TeamFiles_Pill_Light2.apk" "system/product/overlay/temp/$file"
     mv -f "system/product/overlay/TeamFiles_Pill_Light_Accent.apk" "system/product/overlay/temp/$file"
-    mv -f "system/product/overlay/TeamFiles_QSB_Circular.apk" "system/product/overlay/temp/$file"
-    mv -f "system/product/overlay/TeamFiles_QSB_Rectangular.apk" "system/product/overlay/temp/$file"
+    mv -f "system/product/overlay/TeamFiles_Pill_Light_Accent2.apk" "system/product/overlay/temp/$file"
     mv "system/product/priv-app/ExtendedSettings" "system/product/priv-app/temp/$folder"
-    mv -f "system/product/etc/permissions/privapp_permissions_com_domain_liranazuz5_weatherpillbackground.xml" "system/product/etc/permissions/temp/$file"
+    mv -f "system/product/etc/permissions/privapp-permissions-com.domain.liranazuz5.extendedsettings.xml" "system/product/etc/permissions/temp/$file"
   fi
 
   echo "Do you want to enable DT2S in Launcher?"
