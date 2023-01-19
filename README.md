@@ -12,7 +12,7 @@
 - More grids options, total of 14 grids. You can select these extra grids by going to **Wallpaper & style** > **App grid**. These are available for **Phones** only. Not available for **Tablets**.
 - Double tap to sleep *(LSPosed required)*.
 - You can choose different icons shapes while installing. Total of 17 icons shapes.
-- Material You At A Glance greetings.
+- Material You At A Glance greetings with Extended Settings app. Using this app you will be able to do some subtle modifications.
 - [Pixel Launcher Mods](https://github.com/KieronQuinn/PixelLauncherMods) by KieronQuinn. It has many cool features such as icon pack changer, recent section blur, etc.
 - Add-ons, which can enhance and add more functionality.
 - Enable hidden flags & developer options.
@@ -25,8 +25,6 @@
 This module is expected to work on ROMs which are based on fairly unmodified Android source code.
 - Android 13 AOSP-based ROMs
 - Android 13 QPR AOSP-based ROMs
-
-> WARNING: It may not work on some LOS-based ROMs like RiceDroid. If you face any crashes on these ROMs, please look through the [troubleshooting section](#troubleshooting).
 
 ### Implement In Custom ROMs
 If you wanna implement Pixel Launcher Extended in your custom rom then [visit here](https://github.com/StudioKeys/vendor_PixelLauncherExtended).
