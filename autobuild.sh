@@ -114,9 +114,9 @@ elif [ $choice -eq 2 ]; then
 
   # Create zip file
   echo ">> Creating zip file"
-  echo ""                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             # make the output look easier to read
-  zip -r -q "Pixel Launcher Extended Online Installer $version.zip" . -x .git/\* Modifications/\* ThemedIcons/\* screenshots/\* autobuild.sh autobuild.bat banner.jpg banner2.jpg changelog.md codename.txt logo.png offline_setup.sh customize_setup.sh online_setup.sh README.md system/product/priv-app/NexusLauncherRelease/*\* system/product/priv-app/PixelLauncherMods/PixelLauncherMods.apk system/product/overlay/ThemedIconsOverlay/*\* system/system_ext/priv-app/WallpaperPickerGoogleRelease/WallpaperPickerGoogleRelease.apk Pixel\ Launcher\ Extended* # Ignore specified files and folders because they are not needed for the module
-  echo ""                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             # make the output look easier to read
+  echo ""                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             # make the output look easier to read
+  zip -r -q "Pixel Launcher Extended Online Installer $version.zip" . -x .git/\* Modifications/\* ThemedIcons/\* screenshots/\* autobuild.sh autobuild.bat banner.jpg banner2.jpg changelog.md codename.txt logo.png offline_setup.sh customize_setup.sh online_setup.sh README.md system/product/priv-app/NexusLauncherRelease/*\* system/product/priv-app/PixelLauncherMods/PixelLauncherMods.apk system/product/overlay/ThemedIconsOverlay/*\* system/system_ext/priv-app/WallpaperPickerGoogleRelease/WallpaperPickerGoogleRelease.apk system/product/overlay/TeamFiles* system/product/priv-app/ExtendedSettings/ExtendedSettings.apk Pixel\ Launcher\ Extended* # Ignore specified files and folders because they are not needed for the module
+  echo ""                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             # make the output look easier to read
   echo ">> Done! You can find the module zip file in the current directory - '$(pwd)/Pixel Launcher Extended Online Installer $version.zip'"
 
 elif [ $choice -eq 3 ]; then
@@ -191,7 +191,7 @@ elif [ $choice -eq 3 ]; then
     mv -f "system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease12z.apk" "system/product/priv-app/NexusLauncherRelease/temp/$file" 2>/dev/null || true
   fi
 
-  echo "Do you wanna add 'Material You Greetings In At A Glance' & Some Tweaks In QSB?"
+  echo "Do you wanna add 'Material You Greetings In At A Glance' & install Extended Settings app?"
   echo "1. Yes"
   echo "2. No"
   read -p "Enter your choice: " choice
@@ -229,6 +229,14 @@ elif [ $choice -eq 3 ]; then
     mv -f "system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease02z.apk" "system/product/priv-app/NexusLauncherRelease/temp/$file" 2>/dev/null || true
     mv -f "system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease11z.apk" "system/product/priv-app/NexusLauncherRelease/temp/$file" 2>/dev/null || true
     mv -f "system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease12z.apk" "system/product/priv-app/NexusLauncherRelease/temp/$file" 2>/dev/null || true
+    mv -f "system/product/overlay/TeamFiles_Pill_Dark.apk" "system/product/overlay/temp/$file"
+    mv -f "system/product/overlay/TeamFiles_Pill_Empty.apk" "system/product/overlay/temp/$file"
+    mv -f "system/product/overlay/TeamFiles_Pill_Light.apk" "system/product/overlay/temp/$file"
+    mv -f "system/product/overlay/TeamFiles_Pill_Light_Accent.apk" "system/product/overlay/temp/$file"
+    mv -f "system/product/overlay/TeamFiles_QSB_Circular.apk" "system/product/overlay/temp/$file"
+    mv -f "system/product/overlay/TeamFiles_QSB_Rectangular.apk" "system/product/overlay/temp/$file"
+    mv "system/product/priv-app/ExtendedSettings" "system/product/priv-app/temp/$folder"
+    mv -f "system/product/etc/permissions/privapp_permissions_com_domain_liranazuz5_weatherpillbackground.xml" "system/product/etc/permissions/temp/$file"
   fi
 
   echo "Do you want to enable DT2S in Launcher?"
@@ -712,6 +720,9 @@ elif [ $choice -eq 3 ]; then
   for file in temp/*; do
     mv -f "$file" "$(basename $file)"
   done
+  for file in system/product/overlay/temp/*; do
+    mv -f "$file" "system/product/overlay/$(basename $file)" 2>/dev/null || true
+  done
   mv "system/product/priv-app/temp/PixelLauncherDT2S" "system/product/priv-app/$folder"
   mv "system/product/overlay/temp/ThemedIconsOverlay" "system/product/overlay/$folder" 2>/dev/null || true
   mv "system/product/priv-app/temp/PixelLauncherMods" "system/product/priv-app/$folder"
@@ -719,6 +730,7 @@ elif [ $choice -eq 3 ]; then
   mv "system/product/overlay/temp/IconShape" "system/product/overlay/$folder" 2>/dev/null || true
   mv "system/temp/lib64" "system/$folder"
   mv "system/product/priv-app/temp/OnePunchNotifier" "system/product/priv-app/$folder"
+  mv "system/product/priv-app/temp/ExtendedSettings" "system/product/priv-app/$folder" 2>/dev/null || true
 
   # Delete temp folders
   rm -rf system/product/priv-app/NexusLauncherRelease/temp

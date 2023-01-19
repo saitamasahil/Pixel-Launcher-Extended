@@ -232,8 +232,7 @@ init_main() {
 
   ui_print ""
   ui_print "[*] Do you wanna add 'Material You Greetings In At A Glance'"
-  ui_print "& Some Tweaks In QSB?"
-  ui_print "[*] QSB Means = Quick Search Bar"
+  ui_print "& install Extended Settings app?"
   ui_print "[*] Press volume up to switch to another choice"
   ui_print "[*] Press volume down to continue with that choice"
   ui_print ""
@@ -331,6 +330,14 @@ init_main() {
     rm -rf "$MODPATH/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease02z.apk"
     rm -rf "$MODPATH/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease11z.apk"
     rm -rf "$MODPATH/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease12z.apk"
+    rm -rf "$MODPATH/system/product/overlay/TeamFiles_Pill_Dark.apk"
+    rm -rf "$MODPATH/system/product/overlay/TeamFiles_Pill_Empty.apk"
+    rm -rf "$MODPATH/system/product/overlay/TeamFiles_Pill_Light.apk"
+    rm -rf "$MODPATH/system/product/overlay/TeamFiles_Pill_Light_Accent.apk"
+    rm -rf "$MODPATH/system/product/overlay/TeamFiles_QSB_Circular.apk"
+    rm -rf "$MODPATH/system/product/overlay/TeamFiles_QSB_Rectangular.apk"
+    rm -rf "$MODPATH/system/product/priv-app/ExtendedSettings"
+    rm -rf "$MODPATH/system/product/etc/permissions/privapp_permissions_com_domain_liranazuz5_weatherpillbackground.xml"
   fi
 
   ui_print ""
