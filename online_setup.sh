@@ -126,6 +126,7 @@ init_main() {
     /system/system_ext/priv-app/Lawnchair
     /system/system_ext/priv-app/PixelLauncherRelease
     /system/system_ext/priv-app/Launcher3QuickStep
+    /system/system_ext/priv-app/ArrowLauncher
     /system/system_ext/priv-app/ThemePicker
     /system/product/overlay/ThemedIconsOverlay.apk
     /system/product/overlay/PixelLauncherIconsOverlay.apk
@@ -404,6 +405,7 @@ init_main() {
     /system/system_ext/priv-app/Lawnchair
     /system/system_ext/priv-app/PixelLauncherRelease
     /system/system_ext/priv-app/Launcher3QuickStep
+    /system/system_ext/priv-app/ArrowLauncher
     /system/system_ext/priv-app/ThemePicker
     /system/product/overlay/ThemedIconsOverlay.apk
     /system/product/overlay/PixelLauncherIconsOverlay.apk
