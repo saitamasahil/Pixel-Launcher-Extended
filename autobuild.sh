@@ -212,6 +212,15 @@ elif [ $choice -eq 3 ]; then
     mv -f "system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease10z.apk" "system/product/priv-app/NexusLauncherRelease/temp/$file" 2>/dev/null || true
     echo $divider
     echo "Do you want to install Glance Greetings Style 1 or Glance Greetings Style 2?"
+    echo -e "\033[38;5;208mExample Example Example Example\033[0m"
+    echo "Example Of Glance Greetings Style 1-"
+    echo "Line 1 - Material You Greetings,"
+    echo "Line 2 - Day & Date"
+    echo "Line 3 - Weather Information"
+    echo -e "\033[38;5;208mExample Example Example Example\033[0m"
+    echo "Example Of Glance Greetings Style 2-"
+    echo "Line 1 - Material You Greetings, Day & Date"
+    echo "Line 2 - Weather Information"
     echo "You can check preview of these two styles in Pixel Launcher Extended post on GitHub Repo"
     echo "1. Glance Greetings Style 1"
     echo "2. Glance Greetings Style 2"
