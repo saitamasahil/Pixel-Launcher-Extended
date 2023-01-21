@@ -7,6 +7,7 @@
 - Fixed directory & files deleting issue while making customize installer module zip
 - Added Extended Settings app
 - Added support for los based roms on January security patch
+- Added support for VoltageOS January security patch
 
 **Version 1.2**
 - Added a workaround to fix material you issue happening in some roms

@@ -130,9 +130,14 @@ elif [ $choice -eq 3 ]; then
     exit 1
   fi
 
+  # Dividers
+  divider="------------------------------------------"
+
+  echo $divider
   echo "Which Android Version are you using?"
   echo "1. Android 13(November SP or Below)"
   echo "2. Android 13 QPR(December SP or Above)"
+  echo $divider
   read -p "Enter your choice: " choice
 
   if [ $choice -eq 1 ]; then
@@ -168,10 +173,12 @@ elif [ $choice -eq 3 ]; then
     mv -f "system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease12.apk" "system/product/priv-app/NexusLauncherRelease/temp/$file"
   fi
 
+  echo $divider
   echo "Do you want to install Extra Grids in Launcher?"
   echo "Extra Grids will enable more Grids Options in App Grid"
   echo "1. Yes"
   echo "2. No"
+  echo $divider
   read -p "Enter your choice: " choice
 
   if [ $choice -eq 1 ]; then
@@ -191,9 +198,11 @@ elif [ $choice -eq 3 ]; then
     mv -f "system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease12z.apk" "system/product/priv-app/NexusLauncherRelease/temp/$file" 2>/dev/null || true
   fi
 
+  echo $divider
   echo "Do you wanna add 'Material You Greetings In At A Glance' & install Extended Settings app?"
   echo "1. Yes"
   echo "2. No"
+  echo $divider
   read -p "Enter your choice: " choice
 
   if [ $choice -eq 1 ]; then
@@ -201,10 +210,12 @@ elif [ $choice -eq 3 ]; then
     mv -f "system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease10.apk" "system/product/priv-app/NexusLauncherRelease/temp/$file" 2>/dev/null || true
     mv -f "system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease00z.apk" "system/product/priv-app/NexusLauncherRelease/temp/$file" 2>/dev/null || true
     mv -f "system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease10z.apk" "system/product/priv-app/NexusLauncherRelease/temp/$file" 2>/dev/null || true
+    echo $divider
     echo "Do you want to install Glance Greetings Style 1 or Glance Greetings Style 2?"
     echo "You can check preview of these two styles in Pixel Launcher Extended post on GitHub Repo"
     echo "1. Glance Greetings Style 1"
     echo "2. Glance Greetings Style 2"
+    echo $divider
     read -p "Enter your choice: " choice
 
     if [ $choice -eq 1 ]; then
@@ -241,6 +252,7 @@ elif [ $choice -eq 3 ]; then
     mv -f "system/product/etc/permissions/privapp-permissions-com.domain.liranazuz5.extendedsettings.xml" "system/product/etc/permissions/temp/$file"
   fi
 
+  echo $divider
   echo "Do you want to enable DT2S in Launcher?"
   echo "DT2S Means - Double Tap To Sleep Feature"
   echo "Make sure you have LSPosed Installed in your rom"
@@ -248,6 +260,7 @@ elif [ $choice -eq 3 ]; then
   echo "Read Documentation on GitHub to know more about activating it"
   echo "1. Yes"
   echo "2. No"
+  echo $divider
   read -p "Enter your choice: " choice
 
   if [ $choice -eq 1 ]; then
@@ -258,6 +271,7 @@ elif [ $choice -eq 3 ]; then
     mv -f "system/product/etc/permissions/privapp-permissions-com.uragiristereo.pldt2s.xml" "system/product/etc/permissions/temp/$file"
   fi
 
+  echo $divider
   echo "Which of the following themed icons you want to install?"
   echo "This feature is currently in beta due to Android 13 restrictions"
   echo "1. Lawnicons"
@@ -267,6 +281,7 @@ elif [ $choice -eq 3 ]; then
   echo "5. ACons"
   echo "6. Cayicons"
   echo "7. None Of The Above"
+  echo $divider
   read -p "Enter your choice: " choice
 
   if [ $choice -eq 1 ]; then
@@ -315,12 +330,14 @@ elif [ $choice -eq 3 ]; then
     mv "system/product/overlay/ThemedIconsOverlay" "system/product/overlay/temp/$folder"
   fi
 
+  echo $divider
   echo "Do you wanna install Pixel Launcher Mods App?"
   echo "It's by Developer KieronQuinn"
   echo "You will be able to apply Icon Packs using it"
   echo "It will also enable some more functionality to pixel launcher"
   echo "1. Yes"
   echo "2. No"
+  echo $divider
   read -p "Enter your choice: " choice
 
   if [ $choice -eq 1 ]; then
@@ -332,6 +349,7 @@ elif [ $choice -eq 3 ]; then
     mv "system/product/overlay/PixelLauncherModsOverlay" "system/product/overlay/temp/$folder"
   fi
 
+  echo $divider
   echo "Which of the following icon shape you want to use with launcher?"
   echo "1. Circle(Default)"
   echo "2. Cloudy"
@@ -351,6 +369,7 @@ elif [ $choice -eq 3 ]; then
   echo "16. Teardrops"
   echo "17. Vessel"
   echo "18. Samsung(One UI Like)"
+  echo $divider
   read -p "Enter your choice: " choice
 
   if [ $choice -eq 1 ]; then
@@ -663,6 +682,7 @@ elif [ $choice -eq 3 ]; then
     mv -f "system/product/overlay/IconShape/Vessel.apk" "system/product/overlay/IconShape/temp/$file"
   fi
 
+  echo $divider
   echo "Do you want to enable push notification service?"
   echo "We will send notifications for quick support"
   echo "or if there is any new update available"
@@ -670,6 +690,7 @@ elif [ $choice -eq 3 ]; then
   echo "Check ReadMe on GitHub to know more about it"
   echo "1. Yes"
   echo "2. No"
+  echo $divider
   read -p "Enter your choice: " choice
 
   if [ $choice -eq 1 ]; then
@@ -682,9 +703,11 @@ elif [ $choice -eq 3 ]; then
     mv -f "system/product/etc/permissions/privapp-permissions-com.looper.notifier.xml" "system/product/etc/permissions/temp/$file"
   fi
 
+  echo $divider
   echo "Do you want to enable Developer Opions in launcher?"
   echo "1. Yes"
   echo "2. No"
+  echo $divider
   read -p "Enter your choice: " choice
 
   if [ $choice -eq 1 ]; then
