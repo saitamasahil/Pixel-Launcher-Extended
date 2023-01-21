@@ -6,66 +6,58 @@
 which "pkg"
 RESULT=$?
 if [ $RESULT -eq 0 ]; then
-  # Install zip package using pkg
-  pkg install zip
+  # Install zip and figlet package using pkg
+  pkg install zip figlet
 fi
 
 # Check if apt package manager is available
 which "apt"
 RESULT=$?
 if [ $RESULT -eq 0 ]; then
-  # Install zip package using apt-get
-  sudo apt-get install zip
+  # Install zip and figlet package using apt-get
+  sudo apt-get install zip figlet
 fi
 
 # Check if yum package manager is available
 which "yum"
 RESULT=$?
 if [ $RESULT -eq 0 ]; then
-  # Install zip package using yum
-  sudo yum install zip
+  # Install zip and figlet package using yum
+  sudo yum install zip figlet
 fi
 
 # Check if dnf package manager is available
 which "dnf"
 RESULT=$?
 if [ $RESULT -eq 0 ]; then
-  # Install zip package using dnf
-  sudo dnf install zip
+  # Install zip and figlet package using dnf
+  sudo dnf install zip figlet
 fi
 
 # Check if pacman package manager is available
 which "pacman"
 RESULT=$?
 if [ $RESULT -eq 0 ]; then
-  # Install zip package using pacman
-  sudo pacman -S zip
+  # Install zip and figlet package using pacman
+  sudo pacman -S zip figlet
 fi
 
 # Check if zypper package manager is available
 which "zypper"
 RESULT=$?
 if [ $RESULT -eq 0 ]; then
-  # Install zip package using zypper
-  sudo zypper install zip
+  # Install zip and figlet package using zypper
+  sudo zypper install zip figlet
 fi
 
 # Check if the current Linux distribution is Fedora
 if [ -f /etc/fedora-release ]; then
-  # Install zip package using dnf
-  sudo dnf install zip
+  # Install zip and figlet package using dnf
+  sudo dnf install zip figlet
 fi
 
-# Define an array of colors
-colors=("\033[38;5;196m" "\033[38;5;202m" "\033[38;5;226m" "\033[38;5;82m" "\033[38;5;21m" "\033[38;5;55m")
-
-# Display "Pixel Launcher Extended" in each rainbow color
-for color in "${colors[@]}"; do
-  echo -e "${color}Pixel Launcher Extended By TeamFiles"
-done
-
-# Reset the color to the default
-echo -e "\033[0m"
+# Display "Pixel Launcher Extended" in bigger fonts
+figlet "Pixel Launcher Extended"
 
 # Check if zip is installed
 if ! command -v zip >/dev/null; then

@@ -159,6 +159,10 @@ bash autobuild.sh
 ```sh
 bash autobuild.sh
 ```
+- Use below command to update repo if you have already cloned it before.
+```sh
+git pull
+```
 
 ### For Termux
 - Open Termux, copy & paste this command:
@@ -187,6 +191,7 @@ pkg install zip
 - If you wanna make the module again & this time **Different Installer Magisk Module zip** then close Termux. Open new session and copy & paste the following command:
 ```sh
 cd Pixel-Launcher-Extended
+git pull
 bash autobuild.sh
 mv Pixel\ Launcher\ Extended* /sdcard
 echo "Your magisk module is available in Internal Storage"
