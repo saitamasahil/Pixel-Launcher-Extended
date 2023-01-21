@@ -69,7 +69,7 @@ fi
 version=$(grep "version=" module.prop | cut -d "=" -f 2)
 
 # ask user if they want to build online installer or offline installer
-echo "Do you want to build offline installer or online installer?"
+echo -e "\033[38;5;208mDo you want to build offline installer or online installer?\033[0m"
 echo "1. Offline Installer"
 echo "2. Online Installer"
 echo "3. Customize Installer"
@@ -135,7 +135,7 @@ elif [ $choice -eq 3 ]; then
   divider="------------------------------------------"
 
   echo $divider
-  echo "Which Android Version are you using?"
+  echo -e "\033[38;5;208mWhich Android Version are you using?\033[0m"
   echo "1. Android 13(November SP or Below)"
   echo "2. Android 13 QPR(December SP or Above)"
   echo $divider
@@ -175,8 +175,8 @@ elif [ $choice -eq 3 ]; then
   fi
 
   echo $divider
-  echo "Do you want to install Extra Grids in Launcher?"
-  echo "Extra Grids will enable more Grids Options in App Grid"
+  echo -e "\033[38;5;208mDo you want to install Extra Grids in Launcher?\033[0m"
+  echo -e "\033[38;5;208mExtra Grids will enable more Grids Options in App Grid\033[0m"
   echo "1. Yes"
   echo "2. No"
   echo $divider
@@ -200,7 +200,7 @@ elif [ $choice -eq 3 ]; then
   fi
 
   echo $divider
-  echo "Do you wanna add 'Material You Greetings In At A Glance' & install Extended Settings app?"
+  echo -e "\033[38;5;208mDo you wanna add 'Material You Greetings In At A Glance' & install Extended Settings app?\033[0m"
   echo "1. Yes"
   echo "2. No"
   echo $divider
@@ -212,17 +212,17 @@ elif [ $choice -eq 3 ]; then
     mv -f "system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease00z.apk" "system/product/priv-app/NexusLauncherRelease/temp/$file" 2>/dev/null || true
     mv -f "system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease10z.apk" "system/product/priv-app/NexusLauncherRelease/temp/$file" 2>/dev/null || true
     echo $divider
-    echo "Do you want to install Glance Greetings Style 1 or Glance Greetings Style 2?"
-    echo -e "\033[38;5;208mExample Example Example Example\033[0m"
+    echo -e "\033[38;5;208mDo you want to install Glance Greetings Style 1 or Glance Greetings Style 2?\033[0m"
+    echo -e "\033[38;5;2mExample Example Example Example Example\033[0m"
     echo "Example Of Glance Greetings Style 1-"
     echo "Line 1 - Material You Greetings,"
     echo "Line 2 - Day & Date"
     echo "Line 3 - Weather Information"
-    echo -e "\033[38;5;208mExample Example Example Example\033[0m"
+    echo -e "\033[38;5;2mExample Example Example Example Example\033[0m"
     echo "Example Of Glance Greetings Style 2-"
     echo "Line 1 - Material You Greetings, Day & Date"
     echo "Line 2 - Weather Information"
-    echo "You can check preview of these two styles in Pixel Launcher Extended post on GitHub Repo"
+    echo -e "\033[38;5;208mYou can check preview of these two styles in Pixel Launcher Extended post on GitHub Repo\033[0m"
     echo "1. Glance Greetings Style 1"
     echo "2. Glance Greetings Style 2"
     echo $divider
@@ -263,11 +263,11 @@ elif [ $choice -eq 3 ]; then
   fi
 
   echo $divider
-  echo "Do you want to enable DT2S in Launcher?"
-  echo "DT2S Means - Double Tap To Sleep Feature"
-  echo "Make sure you have LSPosed Installed in your rom"
-  echo "Without LSPosed it won't work"
-  echo "Read Documentation on GitHub to know more about activating it"
+  echo -e "\033[38;5;208mDo you want to enable DT2S in Launcher?\033[0m"
+  echo -e "\033[38;5;208mDT2S Means - Double Tap To Sleep Feature\033[0m"
+  echo -e "\033[38;5;208mMake sure you have LSPosed Installed in your rom\033[0m"
+  echo -e "\033[38;5;208mWithout LSPosed it won't work\033[0m"
+  echo -e "\033[38;5;208mRead Documentation on GitHub to know more about activating it\033[0m"
   echo "1. Yes"
   echo "2. No"
   echo $divider
@@ -282,8 +282,8 @@ elif [ $choice -eq 3 ]; then
   fi
 
   echo $divider
-  echo "Which of the following themed icons you want to install?"
-  echo "This feature is currently in beta due to Android 13 restrictions"
+  echo -e "\033[38;5;208mWhich of the following themed icons you want to install?\033[0m"
+  echo -e "\033[38;5;208mThis feature is currently in beta due to Android 13 restrictions\033[0m"
   echo "1. Lawnicons"
   echo "2. TeamFiles Icons(Recommended)"
   echo "3. RK Icons"
@@ -341,10 +341,10 @@ elif [ $choice -eq 3 ]; then
   fi
 
   echo $divider
-  echo "Do you wanna install Pixel Launcher Mods App?"
-  echo "It's by Developer KieronQuinn"
-  echo "You will be able to apply Icon Packs using it"
-  echo "It will also enable some more functionality to pixel launcher"
+  echo -e "\033[38;5;208mDo you wanna install Pixel Launcher Mods App?\033[0m"
+  echo -e "\033[38;5;208mIt's by Developer KieronQuinn\033[0m"
+  echo -e "\033[38;5;208mYou will be able to apply Icon Packs using it\033[0m"
+  echo -e "\033[38;5;208mIt will also enable some more functionality to pixel launcher\033[0m"
   echo "1. Yes"
   echo "2. No"
   echo $divider
@@ -360,7 +360,7 @@ elif [ $choice -eq 3 ]; then
   fi
 
   echo $divider
-  echo "Which of the following icon shape you want to use with launcher?"
+  echo -e "\033[38;5;208mWhich of the following icon shape you want to use with launcher?\033[0m"
   echo "1. Circle(Default)"
   echo "2. Cloudy"
   echo "3. Cylinder"
@@ -693,11 +693,11 @@ elif [ $choice -eq 3 ]; then
   fi
 
   echo $divider
-  echo "Do you want to enable push notification service?"
-  echo "We will send notifications for quick support"
-  echo "or if there is any new update available"
-  echo "This feature uses very little internet"
-  echo "Check ReadMe on GitHub to know more about it"
+  echo -e "\033[38;5;208mDo you want to enable push notification service?\033[0m"
+  echo -e "\033[38;5;208mWe will send notifications for quick support\033[0m"
+  echo -e "\033[38;5;208mor if there is any new update available\033[0m"
+  echo -e "\033[38;5;208mThis feature uses very little internet\033[0m"
+  echo -e "\033[38;5;208mCheck ReadMe on GitHub to know more about it\033[0m"
   echo "1. Yes"
   echo "2. No"
   echo $divider
@@ -714,7 +714,7 @@ elif [ $choice -eq 3 ]; then
   fi
 
   echo $divider
-  echo "Do you want to enable Developer Opions in launcher?"
+  echo -e "\033[38;5;208mDo you want to enable Developer Opions in launcher?\033[0m"
   echo "1. Yes"
   echo "2. No"
   echo $divider
