@@ -69,7 +69,7 @@ fi
 version=$(grep "version=" module.prop | cut -d "=" -f 2)
 
 # ask user if they want to build online installer or offline installer
-echo -e "\033[38;5;208mDo you want to build offline installer or online installer?\033[0m"
+echo -e "\033[38;5;208mDo you want to build Offline Installer, Online Installer or Customize Installer?\033[0m"
 echo "1. Offline Installer"
 echo "2. Online Installer"
 echo "3. Customize Installer"
