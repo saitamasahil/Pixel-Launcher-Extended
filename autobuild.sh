@@ -77,6 +77,9 @@ read -p "Enter your choice: " choice
 
 if [ $choice -eq 1 ]; then
 
+  # Delete already exists Offline Installer
+  rm -rf Pixel\ Launcher\ Extended\ Offline*
+
   # Copy & Rename offline_setup.sh to setup.sh
   cp offline_setup.sh setup.sh
 
@@ -95,6 +98,9 @@ if [ $choice -eq 1 ]; then
 
 elif [ $choice -eq 2 ]; then
 
+  # Delete already exists Online Installer
+  rm -rf Pixel\ Launcher\ Extended\ Online*
+
   # Copy & Rename online_setup.sh to setup.sh
   cp online_setup.sh setup.sh
 
@@ -112,6 +118,9 @@ elif [ $choice -eq 2 ]; then
   echo ">> Done! You can find the module zip file in the current directory - '$(pwd)/Pixel Launcher Extended Online Installer $version.zip'"
 
 elif [ $choice -eq 3 ]; then
+
+  # Delete already exists Customize Installer
+  rm -rf Pixel\ Launcher\ Extended\ Customize*
 
   # Copy & Rename customize_setup.sh to setup.sh
   cp customize_setup.sh setup.sh
@@ -732,10 +741,10 @@ elif [ $choice -eq 3 ]; then
 
   # Move temp files & folders back to original location
   for file in system/product/priv-app/NexusLauncherRelease/temp/*; do
-    mv -f "$file" "system/product/priv-app/NexusLauncherRelease/$(basename $file)"
+    mv -f "$file" "system/product/priv-app/NexusLauncherRelease/$(basename $file)" 2>/dev/null || true
   done
   for file in system/product/etc/permissions/temp/*; do
-    mv -f "$file" "system/product/etc/permissions/$(basename $file)"
+    mv -f "$file" "system/product/etc/permissions/$(basename $file)" 2>/dev/null || true
   done
   for file in system/product/overlay/ThemedIconsOverlay/temp/*; do
     mv -f "$file" "system/product/overlay/ThemedIconsOverlay/$(basename $file)" 2>/dev/null || true
@@ -744,18 +753,18 @@ elif [ $choice -eq 3 ]; then
     mv -f "$file" "system/product/overlay/IconShape/$(basename $file)" 2>/dev/null || true
   done
   for file in temp/*; do
-    mv -f "$file" "$(basename $file)"
+    mv -f "$file" "$(basename $file)" 2>/dev/null || true
   done
   for file in system/product/overlay/temp/*; do
     mv -f "$file" "system/product/overlay/$(basename $file)" 2>/dev/null || true
   done
-  mv "system/product/priv-app/temp/PixelLauncherDT2S" "system/product/priv-app/$folder"
+  mv "system/product/priv-app/temp/PixelLauncherDT2S" "system/product/priv-app/$folder" 2>/dev/null || true
   mv "system/product/overlay/temp/ThemedIconsOverlay" "system/product/overlay/$folder" 2>/dev/null || true
-  mv "system/product/priv-app/temp/PixelLauncherMods" "system/product/priv-app/$folder"
+  mv "system/product/priv-app/temp/PixelLauncherMods" "system/product/priv-app/$folder" 2>/dev/null || true
   mv "system/product/overlay/temp/PixelLauncherModsOverlay" "system/product/overlay/$folder" 2>/dev/null || true
   mv "system/product/overlay/temp/IconShape" "system/product/overlay/$folder" 2>/dev/null || true
-  mv "system/temp/lib64" "system/$folder"
-  mv "system/product/priv-app/temp/OnePunchNotifier" "system/product/priv-app/$folder"
+  mv "system/temp/lib64" "system/$folder" 2>/dev/null || true
+  mv "system/product/priv-app/temp/OnePunchNotifier" "system/product/priv-app/$folder" 2>/dev/null || true
   mv "system/product/priv-app/temp/ExtendedSettings" "system/product/priv-app/$folder" 2>/dev/null || true
 
   # Delete temp folders
