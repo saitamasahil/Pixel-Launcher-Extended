@@ -4,10 +4,10 @@
 - Updated apks & permissions
 - Added developer options
 - Fixed directory & files deleting issue while making customize installer module zip
-- Fixed directory & files deleting issue while making customize installer module zip
-- Added Extended Settings app
+- Added a new app Extended Settings. This can make subtle changes in launcher.
 - Added support for los based roms on January security patch
 - Added support for VoltageOS January security patch
+- Fixed lots of bugs while making customize installer & made script more users friendly
 
 **Version 1.2**
 - Added a workaround to fix material you issue happening in some roms
