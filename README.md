@@ -21,6 +21,9 @@
 > Please note that this feature requires internet to provide you update & support related notifications.
 > We don't take any data or logs from your phone to provide you these notifications.
 
+### Screenshots
+- [Click Here](https://telegra.ph/Pixel-Launcher-Extended-Screenshots-01-22)
+
 ### Compatibility
 This module is expected to work on ROMs which are based on fairly unmodified Android source code.
 - Android 13 AOSP-based ROMs
