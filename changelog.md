@@ -1,3 +1,6 @@
+**Version 1.4**
+- Updated ui of Extended Settings
+
 **Version 1.3**
 - Updated recent provider overlay
 - Fixed wallpaper app crashing issue after installing launcher for the first time
