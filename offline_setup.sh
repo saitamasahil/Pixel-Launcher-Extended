@@ -988,6 +988,8 @@ init_main() {
 
   ui_print ""
   ui_print "[*] Do you want to enable Developer Opions in launcher?"
+  ui_print "[*] WARNING: Your rom may cause Bootloop Issue if you enable this feature"
+  ui_print "[*] Enable at your own risk"
   ui_print "[*] Press volume up to switch to another choice"
   ui_print "[*] Press volume down to continue with that choice"
   ui_print ""

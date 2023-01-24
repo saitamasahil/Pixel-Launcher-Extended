@@ -715,6 +715,8 @@ elif [ $choice -eq 3 ]; then
 
   echo $divider
   echo -e "\033[38;5;208mDo you want to enable Developer Opions in launcher?\033[0m"
+  echo -e "\033[31;1mWARNING: Your rom may cause Bootloop Issue if you enable this feature\033[0m"
+  echo -e "\033[31;1mEnable at your own risk\033[0m"
   echo "1. Yes"
   echo "2. No"
   echo $divider
