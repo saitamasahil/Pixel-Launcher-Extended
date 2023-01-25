@@ -1,0 +1,46 @@
+name: Build CI
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Set up environment
+      run: |
+        sudo apt install zip figlet -y
+
+    - name: Build installer
+      run: |
+        cd ${{ github.workspace }}
+        echo "1" | bash autobuild.sh
+        echo "2" | bash autobuild.sh
+    
+    - name: Retrieve version
+      run: echo VERSION=$(echo ${{ github.event.head_commit.id }} | head -c 7) >> $GITHUB_ENV
+
+    - name: Rename installer
+      run: |
+        mv ${{ github.workspace }}/"Pixel Launcher Extended Offline Installer $(grep 'version=' module.prop | cut -d '=' -f 2).zip" ${{ github.workspace }}/"Pixel Launcher Extended Offline Installer CI Version ${{ env.VERSION }}.zip"
+        mv ${{ github.workspace }}/"Pixel Launcher Extended Online Installer $(grep 'version=' module.prop | cut -d '=' -f 2).zip" ${{ github.workspace }}/"Pixel Launcher Extended Online Installer CI Version ${{ env.VERSION }}.zip"
+
+    - name: Upload offline installer
+      uses: actions/upload-artifact@v3
+      with:
+        name: Pixel Launcher Extended Offline Installer CI Version ${{ env.VERSION }}.zip
+        path: |
+          ${{ github.workspace }}/Pixel Launcher Extended Offline Installer CI Version ${{ env.VERSION }}.zip
+        if-no-files-found: error
+
+    - name: Upload online installer
+      uses: actions/upload-artifact@v3
+      with:
+        name: Pixel Launcher Extended Online Installer CI Version ${{ env.VERSION }}.zip
+        path: |
+          ${{ github.workspace }}/Pixel Launcher Extended Online Installer CI Version ${{ env.VERSION }}.zip
+        if-no-files-found: error
