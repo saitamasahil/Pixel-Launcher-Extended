@@ -258,6 +258,7 @@ elif [ $choice -eq 3 ]; then
     mv -f "system/product/overlay/TeamFiles_Pill_Light2.apk" "system/product/overlay/temp/$file"
     mv -f "system/product/overlay/TeamFiles_Pill_Light_Accent.apk" "system/product/overlay/temp/$file"
     mv -f "system/product/overlay/TeamFiles_Pill_Light_Accent2.apk" "system/product/overlay/temp/$file"
+    mv -f "system/product/overlay/TeamFiles_UserChip.apk" "system/product/overlay/temp/$file"
     mv "system/product/priv-app/ExtendedSettings" "system/product/priv-app/temp/$folder"
     mv -f "system/product/etc/permissions/privapp-permissions-com.domain.liranazuz5.extendedsettings.xml" "system/product/etc/permissions/temp/$file"
   fi
