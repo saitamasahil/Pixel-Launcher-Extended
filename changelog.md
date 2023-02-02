@@ -1,6 +1,7 @@
 **Version 1.4**
 - Updated ui of Extended Settings
 - Fixed an issue with Google Photo Editor not working in some roms
+- Added user pill option in Extended Settings App.
 
 **Version 1.3**
 - Updated recent provider overlay
