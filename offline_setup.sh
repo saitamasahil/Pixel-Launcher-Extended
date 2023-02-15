@@ -106,6 +106,7 @@ init_main() {
     /system/system_ext/priv-app/Launcher3QuickStep
     /system/system_ext/priv-app/ArrowLauncher
     /system/system_ext/priv-app/ThemePicker
+    /system/system_ext/priv-app/WallpaperPickerGoogleRelease
     /system/product/overlay/ThemedIconsOverlay.apk
     /system/product/overlay/PixelLauncherIconsOverlay.apk
     /system/product/overlay/CustomPixelLauncherOverlay.apk
@@ -148,6 +149,7 @@ init_main() {
     /system/system_ext/priv-app/Launcher3QuickStep
     /system/system_ext/priv-app/ArrowLauncher
     /system/system_ext/priv-app/ThemePicker
+    /system/system_ext/priv-app/WallpaperPickerGoogleRelease
     /system/product/overlay/ThemedIconsOverlay.apk
     /system/product/overlay/PixelLauncherIconsOverlay.apk
     /system/product/overlay/CustomPixelLauncherOverlay.apk
