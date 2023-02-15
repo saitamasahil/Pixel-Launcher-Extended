@@ -55,47 +55,101 @@ web_fetch() {
 }
 
 ############
-# Replace List
-############
-
-# List all directories you want to directly replace in the system
-# Construct your list in the following example format
-REPLACE_EXAMPLE="
-/system/app/Youtube
-/system/priv-app/SystemUI
-/system/priv-app/Settings
-/system/framework
-"
-# Construct your own list here
-REPLACE="
-/system/priv-app/AsusLauncherDev
-/system/priv-app/Lawnchair
-/system/priv-app/NexusLauncherPrebuilt
-/system/product/priv-app/ParanoidQuickStep
-/system/product/priv-app/ShadyQuickStep
-/system/product/priv-app/TrebuchetQuickStep
-/system/product/priv-app/NexusLauncherRelease
-/system/product/overlay/PixelLauncherIconsOverlay
-/system/product/overlay/CustomPixelLauncherOverlay
-/system/system_ext/priv-app/NexusLauncherRelease
-/system/system_ext/priv-app/TrebuchetQuickStep
-/system/system_ext/priv-app/Lawnchair
-/system/system_ext/priv-app/PixelLauncherRelease
-/system/system_ext/priv-app/Launcher3QuickStep
-/system/system_ext/priv-app/ArrowLauncher
-/system/system_ext/priv-app/ThemePicker
-/system/system_ext/priv-app/WallpaperPickerGoogleRelease
-/system/product/overlay/ThemedIconsOverlay.apk
-/system/product/overlay/PixelLauncherIconsOverlay.apk
-/system/product/overlay/CustomPixelLauncherOverlay.apk
-"
-
-############
 # Main
 ############
 
 # Change the logic to whatever you want
 init_main() {
+  # Get the Android SDK version
+  sdk_version=$(getprop ro.build.version.sdk)
+
+  # Check if the SDK version is 32 or below
+  if [[ $sdk_version -le 32 ]]; then
+    # Fail the script immediately
+    echo "Error: Unsupported SDK version ($sdk_version)"
+    exit 1
+  fi
+
+  # Get the Android security patch level
+  security_patch_level=$(getprop ro.build.version.security_patch)
+
+  # Check if the security patch level is November 2022 or below
+  if [[ $security_patch_level <= "2022-11-30" ]]; then
+    ############
+    # Replace List
+    ############
+
+    # List all directories you want to directly replace in the system
+    # Construct your list in the following example format
+    REPLACE_EXAMPLE="
+    /system/app/Youtube
+    /system/priv-app/SystemUI
+    /system/priv-app/Settings
+    /system/framework
+    "
+    # Construct your own list here
+    REPLACE="
+    /system/priv-app/AsusLauncherDev
+    /system/priv-app/Lawnchair
+    /system/priv-app/NexusLauncherPrebuilt
+    /system/product/priv-app/ParanoidQuickStep
+    /system/product/priv-app/ShadyQuickStep
+    /system/product/priv-app/TrebuchetQuickStep
+    /system/product/priv-app/NexusLauncherRelease
+    /system/product/overlay/PixelLauncherIconsOverlay
+    /system/product/overlay/CustomPixelLauncherOverlay
+    /system/system_ext/priv-app/NexusLauncherRelease
+    /system/system_ext/priv-app/DerpLauncherQuickStep
+    /system/system_ext/priv-app/TrebuchetQuickStep
+    /system/system_ext/priv-app/Lawnchair
+    /system/system_ext/priv-app/PixelLauncherRelease
+    /system/system_ext/priv-app/Launcher3QuickStep
+    /system/system_ext/priv-app/ArrowLauncher
+    /system/system_ext/priv-app/ThemePicker
+    /system/system_ext/priv-app/WallpaperPickerGoogleRelease
+    /system/product/overlay/ThemedIconsOverlay.apk
+    /system/product/overlay/PixelLauncherIconsOverlay.apk
+    /system/product/overlay/CustomPixelLauncherOverlay.apk
+    "
+
+  else
+    ############
+    # Replace List
+    ############
+
+    # List all directories you want to directly replace in the system
+    # Construct your list in the following example format
+    REPLACE_EXAMPLE="
+    /system/app/Youtube
+    /system/priv-app/SystemUI
+    /system/priv-app/Settings
+    /system/framework
+    "
+    # Construct your own list here
+    REPLACE="
+    /system/priv-app/AsusLauncherDev
+    /system/priv-app/Lawnchair
+    /system/priv-app/NexusLauncherPrebuilt
+    /system/product/priv-app/ParanoidQuickStep
+    /system/product/priv-app/ShadyQuickStep
+    /system/product/priv-app/TrebuchetQuickStep
+    /system/product/priv-app/NexusLauncherRelease
+    /system/product/overlay/PixelLauncherIconsOverlay
+    /system/product/overlay/CustomPixelLauncherOverlay
+    /system/system_ext/priv-app/NexusLauncherRelease
+    /system/system_ext/priv-app/TrebuchetQuickStep
+    /system/system_ext/priv-app/Lawnchair
+    /system/system_ext/priv-app/PixelLauncherRelease
+    /system/system_ext/priv-app/Launcher3QuickStep
+    /system/system_ext/priv-app/ArrowLauncher
+    /system/system_ext/priv-app/ThemePicker
+    /system/system_ext/priv-app/WallpaperPickerGoogleRelease
+    /system/product/overlay/ThemedIconsOverlay.apk
+    /system/product/overlay/PixelLauncherIconsOverlay.apk
+    /system/product/overlay/CustomPixelLauncherOverlay.apk
+    "
+  fi
+
   ui_print ""
   ui_print "[*] Installing..."
   ui_print ""
