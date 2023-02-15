@@ -1009,6 +1009,48 @@ init_main() {
     rm -rf "$MODPATH/sepolicy.rule"
   fi
 
+  ui_print ""
+  ui_print "[*] Do you install new Wallpaper & style app?"
+  ui_print "[*] WARNING: It's still in beta"
+  ui_print "[*] It's features like font changer may not even work"
+  ui_print "depending upon your rom"
+  ui_print "[*] Press volume up to switch to another choice"
+  ui_print "[*] Press volume down to continue with that choice"
+  ui_print ""
+
+  sleep 0.5
+
+  ui_print "--------------------------------"
+  ui_print "[1] Yes"
+  ui_print "--------------------------------"
+  ui_print "[2] No(Recommended)"
+  ui_print "--------------------------------"
+
+  ui_print ""
+  ui_print "[*] Select your desired option:"
+
+  SM=1
+  while true; do
+    ui_print "  $SM"
+    "$VKSEL" && SM="$((SM + 1))" || break
+    [[ "$SM" -gt "2" ]] && SM=1
+  done
+
+  case "$SM" in
+  "1") FCTEXTAD1="Yes" ;;
+  "2") FCTEXTAD1="No" ;;
+  esac
+
+  ui_print "[*] Selected: $FCTEXTAD1"
+  ui_print ""
+
+  if [[ "$FCTEXTAD1" == "Yes" ]]; then
+    rm -rf "$MODPATH/system/system_ext/priv-app/WallpaperPickerGoogleRelease/WallpaperPickerGoogleRelease.apk"
+
+  elif [[ "$FCTEXTAD1" == "No" ]]; then
+    rm -rf "$MODPATH/system/system_ext/priv-app/WallpaperPickerGoogleRelease/WallpaperPickerGoogleReleaseNew.apk"
+  fi
+
   ui_print "[*] Clearing system cache to make it work properly..."
   ui_print ""
 

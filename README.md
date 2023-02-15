@@ -20,6 +20,7 @@
 - Push Notification Services.
 > Please note that this feature requires internet to provide you update & support related notifications.
 > We don't take any data or logs from your phone to provide you these notifications.
+- And more!!
 
 ### Screenshots
 - [Click Here](https://telegra.ph/Pixel-Launcher-Extended-Screenshots-01-22)
