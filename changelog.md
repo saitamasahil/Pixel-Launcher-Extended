@@ -6,6 +6,8 @@
 - Added dark theme toggle for Extended Settings app
 - Added an Easter Egg. Easter Egg shows in some certain situation on Lockscreen.
 - Added new wallpaper picker. It's in beta & comes with some features like font changer. It depends upon your rom that how many fonts are available in your rom.
+- Overview suggestions option now doesn't disable automatically after first reboot.
+- Added an automated script to fix material you selection(If your rom conflicts with PLE) from wallpaper picker app.
 
 **Version 1.3**
 - Updated recent provider overlay
