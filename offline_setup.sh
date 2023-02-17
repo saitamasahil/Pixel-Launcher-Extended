@@ -97,6 +97,16 @@ web_fetch() {
 
 # Change the logic to whatever you want
 init_main() {
+  # Get the Android SDK version
+  sdk_version=$(getprop ro.build.version.sdk)
+
+  # Check if the SDK version is 32 or below
+  if [[ $sdk_version -le 32 ]]; then
+    # Fail the script immediately
+    echo "Error: Unsupported SDK version ($sdk_version)"
+    exit 1
+  fi
+
   ui_print ""
   ui_print "[*] Which Android Version are you using?"
   ui_print "[*] Press volume up to switch to another choice"
