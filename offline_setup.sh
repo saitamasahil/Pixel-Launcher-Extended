@@ -43,6 +43,43 @@ info_print() {
   sleep 2
 }
 
+############
+# Replace List
+############
+
+# List all directories you want to directly replace in the system
+# Construct your list in the following example format
+REPLACE_EXAMPLE="
+/system/app/Youtube
+/system/priv-app/SystemUI
+/system/priv-app/Settings
+/system/framework
+"
+# Construct your own list here
+REPLACE="
+/system/priv-app/AsusLauncherDev
+/system/priv-app/Lawnchair
+/system/priv-app/NexusLauncherPrebuilt
+/system/product/priv-app/ParanoidQuickStep
+/system/product/priv-app/ShadyQuickStep
+/system/product/priv-app/TrebuchetQuickStep
+/system/product/priv-app/NexusLauncherRelease
+/system/product/overlay/PixelLauncherIconsOverlay
+/system/product/overlay/CustomPixelLauncherOverlay
+/system/system_ext/priv-app/NexusLauncherRelease
+/system/system_ext/priv-app/DerpLauncherQuickStep
+/system/system_ext/priv-app/TrebuchetQuickStep
+/system/system_ext/priv-app/Lawnchair
+/system/system_ext/priv-app/PixelLauncherRelease
+/system/system_ext/priv-app/Launcher3QuickStep
+/system/system_ext/priv-app/ArrowLauncher
+/system/system_ext/priv-app/ThemePicker
+/system/system_ext/priv-app/WallpaperPickerGoogleRelease
+/system/product/overlay/ThemedIconsOverlay.apk
+/system/product/overlay/PixelLauncherIconsOverlay.apk
+/system/product/overlay/CustomPixelLauncherOverlay.apk
+"
+
 # Web fetch tool for files & media by iamlooper @ telegram
 # curl: Silent mode (-fsS), redirect to STDOUT (-L) & contents to a file (-o)
 # wget: Silent mode (-q), redirect to STDOUT (-O-) & contents to a file (-O)
@@ -97,42 +134,6 @@ init_main() {
   ui_print ""
 
   if [[ "$FCTEXTAD1" == "Android 13" ]]; then
-    ############
-    # Replace List
-    ############
-
-    # List all directories you want to directly replace in the system
-    # Construct your list in the following example format
-    REPLACE_EXAMPLE="
-    /system/app/Youtube
-    /system/priv-app/SystemUI
-    /system/priv-app/Settings
-    /system/framework
-    "
-    # Construct your own list here
-    REPLACE="
-    /system/priv-app/AsusLauncherDev
-    /system/priv-app/Lawnchair
-    /system/priv-app/NexusLauncherPrebuilt
-    /system/product/priv-app/ParanoidQuickStep
-    /system/product/priv-app/ShadyQuickStep
-    /system/product/priv-app/TrebuchetQuickStep
-    /system/product/priv-app/NexusLauncherRelease
-    /system/product/overlay/PixelLauncherIconsOverlay
-    /system/product/overlay/CustomPixelLauncherOverlay
-    /system/system_ext/priv-app/NexusLauncherRelease
-    /system/system_ext/priv-app/DerpLauncherQuickStep
-    /system/system_ext/priv-app/TrebuchetQuickStep
-    /system/system_ext/priv-app/Lawnchair
-    /system/system_ext/priv-app/PixelLauncherRelease
-    /system/system_ext/priv-app/Launcher3QuickStep
-    /system/system_ext/priv-app/ArrowLauncher
-    /system/system_ext/priv-app/ThemePicker
-    /system/system_ext/priv-app/WallpaperPickerGoogleRelease
-    /system/product/overlay/ThemedIconsOverlay.apk
-    /system/product/overlay/PixelLauncherIconsOverlay.apk
-    /system/product/overlay/CustomPixelLauncherOverlay.apk
-    "
     rm -rf "$MODPATH/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease00z.apk"
     rm -rf "$MODPATH/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease01z.apk"
     rm -rf "$MODPATH/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease02z.apk"
@@ -141,41 +142,6 @@ init_main() {
     rm -rf "$MODPATH/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease12z.apk"
 
   elif [[ "$FCTEXTAD1" == "Android 13 QPR" ]]; then
-    ############
-    # Replace List
-    ############
-
-    # List all directories you want to directly replace in the system
-    # Construct your list in the following example format
-    REPLACE_EXAMPLE="
-    /system/app/Youtube
-    /system/priv-app/SystemUI
-    /system/priv-app/Settings
-    /system/framework
-    "
-    # Construct your own list here
-    REPLACE="
-    /system/priv-app/AsusLauncherDev
-    /system/priv-app/Lawnchair
-    /system/priv-app/NexusLauncherPrebuilt
-    /system/product/priv-app/ParanoidQuickStep
-    /system/product/priv-app/ShadyQuickStep
-    /system/product/priv-app/TrebuchetQuickStep
-    /system/product/priv-app/NexusLauncherRelease
-    /system/product/overlay/PixelLauncherIconsOverlay
-    /system/product/overlay/CustomPixelLauncherOverlay
-    /system/system_ext/priv-app/NexusLauncherRelease
-    /system/system_ext/priv-app/TrebuchetQuickStep
-    /system/system_ext/priv-app/Lawnchair
-    /system/system_ext/priv-app/PixelLauncherRelease
-    /system/system_ext/priv-app/Launcher3QuickStep
-    /system/system_ext/priv-app/ArrowLauncher
-    /system/system_ext/priv-app/ThemePicker
-    /system/system_ext/priv-app/WallpaperPickerGoogleRelease
-    /system/product/overlay/ThemedIconsOverlay.apk
-    /system/product/overlay/PixelLauncherIconsOverlay.apk
-    /system/product/overlay/CustomPixelLauncherOverlay.apk
-    "
     rm -rf "$MODPATH/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease00.apk"
     rm -rf "$MODPATH/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease01.apk"
     rm -rf "$MODPATH/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease02.apk"
