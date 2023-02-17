@@ -60,21 +60,43 @@ web_fetch() {
 
 # Change the logic to whatever you want
 init_main() {
-  # Get the Android SDK version
-  sdk_version=$(getprop ro.build.version.sdk)
+  ui_print ""
+  ui_print "[*] Which Android Version are you using?"
+  ui_print "[*] Press volume up to switch to another choice"
+  ui_print "[*] Press volume down to continue with that choice"
+  ui_print ""
 
-  # Check if the SDK version is 32 or below
-  if [[ $sdk_version -le 32 ]]; then
-    # Fail the script immediately
-    echo "Error: Unsupported SDK version ($sdk_version)"
-    exit 1
-  fi
+  sleep 0.5
 
-  # Get the Android security patch level
-  security_patch_level=$(getprop ro.build.version.security_patch)
+  ui_print "--------------------------------"
+  ui_print "[1] Android 13(November SP or Below)"
+  ui_print "--------------------------------"
+  ui_print "[2] Android 13 QPR(December SP or Above)"
+  ui_print "--------------------------------"
+  ui_print "[*] SP means: Security Patch"
+  ui_print "[*] If you're not sure about 'which version to flash' then"
+  ui_print "ask in your rom community"
+  ui_print "to know about current version of your rom"
 
-  # Check if the security patch level is November 2022 or below
-  if [[ $security_patch_level <= "2022-11-30" ]]; then
+  ui_print ""
+  ui_print "[*] Select your desired option:"
+
+  SM=1
+  while true; do
+    ui_print "  $SM"
+    "$VKSEL" && SM="$((SM + 1))" || break
+    [[ "$SM" -gt "2" ]] && SM=1
+  done
+
+  case "$SM" in
+  "1") FCTEXTAD1="Android 13" ;;
+  "2") FCTEXTAD1="Android 13 QPR" ;;
+  esac
+
+  ui_print "[*] Selected: $FCTEXTAD1"
+  ui_print ""
+
+  if [[ "$FCTEXTAD1" == "Android 13" ]]; then
     ############
     # Replace List
     ############
@@ -359,7 +381,7 @@ init_main() {
       fi
     fi
 
-  else
+  elif [[ "$FCTEXTAD1" == "Android 13 QPR" ]]; then
     ############
     # Replace List
     ############
