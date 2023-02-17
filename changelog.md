@@ -4,7 +4,6 @@
 - Added user pill option in Extended Settings App
 - Fixed weather pill background issue with November & below security patch
 - Added dark theme toggle for Extended Settings app
-- Added autodetect function to detect Android 13 Or Android 13 QPR for offline & online installer
 - Added an Easter Egg. Easter Egg shows in some certain situation on Lockscreen.
 - Added new wallpaper picker. It's in beta & comes with some features like font changer. It depends upon your rom that how many fonts are available in your rom.
 

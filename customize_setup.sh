@@ -43,17 +43,6 @@ info_print() {
   sleep 2
 }
 
-# Web fetch tool for files & media by iamlooper @ telegram
-# curl: Silent mode (-fsS), redirect to STDOUT (-L) & contents to a file (-o)
-# wget: Silent mode (-q), redirect to STDOUT (-O-) & contents to a file (-O)
-web_fetch() {
-  [[ ! -z "$(command -v wget)" ]] && tool="wget" || tool="curl"
-  case "$1" in
-  "-d" | "--download") [[ "$tool" == "wget" ]] && wget "$2" -qO "$3" || curl "$2" -fsSo "$3" ;;
-  "-p" | "--print") [[ "$tool" == "wget" ]] && wget -qO- "$2" || curl -fsSL "$2" ;;
-  esac
-}
-
 ############
 # Replace List
 ############
@@ -78,6 +67,7 @@ REPLACE="
 /system/product/overlay/PixelLauncherIconsOverlay
 /system/product/overlay/CustomPixelLauncherOverlay
 /system/system_ext/priv-app/NexusLauncherRelease
+/system/system_ext/priv-app/DerpLauncherQuickStep
 /system/system_ext/priv-app/TrebuchetQuickStep
 /system/system_ext/priv-app/Lawnchair
 /system/system_ext/priv-app/PixelLauncherRelease
@@ -89,6 +79,17 @@ REPLACE="
 /system/product/overlay/PixelLauncherIconsOverlay.apk
 /system/product/overlay/CustomPixelLauncherOverlay.apk
 "
+
+# Web fetch tool for files & media by iamlooper @ telegram
+# curl: Silent mode (-fsS), redirect to STDOUT (-L) & contents to a file (-o)
+# wget: Silent mode (-q), redirect to STDOUT (-O-) & contents to a file (-O)
+web_fetch() {
+  [[ ! -z "$(command -v wget)" ]] && tool="wget" || tool="curl"
+  case "$1" in
+  "-d" | "--download") [[ "$tool" == "wget" ]] && wget "$2" -qO "$3" || curl "$2" -fsSo "$3" ;;
+  "-p" | "--print") [[ "$tool" == "wget" ]] && wget -qO- "$2" || curl -fsSL "$2" ;;
+  esac
+}
 
 ############
 # Main
