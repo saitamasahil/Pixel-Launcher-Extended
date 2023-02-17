@@ -23,8 +23,13 @@ while true; do
 done
 
 if [ -f $MODDIR/first ]; then
+  # Get the Android SDK version
+  sdk_version=$(getprop ro.build.version.sdk)
+
+  if [ "$sdk_version" -eq 33 ]; then
     su -c "settings delete secure theme_customization_overlay_packages"
-    rm -rf $MODDIR/first
+  fi
+  rm -rf $MODDIR/first
 fi
 
 # Initialize system
