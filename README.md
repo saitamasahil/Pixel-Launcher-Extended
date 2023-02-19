@@ -131,6 +131,7 @@ If you want to enable or disable wallpaer zoom effect then use this add-on.
 If you don't want to download built module from mirrors above, then you can build magisk module yourself.
 
 ### For Windows
+- PowerShell 5+ required.
 - Clone the repository with [GitHub Desktop](https://desktop.github.com) or using [Git app](https://git-scm.com/download/win).
 ```bat
 :: ONLY RUN THIS IF YOU USE GIT AND HAVE IT INSTALLED
@@ -144,7 +145,6 @@ powershell -ExecutionPolicy Bypass -File ./autobuild.ps1
 ```
 - Select desired installer to make magisk module from PLE Builder
 - Don't use git in command-line or powershell to clone repo. Some users reported that it's corrupting contents.
-- It supports making of **Offline Installer** only.
 
 ### For Ubuntu, Debian, and other Linux distributions
 - The required zip package install command is in the script itself. However, if you encounter any errors, you can install **zip** manually. On Ubuntu or Debian, Use the following command to do so."
@@ -163,7 +163,7 @@ cd Pixel-Launcher-Extended
 ```sh
 bash autobuild.sh
 ```
-- Choose Offline Installer, Online Installer or Customize Installer using number keys from PLE Builder.
+- Choose `Offline Installer`, `Online Installer` or `Customize Installer` using number keys from PLE Builder.
 - If you wanna make the module again & this time **Different Installer Magisk Module zip** then run autobuild.sh again.
 ```sh
 bash autobuild.sh
@@ -191,7 +191,7 @@ mv Pixel\ Launcher\ Extended* /sdcard
 echo "Your magisk module is available in Internal Storage"
 ```
 - Please make sure to grant storage permissions, if Termux asks you to do so, you will get Magisk module in your internal storage.
-- Choose Offline Installer, Online Installer or Customize Installer using number keys from PLE Builder.
+- Choose `Offline Installer`, `Online Installer` or `Customize Installer` using number keys from PLE Builder.
 - Use [Termux From F-Droid](https://f-droid.org/en/packages/com.termux/) to perform these tasks.
 - The required zip package install command is in the script itself. However, if you encounter any errors, you can install **zip** manually. Use the following command to do so."
 ```sh
