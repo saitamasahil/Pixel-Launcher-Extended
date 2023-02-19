@@ -125,7 +125,7 @@
     </style>
     <style name="AppTheme.DarkText" parent="@style/LauncherTheme.DarkText">
         <item name="allappsHeaderProtectionColor">@android:color/system_neutral1_100</item>
-        <item name="focusHighlight">@android:color/system_accent1_100</item>
+        <<item name="focusHighlight">@android:color/system_accent1_100</item>
         <item name="groupHighlight">@android:color/system_neutral1_0</item>
         <item name="qsbFillColor">#ffffffff</item>
         <item name="qsbIconTintPrimary">#ff4285f4</item>
@@ -2816,7 +2816,7 @@
         <item name="iconDisplay">taskbar</item>
     </style>
     <style name="BaseIconRoot" parent="@android:style/TextAppearance.DeviceDefault.DialogWindowTitle">
-        <item name="android:fontFamily">@android:string/config_batterySaverDeviceSpecificConfig</item>
+        <item name="android:fontFamily">@android:string/config_bandwidthEstimateSource</item>
     </style>
     <style name="BaseIconUnBounded" parent="@style/BaseIconRoot">
         <item name="android:textColor">?android:textColorSecondary</item>
@@ -3478,7 +3478,7 @@
     </style>
     <style name="SearchEduText">
         <item name="android:textSize">14.0sp</item>
-        <item name="android:textColor">?android:^attr-private/textColorSecondaryActivated</item>
+        <item name="android:textColor">?android:^attr-private/textColorOnAccent</item>
         <item name="android:fontFamily">google-sans-medium</item>
         <item name="android:textAlignment">center</item>
         <item name="android:letterSpacing">0.02</item>
@@ -4082,7 +4082,7 @@
     <style name="TextAppearance.Widget.AppCompat.Toolbar.Subtitle" parent="@style/Base.TextAppearance.Widget.AppCompat.Toolbar.Subtitle" />
     <style name="TextAppearance.Widget.AppCompat.Toolbar.Title" parent="@style/Base.TextAppearance.Widget.AppCompat.Toolbar.Title" />
     <style name="TextHeadline" parent="@android:style/TextAppearance.DeviceDefault.DialogWindowTitle">
-        <item name="android:fontFamily">@android:string/config_batterySaverDeviceSpecificConfig</item>
+        <item name="android:fontFamily">@android:string/config_bandwidthEstimateSource</item>
     </style>
     <style name="TextTitle" parent="@android:style/TextAppearance.DeviceDefault" />
     <style name="Theme.AppCompat" parent="@style/Base.Theme.AppCompat" />
