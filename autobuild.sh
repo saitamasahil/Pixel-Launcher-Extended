@@ -56,8 +56,8 @@ if [ -f /etc/fedora-release ]; then
   sudo dnf install zip figlet
 fi
 
-# Display "Pixel Launcher Extended" in bigger fonts
-figlet "Pixel Launcher Extended"
+# Display "PLE Builder" in bigger fonts
+figlet "PLE Builder"
 
 # Check if zip is installed
 if ! command -v zip >/dev/null; then
@@ -90,7 +90,7 @@ if [ $choice -eq 1 ]; then
   fi
 
   # Create zip file
-  echo ">> Creating zip file"
+  echo ">> Creating Magisk Module"
   echo ""                                                                                                                                                                                                                                                                                                      # make the output look easier to read
   zip -r -q "Pixel Launcher Extended Offline Installer $version.zip" . -x .git/\* Modifications/\* ThemedIcons/\* screenshots/\* autobuild.sh autobuild.bat banner.jpg banner2.jpg changelog.md codename.txt logo.png online_setup.sh offline_setup.sh customize_setup.sh README.md Pixel\ Launcher\ Extended* # Ignore specified files and folders because they are not needed for the module
   echo ""                                                                                                                                                                                                                                                                                                      # make the output look easier to read
@@ -111,7 +111,7 @@ elif [ $choice -eq 2 ]; then
   fi
 
   # Create zip file
-  echo ">> Creating zip file"
+  echo ">> Creating Magisk Module"
   echo ""                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         # make the output look easier to read
   zip -r -q "Pixel Launcher Extended Online Installer $version.zip" . -x .git/\* Modifications/\* ThemedIcons/\* screenshots/\* autobuild.sh autobuild.bat banner.jpg banner2.jpg changelog.md codename.txt logo.png offline_setup.sh customize_setup.sh online_setup.sh README.md system/product/priv-app/NexusLauncherRelease/*\* system/product/priv-app/PixelLauncherMods/PixelLauncherMods.apk system/product/overlay/ThemedIconsOverlay/*\* system/system_ext/priv-app/WallpaperPickerGoogleRelease/WallpaperPickerGoogleRelease.apk system/system_ext/priv-app/WallpaperPickerGoogleRelease/WallpaperPickerGoogleReleaseNew.apk system/product/overlay/TeamFiles* system/product/priv-app/ExtendedSettings/ExtendedSettings.apk Pixel\ Launcher\ Extended* # Ignore specified files and folders because they are not needed for the module
   echo ""                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         # make the output look easier to read
@@ -754,7 +754,7 @@ elif [ $choice -eq 3 ]; then
   fi
 
   # Create zip file
-  echo ">> Creating zip file"
+  echo ">> Creating Magisk Module"
   echo ""                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     # make the output look easier to read
   zip -r -q "Pixel Launcher Extended Customize Installer $version.zip" . -x .git/\* Modifications/\* ThemedIcons/\* screenshots/\* autobuild.sh autobuild.bat banner.jpg banner2.jpg changelog.md codename.txt logo.png online_setup.sh offline_setup.sh customize_setup.sh README.md Pixel\ Launcher\ Extended* system/product/priv-app/NexusLauncherRelease/temp/\* system/product/priv-app/temp/\* system/product/etc/permissions/temp/\* system/product/overlay/ThemedIconsOverlay/temp/\* system/product/overlay/temp/\* system/product/overlay/IconShape/temp/\* system/temp/\* temp/\* system/system_ext/priv-app/WallpaperPickerGoogleRelease/temp/\* # Ignore specified files and folders because they are not needed for the module
   echo ""                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     # make the output look easier to read
