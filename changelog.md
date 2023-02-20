@@ -1,13 +1,14 @@
 **Version 1.4**
 - Updated ui of Extended Settings
 - Fixed an issue with Google Photo Editor not working in some roms
-- Added user pill option in Extended Settings App
 - Fixed weather pill background issue with November & below security patch
 - Added dark theme toggle for Extended Settings app
-- Added an Easter Egg. Easter Egg shows in some certain situation on Lockscreen.
-- Added new wallpaper picker. It's in beta & comes with some features like font changer. It depends upon your rom that how many fonts are available in your rom.
-- Overview suggestions option now doesn't disable automatically after first reboot.
-- Added an automated script to fix material you selection(If your rom conflicts with PLE) from wallpaper picker app.
+- Added an Easter Egg. Let's see who finds it first!
+- Added new wallpaper picker. It's in beta & comes with some features like font changer. It depends upon your rom that how many fonts are available in your rom
+- Overview suggestions option now doesn't disable automatically after first reboot
+- Added an automated script to fix material you selection(If your rom conflicts with PLE) from wallpaper picker app
+- Updated base launcher apk to feb security patch
+- Added new PowerShell PLE Builder script for Windows
 
 **Version 1.3**
 - Updated recent provider overlay
