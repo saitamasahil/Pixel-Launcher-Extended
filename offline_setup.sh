@@ -319,6 +319,8 @@ init_main() {
     rm -rf "$MODPATH/system/product/overlay/TeamFiles_Pill_Light_Accent.apk"
     rm -rf "$MODPATH/system/product/overlay/TeamFiles_Pill_Light_Accent2.apk"
     rm -rf "$MODPATH/system/product/overlay/TeamFiles_UserChip.apk"
+    rm -rf "$MODPATH/system/product/overlay/TeamFiles_UserCL.apk"
+    rm -rf "$MODPATH/system/product/overlay/TeamFiles_UserLockscreen.apk"
     rm -rf "$MODPATH/system/product/priv-app/ExtendedSettings"
     rm -rf "$MODPATH/system/product/etc/permissions/privapp-permissions-com.domain.liranazuz5.extendedsettings.xml"
   fi
