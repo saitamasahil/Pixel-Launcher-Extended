@@ -67,7 +67,6 @@ REPLACE="
 /system/product/overlay/PixelLauncherIconsOverlay
 /system/product/overlay/CustomPixelLauncherOverlay
 /system/system_ext/priv-app/NexusLauncherRelease
-/system/system_ext/priv-app/DerpLauncherQuickStep
 /system/system_ext/priv-app/TrebuchetQuickStep
 /system/system_ext/priv-app/Lawnchair
 /system/system_ext/priv-app/PixelLauncherRelease
