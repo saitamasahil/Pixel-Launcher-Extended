@@ -1,3 +1,7 @@
+**Version 1.4.1**
+- Fixed blank screen issue after flashing launcher in DerpFest
+- Improved autobuild script to download required packackes in different distros
+
 **Version 1.4**
 - Updated ui of Extended Settings
 - Fixed an issue with Google Photo Editor not working in some roms
