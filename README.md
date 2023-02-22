@@ -209,15 +209,12 @@ echo "Your magisk module is available in Internal Storage"
 ## Troubleshooting
 If you face any issues while using Pixel Launcher Extended then look into this section first before asking in support group on Telegram.
 
-### Overview suggestions & other hints like sharing images or links aren't visible in recent tabs
-Enable Overview suggestions from pixel launher extended's settings.
-
 ### Weather widget in At A Glance or Select feature in recent tabs not working
 Try updating Google App, Google Play Services, Android System Intelligence (ASI), Android System Webview, Google Calendar, Google Lens and all other Google apps from Play Store. We suggest you to use ROMs that have stock Pixel GApps by default.
 After trying above solution if it still doesn't work or if you are facing random crashes in launcher then download [At A Glance Enhancer add-on](#at-a-glance-enhancer). It contains Android System Intelligence (which may fix all these issues).
 
 ### Material You isn't working properly, it's not changing color according to wallpaper
-Your ROM may have its own implementation of Material You and that may be interfering with Pixel Launcher Extended.
+Your ROM may have its own implementation of Material You and that may be interfering with Pixel Launcher Extended. Although we have implemented fix for this within launcher, It is possible that you may still face this issue.
 
 To fix this issue, please follow these steps:
 - [Download Termux](https://f-droid.org/en/packages/com.termux/)
@@ -270,6 +267,7 @@ Thank you for your generosity!
 - [jaaat4u](https://github.com/jaaat4u)
 - [selfmusing](https://github.com/selfmusing)
 - [Sameera](https://telegram.me/sameera_s_w)
+- [naokoshoto](https://github.com/naokoshoto)
 
 Brought to you by [TeamFiles](https://github.com/TeamFiles)!
 
