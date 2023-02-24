@@ -1,3 +1,6 @@
+**Version 1.5**
+- Added theme switcher background & updated icons in extended settings app
+
 **Version 1.4.1**
 - Fixed blank screen issue after flashing launcher in DerpFest
 - Improved autobuild script to download required packackes in different distros
