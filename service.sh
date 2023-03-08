@@ -10,16 +10,16 @@ loop_count=0
 
 # Wait for the boot
 while true; do
-    boot=$(getprop sys.boot_completed)
-    if [ "$boot" -eq 1 ] && [ -d /data/data ]; then
-        sleep 5
-        break
-    fi
-    if [ $loop_count -gt 30 ]; then
-        break
-    fi
+  boot=$(getprop sys.boot_completed)
+  if [ "$boot" -eq 1 ] && [ -d /data/data ]; then
     sleep 5
-    loop_count=$((loop_count + 1))
+    break
+  fi
+  if [ $loop_count -gt 30 ]; then
+    break
+  fi
+  sleep 5
+  loop_count=$((loop_count + 1))
 done
 
 if [ -f $MODDIR/first ]; then

@@ -470,7 +470,7 @@ init_main() {
   fi
 
   ui_print ""
-  ui_print "[*] Do you wanna install Pixel Launcher Mods App?"
+  ui_print "[*] Do you wanna install Pixel Launcher Mods app?"
   ui_print "[*] It's by Developer KieronQuinn"
   ui_print "[*] You will be able to apply Icon Packs using it"
   ui_print "[*] It will also enable some more functionality to pixel launcher"

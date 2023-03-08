@@ -6,14 +6,14 @@ PACKAGE_MANAGERS=("pkg" "apt" "yum" "dnf" "pacman" "zypper")
 PACKAGES=("zip" "figlet")
 
 for PM in "${PACKAGE_MANAGERS[@]}"; do
-  if command -v "$PM" > /dev/null; then
+  if command -v "$PM" >/dev/null; then
     case "$PM" in
-      "pkg") pkg install "${PACKAGES[@]}" ;;
-      "apt") sudo apt-get install "${PACKAGES[@]}" ;;
-      "yum") sudo yum install "${PACKAGES[@]}" ;;
-      "dnf") sudo dnf install "${PACKAGES[@]}" ;;
-      "pacman") sudo pacman -S "${PACKAGES[@]}" ;;
-      "zypper") sudo zypper install "${PACKAGES[@]}" ;;
+    "pkg") pkg install "${PACKAGES[@]}" ;;
+    "apt") sudo apt-get install "${PACKAGES[@]}" ;;
+    "yum") sudo yum install "${PACKAGES[@]}" ;;
+    "dnf") sudo dnf install "${PACKAGES[@]}" ;;
+    "pacman") sudo pacman -S "${PACKAGES[@]}" ;;
+    "zypper") sudo zypper install "${PACKAGES[@]}" ;;
     esac
     break
   fi
@@ -114,7 +114,6 @@ elif [ $choice -eq 3 ]; then
     mkdir system/product/priv-app/temp
     mkdir system/product/etc/permissions/temp
     mkdir system/product/overlay/temp
-    mkdir system/product/overlay/IconShape/temp
     mkdir system/system_ext/priv-app/WallpaperPickerGoogleRelease/temp
     mkdir system/temp
     mkdir temp
@@ -131,7 +130,6 @@ elif [ $choice -eq 3 ]; then
     mkdir system/product/priv-app/temp
     mkdir system/product/etc/permissions/temp
     mkdir system/product/overlay/temp
-    mkdir system/product/overlay/IconShape/temp
     mkdir system/system_ext/priv-app/WallpaperPickerGoogleRelease/temp
     mkdir system/temp
     mkdir temp
@@ -313,7 +311,7 @@ elif [ $choice -eq 3 ]; then
   fi
 
   echo $divider
-  echo -e "\033[38;5;208mDo you wanna install Pixel Launcher Mods App?\033[0m"
+  echo -e "\033[38;5;208mDo you wanna install Pixel Launcher Mods app?\033[0m"
   echo -e "\033[38;5;208mIt's by Developer KieronQuinn\033[0m"
   echo -e "\033[38;5;208mYou will be able to apply Icon Packs using it\033[0m"
   echo -e "\033[38;5;208mIt will also enable some more functionality to pixel launcher\033[0m"
@@ -332,336 +330,35 @@ elif [ $choice -eq 3 ]; then
   fi
 
   echo $divider
-  echo -e "\033[38;5;208mWhich of the following icon shape you want to use with launcher?\033[0m"
-  echo "1. Circle(Default)"
-  echo "2. Cloudy"
-  echo "3. Cylinder"
-  echo "4. Flower"
-  echo "5. Heart"
-  echo "6. Hexagon"
-  echo "7. Leaf"
-  echo "8. Mallow"
-  echo "9. Pebble"
-  echo "10. Rounded Hexagon"
-  echo "11. Rounded Rectangle"
-  echo "12. Square"
-  echo "13. Squircle"
-  echo "14. Stretched"
-  echo "15. Tapered Rectangular"
-  echo "16. Teardrops"
-  echo "17. Vessel"
-  echo "18. Samsung(One UI Like)"
+  echo -e "\033[38;5;208mDo you want to install Icon Shape Changer app?\033[0m"
+  echo "1. Yes"
+  echo "2. No"
   echo $divider
   read -p "Enter your choice: " choice
 
   if [ $choice -eq 1 ]; then
-    mv "system/product/overlay/IconShape" "system/product/overlay/temp/$folder"
+    :
 
   elif [ $choice -eq 2 ]; then
-    mv -f "system/product/overlay/IconShape/Cylinder.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Flower.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Heart.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Hexagon.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Leaf.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Mallow.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Pebble.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/RoundedHexagon.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/RoundedRectangle.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Square.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Squircle.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Stretched.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/TaperedRectangular.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Teardrops.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Vessel.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Samsung.apk" "system/product/overlay/IconShape/temp/$file"
-
-  elif [ $choice -eq 3 ]; then
-    mv -f "system/product/overlay/IconShape/Cloudy.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Flower.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Heart.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Hexagon.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Leaf.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Mallow.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Pebble.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/RoundedHexagon.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/RoundedRectangle.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Square.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Squircle.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Stretched.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/TaperedRectangular.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Teardrops.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Vessel.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Samsung.apk" "system/product/overlay/IconShape/temp/$file"
-
-  elif [ $choice -eq 4 ]; then
-    mv -f "system/product/overlay/IconShape/Cloudy.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Cylinder.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Heart.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Hexagon.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Leaf.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Mallow.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Pebble.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/RoundedHexagon.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/RoundedRectangle.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Square.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Squircle.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Stretched.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/TaperedRectangular.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Teardrops.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Vessel.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Samsung.apk" "system/product/overlay/IconShape/temp/$file"
-
-  elif [ $choice -eq 5 ]; then
-    mv -f "system/product/overlay/IconShape/Cloudy.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Cylinder.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Flower.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Hexagon.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Leaf.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Mallow.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Pebble.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/RoundedHexagon.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/RoundedRectangle.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Square.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Squircle.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Stretched.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/TaperedRectangular.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Teardrops.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Vessel.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Samsung.apk" "system/product/overlay/IconShape/temp/$file"
-
-  elif [ $choice -eq 6 ]; then
-    mv -f "system/product/overlay/IconShape/Cloudy.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Cylinder.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Flower.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Heart.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Leaf.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Mallow.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Pebble.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/RoundedHexagon.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/RoundedRectangle.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Square.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Squircle.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Stretched.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/TaperedRectangular.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Teardrops.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Vessel.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Samsung.apk" "system/product/overlay/IconShape/temp/$file"
-
-  elif [ $choice -eq 7 ]; then
-    mv -f "system/product/overlay/IconShape/Cloudy.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Cylinder.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Flower.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Heart.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Hexagon.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Mallow.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Pebble.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/RoundedHexagon.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/RoundedRectangle.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Square.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Squircle.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Stretched.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/TaperedRectangular.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Teardrops.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Vessel.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Samsung.apk" "system/product/overlay/IconShape/temp/$file"
-
-  elif [ $choice -eq 8 ]; then
-    mv -f "system/product/overlay/IconShape/Cloudy.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Cylinder.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Flower.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Heart.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Hexagon.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Leaf.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Pebble.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/RoundedHexagon.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/RoundedRectangle.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Square.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Squircle.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Stretched.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/TaperedRectangular.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Teardrops.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Vessel.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Samsung.apk" "system/product/overlay/IconShape/temp/$file"
-
-  elif [ $choice -eq 9 ]; then
-    mv -f "system/product/overlay/IconShape/Cloudy.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Cylinder.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Flower.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Heart.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Hexagon.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Leaf.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Mallow.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/RoundedHexagon.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/RoundedRectangle.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Square.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Squircle.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Stretched.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/TaperedRectangular.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Teardrops.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Vessel.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Samsung.apk" "system/product/overlay/IconShape/temp/$file"
-
-  elif [ $choice -eq 10 ]; then
-    mv -f "system/product/overlay/IconShape/Cloudy.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Cylinder.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Flower.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Heart.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Hexagon.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Leaf.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Mallow.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Pebble.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/RoundedRectangle.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Square.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Squircle.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Stretched.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/TaperedRectangular.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Teardrops.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Vessel.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Samsung.apk" "system/product/overlay/IconShape/temp/$file"
-
-  elif [ $choice -eq 11 ]; then
-    mv -f "system/product/overlay/IconShape/Cloudy.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Cylinder.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Flower.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Heart.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Hexagon.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Leaf.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Mallow.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Pebble.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/RoundedHexagon.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Square.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Squircle.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Stretched.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/TaperedRectangular.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Teardrops.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Vessel.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Samsung.apk" "system/product/overlay/IconShape/temp/$file"
-
-  elif [ $choice -eq 12 ]; then
-    mv -f "system/product/overlay/IconShape/Cloudy.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Cylinder.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Flower.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Heart.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Hexagon.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Leaf.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Mallow.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Pebble.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/RoundedHexagon.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/RoundedRectangle.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Squircle.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Stretched.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/TaperedRectangular.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Teardrops.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Vessel.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Samsung.apk" "system/product/overlay/IconShape/temp/$file"
-
-  elif [ $choice -eq 13 ]; then
-    mv -f "system/product/overlay/IconShape/Cloudy.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Cylinder.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Flower.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Heart.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Hexagon.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Leaf.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Mallow.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Pebble.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/RoundedHexagon.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/RoundedRectangle.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Square.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Stretched.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/TaperedRectangular.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Teardrops.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Vessel.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Samsung.apk" "system/product/overlay/IconShape/temp/$file"
-
-  elif [ $choice -eq 14 ]; then
-    mv -f "system/product/overlay/IconShape/Cloudy.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Cylinder.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Flower.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Heart.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Hexagon.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Leaf.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Mallow.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Pebble.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/RoundedHexagon.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/RoundedRectangle.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Square.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Squircle.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/TaperedRectangular.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Teardrops.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Vessel.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Samsung.apk" "system/product/overlay/IconShape/temp/$file"
-
-  elif [ $choice -eq 15 ]; then
-    mv -f "system/product/overlay/IconShape/Cloudy.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Cylinder.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Flower.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Heart.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Hexagon.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Leaf.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Mallow.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Pebble.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/RoundedHexagon.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/RoundedRectangle.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Square.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Squircle.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Stretched.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Teardrops.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Vessel.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Samsung.apk" "system/product/overlay/IconShape/temp/$file"
-
-  elif [ $choice -eq 16 ]; then
-    mv -f "system/product/overlay/IconShape/Cloudy.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Cylinder.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Flower.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Heart.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Hexagon.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Leaf.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Mallow.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Pebble.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/RoundedHexagon.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/RoundedRectangle.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Square.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Squircle.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Stretched.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/TaperedRectangular.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Vessel.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Samsung.apk" "system/product/overlay/IconShape/temp/$file"
-
-  elif [ $choice -eq 17 ]; then
-    mv -f "system/product/overlay/IconShape/Cloudy.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Cylinder.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Flower.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Heart.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Hexagon.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Leaf.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Mallow.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Pebble.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/RoundedHexagon.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/RoundedRectangle.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Square.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Squircle.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Stretched.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/TaperedRectangular.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Teardrops.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Samsung.apk" "system/product/overlay/IconShape/temp/$file"
-
-  elif [ $choice -eq 18 ]; then
-    mv -f "system/product/overlay/IconShape/Cloudy.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Cylinder.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Flower.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Heart.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Hexagon.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Leaf.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Mallow.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Pebble.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/RoundedHexagon.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/RoundedRectangle.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Square.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Squircle.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Stretched.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/TaperedRectangular.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Teardrops.apk" "system/product/overlay/IconShape/temp/$file"
-    mv -f "system/product/overlay/IconShape/Vessel.apk" "system/product/overlay/IconShape/temp/$file"
+    mv -f "system/product/overlay/TeamFiles_we_Cloudy.apk" "system/product/overlay/temp/$file"
+    mv -f "system/product/overlay/TeamFiles_we_Cylinder.apk" "system/product/overlay/temp/$file"
+    mv -f "system/product/overlay/TeamFiles_we_Flower.apk" "system/product/overlay/temp/$file"
+    mv -f "system/product/overlay/TeamFiles_we_Heart.apk" "system/product/overlay/temp/$file"
+    mv -f "system/product/overlay/TeamFiles_we_Hexagon.apk" "system/product/overlay/temp/$file"
+    mv -f "system/product/overlay/TeamFiles_we_Leaf.apk" "system/product/overlay/temp/$file"
+    mv -f "system/product/overlay/TeamFiles_we_Mallow.apk" "system/product/overlay/temp/$file"
+    mv -f "system/product/overlay/TeamFiles_we_Pebble.apk" "system/product/overlay/temp/$file"
+    mv -f "system/product/overlay/TeamFiles_we_RoundedHexagon.apk" "system/product/overlay/temp/$file"
+    mv -f "system/product/overlay/TeamFiles_we_RoundedRectangle.apk" "system/product/overlay/temp/$file"
+    mv -f "system/product/overlay/TeamFiles_we_Square.apk" "system/product/overlay/temp/$file"
+    mv -f "system/product/overlay/TeamFiles_we_Squircle.apk" "system/product/overlay/temp/$file"
+    mv -f "system/product/overlay/TeamFiles_we_Stretched.apk" "system/product/overlay/temp/$file"
+    mv -f "system/product/overlay/TeamFiles_we_TaperedRectangular.apk" "system/product/overlay/temp/$file"
+    mv -f "system/product/overlay/TeamFiles_we_Teardrops.apk" "system/product/overlay/temp/$file"
+    mv -f "system/product/overlay/TeamFiles_we_Vessel.apk" "system/product/overlay/temp/$file"
+    mv -f "system/product/overlay/TeamFiles_we_Samsung.apk" "system/product/overlay/temp/$file"
+    mv "system/product/priv-app/IconShapeChanger" "system/product/priv-app/temp/$folder"
+    mv -f "system/product/etc/permissions/privapp-permissions-com.saitama.iconshape.xml" "system/product/etc/permissions/temp/$file"
   fi
 
   echo $divider
@@ -725,9 +422,9 @@ elif [ $choice -eq 3 ]; then
 
   # Create zip file
   echo ">> Creating Magisk Module"
-  echo ""                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     # make the output look easier to read
-  zip -r -q "Pixel Launcher Extended Customize Installer $version.zip" . -x .git/\* Modifications/\* ThemedIcons/\* screenshots/\* autobuild.sh autobuild.ps1 banner.jpg banner2.jpg changelog.md codename.txt logo.png online_setup.sh offline_setup.sh customize_setup.sh README.md Pixel\ Launcher\ Extended* system/product/priv-app/NexusLauncherRelease/temp/\* system/product/priv-app/temp/\* system/product/etc/permissions/temp/\* system/product/overlay/ThemedIconsOverlay/temp/\* system/product/overlay/temp/\* system/product/overlay/IconShape/temp/\* system/temp/\* temp/\* system/system_ext/priv-app/WallpaperPickerGoogleRelease/temp/\* # Ignore specified files and folders because they are not needed for the module
-  echo ""                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     # make the output look easier to read
+  echo ""                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            # make the output look easier to read
+  zip -r -q "Pixel Launcher Extended Customize Installer $version.zip" . -x .git/\* Modifications/\* ThemedIcons/\* screenshots/\* autobuild.sh autobuild.ps1 banner.jpg banner2.jpg changelog.md codename.txt logo.png online_setup.sh offline_setup.sh customize_setup.sh README.md Pixel\ Launcher\ Extended* system/product/priv-app/NexusLauncherRelease/temp/\* system/product/priv-app/temp/\* system/product/etc/permissions/temp/\* system/product/overlay/ThemedIconsOverlay/temp/\* system/product/overlay/temp/\* system/temp/\* temp/\* system/system_ext/priv-app/WallpaperPickerGoogleRelease/temp/\* # Ignore specified files and folders because they are not needed for the module
+  echo ""                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            # make the output look easier to read
   echo ">> Done! You can find the module zip file in the current directory - '$(pwd)/Pixel Launcher Extended Customize Installer $version.zip'"
 
   # Move temp files & folders back to original location
@@ -739,9 +436,6 @@ elif [ $choice -eq 3 ]; then
   done
   for file in system/product/overlay/ThemedIconsOverlay/temp/*; do
     mv -f "$file" "system/product/overlay/ThemedIconsOverlay/$(basename $file)" 2>/dev/null || true
-  done
-  for file in system/product/overlay/IconShape/temp/*; do
-    mv -f "$file" "system/product/overlay/IconShape/$(basename $file)" 2>/dev/null || true
   done
   for file in temp/*; do
     mv -f "$file" "$(basename $file)" 2>/dev/null || true
@@ -760,6 +454,7 @@ elif [ $choice -eq 3 ]; then
   mv "system/temp/lib64" "system/$folder" 2>/dev/null || true
   mv "system/product/priv-app/temp/OnePunchNotifier" "system/product/priv-app/$folder" 2>/dev/null || true
   mv "system/product/priv-app/temp/ExtendedSettings" "system/product/priv-app/$folder" 2>/dev/null || true
+  mv "system/product/priv-app/temp/IconShapeChanger" "system/product/priv-app/$folder" 2>/dev/null || true
 
   # Delete temp folders
   rm -rf system/product/priv-app/NexusLauncherRelease/temp
@@ -767,7 +462,7 @@ elif [ $choice -eq 3 ]; then
   rm -rf system/product/priv-app/temp
   rm -rf system/product/etc/permissions/temp
   rm -rf system/product/overlay/temp
-  rm -rf system/product/overlay/IconShape/temp
+  rm -rf system/product/overlay/TeamFiles_we_temp
   rm -rf system/system_ext/priv-app/WallpaperPickerGoogleRelease/temp
   rm -rf system/temp
   rm -rf temp
