@@ -1,7 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--
-	Made by @saitama_96 Telegram
--->
 <permissions>
     <privapp-permissions package="com.kieronquinn.app.pixellaunchermods">
         <permission name="android.permission.ACCESS_NETWORK_STATE"/>

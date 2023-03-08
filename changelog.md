@@ -1,5 +1,6 @@
 **Version 1.5**
 - Added theme switcher background & updated icons in extended settings app
+- Added Icon Shape Changer app
 
 **Version 1.4.1**
 - Fixed blank screen issue after flashing launcher in DerpFest
