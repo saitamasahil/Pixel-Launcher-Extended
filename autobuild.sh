@@ -462,7 +462,6 @@ elif [ $choice -eq 3 ]; then
   rm -rf system/product/priv-app/temp
   rm -rf system/product/etc/permissions/temp
   rm -rf system/product/overlay/temp
-  rm -rf system/product/overlay/TeamFiles_we_temp
   rm -rf system/system_ext/priv-app/WallpaperPickerGoogleRelease/temp
   rm -rf system/temp
   rm -rf temp
