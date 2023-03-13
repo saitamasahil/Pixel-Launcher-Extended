@@ -1,6 +1,6 @@
 #!/usr/bin/bash
 
-# Check for the Distro Type
+# Check for the Distro Type & Install necessary packages
 
 PACKAGE_MANAGERS=("pkg" "apt" "yum" "dnf" "pacman" "zypper")
 PACKAGES=("zip" "figlet")
@@ -343,7 +343,6 @@ elif [ $choice -eq 3 ]; then
     mv -f "system/product/overlay/TeamFiles_we_Cloudy.apk" "system/product/overlay/temp/$file"
     mv -f "system/product/overlay/TeamFiles_we_Cylinder.apk" "system/product/overlay/temp/$file"
     mv -f "system/product/overlay/TeamFiles_we_Flower.apk" "system/product/overlay/temp/$file"
-    mv -f "system/product/overlay/TeamFiles_we_Heart.apk" "system/product/overlay/temp/$file"
     mv -f "system/product/overlay/TeamFiles_we_Hexagon.apk" "system/product/overlay/temp/$file"
     mv -f "system/product/overlay/TeamFiles_we_Leaf.apk" "system/product/overlay/temp/$file"
     mv -f "system/product/overlay/TeamFiles_we_Mallow.apk" "system/product/overlay/temp/$file"
