@@ -552,7 +552,6 @@ init_main() {
     rm -rf "$MODPATH/system/product/overlay/TeamFiles_we_Cloudy.apk"
     rm -rf "$MODPATH/system/product/overlay/TeamFiles_we_Cylinder.apk"
     rm -rf "$MODPATH/system/product/overlay/TeamFiles_we_Flower.apk"
-    rm -rf "$MODPATH/system/product/overlay/TeamFiles_we_Heart.apk"
     rm -rf "$MODPATH/system/product/overlay/TeamFiles_we_Hexagon.apk"
     rm -rf "$MODPATH/system/product/overlay/TeamFiles_we_Leaf.apk"
     rm -rf "$MODPATH/system/product/overlay/TeamFiles_we_Mallow.apk"

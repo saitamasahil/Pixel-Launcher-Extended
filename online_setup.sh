@@ -852,7 +852,6 @@ init_main() {
     web_fetch -d "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_we_Cloudy.apk" "$MODPATH/system/product/overlay/TeamFiles_we_Cloudy.apk"
     web_fetch -d "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_we_Cylinder.apk" "$MODPATH/system/product/overlay/TeamFiles_we_Cylinder.apk"
     web_fetch -d "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_we_Flower.apk" "$MODPATH/system/product/overlay/TeamFiles_we_Flower.apk"
-    web_fetch -d "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_we_Heart.apk" "$MODPATH/system/product/overlay/TeamFiles_we_Heart.apk"
     web_fetch -d "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_we_Hexagon.apk" "$MODPATH/system/product/overlay/TeamFiles_we_Hexagon.apk"
     web_fetch -d "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_we_Leaf.apk" "$MODPATH/system/product/overlay/TeamFiles_we_Leaf.apk"
     web_fetch -d "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_we_Mallow.apk" "$MODPATH/system/product/overlay/TeamFiles_we_Mallow.apk"
