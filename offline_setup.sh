@@ -143,70 +143,14 @@ init_main() {
   ui_print ""
 
   if [[ "$FCTEXTAD1" == "Android 13" ]]; then
-    rm -rf "$MODPATH/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease00z.apk"
-    rm -rf "$MODPATH/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease01z.apk"
-    rm -rf "$MODPATH/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease02z.apk"
-    rm -rf "$MODPATH/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease10z.apk"
-    rm -rf "$MODPATH/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease11z.apk"
-    rm -rf "$MODPATH/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease12z.apk"
+    rm -rf "$MODPATH/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease01.apk"
+    rm -rf "$MODPATH/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease11.apk"
+    rm -rf "$MODPATH/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease21.apk"
 
   elif [[ "$FCTEXTAD1" == "Android 13 QPR" ]]; then
     rm -rf "$MODPATH/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease00.apk"
-    rm -rf "$MODPATH/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease01.apk"
-    rm -rf "$MODPATH/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease02.apk"
     rm -rf "$MODPATH/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease10.apk"
-    rm -rf "$MODPATH/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease11.apk"
-    rm -rf "$MODPATH/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease12.apk"
-  fi
-
-  ui_print ""
-  ui_print "[*] Do you want to install Extra Grids in Launcher?"
-  ui_print "[*] Extra Grids will enable more Grids Options in App Grid"
-  ui_print "[*] Press volume up to switch to another choice"
-  ui_print "[*] Press volume down to continue with that choice"
-  ui_print ""
-
-  sleep 0.5
-
-  ui_print "--------------------------------"
-  ui_print "[1] Yes"
-  ui_print "--------------------------------"
-  ui_print "[2] No"
-  ui_print "--------------------------------"
-
-  ui_print ""
-  ui_print "[*] Select your desired option:"
-
-  SM=1
-  while true; do
-    ui_print "  $SM"
-    "$VKSEL" && SM="$((SM + 1))" || break
-    [[ "$SM" -gt "2" ]] && SM=1
-  done
-
-  case "$SM" in
-  "1") FCTEXTAD1="Yes" ;;
-  "2") FCTEXTAD1="No" ;;
-  esac
-
-  ui_print "[*] Selected: $FCTEXTAD1"
-  ui_print ""
-
-  if [[ "$FCTEXTAD1" == "Yes" ]]; then
-    rm -rf "$MODPATH/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease00.apk"
-    rm -rf "$MODPATH/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease01.apk"
-    rm -rf "$MODPATH/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease02.apk"
-    rm -rf "$MODPATH/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease00z.apk"
-    rm -rf "$MODPATH/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease01z.apk"
-    rm -rf "$MODPATH/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease02z.apk"
-
-  elif [[ "$FCTEXTAD1" == "No" ]]; then
-    rm -rf "$MODPATH/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease10.apk"
-    rm -rf "$MODPATH/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease11.apk"
-    rm -rf "$MODPATH/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease12.apk"
-    rm -rf "$MODPATH/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease10z.apk"
-    rm -rf "$MODPATH/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease11z.apk"
-    rm -rf "$MODPATH/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease12z.apk"
+    rm -rf "$MODPATH/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease20.apk"
   fi
 
   ui_print ""
@@ -244,9 +188,7 @@ init_main() {
 
   if [[ "$FCTEXTAD1" == "Yes" ]]; then
     rm -rf "$MODPATH/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease00.apk"
-    rm -rf "$MODPATH/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease10.apk"
-    rm -rf "$MODPATH/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease00z.apk"
-    rm -rf "$MODPATH/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease10z.apk"
+    rm -rf "$MODPATH/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease01.apk"
     ui_print "[*] Do you want to install Glance Greetings Style 1 or Glance Greetings Style 2?"
     ui_print "[*] Press volume up to switch to another choice"
     ui_print "[*] Press volume down to continue with that choice"
@@ -288,27 +230,19 @@ init_main() {
     ui_print ""
 
     if [[ "$FCTEXTAD1" == "Glance Greetings Style 1" ]]; then
-      rm -rf "$MODPATH/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease12.apk"
-      rm -rf "$MODPATH/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease02.apk"
-      rm -rf "$MODPATH/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease12z.apk"
-      rm -rf "$MODPATH/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease02z.apk"
+      rm -rf "$MODPATH/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease20.apk"
+      rm -rf "$MODPATH/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease21.apk"
 
     elif [[ "$FCTEXTAD1" == "Glance Greetings Style 2" ]]; then
+      rm -rf "$MODPATH/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease10.apk"
       rm -rf "$MODPATH/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease11.apk"
-      rm -rf "$MODPATH/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease01.apk"
-      rm -rf "$MODPATH/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease11z.apk"
-      rm -rf "$MODPATH/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease01z.apk"
     fi
 
   elif [[ "$FCTEXTAD1" == "No" ]]; then
-    rm -rf "$MODPATH/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease01.apk"
-    rm -rf "$MODPATH/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease02.apk"
+    rm -rf "$MODPATH/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease10.apk"
+    rm -rf "$MODPATH/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease20.apk"
     rm -rf "$MODPATH/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease11.apk"
-    rm -rf "$MODPATH/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease12.apk"
-    rm -rf "$MODPATH/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease01z.apk"
-    rm -rf "$MODPATH/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease02z.apk"
-    rm -rf "$MODPATH/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease11z.apk"
-    rm -rf "$MODPATH/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease12z.apk"
+    rm -rf "$MODPATH/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease21.apk"
     rm -rf "$MODPATH/system/product/overlay/TeamFiles_Pill_Dark.apk"
     rm -rf "$MODPATH/system/product/overlay/TeamFiles_Pill_Dark2.apk"
     rm -rf "$MODPATH/system/product/overlay/TeamFiles_Pill_Empty.apk"
