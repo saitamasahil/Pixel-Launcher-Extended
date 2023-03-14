@@ -11,7 +11,7 @@
             <corners
                 android:radius="60.0dip" />
             <solid
-                android:color="@android:color/system_neutral2_800" />
+                android:color="#00000000" />
         </shape>
     </item>
 </ripple>
