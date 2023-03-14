@@ -5,9 +5,9 @@ NexusLauncherRelease(xy) format is used. x & y are variables, where each differe
 • If x=1, then launcher contains material you greetings style 1.
 • If x=2, then launcher contains material you greetings style 2.
 
-• If y=0, then launcher is for Android 13.
-• If y=1, then launcher is for Android 13 QPR.
-• If y=2, then launcher is for Android 13 QPR2.
+• If y=0, then launcher is for Android 13. Android 13 - November security patch or below.
+• If y=1, then launcher is for Android 13 QPR. Android 13 QPR - December to February security patch.
+• If y=2, then launcher is for Android 13 QPR2. Android 13 QPR2 - March security patch or above.
 
 • Example Of Style 1
 Line 1 - Material You Greetings
