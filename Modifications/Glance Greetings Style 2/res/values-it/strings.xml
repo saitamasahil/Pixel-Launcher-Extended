@@ -42,8 +42,6 @@
     <string name="abc_slice_updated">Ultimo aggiornamento: %1$s</string>
     <string name="abc_slices_permission_request">"L'app %1$s vuole mostrare sezioni dell'app %2$s"</string>
     <string name="abc_toolbar_collapse_description">Comprimi</string>
-    <string name="about">Informazioni</string>
-    <string name="about_app_version">Versione</string>
     <string name="accessibility_app_usage_settings">Impostazioni di utilizzo delle app</string>
     <string name="accessibility_close">Esci</string>
     <string name="accessibility_next_alarm">Prossima sveglia alle ore %s</string>
@@ -88,12 +86,11 @@
     <string name="all_apps_search_results">Risultati di ricerca</string>
     <string name="all_apps_work_tab">Lavoro</string>
     <string name="allapps_device_search_hint">Cerca nel telefono e altro</string>
-    <string name="allapps_quick_launch_chip_text">→ Apri</string>
     <string name="allapps_toast_hint">Cerca nelle app, sul Web e non solo</string>
     <string name="allow_rotation_desc">Con il telefono ruotato</string>
     <string name="allow_rotation_title">Consenti rotazione della schermata Home</string>
-    <string name="allset_description">Puoi iniziare a usare il tuo telefono</string>
-    <string name="allset_description_tablet">Puoi iniziare a usare il tuo tablet</string>
+    <string name="allset_button_hint">Tocca il pulsante Home per andare alla schermata Home</string>
+    <string name="allset_description_generic">Puoi iniziare a usare il tuo %1$s</string>
     <string name="allset_hint">"Scorri verso l'alto per andare alla schermata Home"</string>
     <string name="allset_navigation_settings"><annotation id="link">Impostazioni Navigazione del sistema</annotation></string>
     <string name="allset_title">Finito.</string>
@@ -124,6 +121,7 @@
     <string name="copy">Copia</string>
     <string name="create_folder_name">Crea</string>
     <string name="create_folder_with">Crea cartella con: %1$s</string>
+    <string name="default_device_name">dispositivo</string>
     <string name="default_scroll_format">Pagina %1$d di %2$d</string>
     <string name="developer_options_filter_hint">Filtra</string>
     <string name="developer_options_title">Opzioni sviluppatore</string>
@@ -200,6 +198,7 @@
     <string name="keyboard_show">Mostra sempre tastiera</string>
     <string name="keyboard_show_desc">"Quando scorri verso l'alto sulla schermata Home"</string>
     <string name="label_application">App</string>
+    <string name="label_g_icon">App Google</string>
     <string name="label_lens">Google Lens</string>
     <string name="label_search">Cerca</string>
     <string name="label_turn_off_allapps_suggestions">Reimposta preferenze</string>
@@ -278,6 +277,7 @@
     <string name="notification_dots_service_title">Mostra indicatori di notifica</string>
     <string name="notification_dots_title">Indicatori di notifica</string>
     <string name="notifications_header">Notifiche</string>
+    <string name="open_app">Apri %1$s</string>
     <string name="out_of_space">"Non c'è più spazio nella schermata Home"</string>
     <string name="overview_gesture_feedback_complete_with_follow_up">Hai imparato a usare i gesti. Per disattivarli, vai alle Impostazioni.</string>
     <string name="overview_gesture_feedback_complete_without_follow_up">Hai completato il gesto Cambia app.</string>
@@ -301,11 +301,12 @@
     <string name="permlab_write_settings">creare impostazioni e scorciatoie nella schermata Home</string>
     <string name="pin_prediction">Blocca previsione</string>
     <string name="play_folder_name">Riproduci</string>
-    <string name="pref_open_source_licenses_title">Licenze open source</string>
     <string name="preference_copied">\"%1$s\"copiato negli appunti.</string>
     <string name="qsb_search_edu_body">La Ricerca ora include contenuti provenienti dalle app, oltre a quelli del Web. Android System Intelligence cerca nelle app supportate per fornire risultati.</string>
     <string name="qsb_search_edu_title">Cerca nel Web e nelle app</string>
     <string name="query_builder_content_description">Mostra le previsioni per %1$s</string>
+    <string name="quick_launch_chip_text_app">• Apri</string>
+    <string name="quick_launch_separator_corpus_text">" • App %1$s aperta"</string>
     <string name="recent_task_option_freeform">Forma libera</string>
     <string name="recent_task_option_pin">Blocca su schermo</string>
     <string name="recent_task_option_split_screen">Schermo diviso</string>
@@ -353,6 +354,7 @@
     <string name="search_pref_screen_title_tablet">Cerca il tuo tablet</string>
     <string name="search_pref_web_settings">Gestisci preferenze di ricerca</string>
     <string name="search_pref_web_settings_desc">"Gestisci la cronologia delle ricerche e tanto altro nell'app Google"</string>
+    <string name="search_tall_card_buttonn_text">Mostra altro</string>
     <string name="section_header">Dalle tue app</string>
     <string name="select_tooltip">Scegli testo e immagini da copiare, condividere e non solo</string>
     <string name="set_wallpaper_error_message">Impossibile impostare lo sfondo.</string>
@@ -368,6 +370,7 @@
     <string name="smartspace_calendar_event_now">%1$s adesso</string>
     <string name="smartspace_desc_off">Off</string>
     <string name="smartspace_desc_on">On</string>
+    <string name="smartspace_explain_card">Perché vedi questo contenuto</string>
     <string name="smartspace_flight_card_gate_header">Gate</string>
     <string name="smartspace_flight_card_seat_header">Posto</string>
     <string name="smartspace_flight_qr_code">Codice QR</string>
@@ -396,6 +399,7 @@
     <string name="summary_collapsed_preference_list">%1$s, %2$s</string>
     <string name="task_contents_description_with_remaining_time">%1$s, %2$s</string>
     <string name="task_view_closed">Attività chiusa</string>
+    <string name="taskbar_a11y_title">Barra delle applicazioni</string>
     <string name="taskbar_button_a11y">Accessibilità</string>
     <string name="taskbar_button_back">Indietro</string>
     <string name="taskbar_button_home">Home</string>
@@ -403,15 +407,17 @@
     <string name="taskbar_button_notifications">Notifiche</string>
     <string name="taskbar_button_quick_settings">Impostazioni rapide</string>
     <string name="taskbar_button_recents">Recenti</string>
+    <string name="taskbar_edu_a11y_title">Informazioni sulla barra delle applicazioni</string>
     <string name="taskbar_edu_close">Chiudi</string>
     <string name="taskbar_edu_closed">Riquadro Formazione barra delle applicazioni chiuso</string>
     <string name="taskbar_edu_done">Fine</string>
     <string name="taskbar_edu_next">Avanti</string>
     <string name="taskbar_edu_opened">Riquadro Formazione barra delle applicazioni visualizzato</string>
     <string name="taskbar_edu_previous">Indietro</string>
-    <string name="taskbar_edu_splitscreen">Trascina di lato per usare due app contemporaneamente</string>
-    <string name="taskbar_edu_stashing">Tocca e tieni premuto per nascondere barra applicazioni</string>
-    <string name="taskbar_edu_switch_apps">Usa la barra delle applicazioni per cambiare app</string>
+    <string name="taskbar_edu_splitscreen">Trascina di lato per usare 2 app contemporaneamente</string>
+    <string name="taskbar_edu_stashing">"Scorri verso l'alto per mostrare la barra delle applicazioni"</string>
+    <string name="taskbar_edu_suggestions">Barra delle applicazioni suggerisce app in base alla routine</string>
+    <string name="taskbar_phone_a11y_title">Barra di navigazione</string>
     <string name="time_left_for_app">Rimanente oggi: %1$s</string>
     <string name="title_app_suggestions">App suggerite</string>
     <string name="title_change_settings">Modifica impostazioni</string>
@@ -419,7 +425,7 @@
     <string name="title_disable_allapps_suggestions_prompt">Reimpostare le preferenze per le azioni?</string>
     <string name="title_missing_notification_access">Accesso alle notifiche necessario</string>
     <string name="title_show_google_app">"Scorri per accedere all'app Google"</string>
-    <string name="toast_split_app_unsupported">"L'app non supporta la modalità Schermo diviso."</string>
+    <string name="toast_split_app_unsupported">"Scegli un'altra app per usare lo schermo diviso"</string>
     <string name="toast_split_select_app">"Tocca un'altra app per usare lo schermo diviso"</string>
     <string name="undo">Annulla</string>
     <string name="uninstall_drop_target_label">Disinstalla</string>

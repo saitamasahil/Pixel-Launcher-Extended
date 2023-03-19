@@ -42,8 +42,6 @@
     <string name="abc_slice_updated">آخر تحديث: %1$s</string>
     <string name="abc_slices_permission_request">يريد تطبيق %1$s عرض شرائح تطبيق %2$s.</string>
     <string name="abc_toolbar_collapse_description">تصغير</string>
-    <string name="about">لمحة</string>
-    <string name="about_app_version">الإصدار</string>
     <string name="accessibility_app_usage_settings">إعدادات استخدام التطبيق</string>
     <string name="accessibility_close">إغلاق</string>
     <string name="accessibility_next_alarm">المنبّه التالي في %s.</string>
@@ -73,7 +71,7 @@
     <string name="add_item_request_drag_hint">انقر مع الاستمرار على التطبيق المصغّر لنقله إلى الشاشة الرئيسية.</string>
     <string name="add_to_folder">إضافة إلى المجلد: %1$s</string>
     <string name="add_to_folder_with_app">إضافة إلى المجلد الذي به %1$s</string>
-    <string name="add_to_home_screen">إضافة التطبيق المصغّر إلى الشاشة الرئيسية</string>
+    <string name="add_to_home_screen">إضافة إلى الشاشة الرئيسية</string>
     <string name="added_to_folder">تمت إضافة العنصر إلى المجلد</string>
     <string name="added_to_home_screen_accessibility_text">تمت إضافة الأداة %1$s إلى الشاشة الرئيسية.</string>
     <string name="all_apps_button_label">قائمة التطبيقات</string>
@@ -88,12 +86,11 @@
     <string name="all_apps_search_results">نتائج البحث</string>
     <string name="all_apps_work_tab">للعمل</string>
     <string name="allapps_device_search_hint">البحث في هاتفك والمزيد</string>
-    <string name="allapps_quick_launch_chip_text">→ مفتوح</string>
     <string name="allapps_toast_hint">البحث في التطبيقات والويب وغير ذلك</string>
     <string name="allow_rotation_desc">عند تدوير الهاتف</string>
     <string name="allow_rotation_title">السماح بتدوير الشاشة الرئيسية</string>
-    <string name="allset_description">يمكنك الآن بدء استخدام هاتفك.</string>
-    <string name="allset_description_tablet">يمكنك الآن بدء استخدام جهازك اللوحي.</string>
+    <string name="allset_button_hint">انقر على زر الشاشة الرئيسية للانتقال إلى الشاشة الرئيسية.</string>
+    <string name="allset_description_generic">يمكنك الآن بدء استخدام \"%1$s\".</string>
     <string name="allset_hint">مرِّر سريعًا للأعلى للانتقال إلى الشاشة الرئيسية.</string>
     <string name="allset_navigation_settings"><annotation id="link">إعدادات التنقّل داخل النظام</annotation></string>
     <string name="allset_title">اكتملت عملية الإعداد</string>
@@ -124,6 +121,7 @@
     <string name="copy">نسخ</string>
     <string name="create_folder_name">إنشاء</string>
     <string name="create_folder_with">إنشاء مجلد يتضمن: %1$s</string>
+    <string name="default_device_name">الجهاز</string>
     <string name="default_scroll_format">‏الصفحة %1$d من %2$d</string>
     <string name="developer_options_filter_hint">فلتر</string>
     <string name="developer_options_title">خيارات المطوّرين</string>
@@ -200,6 +198,7 @@
     <string name="keyboard_show">إظهار لوحة المفاتيح دائمًا</string>
     <string name="keyboard_show_desc">عند التمرير السريع للأعلى على شاشتك الرئيسية</string>
     <string name="label_application">تطبيق</string>
+    <string name="label_g_icon">‏تطبيق Google</string>
     <string name="label_lens">‏عدسة Google</string>
     <string name="label_search">بحث</string>
     <string name="label_turn_off_allapps_suggestions">إعادة ضبط الإعدادات المفضّلة</string>
@@ -278,6 +277,7 @@
     <string name="notification_dots_service_title">عرض نقاط الإشعارات</string>
     <string name="notification_dots_title">نقاط الإشعارات</string>
     <string name="notifications_header">الإشعارات</string>
+    <string name="open_app">فتح \"%1$s\"</string>
     <string name="out_of_space">لا تتوفَّر مساحة على هذه الشاشة الرئيسية.</string>
     <string name="overview_gesture_feedback_complete_with_follow_up">لقد تعرّفت على كيفية استخدام الإيماءات. لإيقاف الإيماءات، انتقِل إلى \"الإعدادات\".</string>
     <string name="overview_gesture_feedback_complete_without_follow_up">أكملت التدريب على إيماءة التبديل بين التطبيقات.</string>
@@ -301,11 +301,12 @@
     <string name="permlab_write_settings">تعديل الإعدادات والاختصارات على الشاشة الرئيسية</string>
     <string name="pin_prediction">تثبيت التطبيق المتوقّع</string>
     <string name="play_folder_name">تشغيل</string>
-    <string name="pref_open_source_licenses_title">تراخيص البرامج المفتوحة المصدر</string>
     <string name="preference_copied">تم نسخ \"%1$s\" إلى الحافظة.</string>
     <string name="qsb_search_edu_body">‏يعرض البحث الآن نتائج من التطبيقات بالإضافة إلى نتائج الويب. يتم من خلال Android System Intelligence البحث في التطبيقات المتوافقة لعرض النتائج.</string>
     <string name="qsb_search_edu_title">البحث في الويب والتطبيقات</string>
     <string name="query_builder_content_description">عرض توقعات عن %1$s</string>
+    <string name="quick_launch_chip_text_app">• فتح</string>
+    <string name="quick_launch_separator_corpus_text">" • %1$s مفتوحة"</string>
     <string name="recent_task_option_freeform">شكل مجاني</string>
     <string name="recent_task_option_pin">تثبيت</string>
     <string name="recent_task_option_split_screen">تقسيم الشاشة</string>
@@ -353,6 +354,7 @@
     <string name="search_pref_screen_title_tablet">البحث في جهازك اللوحي</string>
     <string name="search_pref_web_settings">إدارة إعدادات البحث المفضّلة</string>
     <string name="search_pref_web_settings_desc">‏إدارة سجلّ البحث وغير ذلك في تطبيق Google</string>
+    <string name="search_tall_card_buttonn_text">عرض المزيد</string>
     <string name="section_header">من تطبيقاتك</string>
     <string name="select_tooltip">اختيار النص والصور التي تريد نسخها ومشاركتها والمزيد</string>
     <string name="set_wallpaper_error_message">يتعذّر ضبط الخلفية.</string>
@@ -368,6 +370,7 @@
     <string name="smartspace_calendar_event_now">%1$s الآن</string>
     <string name="smartspace_desc_off">الإعداد غير مفعّل</string>
     <string name="smartspace_desc_on">الإعداد مفعّل</string>
+    <string name="smartspace_explain_card">لماذا يظهر لك هذا؟</string>
     <string name="smartspace_flight_card_gate_header">البوّابة</string>
     <string name="smartspace_flight_card_seat_header">المقعد</string>
     <string name="smartspace_flight_qr_code">رمز الاستجابة السريعة</string>
@@ -396,6 +399,7 @@
     <string name="summary_collapsed_preference_list">%1$s، %2$s</string>
     <string name="task_contents_description_with_remaining_time">%1$s، %2$s</string>
     <string name="task_view_closed">تم إغلاق المهمة.</string>
+    <string name="taskbar_a11y_title">شريط التطبيقات</string>
     <string name="taskbar_button_a11y">تسهيل الاستخدام</string>
     <string name="taskbar_button_back">رجوع</string>
     <string name="taskbar_button_home">الرئيسية</string>
@@ -403,15 +407,17 @@
     <string name="taskbar_button_notifications">الإشعارات</string>
     <string name="taskbar_button_quick_settings">إعدادات سريعة</string>
     <string name="taskbar_button_recents">الأحدث</string>
+    <string name="taskbar_edu_a11y_title">التعريف بشريط التطبيقات</string>
     <string name="taskbar_edu_close">إغلاق</string>
     <string name="taskbar_edu_closed">تم إغلاق لوحة تعليم استخدام شريط المهام.</string>
     <string name="taskbar_edu_done">تم</string>
     <string name="taskbar_edu_next">الشاشة التالية</string>
     <string name="taskbar_edu_opened">ظهرت لوحة تعليم استخدام شريط المهام.</string>
     <string name="taskbar_edu_previous">رجوع</string>
-    <string name="taskbar_edu_splitscreen">اسحبه إلى جانب الشاشة لاستخدام تطبيقين في آنٍ واحد.</string>
-    <string name="taskbar_edu_stashing">انقر مع الاستمرار لإخفاء شريط المهام.</string>
-    <string name="taskbar_edu_switch_apps">يمكنك استخدام شريط المهام للتبديل بين التطبيقات.</string>
+    <string name="taskbar_edu_splitscreen">اسحبه إلى جانب الشاشة لاستخدام تطبيقَين في آنٍ واحد.</string>
+    <string name="taskbar_edu_stashing">مرِّر سريعًا للأعلى تمريرة قصيرة لإظهار شريط التطبيقات.</string>
+    <string name="taskbar_edu_suggestions">يقترح شريط المهام تطبيقات بناءً على روتينك.</string>
+    <string name="taskbar_phone_a11y_title">شريط التنقل</string>
     <string name="time_left_for_app">يتبقى اليوم %1$s.</string>
     <string name="title_app_suggestions">التطبيقات المقترحة</string>
     <string name="title_change_settings">تغيير الإعدادات</string>
@@ -419,7 +425,7 @@
     <string name="title_disable_allapps_suggestions_prompt">هل تريد إعادة ضبط الإعدادات المفضّلة للإجراءات؟</string>
     <string name="title_missing_notification_access">يلزم تمكين الوصول إلى الإشعارات</string>
     <string name="title_show_google_app">‏التمرير سريعًا للوصول إلى تطبيق Google</string>
-    <string name="toast_split_app_unsupported">التطبيق لا يتيح تقسيم الشاشة.</string>
+    <string name="toast_split_app_unsupported">اختَر تطبيقًا آخر لاستخدام وضع تقسيم الشاشة.</string>
     <string name="toast_split_select_app">انقر على تطبيق آخر لاستخدام وضع تقسيم الشاشة.</string>
     <string name="undo">تراجع</string>
     <string name="uninstall_drop_target_label">إلغاء التثبيت</string>

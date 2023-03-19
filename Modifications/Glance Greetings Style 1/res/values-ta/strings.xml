@@ -42,8 +42,6 @@
     <string name="abc_slice_updated">புதுப்பித்தது: %1$s</string>
     <string name="abc_slices_permission_request">%2$s ஆப்ஸின் ஸ்லைஸ்களை %1$s ஆப்ஸ் காட்ட விரும்புகிறது</string>
     <string name="abc_toolbar_collapse_description">சுருக்கும்</string>
-    <string name="about">அறிமுகம்</string>
-    <string name="about_app_version">பதிப்பு</string>
     <string name="accessibility_app_usage_settings">ஆப்ஸ் உபயோக அமைப்புகள்</string>
     <string name="accessibility_close">மூடும் பட்டன்</string>
     <string name="accessibility_next_alarm">அடுத்த அலாரம் %s மணிக்கு ஒலிக்கும்</string>
@@ -88,12 +86,11 @@
     <string name="all_apps_search_results">தேடல் முடிவுகள்</string>
     <string name="all_apps_work_tab">பணி</string>
     <string name="allapps_device_search_hint">உங்கள் மொபைல் மற்றும் பலவற்றில் தேடுங்கள்</string>
-    <string name="allapps_quick_launch_chip_text">→ திற</string>
     <string name="allapps_toast_hint">ஆப்ஸ், இணையம் மற்றும் பலவற்றில் தேடுங்கள்</string>
     <string name="allow_rotation_desc">மொபைலைச் சுழற்றும் போது</string>
     <string name="allow_rotation_title">முகப்புத் திரை சுழற்சியை அனுமதித்தல்</string>
-    <string name="allset_description">மொபைலைப் பயன்படுத்தத் தயாராகிவிட்டீர்கள்</string>
-    <string name="allset_description_tablet">உங்கள் டேப்லெட்டைப் பயன்படுத்தத் தயாராகிவிட்டீர்கள்</string>
+    <string name="allset_button_hint">முகப்புத் திரைக்குச் செல்வதற்கு முகப்பு பட்டனைத் தட்டவும்</string>
+    <string name="allset_description_generic">உங்கள் %1$s சாதனத்தைப் பயன்படுத்தத் தயாராகிவிட்டீர்கள்</string>
     <string name="allset_hint">முகப்புத் திரைக்குச் செல்ல மேல்நோக்கி ஸ்வைப் செய்யுங்கள்</string>
     <string name="allset_navigation_settings"><annotation id="link">சிஸ்டம் வழிசெலுத்தல் அமைப்புகள்</annotation></string>
     <string name="allset_title">அனைத்தையும் அமைத்துவிட்டீர்கள்!</string>
@@ -124,6 +121,7 @@
     <string name="copy">நகலெடு</string>
     <string name="create_folder_name">உருவாக்கு</string>
     <string name="create_folder_with">இதனுடன் ஃபோல்டரை உருவாக்கும்: %1$s</string>
+    <string name="default_device_name">சாதனம்</string>
     <string name="default_scroll_format">பக்கம் %1$d / %2$d</string>
     <string name="developer_options_filter_hint">வடிப்பான்</string>
     <string name="developer_options_title">டெவெலப்பர் விருப்பங்கள்</string>
@@ -200,6 +198,7 @@
     <string name="keyboard_show">எப்போதும் கீபோர்டைக் காட்டு</string>
     <string name="keyboard_show_desc">முகப்புத் திரையில் மேல்நோக்கி ஸ்வைப் செய்யும்போது</string>
     <string name="label_application">ஆப்ஸ்</string>
+    <string name="label_g_icon">Google ஆப்ஸ்</string>
     <string name="label_lens">Google Lens</string>
     <string name="label_search">தேடு</string>
     <string name="label_turn_off_allapps_suggestions">விருப்பங்களை மீட்டமை</string>
@@ -278,6 +277,7 @@
     <string name="notification_dots_service_title">அறிவிப்புப் புள்ளிகளைக் காட்டு</string>
     <string name="notification_dots_title">அறிவிப்புப் புள்ளிகள்</string>
     <string name="notifications_header">அறிவிப்புகள்</string>
+    <string name="open_app">%1$s ஆப்ஸைத் திறக்கும்</string>
     <string name="out_of_space">இந்த முகப்புத் திரையில் இடமில்லை</string>
     <string name="overview_gesture_feedback_complete_with_follow_up">சைகைகளை எப்படி உபயோகிப்பது என்று கற்றுக்கொண்டீர்கள். சைகைகளை முடக்க அமைப்புகளுக்குச் செல்லுங்கள்.</string>
     <string name="overview_gesture_feedback_complete_without_follow_up">ஆப்ஸுக்கிடையே மாறும் சைகைப் பயிற்சியை முடித்துவிட்டீர்கள்.</string>
@@ -301,11 +301,12 @@
     <string name="permlab_write_settings">முகப்புத் திரையின் அமைப்புகளையும் ஷார்ட்கட்களையும் எழுதுதல்</string>
     <string name="pin_prediction">கணிக்கப்பட்ட ஆப்ஸைப் பின் செய்தல்</string>
     <string name="play_folder_name">இயக்கு</string>
-    <string name="pref_open_source_licenses_title">ஓப்பன் சோர்ஸ் உரிமங்கள்</string>
     <string name="preference_copied">\"%1$s\" கிளிப்போர்டுக்கு நகலெடுக்கப்பட்டது.</string>
     <string name="qsb_search_edu_body">இணையத்துடன் சேர்த்து, ஆப்ஸில் உள்ள உள்ளடக்கமும் Searchசில் இப்போது கிடைக்கிறது. முடிவுகளை வழங்க, ஆதரிக்கப்படும் ஆப்ஸை Android System Intelligence தேடுகிறது.</string>
     <string name="qsb_search_edu_title">இணையம் &amp; ஆப்ஸில் தேடுங்கள்</string>
     <string name="query_builder_content_description">%1$s தொடர்பான கணிப்புகளைக் காட்டும்</string>
+    <string name="quick_launch_chip_text_app">• திற</string>
+    <string name="quick_launch_separator_corpus_text">" • %1$s திறக்கப்பட்டுள்ளது"</string>
     <string name="recent_task_option_freeform">குறிப்பிட்ட வடிவமில்லாத பயன்முறை</string>
     <string name="recent_task_option_pin">பின் செய்தல்</string>
     <string name="recent_task_option_split_screen">திரைப் பிரிப்பு</string>
@@ -353,6 +354,7 @@
     <string name="search_pref_screen_title_tablet">உங்கள் டேப்லெட்டில் தேடுங்கள்</string>
     <string name="search_pref_web_settings">தேடல் விருப்பங்களை நிர்வகித்தல்</string>
     <string name="search_pref_web_settings_desc">Google ஆப்ஸில் நீங்கள் இதுவரை தேடியவை மற்றும் பலவற்றை நிர்வகிக்கலாம்</string>
+    <string name="search_tall_card_buttonn_text">மேலும் காட்டு</string>
     <string name="section_header">உங்கள் ஆப்ஸில் இருந்து</string>
     <string name="select_tooltip">நகலெடுத்தல், பகிர்தல் போன்ற பலவற்றையும் செய்ய உரை &amp; படங்களைத் தேர்வுசெய்யலாம்</string>
     <string name="set_wallpaper_error_message">வால்பேப்பரை அமைக்க முடியவில்லை.</string>
@@ -368,6 +370,7 @@
     <string name="smartspace_calendar_event_now">இப்போது %1$s</string>
     <string name="smartspace_desc_off">முடக்கப்பட்டுள்ளது</string>
     <string name="smartspace_desc_on">இயக்கப்பட்டுள்ளது</string>
+    <string name="smartspace_explain_card">இதை ஏன் பார்க்கிறீர்கள்</string>
     <string name="smartspace_flight_card_gate_header">வாயில்</string>
     <string name="smartspace_flight_card_seat_header">இருக்கை</string>
     <string name="smartspace_flight_qr_code">QR குறியீடு</string>
@@ -396,6 +399,7 @@
     <string name="summary_collapsed_preference_list">%1$s, %2$s</string>
     <string name="task_contents_description_with_remaining_time">%1$s, %2$s</string>
     <string name="task_view_closed">பணி முடிந்தது</string>
+    <string name="taskbar_a11y_title">செயல் பட்டி</string>
     <string name="taskbar_button_a11y">அணுகல்தன்மை</string>
     <string name="taskbar_button_back">பின்செல்லும்</string>
     <string name="taskbar_button_home">முகப்பு</string>
@@ -403,15 +407,17 @@
     <string name="taskbar_button_notifications">அறிவிப்புகள்</string>
     <string name="taskbar_button_quick_settings">விரைவு அமைப்புகள்</string>
     <string name="taskbar_button_recents">சமீபத்தியவை</string>
+    <string name="taskbar_edu_a11y_title">செயல் பட்டியைப் பயன்படுத்தும் விதம்</string>
     <string name="taskbar_edu_close">மூடுக</string>
     <string name="taskbar_edu_closed">பணிப்பட்டியை எவ்வாறு பயன்படுத்துவது என்பது பற்றிய பலகம் மூடப்பட்டது</string>
     <string name="taskbar_edu_done">முடிந்தது</string>
     <string name="taskbar_edu_next">அடுத்து</string>
     <string name="taskbar_edu_opened">பணிப்பட்டியை எவ்வாறு பயன்படுத்துவது என்பது பற்றிய பலகம் காட்டப்படுகிறது</string>
     <string name="taskbar_edu_previous">பின்செல்</string>
-    <string name="taskbar_edu_splitscreen">ஒரே நேரத்தில் இரு ஆப்ஸை உபயோகிக்க பக்கவாட்டிற்கு இழுக்கவும்</string>
-    <string name="taskbar_edu_stashing">பணிப்பட்டியை மறைக்கத் தொட்டுப் பிடிக்கவும்</string>
-    <string name="taskbar_edu_switch_apps">ஆப்ஸிற்கு இடையே மாற பணிப்பட்டியைப் பயன்படுத்தவும்</string>
+    <string name="taskbar_edu_splitscreen">ஒரே நேரத்தில் 2 ஆப்ஸை உபயோகிக்க பக்கவாட்டிற்கு இழுக்கவும்</string>
+    <string name="taskbar_edu_stashing">செயல் பட்டியைக் காட்டுவதற்கு மேலே சிறிது ஸ்வைப் செய்யவும்</string>
+    <string name="taskbar_edu_suggestions">உங்கள் வழக்கத்திற்கேற்ப ஆப்ஸை செயல் பட்டி பரிந்துரைக்கும்</string>
+    <string name="taskbar_phone_a11y_title">வழிசெலுத்தல் பட்டி</string>
     <string name="time_left_for_app">இன்று %1$s மீதமுள்ளது</string>
     <string name="title_app_suggestions">ஆப்ஸ் பரிந்துரைகள்</string>
     <string name="title_change_settings">அமைப்புகளை மாற்று</string>
@@ -419,7 +425,7 @@
     <string name="title_disable_allapps_suggestions_prompt">செயல் விருப்பத்தேர்வுகளை மீட்டமைக்கவா?</string>
     <string name="title_missing_notification_access">அறிவிப்பிற்கான அணுகல் தேவை</string>
     <string name="title_show_google_app">Google ஆப்ஸை அணுக ஸ்வைப் செய்யவும்</string>
-    <string name="toast_split_app_unsupported">திரைப் பிரிப்பு அம்சத்தை ஆப்ஸ் ஆதரிக்கவில்லை.</string>
+    <string name="toast_split_app_unsupported">திரைப் பிரிப்பை பயன்படுத்த வேறு ஆப்ஸை தேர்வுசெய்க</string>
     <string name="toast_split_select_app">ஸ்பிளிட் ஸ்கிரீனுக்கு மற்றொரு ஆப்ஸைத் தட்டவும்</string>
     <string name="undo">செயல்தவிர்</string>
     <string name="uninstall_drop_target_label">நிறுவல் நீக்கு</string>

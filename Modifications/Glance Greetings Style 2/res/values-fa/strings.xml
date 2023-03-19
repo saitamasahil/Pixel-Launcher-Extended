@@ -42,8 +42,6 @@
     <string name="abc_slice_updated">%1$s به‌روزرسانی شد</string>
     <string name="abc_slices_permission_request">%1$s می‌خواهد تکه‌های %2$s را نشان دهد</string>
     <string name="abc_toolbar_collapse_description">کوچک کردن</string>
-    <string name="about">درباره</string>
-    <string name="about_app_version">نسخه</string>
     <string name="accessibility_app_usage_settings">تنظیمات استفاده از برنامه</string>
     <string name="accessibility_close">بستن</string>
     <string name="accessibility_next_alarm">زنگ ساعت بعدی: %s</string>
@@ -88,12 +86,11 @@
     <string name="all_apps_search_results">نتایج جستجو</string>
     <string name="all_apps_work_tab">کاری</string>
     <string name="allapps_device_search_hint">جستجوی تلفن و کارهای بیشتر</string>
-    <string name="allapps_quick_launch_chip_text">→ باز کردن</string>
     <string name="allapps_toast_hint">جستجوی برنامه‌ها، وب، و موارد دیگر</string>
     <string name="allow_rotation_desc">وقتی تلفن چرخانده می‌شود</string>
     <string name="allow_rotation_title">مجاز کردن چرخش صفحه اصلی</string>
-    <string name="allset_description">آماده‌اید از تلفنتان استفاده کنید</string>
-    <string name="allset_description_tablet">آماده‌اید از رایانه لوحی‌تان استفاده کنید</string>
+    <string name="allset_button_hint">برای رفتن به صفحه اصلی، روی دکمه صفحه اصلی ضربه بزنید</string>
+    <string name="allset_description_generic">آماده‌اید از %1$s خود استفاده کنید</string>
     <string name="allset_hint">برای رفتن به «صفحه اصلی»، تند به‌بالا بکشید</string>
     <string name="allset_navigation_settings"><annotation id="link">تنظیمات پیمایش سیستم</annotation></string>
     <string name="allset_title">همه چیز آماده است!</string>
@@ -124,6 +121,7 @@
     <string name="copy">کپی</string>
     <string name="create_folder_name">ایجاد کردن</string>
     <string name="create_folder_with">ایجاد پوشه با: %1$s</string>
+    <string name="default_device_name">دستگاه</string>
     <string name="default_scroll_format">‏صفحه %1$d از %2$d</string>
     <string name="developer_options_filter_hint">فیلتر</string>
     <string name="developer_options_title">گزینه‌های برنامه‌نویس</string>
@@ -200,6 +198,7 @@
     <string name="keyboard_show">صفحه‌کلید همیشه نشان داده شود</string>
     <string name="keyboard_show_desc">وقتی در صفحه اصلی تند به‌بالا کشیده شود</string>
     <string name="label_application">برنامه</string>
+    <string name="label_g_icon">‏برنامه Google</string>
     <string name="label_lens">‏لنز Google</string>
     <string name="label_search">جستجو</string>
     <string name="label_turn_off_allapps_suggestions">بازنشانی اولویت‌ها</string>
@@ -278,6 +277,7 @@
     <string name="notification_dots_service_title">نمایش نقطه‌های اعلان</string>
     <string name="notification_dots_title">نقطه‌های اعلان</string>
     <string name="notifications_header">اعلان‌ها</string>
+    <string name="open_app">باز کردن %1$s</string>
     <string name="out_of_space">فضای خالی در این صفحه اصلی وجود ندارد</string>
     <string name="overview_gesture_feedback_complete_with_follow_up">با نحوه استفاده از اشاره‌ها آشنا شدید. برای خاموش کردن اشاره‌ها، به «تنظیمات» بروید.</string>
     <string name="overview_gesture_feedback_complete_without_follow_up">اشاره جابه‌جا شدن بین برنامه‌ها را تکمیل کردید.</string>
@@ -301,11 +301,12 @@
     <string name="permlab_write_settings">نوشتن تنظیمات و میان‌برهای صفحه اصلی</string>
     <string name="pin_prediction">سنجاق کردن پیشنهاد</string>
     <string name="play_folder_name">پخش</string>
-    <string name="pref_open_source_licenses_title">مجوزهای متن‌باز</string>
     <string name="preference_copied">«%1$s» در بریده‌دان کپی شد.</string>
     <string name="qsb_search_edu_body">‏ازاین‌پس جستجو علاوه‌بر نتایچ وب، شامل محتوای برنامه‌ها نیز می‌شود. جستجوهای «هوش سامانه Android» برای ارائه نتایج از برنامه‌ها پشتیبانی می‌کند.</string>
     <string name="qsb_search_edu_title">جستجوی وب و برنامه‌ها</string>
     <string name="query_builder_content_description">نمایش پیش‌بینی‌ها برای %1$s</string>
+    <string name="quick_launch_chip_text_app">• باز کردن</string>
+    <string name="quick_launch_separator_corpus_text">" • باز کردن %1$s"</string>
     <string name="recent_task_option_freeform">Freeform</string>
     <string name="recent_task_option_pin">پین</string>
     <string name="recent_task_option_split_screen">صفحهٔ دونیمه</string>
@@ -353,6 +354,7 @@
     <string name="search_pref_screen_title_tablet">جستجوی رایانه لوحی</string>
     <string name="search_pref_web_settings">مدیریت اولویت‌های جستجو</string>
     <string name="search_pref_web_settings_desc">‏سابقه جستجو و غیره را در برنامه Google مدیریت کنید</string>
+    <string name="search_tall_card_buttonn_text">دیدن موارد بیشتر</string>
     <string name="section_header">از برنامه‌های شما</string>
     <string name="select_tooltip">انتخاب نوشتار و تصاویر برای کپی، هم‌رسانی، و کارهای دیگر</string>
     <string name="set_wallpaper_error_message">کاغذدیواری تنظیم نشد.</string>
@@ -368,6 +370,7 @@
     <string name="smartspace_calendar_event_now">اکنون %1$s</string>
     <string name="smartspace_desc_off">خاموش</string>
     <string name="smartspace_desc_on">روشن</string>
+    <string name="smartspace_explain_card">چرا این را می‌بینید</string>
     <string name="smartspace_flight_card_gate_header">گیت</string>
     <string name="smartspace_flight_card_seat_header">صندلی</string>
     <string name="smartspace_flight_qr_code">رمزینه پاسخ‌سریع</string>
@@ -396,6 +399,7 @@
     <string name="summary_collapsed_preference_list">%1$s، %2$s</string>
     <string name="task_contents_description_with_remaining_time">%1$s، %2$s</string>
     <string name="task_view_closed">تکلیف بسته شد</string>
+    <string name="taskbar_a11y_title">نوار وظیفه</string>
     <string name="taskbar_button_a11y">دسترس‌پذیری</string>
     <string name="taskbar_button_back">برگشت</string>
     <string name="taskbar_button_home">صفحه اصلی</string>
@@ -403,6 +407,7 @@
     <string name="taskbar_button_notifications">اعلان‌ها</string>
     <string name="taskbar_button_quick_settings">تنظیمات فوری</string>
     <string name="taskbar_button_recents">موارد اخیر</string>
+    <string name="taskbar_edu_a11y_title">آموزش نوار وظیفه</string>
     <string name="taskbar_edu_close">بستن</string>
     <string name="taskbar_edu_closed">پانل آموزشی نوار وظیفه بسته شد</string>
     <string name="taskbar_edu_done">تمام</string>
@@ -410,8 +415,9 @@
     <string name="taskbar_edu_opened">پانل آموزشی نوار وظیفه نمایان شد</string>
     <string name="taskbar_edu_previous">برگشت</string>
     <string name="taskbar_edu_splitscreen">برای استفاده هم‌زمان از دو برنامه، آن را به کنار بکشید</string>
-    <string name="taskbar_edu_stashing">برای پنهان کردن نوار وظیفه، لمس کنید و نگه دارید</string>
-    <string name="taskbar_edu_switch_apps">برای جابه‌جایی بین برنامه‌ها، از نوار وظیفه استفاده کنید</string>
+    <string name="taskbar_edu_stashing">برای نمایش نوار وظیفه، کمی به بالا بکشید</string>
+    <string name="taskbar_edu_suggestions">نوار وظیفه برنامه‌ها را براساس روال شما پیشنهاد می‌دهد</string>
+    <string name="taskbar_phone_a11y_title">نوار پیمایش</string>
     <string name="time_left_for_app">%1$s باقی‌مانده برای امروز</string>
     <string name="title_app_suggestions">پیشنهادهای برنامه</string>
     <string name="title_change_settings">تغییر تنظیمات</string>
@@ -419,7 +425,7 @@
     <string name="title_disable_allapps_suggestions_prompt">اولویت‌های کنش بازنشانی شود؟</string>
     <string name="title_missing_notification_access">دسترسی به اعلان نیاز است</string>
     <string name="title_show_google_app">‏برای دسترسی به برنامه Google تند بکشید</string>
-    <string name="toast_split_app_unsupported">برنامه از صفحهٔ دونیمه پشتیبانی نمی‌کند.</string>
+    <string name="toast_split_app_unsupported">انتخاب برنامه‌ای دیگر برای استفاده از صفحه دونیمه</string>
     <string name="toast_split_select_app">برای استفاده از صفحهٔ دونیمه، روی برنامه دیگری ضربه بزنید</string>
     <string name="undo">واگرد</string>
     <string name="uninstall_drop_target_label">حذف نصب</string>

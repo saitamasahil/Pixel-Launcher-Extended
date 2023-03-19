@@ -42,8 +42,6 @@
     <string name="abc_slice_updated">Ενημερώθηκε %1$s</string>
     <string name="abc_slices_permission_request">Η εφαρμογή %1$s θέλει να εμφανίζει κομμάτια της εφαρμογής %2$s.</string>
     <string name="abc_toolbar_collapse_description">Σύμπτυξη</string>
-    <string name="about">Σχετικά με</string>
-    <string name="about_app_version">Έκδοση</string>
     <string name="accessibility_app_usage_settings">Ρυθμίσεις χρήσης εφαρμογής</string>
     <string name="accessibility_close">Κλείσιμο</string>
     <string name="accessibility_next_alarm">Επόμενο ξυπνητήρι στις %s</string>
@@ -88,12 +86,11 @@
     <string name="all_apps_search_results">Αποτελέσματα αναζήτησης</string>
     <string name="all_apps_work_tab">Εργασίας</string>
     <string name="allapps_device_search_hint">Αναζήτηση στο τηλέφωνό σας και πολλά άλλα</string>
-    <string name="allapps_quick_launch_chip_text">→ Άνοιγμα</string>
     <string name="allapps_toast_hint">Αναζήτηση στον ιστό κ.ά.</string>
     <string name="allow_rotation_desc">Όταν το τηλέφωνο περιστρέφεται</string>
     <string name="allow_rotation_title">Να επιτρέπεται η περιστροφή της αρχικής οθόνης</string>
-    <string name="allset_description">Είστε έτοιμοι να ξεκινήσετε να χρησιμοποιείτε το τηλέφωνό σας</string>
-    <string name="allset_description_tablet">Είστε έτοιμοι να ξεκινήσετε να χρησιμοποιείτε το tablet.</string>
+    <string name="allset_button_hint">Πατήστε το κουμπί αρχικής οθόνης για να μεταβείτε στην αρχική οθόνη</string>
+    <string name="allset_description_generic">Είστε έτοιμοι να ξεκινήσετε να χρησιμοποιείτε το/τη %1$s</string>
     <string name="allset_hint">Σύρετε προς τα πάνω για μετάβαση στην αρχική οθόνη.</string>
     <string name="allset_navigation_settings"><annotation id="link">Ρυθμίσεις πλοήγησης συστήματος</annotation></string>
     <string name="allset_title">Όλα έτοιμα!</string>
@@ -124,6 +121,7 @@
     <string name="copy">Αντιγραφή</string>
     <string name="create_folder_name">Δημιουργία</string>
     <string name="create_folder_with">Δημιουργία φακέλου με: %1$s</string>
+    <string name="default_device_name">συσκευή</string>
     <string name="default_scroll_format">Σελίδα %1$d από %2$d</string>
     <string name="developer_options_filter_hint">Φίλτρο</string>
     <string name="developer_options_title">Επιλογές για προγραμματιστές</string>
@@ -200,6 +198,7 @@
     <string name="keyboard_show">Εμφάν. πληκτρ. πάντα</string>
     <string name="keyboard_show_desc">Όταν κάνετε σάρωση προς τα πάνω στην αρχική οθόνη</string>
     <string name="label_application">Εφαρμογή</string>
+    <string name="label_g_icon">Εφαρμογή Google</string>
     <string name="label_lens">Google Lens</string>
     <string name="label_search">Αναζήτηση</string>
     <string name="label_turn_off_allapps_suggestions">Επαναφ. προτιμήσεων</string>
@@ -278,6 +277,7 @@
     <string name="notification_dots_service_title">Εμφάνιση κουκκίδων ειδοποιήσεων</string>
     <string name="notification_dots_title">Κουκκίδες ειδοποίησης</string>
     <string name="notifications_header">Ειδοποιήσεις</string>
+    <string name="open_app">Άνοιγμα εφαρμογής %1$s</string>
     <string name="out_of_space">Δεν υπάρχει χώρος σε αυτήν την αρχική οθόνη</string>
     <string name="overview_gesture_feedback_complete_with_follow_up">Μάθατε πώς να χρησιμοποιείτε κινήσεις. Μεταβείτε στις Ρυθμίσεις για απενεργοποίηση των κινήσεων.</string>
     <string name="overview_gesture_feedback_complete_without_follow_up">Ολοκληρώσατε την κίνηση εναλλαγής εφαρμογών.</string>
@@ -301,11 +301,12 @@
     <string name="permlab_write_settings">εγγραφή ρυθμίσεων και συντομεύσεων αρχικής οθόνης</string>
     <string name="pin_prediction">Καρφίτσωμα πρόβλεψης</string>
     <string name="play_folder_name">Play</string>
-    <string name="pref_open_source_licenses_title">Άδειες λογισμικού ανοικτού κώδικα</string>
     <string name="preference_copied">Το \"%1$s\" αντιγράφηκε στο πρόχειρο.</string>
     <string name="qsb_search_edu_body">Η Αναζήτηση περιλαμβάνει πλέον περιεχόμενο από εφαρμογές πέρα από το περιεχόμενο από τον ιστό. Το Android System Intelligence κάνει αναζητήσεις σε υποστηριζόμενες εφαρμογές για να παρέχει αποτελέσματα.</string>
     <string name="qsb_search_edu_title">Αναζήτηση σε ιστό &amp; εφαρμογές</string>
     <string name="query_builder_content_description">Εμφάνιση προβλέψεων για %1$s</string>
+    <string name="quick_launch_chip_text_app">• άνοιγμα</string>
+    <string name="quick_launch_separator_corpus_text">" • %1$s άνοιγμα"</string>
     <string name="recent_task_option_freeform">Ελεύθερη μορφή</string>
     <string name="recent_task_option_pin">Καρφίτσωμα</string>
     <string name="recent_task_option_split_screen">Διαχωρισμός οθόνης</string>
@@ -353,6 +354,7 @@
     <string name="search_pref_screen_title_tablet">Αναζητήστε το tablet σας</string>
     <string name="search_pref_web_settings">Διαχείριση προτιμήσεων αναζήτησης</string>
     <string name="search_pref_web_settings_desc">Διαχειριστείτε το ιστορικό αναζήτησής σας και πολλά άλλα στην εφαρμογή Google</string>
+    <string name="search_tall_card_buttonn_text">Περισσότερα</string>
     <string name="section_header">Από τις εφαρμογές σας</string>
     <string name="select_tooltip">Επιλέξτε κείμενο και εικόνες για αντιγραφή, κοινοποίηση κ.ά.</string>
     <string name="set_wallpaper_error_message">Δεν είναι δυνατός ο ορισμός της ταπετσαρίας.</string>
@@ -368,6 +370,7 @@
     <string name="smartspace_calendar_event_now">%1$s τώρα</string>
     <string name="smartspace_desc_off">Ανενεργό</string>
     <string name="smartspace_desc_on">Ενεργό</string>
+    <string name="smartspace_explain_card">Γιατί εμφανίζεται αυτό</string>
     <string name="smartspace_flight_card_gate_header">Πύλη</string>
     <string name="smartspace_flight_card_seat_header">Θέση</string>
     <string name="smartspace_flight_qr_code">Κωδικός QR</string>
@@ -396,6 +399,7 @@
     <string name="summary_collapsed_preference_list">%1$s, %2$s</string>
     <string name="task_contents_description_with_remaining_time">%1$s, %2$s</string>
     <string name="task_view_closed">Η εργασία έκλεισε</string>
+    <string name="taskbar_a11y_title">Γραμμή εργαλείων</string>
     <string name="taskbar_button_a11y">Προσβασιμότητα</string>
     <string name="taskbar_button_back">Πίσω</string>
     <string name="taskbar_button_home">Αρχική σελίδα</string>
@@ -403,6 +407,7 @@
     <string name="taskbar_button_notifications">Ειδοποιήσεις</string>
     <string name="taskbar_button_quick_settings">Γρήγορες ρυθμ.</string>
     <string name="taskbar_button_recents">Πρόσφατα</string>
+    <string name="taskbar_edu_a11y_title">Πληροφορίες χρήσης της Γραμμής εργαλείων</string>
     <string name="taskbar_edu_close">Κλείσιμο</string>
     <string name="taskbar_edu_closed">Η εκπαίδευση για τη γραμμή εργασιών έκλεισε</string>
     <string name="taskbar_edu_done">Τέλος</string>
@@ -410,8 +415,9 @@
     <string name="taskbar_edu_opened">Η εκπαίδευση για τη γραμμή εργασιών εμφανίστηκε</string>
     <string name="taskbar_edu_previous">Πίσω</string>
     <string name="taskbar_edu_splitscreen">Σύρετε στο πλάι για ταυτόχρονη χρήση δύο εφαρμογών</string>
-    <string name="taskbar_edu_stashing">Αγγίξτε παρατεταμένα για απόκρυψη της γραμμής εργασιών.</string>
-    <string name="taskbar_edu_switch_apps">Χρήση της γραμμής εργασιών για εναλλαγή εφαρμογών</string>
+    <string name="taskbar_edu_stashing">Σύρετε σύντομα προς τα πάνω για εμφάνιση γραμμής εργαλείων</string>
+    <string name="taskbar_edu_suggestions">Η γραμμή εργαλείων συνιστά εφαρμογές βάσει της ρουτίνας σας</string>
+    <string name="taskbar_phone_a11y_title">Γραμμή πλοήγησης</string>
     <string name="time_left_for_app">Απομένουν %1$s σήμερα</string>
     <string name="title_app_suggestions">Προτεινόμενες εφαρμογές</string>
     <string name="title_change_settings">Αλλαγή ρυθμίσεων</string>
@@ -419,7 +425,7 @@
     <string name="title_disable_allapps_suggestions_prompt">Να γίνει επαναφορά των προτιμήσεων ενεργειών;</string>
     <string name="title_missing_notification_access">Απαιτείται πρόσβαση στις ειδοποιήσεις</string>
     <string name="title_show_google_app">Σύρετε για πρόσβαση στην εφαρμογή Google</string>
-    <string name="toast_split_app_unsupported">Η εφαρμογή δεν υποστηρίζει διαχωρισμό οθόνης.</string>
+    <string name="toast_split_app_unsupported">Επιλέξτε άλλη εφαρμογή για διαχωρισμό οθόνης</string>
     <string name="toast_split_select_app">Πατήστε άλλη εφαρμογή για χρήση διαχωρισμού οθόνης</string>
     <string name="undo">Αναίρεση</string>
     <string name="uninstall_drop_target_label">Απεγκατάσταση</string>

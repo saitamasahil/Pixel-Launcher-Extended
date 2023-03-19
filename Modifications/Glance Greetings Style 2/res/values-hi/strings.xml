@@ -42,8 +42,6 @@
     <string name="abc_slice_updated">%1$s पहले अपडेट किया गया</string>
     <string name="abc_slices_permission_request">%1$s, %2$s के स्लाइस दिखाना चाहता है</string>
     <string name="abc_toolbar_collapse_description">छोटा करें</string>
-    <string name="about">जानकारी</string>
-    <string name="about_app_version">वर्शन</string>
     <string name="accessibility_app_usage_settings">ऐप्लिकेशन इस्तेमाल की सेटिंग</string>
     <string name="accessibility_close">बंद करें</string>
     <string name="accessibility_next_alarm">अगला अलार्म %s बजे का सेट है</string>
@@ -88,12 +86,11 @@
     <string name="all_apps_search_results">खोज के नतीजे</string>
     <string name="all_apps_work_tab">वर्क ऐप्लिकेशन</string>
     <string name="allapps_device_search_hint">अपने फ़ोन में मौजूद चीज़ें वगैरह खोजें</string>
-    <string name="allapps_quick_launch_chip_text">→ चालू है</string>
     <string name="allapps_toast_hint">ऐप्लिकेशन, वेबसाइट वगैरह खोजें</string>
     <string name="allow_rotation_desc">फ़ोन घुुमाए जाने पर</string>
     <string name="allow_rotation_title">होम स्क्रीन घुमाने की अनुमति दें</string>
-    <string name="allset_description">अब आपका फ़ोन, इस्तेमाल के लिए तैयार है</string>
-    <string name="allset_description_tablet">आप टैबलेट को इस्तेमाल करने के लिए तैयार हैं</string>
+    <string name="allset_button_hint">होम स्क्रीन पर जाने के लिए, होम बटन पर टैप करें</string>
+    <string name="allset_description_generic">आप %1$s को इस्तेमाल करने के लिए तैयार हैं</string>
     <string name="allset_hint">होम स्क्रीन पर जाने के लिए, ऊपर की ओर स्वाइप करें</string>
     <string name="allset_navigation_settings"><annotation id="link">सिस्टम नेविगेशन सेटिंग</annotation></string>
     <string name="allset_title">हो गया!</string>
@@ -124,6 +121,7 @@
     <string name="copy">कॉपी करें</string>
     <string name="create_folder_name">बनाएं</string>
     <string name="create_folder_with">इसके साथ फ़ोल्डर बनाएं: %1$s</string>
+    <string name="default_device_name">डिवाइस</string>
     <string name="default_scroll_format">पेज %2$d में से %1$d</string>
     <string name="developer_options_filter_hint">फ़िल्टर</string>
     <string name="developer_options_title">डेवलपर के लिए सेटिंग और टूल</string>
@@ -200,6 +198,7 @@
     <string name="keyboard_show">कीबोर्ड हमेशा दिखाएं</string>
     <string name="keyboard_show_desc">होम स्क्रीन पर ऊपर की ओर स्वाइप करते समय</string>
     <string name="label_application">ऐप्लिकेशन</string>
+    <string name="label_g_icon">Google app</string>
     <string name="label_lens">Google Lens</string>
     <string name="label_search">खोजें</string>
     <string name="label_turn_off_allapps_suggestions">सेटिंग रीसेट करें</string>
@@ -278,6 +277,7 @@
     <string name="notification_dots_service_title">नई सूचनाएं बताने वाला गोल निशान दिखाएं</string>
     <string name="notification_dots_title">सूचनाएं बताने वाला डॉट</string>
     <string name="notifications_header">सूचनाएं</string>
+    <string name="open_app">%1$s खोलें</string>
     <string name="out_of_space">इस होम स्क्रीन पर जगह खाली नहीं है</string>
     <string name="overview_gesture_feedback_complete_with_follow_up">आपने हाथ के जेस्चर इस्तेमाल करने सीख लिए हैं. जेस्चर बंद करने के लिए, सेटिंग में जाएं.</string>
     <string name="overview_gesture_feedback_complete_without_follow_up">आपने एक ऐप्लिकेशन से दूसरे पर जाने के लिए इस्तेमाल होने वाले हाथ के जेस्चर के बारे में जान लिया है.</string>
@@ -301,11 +301,12 @@
     <string name="permlab_write_settings">होम स्क्रीन की सेटिंग और शॉर्टकट में बदलाव करने की अनुमति</string>
     <string name="pin_prediction">सुझाए गए ऐप्लिकेशन को पिन करें</string>
     <string name="play_folder_name">चलाएं</string>
-    <string name="pref_open_source_licenses_title">ओपन सोर्स लाइसेंस</string>
     <string name="preference_copied">\"%1$s\" क्लिपबोर्ड पर कॉपी किया गया.</string>
     <string name="qsb_search_edu_body">अब Search में वेब के साथ-साथ ऐप्लिकेशन पर खोजा गया कॉन्टेंट भी दिखता है. Android System Intelligence, उन्हीं ऐप्लिकेशन के कॉन्टेंट का इस्तेमाल करके खोज के नतीजे दिखाता है जो इस सुविधा के साथ काम करते हैं.</string>
     <string name="qsb_search_edu_title">वेब और ऐप का कॉन्टेंट खोजें</string>
     <string name="query_builder_content_description">%1$s के लिए सुझाव दिखाएं</string>
+    <string name="quick_launch_chip_text_app">• खोलें</string>
+    <string name="quick_launch_separator_corpus_text">" • %1$s खोलें"</string>
     <string name="recent_task_option_freeform">फ़्रीफ़ॉर्म</string>
     <string name="recent_task_option_pin">पिन करना</string>
     <string name="recent_task_option_split_screen">स्प्लिट स्क्रीन</string>
@@ -353,6 +354,7 @@
     <string name="search_pref_screen_title_tablet">अपना टैबलेट खोजें</string>
     <string name="search_pref_web_settings">खोज सेटिंग मैनेज करें</string>
     <string name="search_pref_web_settings_desc">Google app पर अपना खोज इतिहास वगैरह मैनेज करें</string>
+    <string name="search_tall_card_buttonn_text">ज़्यादा देखें</string>
     <string name="section_header">ऐप्लिकेशन से मिले नतीजे</string>
     <string name="select_tooltip">कॉपी करने, शेयर करने, और दूसरी कार्रवाइयां करने के लिए, टेक्स्ट और इमेज चुनें</string>
     <string name="set_wallpaper_error_message">वॉलपेपर सेट नहीं हो सका.</string>
@@ -368,6 +370,7 @@
     <string name="smartspace_calendar_event_now">अभी %1$s</string>
     <string name="smartspace_desc_off">बंद है</string>
     <string name="smartspace_desc_on">चालू है</string>
+    <string name="smartspace_explain_card">आपको यह क्यों दिख रहा है</string>
     <string name="smartspace_flight_card_gate_header">गेट</string>
     <string name="smartspace_flight_card_seat_header">सीट</string>
     <string name="smartspace_flight_qr_code">क्यूआर कोड</string>
@@ -396,6 +399,7 @@
     <string name="summary_collapsed_preference_list">%1$s, %2$s</string>
     <string name="task_contents_description_with_remaining_time">%1$s, %2$s</string>
     <string name="task_view_closed">टास्क बंद किया गया</string>
+    <string name="taskbar_a11y_title">टास्कबार</string>
     <string name="taskbar_button_a11y">सुलभता</string>
     <string name="taskbar_button_back">वापस जाएं</string>
     <string name="taskbar_button_home">होम</string>
@@ -403,15 +407,17 @@
     <string name="taskbar_button_notifications">सूचनाएं</string>
     <string name="taskbar_button_quick_settings">फटाफट सेटिंग</string>
     <string name="taskbar_button_recents">हाल ही के</string>
+    <string name="taskbar_edu_a11y_title">टास्कबार का ट्यूटोरियल</string>
     <string name="taskbar_edu_close">बंद करें</string>
     <string name="taskbar_edu_closed">टास्कबार ट्यूटोरियल बंद किया गया</string>
     <string name="taskbar_edu_done">हो गया</string>
     <string name="taskbar_edu_next">आगे बढ़ें</string>
     <string name="taskbar_edu_opened">टास्कबार ट्यूटोरियल दिखाया गया</string>
     <string name="taskbar_edu_previous">वापस जाएं</string>
-    <string name="taskbar_edu_splitscreen">एक साथ दो ऐप्लिकेशन इस्तेमाल करने के लिए, उन्हें किनारे की ओर खींचें और छोड़ें</string>
-    <string name="taskbar_edu_stashing">टास्कबार को छिपाने के लिए, उसे दबाकर रखें</string>
-    <string name="taskbar_edu_switch_apps">ऐप्लिकेशन स्विच करने के लिए, टास्कबार का इस्तेमाल करें</string>
+    <string name="taskbar_edu_splitscreen">एक साथ दो ऐप इस्तेमाल करने के लिए, उन्हें किनारे की ओर खींचें और छोड़ें</string>
+    <string name="taskbar_edu_stashing">टास्कबार दिखाने के लिए, ऊपर की ओर थोड़ा स्वाइप करें</string>
+    <string name="taskbar_edu_suggestions">टास्कबार, डिवाइस के इस्तेमाल के आधार पर ऐप के सुझाव देता है</string>
+    <string name="taskbar_phone_a11y_title">नेविगेशन बार</string>
     <string name="time_left_for_app">आज %1$s और चलेगा</string>
     <string name="title_app_suggestions">सुझाए गए ऐप्लिकेशन</string>
     <string name="title_change_settings">सेटिंग बदलें</string>
@@ -419,7 +425,7 @@
     <string name="title_disable_allapps_suggestions_prompt">कार्रवाइयों की सेटिंग रीसेट करें?</string>
     <string name="title_missing_notification_access">सूचना के ऐक्सेस की ज़रूरत है</string>
     <string name="title_show_google_app">Google app को ऐक्सेस करने के लिए स्वाइप करें</string>
-    <string name="toast_split_app_unsupported">यह ऐप्लिकेशन, स्प्लिट स्क्रीन पर काम नहीं करता है.</string>
+    <string name="toast_split_app_unsupported">स्प्लिट स्क्रीन के लिए, दूसरा ऐप्लिकेशन चुनें</string>
     <string name="toast_split_select_app">स्प्लिट स्क्रीन मोड के लिए, दूसरे ऐप पर टैप करें</string>
     <string name="undo">पहले जैसा करें</string>
     <string name="uninstall_drop_target_label">अनइंस्टॉल करें</string>
