@@ -49,17 +49,18 @@
                 android:layout_marginEnd="5.0dip"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentEnd="true" />
-        <com.google.android.systemui.smartspace.IcuDateTextView
-            android:id="@id/date"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            style="@style/EnhancedSmartspaceTextTitle" />
+            <com.google.android.systemui.smartspace.IcuDateTextView
+                android:id="@id/date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                style="@style/EnhancedSmartspaceTextTitle" />
         </LinearLayout>
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@id/smartspace_subtitle_group"
             android:background="@drawable/user_icon_background"
             android:padding="6.0dip"
+            android:layout_marginStart="@dimen/pill_margin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="50.0dip"
