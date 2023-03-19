@@ -3681,6 +3681,7 @@
     <public type="dimen" name="workspace_page_indicator_overlap_workspace" id="0x7f070514" />
     <public type="dimen" name="x_icon_padding" id="0x7f070515" />
     <public type="dimen" name="x_icon_size" id="0x7f070516" />
+    <public type="dimen" name="pill_margin" id="0x7f070517" />
     <public type="drawable" name="$$assistant_gesture__10__0" id="0x7f080000" />
     <public type="drawable" name="$$assistant_gesture__10__1" id="0x7f080001" />
     <public type="drawable" name="$$assistant_gesture__10__2" id="0x7f080002" />
@@ -4528,6 +4529,8 @@
     <public type="drawable" name="widgets_tray_expand_button" id="0x7f080378" />
     <public type="drawable" name="work_apps_toggle_background" id="0x7f080379" />
     <public type="drawable" name="work_card" id="0x7f08037a" />
+    <public type="drawable" name="ic_super_g" id="0x7f08037c" />
+    <public type="drawable" name="user_icon_background" id="0x7f08037d" />
     <public type="drawable" name="abc_ic_arrow_forward" id="0x7f0801ba" />
     <public type="drawable" name="abc_ic_permission" id="0x7f0801c4" />
     <public type="drawable" name="abc_ic_slice_send" id="0x7f0801c6" />
