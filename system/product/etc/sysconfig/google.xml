@@ -100,12 +100,10 @@
          interact with, including the providers that back the implementation of the APIs
          provided by the package. -->
     <allow-association target="com.google.android.as" allowed="com.android.bluetooth" />
-    <allow-association target="com.google.android.as" allowed="com.android.bluetooth.services" />
     <allow-association target="com.google.android.as" allowed="com.android.providers.contacts" />
     <allow-association target="com.google.android.as" allowed="com.android.providers.media" />
     <allow-association target="com.google.android.as" allowed="com.android.providers.telephony" />
     <allow-association target="com.google.android.as" allowed="com.android.systemui" />
-    <allow-association target="com.google.android.as" allowed="com.google.android.bluetooth.services" />
     <allow-association target="com.google.android.as" allowed="com.google.android.providers.media.module" />
     <!-- AI services can bind to its open-source network component. -->
     <allow-association target="com.google.android.as" allowed="com.google.android.as.oss" />
