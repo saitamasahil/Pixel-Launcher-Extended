@@ -42,8 +42,6 @@
     <string name="abc_slice_updated">更新时间：%1$s</string>
     <string name="abc_slices_permission_request">“%1$s”想要显示“%2$s”Slice</string>
     <string name="abc_toolbar_collapse_description">收起</string>
-    <string name="about">关于</string>
-    <string name="about_app_version">版本</string>
     <string name="accessibility_app_usage_settings">应用使用设置</string>
     <string name="accessibility_close">关闭</string>
     <string name="accessibility_next_alarm">闹钟的下一次响铃时间是：%s</string>
@@ -88,12 +86,11 @@
     <string name="all_apps_search_results">搜索结果</string>
     <string name="all_apps_work_tab">工作</string>
     <string name="allapps_device_search_hint">搜索手机等设备上的内容</string>
-    <string name="allapps_quick_launch_chip_text">→ 打开</string>
     <string name="allapps_toast_hint">搜索应用、网站等</string>
     <string name="allow_rotation_desc">手机旋转时</string>
     <string name="allow_rotation_title">允许旋转主屏幕</string>
-    <string name="allset_description">您可以开始使用手机了</string>
-    <string name="allset_description_tablet">您可以开始使用平板电脑了</string>
+    <string name="allset_button_hint">点按主屏幕按钮即可前往主屏幕</string>
+    <string name="allset_description_generic">您可以开始使用%1$s了</string>
     <string name="allset_hint">向上滑动即可转到主屏幕</string>
     <string name="allset_navigation_settings"><annotation id="link">系统导航设置</annotation></string>
     <string name="allset_title">大功告成！</string>
@@ -124,6 +121,7 @@
     <string name="copy">复制</string>
     <string name="create_folder_name">办公</string>
     <string name="create_folder_with">创建“%1$s”文件夹</string>
+    <string name="default_device_name">设备</string>
     <string name="default_scroll_format">第%1$d页，共%2$d页</string>
     <string name="developer_options_filter_hint">过滤器</string>
     <string name="developer_options_title">开发者选项</string>
@@ -200,6 +198,7 @@
     <string name="keyboard_show">一律显示键盘</string>
     <string name="keyboard_show_desc">在主屏幕向上滑动时</string>
     <string name="label_application">应用</string>
+    <string name="label_g_icon">Google 应用</string>
     <string name="label_lens">Google 智能镜头</string>
     <string name="label_search">搜索</string>
     <string name="label_turn_off_allapps_suggestions">重置偏好设置</string>
@@ -278,6 +277,7 @@
     <string name="notification_dots_service_title">显示通知圆点</string>
     <string name="notification_dots_title">通知圆点</string>
     <string name="notifications_header">通知</string>
+    <string name="open_app">打开“%1$s”</string>
     <string name="out_of_space">此主屏幕上已没有空间</string>
     <string name="overview_gesture_feedback_complete_with_follow_up">您已了解如何使用手势了。如要关闭手势，请转到“设置”。</string>
     <string name="overview_gesture_feedback_complete_without_follow_up">您完成了“切换应用”手势教程。</string>
@@ -301,11 +301,12 @@
     <string name="permlab_write_settings">写入主屏幕设置和快捷方式</string>
     <string name="pin_prediction">固定预测的应用</string>
     <string name="play_folder_name">Play</string>
-    <string name="pref_open_source_licenses_title">开放源代码许可</string>
     <string name="preference_copied">已将“%1$s”复制到剪贴板。</string>
     <string name="qsb_search_edu_body">现在，除了网页之外，Google 搜索还可以在应用中查找内容。Android System Intelligence 可在支持的应用中搜索以提供结果。</string>
     <string name="qsb_search_edu_title">在网页和应用中搜索</string>
     <string name="query_builder_content_description">显示“%1$s”的联想查询</string>
+    <string name="quick_launch_chip_text_app">• 打开</string>
+    <string name="quick_launch_separator_corpus_text">" • 打“%1$s”已打开"</string>
     <string name="recent_task_option_freeform">自由窗口</string>
     <string name="recent_task_option_pin">固定</string>
     <string name="recent_task_option_split_screen">分屏</string>
@@ -353,6 +354,7 @@
     <string name="search_pref_screen_title_tablet">搜索您的平板电脑</string>
     <string name="search_pref_web_settings">管理搜索设置</string>
     <string name="search_pref_web_settings_desc">在 Google 应用中管理搜索记录以及执行其他操作</string>
+    <string name="search_tall_card_buttonn_text">查看更多</string>
     <string name="section_header">来自你的应用</string>
     <string name="select_tooltip">选择文字和图片，即可复制、分享及执行其他操作</string>
     <string name="set_wallpaper_error_message">无法设置壁纸。</string>
@@ -368,6 +370,7 @@
     <string name="smartspace_calendar_event_now">现在：%1$s</string>
     <string name="smartspace_desc_off">已关闭</string>
     <string name="smartspace_desc_on">已开启</string>
+    <string name="smartspace_explain_card">您为何会看到该内容</string>
     <string name="smartspace_flight_card_gate_header">登机口</string>
     <string name="smartspace_flight_card_seat_header">座位</string>
     <string name="smartspace_flight_qr_code">二维码</string>
@@ -396,6 +399,7 @@
     <string name="summary_collapsed_preference_list">%1$s、%2$s</string>
     <string name="task_contents_description_with_remaining_time">%1$s（%2$s）</string>
     <string name="task_view_closed">任务已关闭</string>
+    <string name="taskbar_a11y_title">任务栏</string>
     <string name="taskbar_button_a11y">无障碍</string>
     <string name="taskbar_button_back">返回</string>
     <string name="taskbar_button_home">主屏幕</string>
@@ -403,15 +407,17 @@
     <string name="taskbar_button_notifications">通知</string>
     <string name="taskbar_button_quick_settings">快捷设置</string>
     <string name="taskbar_button_recents">最近用过</string>
+    <string name="taskbar_edu_a11y_title">任务栏教程</string>
     <string name="taskbar_edu_close">关闭</string>
     <string name="taskbar_edu_closed">任务栏教程已关闭</string>
     <string name="taskbar_edu_done">完成</string>
     <string name="taskbar_edu_next">继续</string>
     <string name="taskbar_edu_opened">任务栏教程已显示</string>
     <string name="taskbar_edu_previous">返回</string>
-    <string name="taskbar_edu_splitscreen">拖动到一侧，以便一次使用两个应用</string>
-    <string name="taskbar_edu_stashing">轻触并按住即可隐藏任务栏</string>
-    <string name="taskbar_edu_switch_apps">使用任务栏切换应用</string>
+    <string name="taskbar_edu_splitscreen">拖动到一侧，即可一次使用两个应用</string>
+    <string name="taskbar_edu_stashing">稍微向上滑动即可显示任务栏</string>
+    <string name="taskbar_edu_suggestions">任务栏会根据您的日常安排向您推荐应用</string>
+    <string name="taskbar_phone_a11y_title">导航栏</string>
     <string name="time_left_for_app">今天还可使用 %1$s</string>
     <string name="title_app_suggestions">应用建议</string>
     <string name="title_change_settings">更改设置</string>
@@ -419,7 +425,7 @@
     <string name="title_disable_allapps_suggestions_prompt">要重置操作偏好设置吗？</string>
     <string name="title_missing_notification_access">需要获取通知使用权</string>
     <string name="title_show_google_app">滑动即可访问 Google 应用</string>
-    <string name="toast_split_app_unsupported">应用不支持分屏。</string>
+    <string name="toast_split_app_unsupported">另外选择一个应用才可使用分屏模式</string>
     <string name="toast_split_select_app">点按另一个应用即可使用分屏</string>
     <string name="undo">撤消</string>
     <string name="uninstall_drop_target_label">卸载</string>

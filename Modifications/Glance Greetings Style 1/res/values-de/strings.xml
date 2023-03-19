@@ -42,8 +42,6 @@
     <string name="abc_slice_updated">Aktualisiert: %1$s</string>
     <string name="abc_slices_permission_request">%1$s möchte Teile von %2$s anzeigen</string>
     <string name="abc_toolbar_collapse_description">Minimieren</string>
-    <string name="about">Info</string>
-    <string name="about_app_version">Version</string>
     <string name="accessibility_app_usage_settings">Einstellungen zur App-Nutzung</string>
     <string name="accessibility_close">Schließen</string>
     <string name="accessibility_next_alarm">Nächster Wecker um %s</string>
@@ -88,12 +86,11 @@
     <string name="all_apps_search_results">Suchergebnisse</string>
     <string name="all_apps_work_tab">Geschäftlich</string>
     <string name="allapps_device_search_hint">Smartphone durchsuchen und mehr</string>
-    <string name="allapps_quick_launch_chip_text">→ Öffnen</string>
     <string name="allapps_toast_hint">Apps, Web &amp; mehr durchsuchen</string>
     <string name="allow_rotation_desc">Beim Drehen des Smartphones</string>
     <string name="allow_rotation_title">Drehen des Startbildschirms zulassen</string>
-    <string name="allset_description">Du kannst dein Smartphone jetzt verwenden</string>
-    <string name="allset_description_tablet">Du kannst dein Tablet jetzt verwenden</string>
+    <string name="allset_button_hint">Startbildschirmtaste drücken, um zum Startbildschirm zu gehen</string>
+    <string name="allset_description_generic">Du kannst dein %1$s jetzt verwenden</string>
     <string name="allset_hint">Nach oben wischen, um den Startbildschirm aufzurufen</string>
     <string name="allset_navigation_settings"><annotation id="link">Einstellungen der Systemsteuerung</annotation></string>
     <string name="allset_title">Fertig!</string>
@@ -124,6 +121,7 @@
     <string name="copy">Kopieren</string>
     <string name="create_folder_name">Erstellen</string>
     <string name="create_folder_with">Anhand von %1$s Ordner erstellen</string>
+    <string name="default_device_name">Gerät</string>
     <string name="default_scroll_format">Seite %1$d von %2$d</string>
     <string name="developer_options_filter_hint">Filter</string>
     <string name="developer_options_title">Entwickleroptionen</string>
@@ -200,6 +198,7 @@
     <string name="keyboard_show">Tastatur immer anzeigen</string>
     <string name="keyboard_show_desc">Wenn du auf dem Startbildschirm nach oben wischst</string>
     <string name="label_application">App</string>
+    <string name="label_g_icon">Google App</string>
     <string name="label_lens">Google Lens</string>
     <string name="label_search">Suchen</string>
     <string name="label_turn_off_allapps_suggestions">Zurücksetzen</string>
@@ -278,6 +277,7 @@
     <string name="notification_dots_service_title">App-Benachrichtigungspunkte anzeigen</string>
     <string name="notification_dots_title">App-Benachrichtigungspunkte</string>
     <string name="notifications_header">Benachrichtigungen</string>
+    <string name="open_app">%1$s öffnen</string>
     <string name="out_of_space">Auf diesem Startbildschirm ist kein Platz mehr vorhanden</string>
     <string name="overview_gesture_feedback_complete_with_follow_up">Nun weißt du, wie Touch-Gesten funktionieren. Du kannst sie in den Einstellungen deaktivieren.</string>
     <string name="overview_gesture_feedback_complete_without_follow_up">Du hast die „Apps wechseln“-Touch-Geste abgeschlossen.</string>
@@ -301,11 +301,12 @@
     <string name="permlab_write_settings">Einstellungen und Verknüpfungen für den Startbildschirm schreiben</string>
     <string name="pin_prediction">Vorgeschlagene App fixieren</string>
     <string name="play_folder_name">Play</string>
-    <string name="pref_open_source_licenses_title">Open Source-Lizenzen</string>
     <string name="preference_copied">\"%1$s\" in Zwischenablage kopiert.</string>
     <string name="qsb_search_edu_body">Mit der Google Suche kannst du jetzt nicht nur im Web, sondern auch in Apps nach Inhalten suchen. Android System Intelligence durchsucht unterstützte Apps, um Ergebnisse anzuzeigen.</string>
     <string name="qsb_search_edu_title">Im Web und in Apps suchen</string>
     <string name="query_builder_content_description">Vervollständigungen für %1$s anzeigen</string>
+    <string name="quick_launch_chip_text_app">• offen</string>
+    <string name="quick_launch_separator_corpus_text">" • %1$s geöffnet"</string>
     <string name="recent_task_option_freeform">Freeform-Modus</string>
     <string name="recent_task_option_pin">Fixieren</string>
     <string name="recent_task_option_split_screen">Geteilter Bildschirm</string>
@@ -353,6 +354,7 @@
     <string name="search_pref_screen_title_tablet">Auf dem Tablet suchen</string>
     <string name="search_pref_web_settings">Sucheinstellungen verwalten</string>
     <string name="search_pref_web_settings_desc">Suchverlauf und mehr in der Google App verwalten</string>
+    <string name="search_tall_card_buttonn_text">Mehr anzeigen</string>
     <string name="section_header">Aus meinen Apps</string>
     <string name="select_tooltip">Texte und Bilder zum Kopieren oder Teilen auswählen</string>
     <string name="set_wallpaper_error_message">Hintergrund kann nicht festgelegt werden.</string>
@@ -368,6 +370,7 @@
     <string name="smartspace_calendar_event_now">Jetzt: %1$s</string>
     <string name="smartspace_desc_off">Aus</string>
     <string name="smartspace_desc_on">An</string>
+    <string name="smartspace_explain_card">Warum das angezeigt wird</string>
     <string name="smartspace_flight_card_gate_header">Gate</string>
     <string name="smartspace_flight_card_seat_header">Sitz</string>
     <string name="smartspace_flight_qr_code">QR-Code</string>
@@ -396,6 +399,7 @@
     <string name="summary_collapsed_preference_list">%1$s, %2$s</string>
     <string name="task_contents_description_with_remaining_time">%1$s, %2$s</string>
     <string name="task_view_closed">Aufgabe geschlossen</string>
+    <string name="taskbar_a11y_title">Taskleiste</string>
     <string name="taskbar_button_a11y">Bedienungshilfen</string>
     <string name="taskbar_button_back">Zurück</string>
     <string name="taskbar_button_home">Startbildschirm</string>
@@ -403,6 +407,7 @@
     <string name="taskbar_button_notifications">Benachrichtigungen</string>
     <string name="taskbar_button_quick_settings">Schnelleinstellungen</string>
     <string name="taskbar_button_recents">Letzte Apps</string>
+    <string name="taskbar_edu_a11y_title">Informationen zur Taskleiste</string>
     <string name="taskbar_edu_close">Schließen</string>
     <string name="taskbar_edu_closed">Anleitung für Taskleiste geschlossen</string>
     <string name="taskbar_edu_done">Fertig</string>
@@ -410,8 +415,9 @@
     <string name="taskbar_edu_opened">Anleitung für Taskleiste eingeblendet</string>
     <string name="taskbar_edu_previous">Zurück</string>
     <string name="taskbar_edu_splitscreen">Zur Seite ziehen, um zwei Apps gleichzeitig zu verwenden</string>
-    <string name="taskbar_edu_stashing">Gedrückt halten, um die Taskleiste auszublenden</string>
-    <string name="taskbar_edu_switch_apps">Über die Taskleiste zwischen Apps wechseln</string>
+    <string name="taskbar_edu_stashing">Kurz nach oben wischen, um die Taskleiste anzuzeigen</string>
+    <string name="taskbar_edu_suggestions">Taskleiste empfiehlt Apps basierend auf deinen Gewohnheiten</string>
+    <string name="taskbar_phone_a11y_title">Navigationsleiste</string>
     <string name="time_left_for_app">Heute noch %1$s</string>
     <string name="title_app_suggestions">App-Vorschläge</string>
     <string name="title_change_settings">Einstellungen ändern</string>
@@ -419,7 +425,7 @@
     <string name="title_disable_allapps_suggestions_prompt">Einstellungen für Aktionen zurücksetzen?</string>
     <string name="title_missing_notification_access">Benachrichtigungszugriff erforderlich</string>
     <string name="title_show_google_app">Wischen, um die Google App aufzurufen</string>
-    <string name="toast_split_app_unsupported">„Geteilter Bildschirm“ wird v. d. App nicht unterstützt.</string>
+    <string name="toast_split_app_unsupported">Für geteilten Bildschirm andere App auswählen</string>
     <string name="toast_split_select_app">Für „Bildschirm teilen“ auf weitere App tippen</string>
     <string name="undo">Rückgängig</string>
     <string name="uninstall_drop_target_label">Deinstallieren</string>

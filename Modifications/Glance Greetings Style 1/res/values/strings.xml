@@ -42,8 +42,6 @@
     <string name="abc_slice_updated">Updated %1$s</string>
     <string name="abc_slices_permission_request">%1$s wants to show %2$s slices</string>
     <string name="abc_toolbar_collapse_description">Collapse</string>
-    <string name="about">About</string>
-    <string name="about_app_version">Version</string>
     <string name="accessibility_app_usage_settings">App usage settings</string>
     <string name="accessibility_close">Close</string>
     <string name="accessibility_next_alarm">Next alarm at %s</string>
@@ -88,12 +86,11 @@
     <string name="all_apps_search_results">Search results</string>
     <string name="all_apps_work_tab">Work</string>
     <string name="allapps_device_search_hint">Search your phone and more</string>
-    <string name="allapps_quick_launch_chip_text">→ Open</string>
     <string name="allapps_toast_hint">Search apps, web and more</string>
     <string name="allow_rotation_desc">When phone is rotated</string>
     <string name="allow_rotation_title">Allow home screen rotation</string>
-    <string name="allset_description">You’re ready to start using your phone</string>
-    <string name="allset_description_tablet">You’re ready to start using your tablet</string>
+    <string name="allset_button_hint">Tap the home button to go to your home screen</string>
+    <string name="allset_description_generic">You’re ready to start using your %1$s</string>
     <string name="allset_hint">Swipe up to go Home</string>
     <string name="allset_navigation_settings"><annotation id="link">System navigation settings</annotation></string>
     <string name="allset_title">All set!</string>
@@ -136,11 +133,10 @@
     <string name="character_counter_overflowed_content_description">Character limit exceeded %1$d of %2$d</string>
     <string name="character_counter_pattern">%1$d/%2$d</string>
     <string name="clear_text_end_icon_content_description">Clear text</string>
-    <string name="clock_12hr_format">hm</string>
-    <string name="clock_24hr_format">Hm</string>
     <string name="clock_component_name">com.google.android.deskclock/com.android.deskclock.DeskClock</string>
     <string name="close">Close</string>
     <string name="color_generator_class" />
+    <string name="composing_no_underline">any_string</string>
     <string name="content_push_no_devices_found">No devices found to push content.</string>
     <string name="copied_text_label">Copied text</string>
     <string name="copy">Copy</string>
@@ -148,6 +144,7 @@
     <string name="create_folder_name">Create</string>
     <string name="create_folder_with">Create folder with: %1$s</string>
     <string name="custom_activity_picker">com.android.customization.picker.CustomizationPickerActivity</string>
+    <string name="default_device_name">device</string>
     <string name="default_scroll_format">Page %1$d of %2$d</string>
     <string name="delete_package_intent">\#Intent;action=android.intent.action.DELETE;launchFlags=0x10800000;end</string>
     <string name="derived_app_name">@string/app_name_pixel_launcher</string>
@@ -170,8 +167,6 @@
     <string name="fab_transformation_sheet_behavior">com.google.android.material.transformation.FabTransformationSheetBehavior</string>
     <string name="fallback_wallpaper_title">Wallpaper</string>
     <string name="feedback">Feedback</string>
-    <string name="floating_task_action">com.motorola.stylus.secure.OPEN</string>
-    <string name="floating_task_package">com.google.android.keep</string>
     <string name="folder_closed">Folder closed</string>
     <string name="folder_created">Folder created</string>
     <string name="folder_hint_text">Edit Name</string>
@@ -238,6 +233,7 @@
     <string name="keyboard_show">Always show keyboard</string>
     <string name="keyboard_show_desc">When swiping up on your home screen</string>
     <string name="label_application">App</string>
+    <string name="label_g_icon">Google app</string>
     <string name="label_lens">Google Lens</string>
     <string name="label_search">Search</string>
     <string name="label_turn_off_allapps_suggestions">Reset preferences</string>
@@ -350,6 +346,7 @@
     <string name="notification_dots_service_title">Show notification dots</string>
     <string name="notification_dots_title">Notification dots</string>
     <string name="notifications_header">Notifications</string>
+    <string name="open_app">Open %1$s</string>
     <string name="out_of_space">No room on this home screen</string>
     <string name="overscroll_plugin_class">com.google.android.compose.launcherplugins.OverscrollPluginImp</string>
     <string name="overscroll_plugin_factory_class" />
@@ -380,17 +377,20 @@
     <string name="pin_prediction">Pin Prediction</string>
     <string name="play_folder_name">Play</string>
     <string name="popup_container_iterate_children">popup_container_iterate_children</string>
-    <string name="pref_open_source_licenses_title">Open source licenses</string>
     <string name="pref_show_google_now_summary">@string/msg_minus_one_on_right</string>
     <string name="preference_copied">\"%1$s\" copied to clipboard.</string>
     <string name="qsb_search_edu_body">Search now includes content from apps, in addition to web. Android System Intelligence searches supported apps to provide results.</string>
     <string name="qsb_search_edu_title">Search web &amp; apps</string>
     <string name="query_builder_content_description">Show predictions for %1$s</string>
+    <string name="quick_launch_chip_text_app">" • open"</string>
+    <string name="quick_launch_separator_corpus_text">" • %1$s open"</string>
     <string name="recent_task_option_freeform">Freeform</string>
     <string name="recent_task_option_pin">Pin</string>
     <string name="recent_task_option_split_screen">Split screen</string>
+    <string name="recents_back">Back</string>
     <string name="recents_clear_all">Clear all</string>
     <string name="recents_empty_message">No recent items</string>
+    <string name="recents_filter_icon_desc">"Click to show only this app's tasks"</string>
     <string name="reconfigurable_widget_education_tip">Tap to change widget settings</string>
     <string name="remote_action_failed">Failed: %1$s</string>
     <string name="remove_drop_target_label">Remove</string>
@@ -459,6 +459,7 @@
     <string name="search_pref_web_settings">Manage search preferences</string>
     <string name="search_pref_web_settings_desc">Manage your search history and more in the Google app</string>
     <string name="search_session_manager_class">com.google.android.apps.nexuslauncher.allapps.OneSearchSessionManager</string>
+    <string name="search_tall_card_buttonn_text">See more</string>
     <string name="secondary_display_predictions_class">com.android.launcher3.secondarydisplay.SecondaryDisplayPredictionsImpl</string>
     <string name="section_header">From your apps</string>
     <string name="select_tooltip">Select text and images to copy, share, and more</string>
@@ -477,6 +478,7 @@
     <string name="smartspace_calendar_event_now">%1$s now</string>
     <string name="smartspace_desc_off">Off</string>
     <string name="smartspace_desc_on">On</string>
+    <string name="smartspace_explain_card">Why you’re seeing this</string>
     <string name="smartspace_flight_card_gate_header">Gate</string>
     <string name="smartspace_flight_card_seat_header">Seat</string>
     <string name="smartspace_flight_qr_code">QR code</string>
@@ -508,6 +510,7 @@
     <string name="task_contents_description_with_remaining_time">%1$s, %2$s</string>
     <string name="task_overlay_factory_class">com.google.android.apps.nexuslauncher.quickstep.TaskOverlayFactoryImpl</string>
     <string name="task_view_closed">Task Closed</string>
+    <string name="taskbar_a11y_title">Taskbar</string>
     <string name="taskbar_button_a11y">Accessibility</string>
     <string name="taskbar_button_back">Back</string>
     <string name="taskbar_button_home">Home</string>
@@ -515,15 +518,17 @@
     <string name="taskbar_button_notifications">Notifications</string>
     <string name="taskbar_button_quick_settings">Quick Settings</string>
     <string name="taskbar_button_recents">Recents</string>
+    <string name="taskbar_edu_a11y_title">Taskbar education</string>
     <string name="taskbar_edu_close">Close</string>
     <string name="taskbar_edu_closed">Taskbar education closed</string>
     <string name="taskbar_edu_done">Done</string>
     <string name="taskbar_edu_next">Next</string>
     <string name="taskbar_edu_opened">Taskbar education appeared</string>
     <string name="taskbar_edu_previous">Back</string>
-    <string name="taskbar_edu_splitscreen">Drag to the side to use two apps at once</string>
-    <string name="taskbar_edu_stashing">Touch &amp; hold to hide the taskbar</string>
-    <string name="taskbar_edu_switch_apps">Use the taskbar to switch apps</string>
+    <string name="taskbar_edu_splitscreen">Drag to the side to use 2 apps at once</string>
+    <string name="taskbar_edu_stashing">Short swipe up to show the taskbar</string>
+    <string name="taskbar_edu_suggestions">The taskbar suggests apps based on your routine</string>
+    <string name="taskbar_phone_a11y_title">Navigation bar</string>
     <string name="test_information_handler_class">com.android.quickstep.QuickstepTestInformationHandler</string>
     <string name="time_left_for_app">%1$s left today</string>
     <string name="title_app_suggestions">App suggestions</string>
@@ -532,7 +537,7 @@
     <string name="title_disable_allapps_suggestions_prompt">Reset action preferences?</string>
     <string name="title_missing_notification_access">Notification access needed</string>
     <string name="title_show_google_app">Swipe to access Google app</string>
-    <string name="toast_split_app_unsupported">App does not support split-screen.</string>
+    <string name="toast_split_app_unsupported">Choose another app to use split screen</string>
     <string name="toast_split_select_app">Tap another app to use splitscreen</string>
     <string name="undo">Undo</string>
     <string name="uninstall_drop_target_label">Uninstall</string>
@@ -558,6 +563,7 @@
     <string name="widget_education_header">Useful info at your fingertips</string>
     <string name="widget_education_tips_button">Learn more</string>
     <string name="widget_education_tips_not_available">"Can't open Tips app"</string>
+    <string name="widget_holder_factory_class">com.android.launcher3.uioverrides.QuickstepWidgetHolder$QuickstepHolderFactory</string>
     <string name="widget_preview_context_description">%1$s widget</string>
     <string name="widget_reconfigure_button_content_description">Change widget settings</string>
     <string name="widget_resized">Widget resized to width %1$s height %2$s</string>

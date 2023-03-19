@@ -42,8 +42,6 @@
     <string name="abc_slice_updated">%1$s അപ്‌ഡേറ്റ് ചെയ്‌തു</string>
     <string name="abc_slices_permission_request">%2$s സ്ലൈസുകൾ കാണിക്കാൻ %1$s താൽപ്പര്യപ്പെടുന്നു</string>
     <string name="abc_toolbar_collapse_description">ചുരുക്കുക</string>
-    <string name="about">ആമുഖം</string>
-    <string name="about_app_version">പതിപ്പ്</string>
     <string name="accessibility_app_usage_settings">ആപ്പ് ഉപയോഗ ക്രമീകരണം</string>
     <string name="accessibility_close">അടയ്ക്കൂ</string>
     <string name="accessibility_next_alarm">അടുത്ത അലാറം %s-നാണ്</string>
@@ -88,12 +86,11 @@
     <string name="all_apps_search_results">തിരയൽ ഫലങ്ങൾ</string>
     <string name="all_apps_work_tab">ഔദ്യോഗികം</string>
     <string name="allapps_device_search_hint">നിങ്ങളുടെ ഫോണിലുള്ളവ തിരയലും മറ്റും</string>
-    <string name="allapps_quick_launch_chip_text">→ തുറക്കുക</string>
     <string name="allapps_toast_hint">ആപ്പുകളും വെബ്ബും മറ്റും തിരയുക</string>
     <string name="allow_rotation_desc">ഫോൺ തിരിച്ച നിലയിലായിരിക്കുമ്പോൾ</string>
     <string name="allow_rotation_title">ഹോം സ്ക്രീൻ റൊട്ടേഷൻ അനുവദിക്കുക</string>
-    <string name="allset_description">ഫോൺ ഉപയോഗിച്ച് തുടങ്ങാൻ നിങ്ങൾ തയ്യാറാണ്</string>
-    <string name="allset_description_tablet">ടാബ്‌ലെറ്റ് ഉപയോഗിച്ച് തുടങ്ങാൻ നിങ്ങൾ തയ്യാറാണ്</string>
+    <string name="allset_button_hint">നിങ്ങളുടെ ഹോം സ്ക്രീനിലേക്ക് പോകാൻ ഹോം ബട്ടൺ ടാപ്പ് ചെയ്യുക</string>
+    <string name="allset_description_generic">നിങ്ങൾക്ക് %1$s ഉപയോഗിച്ചു തുടങ്ങാം</string>
     <string name="allset_hint">ഹോമിലേക്ക് പോകാൻ മുകളിലേക്ക് സ്വൈപ്പ് ചെയ്യുക</string>
     <string name="allset_navigation_settings"><annotation id="link">സിസ്‌റ്റം നാവിഗേഷൻ ക്രമീകരണം</annotation></string>
     <string name="allset_title">എല്ലാം സജ്ജീകരിച്ചു!</string>
@@ -124,6 +121,7 @@
     <string name="copy">പകർത്തുക</string>
     <string name="create_folder_name">സൃഷ്‌ടിക്കുക</string>
     <string name="create_folder_with">ഇതുപയോഗിച്ച് ഫോൾഡർ സൃഷ്‌ടിക്കുക: %1$s</string>
+    <string name="default_device_name">ഉപകരണം</string>
     <string name="default_scroll_format">പേജ് %1$d / %2$d</string>
     <string name="developer_options_filter_hint">ഫിൽട്ടർ ചെയ്യുക</string>
     <string name="developer_options_title">ഡെവലപ്പർ ഓപ്‌ഷനുകൾ</string>
@@ -200,6 +198,7 @@
     <string name="keyboard_show">കീബോർഡ് എപ്പോഴും കാണിക്കൂ</string>
     <string name="keyboard_show_desc">ഹോം സ്ക്രീനിൽ മുകളിലേക്ക് സ്വൈപ്പ് ചെയ്യുമ്പോൾ</string>
     <string name="label_application">ആപ്പ്</string>
+    <string name="label_g_icon">Google ആപ്പ്</string>
     <string name="label_lens">Google Lens</string>
     <string name="label_search">തിരയുക</string>
     <string name="label_turn_off_allapps_suggestions">മുൻഗണനകൾ പുനഃസജ്ജീകരിക്കുക</string>
@@ -278,6 +277,7 @@
     <string name="notification_dots_service_title">അറിയിപ്പ് ഡോട്ടുകൾ കാണിക്കുക</string>
     <string name="notification_dots_title">അറിയിപ്പ് ഡോട്ടുകൾ</string>
     <string name="notifications_header">അറിയിപ്പുകൾ</string>
+    <string name="open_app">%1$s തുറക്കുക</string>
     <string name="out_of_space">ഈ ഹോം സ്ക്രീനിൽ ഇടമില്ല</string>
     <string name="overview_gesture_feedback_complete_with_follow_up">ജെസ്ച്ചറുകൾ ഉപയോഗിക്കുന്ന രീതി നിങ്ങൾ മനസ്സിലാക്കി. ജെസ്ച്ചറുകൾ ഓഫാക്കാൻ ക്രമീകരണത്തിലേക്ക് പോകുക.</string>
     <string name="overview_gesture_feedback_complete_without_follow_up">ആപ്പുകൾ തമ്മിൽ മാറുക ജെസ്‌ച്ചർ നിങ്ങൾ പൂർത്തിയാക്കി.</string>
@@ -301,11 +301,12 @@
     <string name="permlab_write_settings">ഹോം ക്രമീകരണവും കുറുക്കുവഴികളും എഴുതുക</string>
     <string name="pin_prediction">പ്രവചനം പിൻ ചെയ്യുക</string>
     <string name="play_folder_name">പ്ലേ ചെയ്യുക</string>
-    <string name="pref_open_source_licenses_title">ഓപ്പൺ സോഴ്‌സ് ലൈസൻസുകൾ</string>
     <string name="preference_copied">\"%1$s\" ക്ലിപ്‌ബോർഡിലേക്ക് പകർത്തി.</string>
     <string name="qsb_search_edu_body">വെബിൽ നിന്നുള്ള ഉള്ളടക്കത്തിന് പുറമെ ആപ്പുകളിൽ നിന്നുള്ള ഉള്ളടക്കവും ഇപ്പോൾ തിരയലിൽ ഉൾപ്പെടുന്നു. ഫലങ്ങൾ നൽകുന്നതിന് Android System Intelligence, പിന്തുണയ്ക്കുന്ന ആപ്പുകൾ തിരയുന്നു.</string>
     <string name="qsb_search_edu_title">വെബ്ബിലും ആപ്പുകളിലും തിരയൂ</string>
     <string name="query_builder_content_description">%1$s എന്നതിനുള്ള പ്രവചനങ്ങൾ കാണിക്കുക</string>
+    <string name="quick_launch_chip_text_app">• തുറക്കുക</string>
+    <string name="quick_launch_separator_corpus_text">" • %1$s തുറന്നിരിക്കുന്നു"</string>
     <string name="recent_task_option_freeform">ഫ്രീഫോം</string>
     <string name="recent_task_option_pin">പിൻ ചെയ്യുക</string>
     <string name="recent_task_option_split_screen">സ്‌ക്രീൻ വിഭജന മോഡ്</string>
@@ -353,6 +354,7 @@
     <string name="search_pref_screen_title_tablet">നിങ്ങളുടെ ടാബ്‌ലെറ്റിൽ തിരയൂ</string>
     <string name="search_pref_web_settings">തിരയൽ മുൻഗണനകൾ മാനേജ് ചെയ്യുക</string>
     <string name="search_pref_web_settings_desc">Google ആപ്പിൽ നിങ്ങളുടെ തിരയൽ ചരിത്രവും മറ്റും മാനേജ് ചെയ്യുക</string>
+    <string name="search_tall_card_buttonn_text">കൂടുതൽ കാണുക</string>
     <string name="section_header">നിങ്ങളുടെ ആപ്പുകളിൽ നിന്ന്</string>
     <string name="select_tooltip">പകർത്താനും പങ്കിടാനും മറ്റുമായി ടെക്‌സ്റ്റും ചിത്രങ്ങളും തിരഞ്ഞെടുക്കൂ</string>
     <string name="set_wallpaper_error_message">വാൾപേപ്പർ സജ്ജീകരിക്കാനാകുന്നില്ല.</string>
@@ -368,6 +370,7 @@
     <string name="smartspace_calendar_event_now">ഇപ്പോൾ %1$s</string>
     <string name="smartspace_desc_off">ഓഫാണ്</string>
     <string name="smartspace_desc_on">ഓണാണ്</string>
+    <string name="smartspace_explain_card">എന്തുകൊണ്ടാണ് നിങ്ങളിത് കാണുന്നത്</string>
     <string name="smartspace_flight_card_gate_header">ഗേറ്റ്</string>
     <string name="smartspace_flight_card_seat_header">സീറ്റ്</string>
     <string name="smartspace_flight_qr_code">QR കോഡ്</string>
@@ -396,6 +399,7 @@
     <string name="summary_collapsed_preference_list">%1$s, %2$s</string>
     <string name="task_contents_description_with_remaining_time">%1$s, %2$s</string>
     <string name="task_view_closed">ടാസ്ക്ക് അടച്ചു</string>
+    <string name="taskbar_a11y_title">ടാസ്‌ക്ബാർ</string>
     <string name="taskbar_button_a11y">ഉപയോഗസഹായി</string>
     <string name="taskbar_button_back">മടങ്ങുക</string>
     <string name="taskbar_button_home">ഹോം</string>
@@ -403,15 +407,17 @@
     <string name="taskbar_button_notifications">അറിയിപ്പുകൾ</string>
     <string name="taskbar_button_quick_settings">ദ്രുത ക്രമീകരണം</string>
     <string name="taskbar_button_recents">അടുത്തിടെയുള്ളവ</string>
+    <string name="taskbar_edu_a11y_title">ടാസ്‌ക്ബാർ മാർഗ്ഗനിർദ്ദേശ വിൻഡോ</string>
     <string name="taskbar_edu_close">അടയ്ക്കുക</string>
     <string name="taskbar_edu_closed">ടാസ്ക്ക്ബാർ വിവര പാനൽ അടച്ചു</string>
     <string name="taskbar_edu_done">പൂർത്തിയായി</string>
     <string name="taskbar_edu_next">അടുത്തത്</string>
     <string name="taskbar_edu_opened">ടാസ്ക്ക്ബാർ വിവര പാനൽ ദൃശ്യമായി</string>
     <string name="taskbar_edu_previous">മടങ്ങുക</string>
-    <string name="taskbar_edu_splitscreen">രണ്ട് ആപ്പുകൾ ഒരുമിച്ച് ഉപയോഗിക്കാൻ അരികിലേക്ക് വലിച്ചിടുക</string>
-    <string name="taskbar_edu_stashing">ടാസ്ക്ക്ബാർ മറയ്ക്കാൻ സ്‌പർശിച്ച് പിടിക്കുക</string>
-    <string name="taskbar_edu_switch_apps">ആപ്പുകൾ മാറാൻ ടാസ്ക്ക്ബാർ ഉപയോഗിക്കുക</string>
+    <string name="taskbar_edu_splitscreen">ഒരേ സമയം 2 ആപ്പുകൾ ഉപയോഗിക്കാൻ വശത്തേയ്‌ക്ക് വലിച്ചിടുക</string>
+    <string name="taskbar_edu_stashing">ടാസ്‌ക്ബാർ ദൃശ്യമാക്കാൻ മുകളിലേക്ക് ചെറുതായി സ്വൈപ്പ് ചെയ്യൂ</string>
+    <string name="taskbar_edu_suggestions">ടാസ്‌ക്ബാർ നിങ്ങളുടെ ദിനചര്യ അനുസരിച്ച് ആപ്പുകൾ നിർദ്ദേശിക്കുന്നു</string>
+    <string name="taskbar_phone_a11y_title">നാവിഗേഷൻ ബാർ</string>
     <string name="time_left_for_app">ഇന്ന് %1$s ശേഷിക്കുന്നു</string>
     <string name="title_app_suggestions">ആപ്പ് നിർദ്ദേശങ്ങൾ</string>
     <string name="title_change_settings">ക്രമീകരണം മാറ്റുക</string>
@@ -419,7 +425,7 @@
     <string name="title_disable_allapps_suggestions_prompt">പ്രവൃത്തന മുൻഗണനകൾ പുനഃസജ്ജീകരിക്കണോ‌?</string>
     <string name="title_missing_notification_access">അറിയിപ്പിനായുള്ള ആക്‌സസ് ആവശ്യമാണ്</string>
     <string name="title_show_google_app">Google ആപ്പ് ആക്‌സസ് ചെയ്യാൻ സ്വൈപ്പ് ചെയ്യുക</string>
-    <string name="toast_split_app_unsupported">സ്പ്ലിറ്റ്-സ്ക്രീനിനെ ആപ്പ് പിന്തുണയ്ക്കുന്നില്ല.</string>
+    <string name="toast_split_app_unsupported">സ്ക്രീൻ വിഭജന മോഡിന് മറ്റൊരു ആപ്പ് തിരഞ്ഞെടുക്കൂ</string>
     <string name="toast_split_select_app">സ്പ്ലിറ്റ് സ്ക്രീനിനായി മറ്റൊരു ആപ്പ് ടാപ്പുചെയ്യൂ</string>
     <string name="undo">പഴയപടിയാക്കുക</string>
     <string name="uninstall_drop_target_label">അൺഇൻസ്റ്റാൾ</string>
