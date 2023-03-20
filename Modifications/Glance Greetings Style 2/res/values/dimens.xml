@@ -1303,5 +1303,5 @@
     <dimen name="workspace_page_indicator_overlap_workspace">12.0dip</dimen>
     <dimen name="x_icon_padding">4.0dip</dimen>
     <dimen name="x_icon_size">16.0dip</dimen>
-    <dimen name="pill_margin">0.0dip</dimen>
+    <dimen name="pill_margin">-6.0dip</dimen>
 </resources>
