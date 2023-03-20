@@ -3,6 +3,7 @@
 - Added Icon Shape Changer app
 - Removed Etra Grids Choice. Extra Grids are now permanent
 - Transparent weather pill is now default in Glance Greetings
+- Fix margin issue when transparent pill(remove pill background) is enabled
 
 **Version 1.4.1**
 - Fixed blank screen issue after flashing launcher in DerpFest
