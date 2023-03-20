@@ -103,8 +103,8 @@ elif [ $choice -eq 3 ]; then
 
   echo $divider
   echo -e "\033[38;5;208mWhich Android Version are you using?\033[0m"
-  echo "1. Android 13(November SP or Below)"
-  echo "2. Android 13 QPR(December SP or Above)"
+  echo "1. Android 13(November Security Patch or Below)"
+  echo "2. Android 13 QPR(December Security Patch or Above)"
   echo $divider
   read -p "Enter your choice: " choice
 
