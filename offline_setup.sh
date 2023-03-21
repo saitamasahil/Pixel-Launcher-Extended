@@ -116,17 +116,62 @@ init_main() {
 
   if [ $PATCH_LEVEL -le 202211 ]; then
     ui_print "Android 13 detected!"
+    ui_print "Security Patch - $PATCH_DATE"
     rm -rf "$MODPATH/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease01.apk"
     rm -rf "$MODPATH/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease11.apk"
     rm -rf "$MODPATH/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease21.apk"
+
   elif [ $PATCH_LEVEL -le 202302 ]; then
     ui_print "Android 13 QPR detected!"
+    ui_print "Security Patch - $PATCH_DATE"
     rm -rf "$MODPATH/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease00.apk"
     rm -rf "$MODPATH/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease10.apk"
     rm -rf "$MODPATH/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease20.apk"
+
   elif [ $PATCH_LEVEL -ge 202303 ]; then
     ui_print "Android 13 QPR2 detected!"
+    ui_print "Security Patch - $PATCH_DATE"
     ui_print "Android 13 QPR2 isn't supported yet!"
+    exit 1
+  fi
+
+  ui_print ""
+  ui_print "[*] If the information displayed above is accurate?"
+  ui_print "[*] Press volume up to switch to another choice"
+  ui_print "[*] Press volume down to continue with that choice"
+  ui_print ""
+
+  sleep 0.5
+
+  ui_print "--------------------------------"
+  ui_print "[1] Yes"
+  ui_print "--------------------------------"
+  ui_print "[2] No"
+  ui_print "--------------------------------"
+
+  ui_print ""
+  ui_print "[*] Select your desired option:"
+
+  SM=1
+  while true; do
+    ui_print "  $SM"
+    "$VKSEL" && SM="$((SM + 1))" || break
+    [[ "$SM" -gt "2" ]] && SM=1
+  done
+
+  case "$SM" in
+  "1") FCTEXTAD1="Yes" ;;
+  "2") FCTEXTAD1="No" ;;
+  esac
+
+  ui_print "[*] Selected: $FCTEXTAD1"
+  ui_print ""
+
+  if [[ "$FCTEXTAD1" == "Yes" ]]; then
+    ui_print "The installation process of Pixel Launcher Extended has been started!!"
+
+  elif [[ "$FCTEXTAD1" == "No" ]]; then
+    ui_print "Tell your rom maintainer to fix 'getprop ro.build.version.security_patch - $PATCH_DATE' value"
     exit 1
   fi
 
@@ -424,8 +469,8 @@ init_main() {
 
   ui_print ""
   ui_print "[*] Do you want to install Icon Shape Changer app?"
-  ui_print "[*] Press volume up to switch to another icon shape"
-  ui_print "[*] Press volume down to install that icon shape"
+  ui_print "[*] Press volume up to switch to another choice"
+  ui_print "[*] Press volume down to continue with that choice"
   ui_print ""
 
   sleep 0.5
