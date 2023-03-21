@@ -156,7 +156,6 @@ elif [ $choice -eq 3 ]; then
     echo "Example Of Glance Greetings Style 2-"
     echo "Line 1 - Material You Greetings, Day & Date"
     echo "Line 2 - Weather Information"
-    echo -e "\033[38;5;208mYou can check preview of these two styles in Pixel Launcher Extended post on GitHub Repo\033[0m"
     echo "1. Glance Greetings Style 1"
     echo "2. Glance Greetings Style 2"
     echo $divider
