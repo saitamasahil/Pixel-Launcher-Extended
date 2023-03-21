@@ -6,6 +6,7 @@
 - Fixed margin issue when transparent pill(remove pill background) is enabled
 - Updated dependent apks & permissions
 - Fixed text visibility issue while applying wallpapers
+- Added auto-detection of Android 13's different variants in offline & online installers
 
 **Version 1.4.1**
 - Fixed blank screen issue after flashing launcher in DerpFest

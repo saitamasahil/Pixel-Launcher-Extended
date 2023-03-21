@@ -105,44 +105,17 @@ init_main() {
     echo "Error: Unsupported SDK version ($sdk_version)"
     exit 1
   fi
+  
+  # Get the security patch date from build.prop
+  PATCH_DATE=$(getprop ro.build.version.security_patch)
 
-  ui_print ""
-  ui_print "[*] Which Android Version are you using?"
-  ui_print "[*] Press volume up to switch to another choice"
-  ui_print "[*] Press volume down to continue with that choice"
-  ui_print ""
+  # Convert it to YYYYMM format
+  PATCH_YEAR=${PATCH_DATE:0:4}
+  PATCH_MONTH=${PATCH_DATE:5:2}
+  PATCH_LEVEL=$PATCH_YEAR$PATCH_MONTH
 
-  sleep 0.5
-
-  ui_print "--------------------------------"
-  ui_print "[1] Android 13(November SP or Below)"
-  ui_print "--------------------------------"
-  ui_print "[2] Android 13 QPR(December SP or Above)"
-  ui_print "--------------------------------"
-  ui_print "[*] SP means: Security Patch"
-  ui_print "[*] If you're not sure about 'which version to flash' then"
-  ui_print "ask in your rom community"
-  ui_print "to know about current version of your rom"
-
-  ui_print ""
-  ui_print "[*] Select your desired option:"
-
-  SM=1
-  while true; do
-    ui_print "  $SM"
-    "$VKSEL" && SM="$((SM + 1))" || break
-    [[ "$SM" -gt "2" ]] && SM=1
-  done
-
-  case "$SM" in
-  "1") FCTEXTAD1="Android 13" ;;
-  "2") FCTEXTAD1="Android 13 QPR" ;;
-  esac
-
-  ui_print "[*] Selected: $FCTEXTAD1"
-  ui_print ""
-
-  if [[ "$FCTEXTAD1" == "Android 13" ]]; then
+  if [ $PATCH_LEVEL -le 202211 ]; then
+    ui_print "Android 13 detected!"
     ui_print ""
     ui_print "[*] Do you wanna add 'Material You Greetings In At A Glance'"
     ui_print "& install Extended Settings app?"
@@ -251,7 +224,8 @@ init_main() {
       rm -rf "$MODPATH/system/product/etc/permissions/privapp-permissions-com.domain.liranazuz5.extendedsettings.xml"
     fi
 
-  elif [[ "$FCTEXTAD1" == "Android 13 QPR" ]]; then
+  elif [ $PATCH_LEVEL -le 202302 ]; then
+    ui_print "Android 13 QPR detected!"
     ui_print ""
     ui_print "[*] Do you wanna add 'Material You Greetings In At A Glance'"
     ui_print "& install Extended Settings app?"
@@ -359,6 +333,10 @@ init_main() {
       web_fetch -d "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease01.apk" "$MODPATH/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease01.apk"
       rm -rf "$MODPATH/system/product/etc/permissions/privapp-permissions-com.domain.liranazuz5.extendedsettings.xml"
     fi
+  elif [ $PATCH_LEVEL -ge 202303 ]; then
+    ui_print "Android 13 QPR2 detected!"
+    ui_print "Android 13 QPR2 isn't supported yet!"
+    exit 1
   fi
 
   ui_print ""

@@ -106,51 +106,28 @@ init_main() {
     exit 1
   fi
 
-  ui_print ""
-  ui_print "[*] Which Android Version are you using?"
-  ui_print "[*] Press volume up to switch to another choice"
-  ui_print "[*] Press volume down to continue with that choice"
-  ui_print ""
+  # Get the security patch date from build.prop
+  PATCH_DATE=$(getprop ro.build.version.security_patch)
 
-  sleep 0.5
+  # Convert it to YYYYMM format
+  PATCH_YEAR=${PATCH_DATE:0:4}
+  PATCH_MONTH=${PATCH_DATE:5:2}
+  PATCH_LEVEL=$PATCH_YEAR$PATCH_MONTH
 
-  ui_print "--------------------------------"
-  ui_print "[1] Android 13(November SP or Below)"
-  ui_print "--------------------------------"
-  ui_print "[2] Android 13 QPR(December SP or Above)"
-  ui_print "--------------------------------"
-  ui_print "[*] SP means: Security Patch"
-  ui_print "[*] If you're not sure about 'which version to flash' then"
-  ui_print "ask in your rom community"
-  ui_print "to know about current version of your rom"
-
-  ui_print ""
-  ui_print "[*] Select your desired option:"
-
-  SM=1
-  while true; do
-    ui_print "  $SM"
-    "$VKSEL" && SM="$((SM + 1))" || break
-    [[ "$SM" -gt "2" ]] && SM=1
-  done
-
-  case "$SM" in
-  "1") FCTEXTAD1="Android 13" ;;
-  "2") FCTEXTAD1="Android 13 QPR" ;;
-  esac
-
-  ui_print "[*] Selected: $FCTEXTAD1"
-  ui_print ""
-
-  if [[ "$FCTEXTAD1" == "Android 13" ]]; then
+  if [ $PATCH_LEVEL -le 202211 ]; then
+    ui_print "Android 13 detected!"
     rm -rf "$MODPATH/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease01.apk"
     rm -rf "$MODPATH/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease11.apk"
     rm -rf "$MODPATH/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease21.apk"
-
-  elif [[ "$FCTEXTAD1" == "Android 13 QPR" ]]; then
+  elif [ $PATCH_LEVEL -le 202302 ]; then
+    ui_print "Android 13 QPR detected!"
     rm -rf "$MODPATH/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease00.apk"
     rm -rf "$MODPATH/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease10.apk"
     rm -rf "$MODPATH/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease20.apk"
+  elif [ $PATCH_LEVEL -ge 202303 ]; then
+    ui_print "Android 13 QPR2 detected!"
+    ui_print "Android 13 QPR2 isn't supported yet!"
+    exit 1
   fi
 
   ui_print ""
