@@ -105,7 +105,7 @@ init_main() {
     echo "Error: Unsupported SDK version ($sdk_version)"
     exit 1
   fi
-  
+
   # Get the security patch date from build.prop
   PATCH_DATE=$(getprop ro.build.version.security_patch)
 
@@ -153,7 +153,9 @@ init_main() {
       ui_print "The installation process of Pixel Launcher Extended has been started!!"
 
     elif [[ "$FCTEXTAD1" == "No" ]]; then
-      ui_print "Tell your rom maintainer to fix 'getprop ro.build.version.security_patch - $PATCH_DATE' value"
+      ui_print "Tell your rom maintainer to fix"
+      ui_print "'getprop ro.build.version.security_patch - $PATCH_DATE' value"
+      ui_print "or make Customize Installer from GitHub"
       exit 1
     fi
 
@@ -304,7 +306,9 @@ init_main() {
       ui_print "The installation process of Pixel Launcher Extended has been started!!"
 
     elif [[ "$FCTEXTAD1" == "No" ]]; then
-      ui_print "Tell your rom maintainer to fix 'getprop ro.build.version.security_patch - $PATCH_DATE' value"
+      ui_print "Tell your rom maintainer to fix"
+      ui_print "'getprop ro.build.version.security_patch - $PATCH_DATE' value"
+      ui_print "or make Customize Installer from GitHub"
       exit 1
     fi
 

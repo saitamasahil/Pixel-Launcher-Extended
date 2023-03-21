@@ -7,15 +7,11 @@
     </style>
     <style name="AlertDialog.AppCompat" parent="@style/Base.AlertDialog.AppCompat" />
     <style name="AlertDialog.AppCompat.Light" parent="@style/Base.AlertDialog.AppCompat.Light" />
-    <style name="AllAppsButtonTheme">
-        <item name="allAppsButtonBgColor">@color/all_apps_button_bg_color</item>
-        <item name="allAppsButtonColor1">@color/all_apps_button_color_1</item>
-        <item name="allAppsButtonColor2">@color/all_apps_button_color_2</item>
-        <item name="allAppsButtonColor3">@color/all_apps_button_color_3</item>
-        <item name="allAppsButtonColor4">@color/all_apps_button_color_4</item>
-    </style>
     <style name="AllAppsSearchResult">
         <item name="android:fontFamily">google-sans-medium</item>
+    </style>
+    <style name="AllAppsSearchResultDefault">
+        <item name="android:fontFamily">google-sans</item>
     </style>
     <style name="AllAppsSearchResultSlice" parent="@style/AllAppsSearchResult">
         <item name="rowRangeSingleTextHeight">22.0dip</item>
@@ -30,15 +26,6 @@
         <item name="subContentStartPadding">@dimen/search_result_padding</item>
         <item name="titleEndPadding">@dimen/search_result_padding</item>
         <item name="titleStartPadding">@dimen/search_result_padding</item>
-    </style>
-    <style name="AllAppsSearchResultSubtitle">
-        <item name="android:fontFamily">google-sans-regular</item>
-    </style>
-    <style name="AllAppsTheme">
-        <item name="disabledIconAlpha">0.54</item>
-    </style>
-    <style name="AllAppsTheme.Dark" parent="@style/AllAppsTheme">
-        <item name="disabledIconAlpha">0.54</item>
     </style>
     <style name="AllSetTheme" parent="@android:style/Theme.DeviceDefault.Light.NoActionBar">
         <item name="android:windowBackground">@android:color/transparent</item>
@@ -2816,7 +2803,7 @@
         <item name="iconDisplay">taskbar</item>
     </style>
     <style name="BaseIconRoot" parent="@android:style/TextAppearance.DeviceDefault.DialogWindowTitle">
-        <item name="android:fontFamily">@android:string/config_bandwidthEstimateSource</item>
+        <item name="android:fontFamily">@android:string/config_bodyFontFamilyMedium</item>
     </style>
     <style name="BaseIconUnBounded" parent="@style/BaseIconRoot">
         <item name="android:textColor">?android:textColorSecondary</item>
@@ -2895,13 +2882,13 @@
         <item name="android:drawablePadding">@dimen/drop_target_button_drawable_padding</item>
     </style>
     <style name="EnhancedSmartspaceTextSubtitle" parent="@style/EnhancedSmartspaceTextTitle">
-        <item name="android:textSize">@dimen/enhanced_smartspace_subtitle_size</item>
+        <item name="android:textSize">17.0sp</item>
         <item name="android:fontFamily">google-sans-text</item>
         <item name="android:letterSpacing">@dimen/smartspaceLetterSpacing</item>
         <item name="android:lineHeight">24.0sp</item>
     </style>
     <style name="EnhancedSmartspaceTextTitle" parent="@android:style/Theme.DeviceDefault.DayNight">
-        <item name="android:textSize">@dimen/enhanced_smartspace_title_size</item>
+        <item name="android:textSize">21.0sp</item>
         <item name="android:textColor">?android:textColorPrimary</item>
         <item name="android:ellipsize">end</item>
         <item name="android:gravity">center_vertical</item>
@@ -2924,6 +2911,53 @@
         <item name="android:importantForAccessibility">no</item>
         <item name="android:paddingEnd">@dimen/fastscroll_popup_padding</item>
         <item name="android:elevation">3.0dip</item>
+    </style>
+    <style name="Folder2x2Style" parent="@style/FolderDefaultStyle">
+        <item name="folderCellHeight">199.0dip</item>
+        <item name="folderCellWidth">176.0dip</item>
+    </style>
+    <style name="Folder3x3Style" parent="@style/FolderDefaultStyle">
+        <item name="folderCellHeight">165.0dip</item>
+        <item name="folderCellWidth">112.0dip</item>
+    </style>
+    <style name="Folder4x4FoldStyle" parent="@style/FolderDefaultStyle">
+        <item name="folderCellHeight">94.0dip</item>
+        <item name="folderCellWidth">80.0dip</item>
+    </style>
+    <style name="Folder4x4Style" parent="@style/FolderDefaultStyle">
+        <item name="folderCellHeight">94.0dip</item>
+        <item name="folderCellWidth">80.0dip</item>
+        <item name="folderFooterHeight">48.0dip</item>
+    </style>
+    <style name="Folder4x5FoldStyle" parent="@style/FolderDefaultStyle">
+        <item name="folderCellHeight">89.0dip</item>
+        <item name="folderCellWidth">68.0dip</item>
+    </style>
+    <style name="Folder4x5Style" parent="@style/FolderDefaultStyle">
+        <item name="folderCellHeight">94.0dip</item>
+        <item name="folderCellWidth">80.0dip</item>
+        <item name="folderFooterHeight">48.0dip</item>
+    </style>
+    <style name="Folder5x5FoldStyle" parent="@style/FolderDefaultStyle">
+        <item name="folderBorderSpace">20.0dip</item>
+        <item name="folderCellHeight">83.0dip</item>
+        <item name="folderCellWidth">64.0dip</item>
+    </style>
+    <style name="Folder5x5Style" parent="@style/FolderDefaultStyle">
+        <item name="folderCellHeight">89.0dip</item>
+        <item name="folderCellWidth">68.0dip</item>
+    </style>
+    <style name="Folder6x5FoldStyle" parent="@style/FolderDefaultStyle">
+        <item name="folderCellHeight">104.0dip</item>
+        <item name="folderCellWidth">102.0dip</item>
+        <item name="folderFooterHeight">64.0dip</item>
+    </style>
+    <style name="FolderDefaultStyle">
+        <item name="folderBorderSpace">16.0dip</item>
+        <item name="folderCellHeight">94.0dip</item>
+        <item name="folderCellWidth">80.0dip</item>
+        <item name="folderFooterHeight">56.0dip</item>
+        <item name="folderTopPadding">24.0dip</item>
     </style>
     <style name="GleamTooltipFadeAnimation">
         <item name="android:windowEnterAnimation">@android:anim/fade_in</item>
@@ -3006,9 +3040,7 @@
         <item name="android:navigationBarColor">#00000000</item>
         <item name="allAppsNavBarScrimColor">#66ffffff</item>
         <item name="allAppsScrimColor">?android:colorBackgroundFloating</item>
-        <item name="allAppsTheme">@style/AllAppsTheme</item>
         <item name="allappsHeaderProtectionColor">@color/popup_color_tertiary_light</item>
-        <item name="disabledIconAlpha">0.54</item>
         <item name="dropTargetHoverTextColor">@color/workspace_text_color_dark</item>
         <item name="eduHalfSheetBGColor">?android:colorAccent</item>
         <item name="folderBackgroundColor">@color/folder_background_light</item>
@@ -3051,7 +3083,6 @@
         <item name="android:colorPrimary">#ff212121</item>
         <item name="allAppsNavBarScrimColor">#80000000</item>
         <item name="allAppsScrimColor">?android:colorBackgroundFloating</item>
-        <item name="allAppsTheme">@style/AllAppsTheme.Dark</item>
         <item name="eduHalfSheetBGColor">#dd000000</item>
         <item name="folderBackgroundColor">@color/folder_background_dark</item>
         <item name="folderDotColor">@color/folder_dot_color</item>
@@ -3077,9 +3108,7 @@
         <item name="widgetsTheme">@style/WidgetContainerTheme.Dark</item>
         <item name="workProfileOverlayTextColor">@android:color/white</item>
     </style>
-    <style name="LauncherTheme.Dark.DarkMainColor" parent="@style/LauncherTheme.Dark">
-        <item name="disabledIconAlpha">0.54</item>
-    </style>
+    <style name="LauncherTheme.Dark.DarkMainColor" parent="@style/LauncherTheme.Dark" />
     <style name="LauncherTheme.Dark.DarkText" parent="@style/LauncherTheme.Dark">
         <item name="android:colorControlHighlight">#19212121</item>
         <item name="dropTargetHoverTextColor">@color/workspace_text_color_light</item>
@@ -3091,9 +3120,7 @@
         <item name="workspaceStatusBarScrim">@null</item>
         <item name="workspaceTextColor">@color/workspace_text_color_dark</item>
     </style>
-    <style name="LauncherTheme.DarkMainColor" parent="@style/LauncherTheme">
-        <item name="disabledIconAlpha">0.54</item>
-    </style>
+    <style name="LauncherTheme.DarkMainColor" parent="@style/LauncherTheme" />
     <style name="LauncherTheme.DarkText" parent="@style/LauncherTheme">
         <item name="dropTargetHoverTextColor">@color/workspace_text_color_light</item>
         <item name="isWorkspaceDarkText">true</item>
@@ -3198,6 +3225,9 @@
         <item name="android:layout_gravity">center</item>
         <item name="android:textAlignment">center</item>
     </style>
+    <style name="NoComposingUnderline">
+        <item name="android:candidatesTextStyleSpans">@string/composing_no_underline</item>
+    </style>
     <style name="OverviewActionButton" parent="@android:style/Widget.DeviceDefault.Button.Borderless">
         <item name="android:textColor">@color/overview_button</item>
         <item name="android:tint">?android:textColorPrimary</item>
@@ -3209,6 +3239,8 @@
         <item name="android:background">@drawable/bg_overview_clear_all_button</item>
         <item name="android:minWidth">96.0dip</item>
         <item name="android:minHeight">48.0dip</item>
+        <item name="android:paddingStart">12.0dip</item>
+        <item name="android:paddingEnd">12.0dip</item>
         <item name="android:stateListAnimator">@null</item>
     </style>
     <style name="Platform.AppCompat" parent="@style/Platform.V25.AppCompat" />
@@ -3718,6 +3750,7 @@
         <item name="android:textColor">?android:textColorPrimaryInverse</item>
         <item name="android:gravity">center</item>
         <item name="android:textAllCaps">false</item>
+        <item name="android:fontFamily">google-sans-text-medium</item>
         <item name="android:letterSpacing">0.02</item>
     </style>
     <style name="TextAppearance.GestureTutorial.CallToAction" parent="@android:style/TextAppearance.Material.Body2" />
@@ -3761,11 +3794,12 @@
         <item name="android:textSize">36.0sp</item>
         <item name="android:textColor">?android:textColorPrimary</item>
         <item name="android:gravity">start</item>
-        <item name="android:fontFamily">google-sans-regular</item>
+        <item name="android:fontFamily">google-sans</item>
         <item name="android:letterSpacing">0.03</item>
         <item name="android:lineHeight">44.0sp</item>
     </style>
     <style name="TextAppearance.GestureTutorial.Feedback.Title.AllSet" parent="@style/TextAppearance.GestureTutorial.Feedback.Title">
+        <item name="android:textSize">@dimen/allset_page_allset_text_size</item>
         <item name="android:letterSpacing">0.03</item>
         <item name="android:lineHeight">44.0sp</item>
     </style>
@@ -4082,7 +4116,7 @@
     <style name="TextAppearance.Widget.AppCompat.Toolbar.Subtitle" parent="@style/Base.TextAppearance.Widget.AppCompat.Toolbar.Subtitle" />
     <style name="TextAppearance.Widget.AppCompat.Toolbar.Title" parent="@style/Base.TextAppearance.Widget.AppCompat.Toolbar.Title" />
     <style name="TextHeadline" parent="@android:style/TextAppearance.DeviceDefault.DialogWindowTitle">
-        <item name="android:fontFamily">@android:string/config_bandwidthEstimateSource</item>
+        <item name="android:fontFamily">@android:string/config_bodyFontFamilyMedium</item>
     </style>
     <style name="TextTitle" parent="@android:style/TextAppearance.DeviceDefault" />
     <style name="Theme.AppCompat" parent="@style/Base.Theme.AppCompat" />
