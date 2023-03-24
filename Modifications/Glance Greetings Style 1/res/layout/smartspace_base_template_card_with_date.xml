@@ -35,7 +35,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="24.0dip">
             <TextView
-                android:textSize="22.6sp"
+                android:textSize="22.599976sp"
                 android:textColor="@android:color/system_accent1_100"
                 android:id="@id/hint"
                 android:focusable="true"
@@ -60,11 +60,11 @@
             android:id="@id/smartspace_subtitle_group"
             android:background="@drawable/user_icon_background"
             android:padding="6.0dip"
-            android:layout_marginStart="@dimen/pill_margin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="50.0dip"
-            android:layout_below="@id/date">
+            android:layout_marginTop="@dimen/pill_margin_top_doubleline"
+            android:layout_below="@id/date"
+            android:layout_marginStart="@dimen/pill_margin">
             <include
                 layout="@layout/smartspace_subtitle_pane" />
         </androidx.constraintlayout.widget.ConstraintLayout>

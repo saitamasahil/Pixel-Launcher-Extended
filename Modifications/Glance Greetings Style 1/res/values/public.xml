@@ -3682,6 +3682,8 @@
     <public type="dimen" name="x_icon_padding" id="0x7f070515" />
     <public type="dimen" name="x_icon_size" id="0x7f070516" />
     <public type="dimen" name="pill_margin" id="0x7f070517" />
+    <public type="dimen" name="pill_margin_top_doubleline" id="0x7f070518" />
+    <public type="dimen" name="pill_margin_top_singleline" id="0x7f070519" />
     <public type="drawable" name="$$assistant_gesture__10__0" id="0x7f080000" />
     <public type="drawable" name="$$assistant_gesture__10__1" id="0x7f080001" />
     <public type="drawable" name="$$assistant_gesture__10__2" id="0x7f080002" />
