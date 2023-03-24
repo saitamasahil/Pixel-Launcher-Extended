@@ -1,12 +1,14 @@
 **Version 1.5**
 - Added theme switcher background & updated icons in extended settings app
 - Added Icon Shape Changer app
-- Removed Etra Grids Choice. Extra Grids are now permanent
+- Removed Extra Grids Choice. Extra Grids are now permanent
 - Transparent weather pill is now default in Glance Greetings
 - Fixed margin issue when transparent pill(remove pill background) is enabled
 - Updated dependent apks & permissions
 - Fixed text visibility issue while applying wallpapers
 - Added auto-detection of Android 13's different variants in offline & online installers
+- Added material you support for Extended Settings app
+- Added support for March Security Patch, Android 13 QPR2
 
 **Version 1.4.1**
 - Fixed blank screen issue after flashing launcher in DerpFest
