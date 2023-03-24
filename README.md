@@ -29,6 +29,7 @@
 This module is expected to work on ROMs which are based on fairly unmodified Android source code.
 - Android 13 AOSP-based ROMs
 - Android 13 QPR AOSP-based ROMs
+- Android 13 QPR2 AOSP-based ROMs
 > Ensure your ROM is equipped with the necessary GApps, including Google apps and services. Without them, certain features may not function optimally on vanilla ROM. Make sure to flash proper GApps Package for your rom if you are using vanilla rom.
 
 ### Implement In Custom ROMs
