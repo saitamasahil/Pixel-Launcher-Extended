@@ -1304,4 +1304,6 @@
     <dimen name="x_icon_padding">4.0dip</dimen>
     <dimen name="x_icon_size">16.0dip</dimen>
     <dimen name="pill_margin">-6.0dip</dimen>
+    <dimen name="pill_margin_top_doubleline">44.0dip</dimen>
+    <dimen name="pill_margin_top_singleline">26.0dip</dimen>
 </resources>
