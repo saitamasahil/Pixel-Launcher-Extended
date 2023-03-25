@@ -31,6 +31,3 @@ if [ -f $MODDIR/first ]; then
   fi
   rm -rf $MODDIR/first
 fi
-
-# Initialize system
-"$MODDIR/cns" &
