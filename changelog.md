@@ -1,5 +1,6 @@
 **Version 1.6**
 - Updated permissions for wallpaper picker
+- Removed all themed icons choice. TeamFiles icons are now permanent
 
 **Version 1.5**
 - Added theme switcher background & updated icons in extended settings app
