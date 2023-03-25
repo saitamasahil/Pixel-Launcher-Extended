@@ -79,9 +79,9 @@ elif [ $choice -eq 2 ]; then
 
   # Create zip file
   echo ">> Creating Magisk Module"
-  echo ""                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        # make the output look easier to read
+  echo ""                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          # make the output look easier to read
   zip -r -q "Pixel Launcher Extended Online Installer $version.zip" . -x .git/\* Modifications/\* screenshots/\* autobuild.sh autobuild.ps1 banner.jpg banner2.jpg changelog.md codename.txt logo.png offline_setup.sh customize_setup.sh online_setup.sh README.md system/product/priv-app/NexusLauncherRelease/*\* system/product/priv-app/PixelLauncherMods/PixelLauncherMods.apk system/system_ext/priv-app/WallpaperPickerGoogleRelease/WallpaperPickerGoogleRelease.apk system/system_ext/priv-app/WallpaperPickerGoogleRelease/WallpaperPickerGoogleReleaseNew.apk system/product/overlay/TeamFiles* system/product/priv-app/ExtendedSettings/ExtendedSettings.apk system/product/priv-app/IconShapeChanger/IconShapeChanger.apk Pixel\ Launcher\ Extended* # Ignore specified files and folders because they are not needed for the module
-  echo ""                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        # make the output look easier to read
+  echo ""                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          # make the output look easier to read
   echo ">> Done! You can find the module zip file in the current directory - '$(pwd)/Pixel Launcher Extended Online Installer $version.zip'"
 
 elif [ $choice -eq 3 ]; then
@@ -115,7 +115,6 @@ elif [ $choice -eq 3 ]; then
     mkdir system/product/etc/permissions/temp
     mkdir system/product/overlay/temp
     mkdir system/system_ext/priv-app/WallpaperPickerGoogleRelease/temp
-    mkdir system/temp
     mkdir temp
     mv -f "system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease01.apk" "system/product/priv-app/NexusLauncherRelease/temp/$file"
     mv -f "system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease11.apk" "system/product/priv-app/NexusLauncherRelease/temp/$file"
@@ -130,7 +129,6 @@ elif [ $choice -eq 3 ]; then
     mkdir system/product/etc/permissions/temp
     mkdir system/product/overlay/temp
     mkdir system/system_ext/priv-app/WallpaperPickerGoogleRelease/temp
-    mkdir system/temp
     mkdir temp
     mv -f "system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease00.apk" "system/product/priv-app/NexusLauncherRelease/temp/$file"
     mv -f "system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease10.apk" "system/product/priv-app/NexusLauncherRelease/temp/$file"
@@ -145,7 +143,6 @@ elif [ $choice -eq 3 ]; then
     mkdir system/product/etc/permissions/temp
     mkdir system/product/overlay/temp
     mkdir system/system_ext/priv-app/WallpaperPickerGoogleRelease/temp
-    mkdir system/temp
     mkdir temp
     mv -f "system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease00.apk" "system/product/priv-app/NexusLauncherRelease/temp/$file"
     mv -f "system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease10.apk" "system/product/priv-app/NexusLauncherRelease/temp/$file"
@@ -286,27 +283,6 @@ elif [ $choice -eq 3 ]; then
   fi
 
   echo $divider
-  echo -e "\033[38;5;208mDo you want to enable push notification service?\033[0m"
-  echo -e "\033[38;5;208mWe will send notifications for quick support\033[0m"
-  echo -e "\033[38;5;208mor if there is any new update available\033[0m"
-  echo -e "\033[38;5;208mThis feature uses very little internet\033[0m"
-  echo -e "\033[38;5;208mCheck ReadMe on GitHub to know more about it\033[0m"
-  echo "1. Yes"
-  echo "2. No"
-  echo $divider
-  read -p "Enter your choice: " choice
-
-  if [ $choice -eq 1 ]; then
-    :
-
-  elif [ $choice -eq 2 ]; then
-    mv "system/lib64" "system/temp/$folder"
-    mv -f "cns" "temp/$file"
-    mv "system/product/priv-app/OnePunchNotifier" "system/product/priv-app/temp/$folder"
-    mv -f "system/product/etc/permissions/privapp-permissions-com.looper.notifier.xml" "system/product/etc/permissions/temp/$file"
-  fi
-
-  echo $divider
   echo -e "\033[38;5;208mDo you want to enable Developer Opions in launcher?\033[0m"
   echo -e "\033[31;1mWARNING: Your rom may cause Bootloop Issue if you enable this feature\033[0m"
   echo -e "\033[31;1mEnable at your own risk\033[0m"
@@ -346,9 +322,9 @@ elif [ $choice -eq 3 ]; then
 
   # Create zip file
   echo ">> Creating Magisk Module"
-  echo ""                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             # make the output look easier to read
-  zip -r -q "Pixel Launcher Extended Customize Installer $version.zip" . -x .git/\* Modifications/\* screenshots/\* autobuild.sh autobuild.ps1 banner.jpg banner2.jpg changelog.md codename.txt logo.png online_setup.sh offline_setup.sh customize_setup.sh README.md Pixel\ Launcher\ Extended* system/product/priv-app/NexusLauncherRelease/temp/\* system/product/priv-app/temp/\* system/product/etc/permissions/temp/\* system/product/overlay/temp/\* system/temp/\* temp/\* system/system_ext/priv-app/WallpaperPickerGoogleRelease/temp/\* # Ignore specified files and folders because they are not needed for the module
-  echo ""                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             # make the output look easier to read
+  echo ""                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            # make the output look easier to read
+  zip -r -q "Pixel Launcher Extended Customize Installer $version.zip" . -x .git/\* Modifications/\* screenshots/\* autobuild.sh autobuild.ps1 banner.jpg banner2.jpg changelog.md codename.txt logo.png online_setup.sh offline_setup.sh customize_setup.sh README.md Pixel\ Launcher\ Extended* system/product/priv-app/NexusLauncherRelease/temp/\* system/product/priv-app/temp/\* system/product/etc/permissions/temp/\* system/product/overlay/temp/\* temp/\* system/system_ext/priv-app/WallpaperPickerGoogleRelease/temp/\* # Ignore specified files and folders because they are not needed for the module
+  echo ""                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            # make the output look easier to read
   echo ">> Done! You can find the module zip file in the current directory - '$(pwd)/Pixel Launcher Extended Customize Installer $version.zip'"
 
   # Move temp files & folders back to original location
@@ -371,8 +347,6 @@ elif [ $choice -eq 3 ]; then
   mv "system/product/priv-app/temp/PixelLauncherMods" "system/product/priv-app/$folder" 2>/dev/null || true
   mv "system/product/overlay/temp/PixelLauncherModsOverlay" "system/product/overlay/$folder" 2>/dev/null || true
   mv "system/product/overlay/temp/IconShape" "system/product/overlay/$folder" 2>/dev/null || true
-  mv "system/temp/lib64" "system/$folder" 2>/dev/null || true
-  mv "system/product/priv-app/temp/OnePunchNotifier" "system/product/priv-app/$folder" 2>/dev/null || true
   mv "system/product/priv-app/temp/ExtendedSettings" "system/product/priv-app/$folder" 2>/dev/null || true
   mv "system/product/priv-app/temp/IconShapeChanger" "system/product/priv-app/$folder" 2>/dev/null || true
 
@@ -382,7 +356,6 @@ elif [ $choice -eq 3 ]; then
   rm -rf system/product/etc/permissions/temp
   rm -rf system/product/overlay/temp
   rm -rf system/system_ext/priv-app/WallpaperPickerGoogleRelease/temp
-  rm -rf system/temp
   rm -rf temp
 
 else

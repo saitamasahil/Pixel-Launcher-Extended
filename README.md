@@ -5,7 +5,7 @@
 **Pixel Launcher Extended** is a Magisk module by **TeamFiles** with many cool features compared to original Pixel Launcher by Google.
 
 ### Features
-- Extra themed icon packs support. Total of 6 icon packs for your favourite apps and games **(BETA)**.
+- Extra themed icons. Total of 1250+ icons.
 > **This feature is currently in beta due to Android 13 restrictions**  
 > Android 13 prefers themed icons made by apps, it looks through the apps first, only then it looks for themed icons overlay (which we use).  
 > TeamFiles icons are very closed to stock themed icons, so we recommend using them.
@@ -18,8 +18,6 @@
 - Enable hidden flags & developer options.
 > These flags can enable some subtle features & bring improvements in launcher. [Some of the flags usage with detailed explanation](https://sameerasw.notion.site/Pixel-Launcher-Flags-0068085015c646dda6210b02a6f719a9).
 - Push Notification Services.
-> Please note that this feature requires internet to provide you update & support related notifications.
-> We don't take any data or logs from your phone to provide you these notifications.
 - And more!!
 
 ### Screenshots

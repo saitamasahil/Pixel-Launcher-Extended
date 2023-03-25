@@ -139,9 +139,4 @@ init_main() {
   sleep 2
 
   touch "$MODPATH/first"
-
-  # Don't add libc++_shared.so if it already exists
-  [[ -e "/system/lib64/libc++_shared.so" ]] && {
-    rm -rf "$MODPATH/system/lib64/libc++_shared.so"
-  }
 }
