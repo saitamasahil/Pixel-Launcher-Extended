@@ -1,3 +1,6 @@
+**Version 1.6**
+- Updated permissions for wallpaper picker
+
 **Version 1.5**
 - Added theme switcher background & updated icons in extended settings app
 - Added Icon Shape Changer app
