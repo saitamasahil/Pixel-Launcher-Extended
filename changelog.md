@@ -2,6 +2,7 @@
 - Updated permissions for wallpaper picker
 - Removed all themed icons choice. TeamFiles icons are now permanent
 - Removed push notifications service
+- Fixed crashing issue while tapping on Google Search Bar
 
 **Version 1.5**
 - Added theme switcher background & updated icons in extended settings app
