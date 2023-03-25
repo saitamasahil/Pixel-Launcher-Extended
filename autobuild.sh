@@ -80,7 +80,7 @@ elif [ $choice -eq 2 ]; then
   # Create zip file
   echo ">> Creating Magisk Module"
   echo ""                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        # make the output look easier to read
-  zip -r -q "Pixel Launcher Extended Online Installer $version.zip" . -x .git/\* Modifications/\* screenshots/\* autobuild.sh autobuild.ps1 banner.jpg banner2.jpg changelog.md codename.txt logo.png offline_setup.sh customize_setup.sh online_setup.sh README.md system/product/priv-app/NexusLauncherRelease/*\* system/product/priv-app/PixelLauncherMods/PixelLauncherMods.apk system/product/overlay/ThemedIconsOverlay/*\* system/system_ext/priv-app/WallpaperPickerGoogleRelease/WallpaperPickerGoogleRelease.apk system/system_ext/priv-app/WallpaperPickerGoogleRelease/WallpaperPickerGoogleReleaseNew.apk system/product/overlay/TeamFiles* system/product/priv-app/ExtendedSettings/ExtendedSettings.apk system/product/priv-app/IconShapeChanger/IconShapeChanger.apk Pixel\ Launcher\ Extended* # Ignore specified files and folders because they are not needed for the module
+  zip -r -q "Pixel Launcher Extended Online Installer $version.zip" . -x .git/\* Modifications/\* screenshots/\* autobuild.sh autobuild.ps1 banner.jpg banner2.jpg changelog.md codename.txt logo.png offline_setup.sh customize_setup.sh online_setup.sh README.md system/product/priv-app/NexusLauncherRelease/*\* system/product/priv-app/PixelLauncherMods/PixelLauncherMods.apk system/system_ext/priv-app/WallpaperPickerGoogleRelease/WallpaperPickerGoogleRelease.apk system/system_ext/priv-app/WallpaperPickerGoogleRelease/WallpaperPickerGoogleReleaseNew.apk system/product/overlay/TeamFiles* system/product/priv-app/ExtendedSettings/ExtendedSettings.apk system/product/priv-app/IconShapeChanger/IconShapeChanger.apk Pixel\ Launcher\ Extended* # Ignore specified files and folders because they are not needed for the module
   echo ""                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        # make the output look easier to read
   echo ">> Done! You can find the module zip file in the current directory - '$(pwd)/Pixel Launcher Extended Online Installer $version.zip'"
 
@@ -111,7 +111,6 @@ elif [ $choice -eq 3 ]; then
 
   if [ $choice -eq 1 ]; then
     mkdir system/product/priv-app/NexusLauncherRelease/temp
-    mkdir system/product/overlay/ThemedIconsOverlay/temp
     mkdir system/product/priv-app/temp
     mkdir system/product/etc/permissions/temp
     mkdir system/product/overlay/temp
@@ -127,7 +126,6 @@ elif [ $choice -eq 3 ]; then
 
   elif [ $choice -eq 2 ]; then
     mkdir system/product/priv-app/NexusLauncherRelease/temp
-    mkdir system/product/overlay/ThemedIconsOverlay/temp
     mkdir system/product/priv-app/temp
     mkdir system/product/etc/permissions/temp
     mkdir system/product/overlay/temp
@@ -143,7 +141,6 @@ elif [ $choice -eq 3 ]; then
 
   elif [ $choice -eq 3 ]; then
     mkdir system/product/priv-app/NexusLauncherRelease/temp
-    mkdir system/product/overlay/ThemedIconsOverlay/temp
     mkdir system/product/priv-app/temp
     mkdir system/product/etc/permissions/temp
     mkdir system/product/overlay/temp
@@ -236,65 +233,6 @@ elif [ $choice -eq 3 ]; then
   elif [ $choice -eq 2 ]; then
     mv "system/product/priv-app/PixelLauncherDT2S" "system/product/priv-app/temp/$folder"
     mv -f "system/product/etc/permissions/privapp-permissions-com.uragiristereo.pldt2s.xml" "system/product/etc/permissions/temp/$file"
-  fi
-
-  echo $divider
-  echo -e "\033[38;5;208mWhich of the following themed icons you want to install?\033[0m"
-  echo -e "\033[38;5;208mThis feature is currently in beta due to Android 13 restrictions\033[0m"
-  echo "1. Lawnicons"
-  echo "2. TeamFiles Icons(Recommended)"
-  echo "3. RK Icons"
-  echo "4. DG Icons"
-  echo "5. ACons"
-  echo "6. Cayicons"
-  echo "7. None Of The Above"
-  echo $divider
-  read -p "Enter your choice: " choice
-
-  if [ $choice -eq 1 ]; then
-    mv -f "system/product/overlay/ThemedIconsOverlay/ThemedIconsOverlayRKIcons.apk" "system/product/overlay/ThemedIconsOverlay/temp/$file"
-    mv -f "system/product/overlay/ThemedIconsOverlay/ThemedIconsOverlayTeamFilesIcons.apk" "system/product/overlay/ThemedIconsOverlay/temp/$file"
-    mv -f "system/product/overlay/ThemedIconsOverlay/ThemedIconsOverlayDGIcons.apk" "system/product/overlay/ThemedIconsOverlay/temp/$file"
-    mv -f "system/product/overlay/ThemedIconsOverlay/ThemedIconsOverlayACons.apk" "system/product/overlay/ThemedIconsOverlay/temp/$file"
-    mv -f "system/product/overlay/ThemedIconsOverlay/ThemedIconsOverlayCayicons.apk" "system/product/overlay/ThemedIconsOverlay/temp/$file"
-
-  elif [ $choice -eq 2 ]; then
-    mv -f "system/product/overlay/ThemedIconsOverlay/ThemedIconsOverlayRKIcons.apk" "system/product/overlay/ThemedIconsOverlay/temp/$file"
-    mv -f "system/product/overlay/ThemedIconsOverlay/ThemedIconsOverlayLawnicons.apk" "system/product/overlay/ThemedIconsOverlay/temp/$file"
-    mv -f "system/product/overlay/ThemedIconsOverlay/ThemedIconsOverlayDGIcons.apk" "system/product/overlay/ThemedIconsOverlay/temp/$file"
-    mv -f "system/product/overlay/ThemedIconsOverlay/ThemedIconsOverlayACons.apk" "system/product/overlay/ThemedIconsOverlay/temp/$file"
-    mv -f "system/product/overlay/ThemedIconsOverlay/ThemedIconsOverlayCayicons.apk" "system/product/overlay/ThemedIconsOverlay/temp/$file"
-
-  elif [ $choice -eq 3 ]; then
-    mv -f "system/product/overlay/ThemedIconsOverlay/ThemedIconsOverlayLawnicons.apk" "system/product/overlay/ThemedIconsOverlay/temp/$file"
-    mv -f "system/product/overlay/ThemedIconsOverlay/ThemedIconsOverlayTeamFilesIcons.apk" "system/product/overlay/ThemedIconsOverlay/temp/$file"
-    mv -f "system/product/overlay/ThemedIconsOverlay/ThemedIconsOverlayDGIcons.apk" "system/product/overlay/ThemedIconsOverlay/temp/$file"
-    mv -f "system/product/overlay/ThemedIconsOverlay/ThemedIconsOverlayACons.apk" "system/product/overlay/ThemedIconsOverlay/temp/$file"
-    mv -f "system/product/overlay/ThemedIconsOverlay/ThemedIconsOverlayCayicons.apk" "system/product/overlay/ThemedIconsOverlay/temp/$file"
-
-  elif [ $choice -eq 4 ]; then
-    mv -f "system/product/overlay/ThemedIconsOverlay/ThemedIconsOverlayLawnicons.apk" "system/product/overlay/ThemedIconsOverlay/temp/$file"
-    mv -f "system/product/overlay/ThemedIconsOverlay/ThemedIconsOverlayTeamFilesIcons.apk" "system/product/overlay/ThemedIconsOverlay/temp/$file"
-    mv -f "system/product/overlay/ThemedIconsOverlay/ThemedIconsOverlayRKIcons.apk" "system/product/overlay/ThemedIconsOverlay/temp/$file"
-    mv -f "system/product/overlay/ThemedIconsOverlay/ThemedIconsOverlayACons.apk" "system/product/overlay/ThemedIconsOverlay/temp/$file"
-    mv -f "system/product/overlay/ThemedIconsOverlay/ThemedIconsOverlayCayicons.apk" "system/product/overlay/ThemedIconsOverlay/temp/$file"
-
-  elif [ $choice -eq 5 ]; then
-    mv -f "system/product/overlay/ThemedIconsOverlay/ThemedIconsOverlayLawnicons.apk" "system/product/overlay/ThemedIconsOverlay/temp/$file"
-    mv -f "system/product/overlay/ThemedIconsOverlay/ThemedIconsOverlayTeamFilesIcons.apk" "system/product/overlay/ThemedIconsOverlay/temp/$file"
-    mv -f "system/product/overlay/ThemedIconsOverlay/ThemedIconsOverlayRKIcons.apk" "system/product/overlay/ThemedIconsOverlay/temp/$file"
-    mv -f "system/product/overlay/ThemedIconsOverlay/ThemedIconsOverlayDGIcons.apk" "system/product/overlay/ThemedIconsOverlay/temp/$file"
-    mv -f "system/product/overlay/ThemedIconsOverlay/ThemedIconsOverlayCayicons.apk" "system/product/overlay/ThemedIconsOverlay/temp/$file"
-
-  elif [ $choice -eq 6 ]; then
-    mv -f "system/product/overlay/ThemedIconsOverlay/ThemedIconsOverlayLawnicons.apk" "system/product/overlay/ThemedIconsOverlay/temp/$file"
-    mv -f "system/product/overlay/ThemedIconsOverlay/ThemedIconsOverlayTeamFilesIcons.apk" "system/product/overlay/ThemedIconsOverlay/temp/$file"
-    mv -f "system/product/overlay/ThemedIconsOverlay/ThemedIconsOverlayRKIcons.apk" "system/product/overlay/ThemedIconsOverlay/temp/$file"
-    mv -f "system/product/overlay/ThemedIconsOverlay/ThemedIconsOverlayDGIcons.apk" "system/product/overlay/ThemedIconsOverlay/temp/$file"
-    mv -f "system/product/overlay/ThemedIconsOverlay/ThemedIconsOverlayACons.apk" "system/product/overlay/ThemedIconsOverlay/temp/$file"
-
-  elif [ $choice -eq 7 ]; then
-    mv "system/product/overlay/ThemedIconsOverlay" "system/product/overlay/temp/$folder"
   fi
 
   echo $divider
@@ -409,7 +347,7 @@ elif [ $choice -eq 3 ]; then
   # Create zip file
   echo ">> Creating Magisk Module"
   echo ""                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             # make the output look easier to read
-  zip -r -q "Pixel Launcher Extended Customize Installer $version.zip" . -x .git/\* Modifications/\* screenshots/\* autobuild.sh autobuild.ps1 banner.jpg banner2.jpg changelog.md codename.txt logo.png online_setup.sh offline_setup.sh customize_setup.sh README.md Pixel\ Launcher\ Extended* system/product/priv-app/NexusLauncherRelease/temp/\* system/product/priv-app/temp/\* system/product/etc/permissions/temp/\* system/product/overlay/ThemedIconsOverlay/temp/\* system/product/overlay/temp/\* system/temp/\* temp/\* system/system_ext/priv-app/WallpaperPickerGoogleRelease/temp/\* # Ignore specified files and folders because they are not needed for the module
+  zip -r -q "Pixel Launcher Extended Customize Installer $version.zip" . -x .git/\* Modifications/\* screenshots/\* autobuild.sh autobuild.ps1 banner.jpg banner2.jpg changelog.md codename.txt logo.png online_setup.sh offline_setup.sh customize_setup.sh README.md Pixel\ Launcher\ Extended* system/product/priv-app/NexusLauncherRelease/temp/\* system/product/priv-app/temp/\* system/product/etc/permissions/temp/\* system/product/overlay/temp/\* system/temp/\* temp/\* system/system_ext/priv-app/WallpaperPickerGoogleRelease/temp/\* # Ignore specified files and folders because they are not needed for the module
   echo ""                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             # make the output look easier to read
   echo ">> Done! You can find the module zip file in the current directory - '$(pwd)/Pixel Launcher Extended Customize Installer $version.zip'"
 
@@ -419,9 +357,6 @@ elif [ $choice -eq 3 ]; then
   done
   for file in system/product/etc/permissions/temp/*; do
     mv -f "$file" "system/product/etc/permissions/$(basename $file)" 2>/dev/null || true
-  done
-  for file in system/product/overlay/ThemedIconsOverlay/temp/*; do
-    mv -f "$file" "system/product/overlay/ThemedIconsOverlay/$(basename $file)" 2>/dev/null || true
   done
   for file in temp/*; do
     mv -f "$file" "$(basename $file)" 2>/dev/null || true
@@ -433,7 +368,6 @@ elif [ $choice -eq 3 ]; then
     mv -f "$file" "system/system_ext/priv-app/WallpaperPickerGoogleRelease/$(basename $file)" 2>/dev/null || true
   done
   mv "system/product/priv-app/temp/PixelLauncherDT2S" "system/product/priv-app/$folder" 2>/dev/null || true
-  mv "system/product/overlay/temp/ThemedIconsOverlay" "system/product/overlay/$folder" 2>/dev/null || true
   mv "system/product/priv-app/temp/PixelLauncherMods" "system/product/priv-app/$folder" 2>/dev/null || true
   mv "system/product/overlay/temp/PixelLauncherModsOverlay" "system/product/overlay/$folder" 2>/dev/null || true
   mv "system/product/overlay/temp/IconShape" "system/product/overlay/$folder" 2>/dev/null || true
@@ -444,7 +378,6 @@ elif [ $choice -eq 3 ]; then
 
   # Delete temp folders
   rm -rf system/product/priv-app/NexusLauncherRelease/temp
-  rm -rf system/product/overlay/ThemedIconsOverlay/temp
   rm -rf system/product/priv-app/temp
   rm -rf system/product/etc/permissions/temp
   rm -rf system/product/overlay/temp

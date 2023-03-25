@@ -54,7 +54,7 @@ If you wanna implement Pixel Launcher Extended in your custom rom then [visit he
 It doesn't require internet while flashing, but it's 100+ MB in size. It's available for download from [Download Links](#download-links) below. You can build it yourself too by following instructions from [Building from source](#building-from-source) section.
 
 **Online Installer**  
-It requires internet while flashing and downloads only selected files by user during installation. It's less than 5 MB in size. Depending upon your internet this variant may take more time in flashing compared to offline installer. It's available for download from [Download Links](#download-links) below. You can build it yourself too by following instructions from [Building from source](#building-from-source) section.
+It requires internet while flashing and downloads only selected files by user during installation. It's less than 10 MB in size. Depending upon your internet this variant may take more time in flashing compared to offline installer. It's available for download from [Download Links](#download-links) below. You can build it yourself too by following instructions from [Building from source](#building-from-source) section.
 
 **Customize Installer**  
 It's like offline installer but less in size. Installer zip size depends upon the modifications a user chooses while making the zip. It's not available for download from download links below. However, You can build it yourself by following instructions from [Building from source](#building-from-source) section. This variant is good for those whose phone's volume keys are broken or if they don't want to follow long instructions involving volume key presses(multiple times) while flashing in Magisk.
@@ -146,6 +146,7 @@ powershell -ExecutionPolicy Bypass -File ./autobuild.ps1
 ```
 - Select desired installer to make magisk module from PLE Builder
 - Don't use git in command-line or powershell to clone repo. Some users reported that it's corrupting contents.
+> PLE Builder for Windows doesn't support making of Customize Installer yet. Use Linux or Termux to make Customize Installer.
 
 ### For Ubuntu, Debian, and other Linux distributions
 - The required zip package install command is in the script itself. However, if you encounter any errors, you can install **zip** manually. On Ubuntu or Debian, Use the following command to do so."
