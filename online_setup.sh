@@ -98,10 +98,12 @@ download_file() {
       # Convert bytes to KB using bc
       filesize_kb=$(echo "scale=2; $filesize / 1024" | bc)
       echo "File size: $filesize_kb KB"
+      echo ""
     else
       # Convert bytes to MB using bc
       filesize_mb=$(echo "scale=2; $filesize / 1048576" | bc)
       echo "File size: $filesize_mb MB"
+      echo ""
     fi
   else
     echo "Download failed."
@@ -254,6 +256,8 @@ init_main() {
 
       if [[ "$FCTEXTAD1" == "Glance Greetings Style 1" ]]; then
         download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease10.apk" "$MODPATH/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease10.apk"
+        ui_print "Downloading required dependencies..."
+        ui_print ""
         download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_Pill_Dark.apk" "$MODPATH/system/product/overlay/TeamFiles_Pill_Dark.apk"
         download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_Pill_Empty.apk" "$MODPATH/system/product/overlay/TeamFiles_Pill_Empty.apk"
         download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_Pill_Light.apk" "$MODPATH/system/product/overlay/TeamFiles_Pill_Light.apk"
@@ -269,6 +273,8 @@ init_main() {
 
       elif [[ "$FCTEXTAD1" == "Glance Greetings Style 2" ]]; then
         download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease20.apk" "$MODPATH/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease20.apk"
+        ui_print "Downloading required dependencies..."
+        ui_print ""
         download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_Pill_Dark.apk" "$MODPATH/system/product/overlay/TeamFiles_Pill_Dark.apk"
         download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_Pill_Empty.apk" "$MODPATH/system/product/overlay/TeamFiles_Pill_Empty.apk"
         download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_Pill_Light.apk" "$MODPATH/system/product/overlay/TeamFiles_Pill_Light.apk"
@@ -407,6 +413,8 @@ init_main() {
 
       if [[ "$FCTEXTAD1" == "Glance Greetings Style 1" ]]; then
         download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease11.apk" "$MODPATH/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease11.apk"
+        ui_print "Downloading required dependencies..."
+        ui_print ""
         download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_Pill_Dark.apk" "$MODPATH/system/product/overlay/TeamFiles_Pill_Dark.apk"
         download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_Pill_Empty.apk" "$MODPATH/system/product/overlay/TeamFiles_Pill_Empty.apk"
         download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_Pill_Light.apk" "$MODPATH/system/product/overlay/TeamFiles_Pill_Light.apk"
@@ -422,6 +430,8 @@ init_main() {
 
       elif [[ "$FCTEXTAD1" == "Glance Greetings Style 2" ]]; then
         download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease21.apk" "$MODPATH/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease21.apk"
+        ui_print "Downloading required dependencies..."
+        ui_print ""
         download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_Pill_Dark.apk" "$MODPATH/system/product/overlay/TeamFiles_Pill_Dark.apk"
         download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_Pill_Empty.apk" "$MODPATH/system/product/overlay/TeamFiles_Pill_Empty.apk"
         download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_Pill_Light.apk" "$MODPATH/system/product/overlay/TeamFiles_Pill_Light.apk"
@@ -440,6 +450,7 @@ init_main() {
       download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease01.apk" "$MODPATH/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease01.apk"
       rm -rf "$MODPATH/system/product/etc/permissions/privapp-permissions-com.domain.liranazuz5.extendedsettings.xml"
     fi
+
   elif [ $PATCH_LEVEL -ge 202303 ]; then
     ui_print "Android 13 QPR2 detected!"
     ui_print "Security Patch - $PATCH_DATE"
@@ -559,6 +570,8 @@ init_main() {
 
       if [[ "$FCTEXTAD1" == "Glance Greetings Style 1" ]]; then
         download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease12.apk" "$MODPATH/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease12.apk"
+        ui_print "Downloading required dependencies..."
+        ui_print ""
         download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_Pill_Dark.apk" "$MODPATH/system/product/overlay/TeamFiles_Pill_Dark.apk"
         download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_Pill_Empty.apk" "$MODPATH/system/product/overlay/TeamFiles_Pill_Empty.apk"
         download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_Pill_Light.apk" "$MODPATH/system/product/overlay/TeamFiles_Pill_Light.apk"
@@ -574,6 +587,8 @@ init_main() {
 
       elif [[ "$FCTEXTAD1" == "Glance Greetings Style 2" ]]; then
         download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease22.apk" "$MODPATH/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease22.apk"
+        ui_print "Downloading required dependencies..."
+        ui_print ""
         download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_Pill_Dark.apk" "$MODPATH/system/product/overlay/TeamFiles_Pill_Dark.apk"
         download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_Pill_Empty.apk" "$MODPATH/system/product/overlay/TeamFiles_Pill_Empty.apk"
         download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_Pill_Light.apk" "$MODPATH/system/product/overlay/TeamFiles_Pill_Light.apk"
@@ -716,6 +731,8 @@ init_main() {
   ui_print ""
 
   if [[ "$FCTEXTAD1" == "Yes" ]]; then
+    ui_print "Downloading required dependencies..."
+    ui_print ""
     download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_we_Cloudy.apk" "$MODPATH/system/product/overlay/TeamFiles_we_Cloudy.apk"
     download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_we_Cylinder.apk" "$MODPATH/system/product/overlay/TeamFiles_we_Cylinder.apk"
     download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_we_Flower.apk" "$MODPATH/system/product/overlay/TeamFiles_we_Flower.apk"
