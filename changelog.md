@@ -3,6 +3,7 @@
 - Removed all themed icons choice. TeamFiles icons are now permanent
 - Removed push notifications service
 - Fixed crashing issue while tapping on Google Search Bar
+- Added new function to download files in online installer
 
 **Version 1.5**
 - Added theme switcher background & updated icons in extended settings app
