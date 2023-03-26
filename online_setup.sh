@@ -79,15 +79,36 @@ REPLACE="
 /system/product/overlay/CustomPixelLauncherOverlay.apk
 "
 
-# Web fetch tool for files & media by iamlooper @ telegram
-# curl: Silent mode (-fsS), redirect to STDOUT (-L) & contents to a file (-o)
-# wget: Silent mode (-q), redirect to STDOUT (-O-) & contents to a file (-O)
-web_fetch() {
-  [[ ! -z "$(command -v wget)" ]] && tool="wget" || tool="curl"
-  case "$1" in
-  "-d" | "--download") [[ "$tool" == "wget" ]] && wget "$2" -qO "$3" || curl "$2" -fsSo "$3" ;;
-  "-p" | "--print") [[ "$tool" == "wget" ]] && wget -qO- "$2" || curl -fsSL "$2" ;;
-  esac
+# Download file tool for files & media by saitamasahil @ GitHub
+download_file() {
+
+  # Get the URL and the file name from the arguments
+  url=$1
+  file=$2
+
+  # Download the file using wget
+  wget -q -O $file $url
+
+  # Check the exit status of wget
+  if [ $? -eq 0 ]; then
+    echo "Download completed."
+    filesize=$(wc -c <$file)
+    # Check if file size is less than 1 MB
+    if [ $filesize -lt 1048576 ]; then
+      # Convert bytes to KB using bc
+      filesize_kb=$(echo "scale=2; $filesize / 1024" | bc)
+      echo "File size: $filesize_kb KB"
+    else
+      # Convert bytes to MB using bc
+      filesize_mb=$(echo "scale=2; $filesize / 1048576" | bc)
+      echo "File size: $filesize_mb MB"
+    fi
+  else
+    echo "Download failed."
+    echo "Please check your internet connection. If it is okay, you may need to use a VPN to download from GitHub."
+    exit 1
+  fi
+
 }
 
 ############
@@ -232,38 +253,38 @@ init_main() {
       ui_print ""
 
       if [[ "$FCTEXTAD1" == "Glance Greetings Style 1" ]]; then
-        web_fetch -d "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease10.apk" "$MODPATH/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease10.apk"
-        web_fetch -d "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_Pill_Dark.apk" "$MODPATH/system/product/overlay/TeamFiles_Pill_Dark.apk"
-        web_fetch -d "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_Pill_Empty.apk" "$MODPATH/system/product/overlay/TeamFiles_Pill_Empty.apk"
-        web_fetch -d "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_Pill_Light.apk" "$MODPATH/system/product/overlay/TeamFiles_Pill_Light.apk"
-        web_fetch -d "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_Pill_Light_Accent.apk" "$MODPATH/system/product/overlay/TeamFiles_Pill_Light_Accent.apk"
-        web_fetch -d "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_Pill_Dark2.apk" "$MODPATH/system/product/overlay/TeamFiles_Pill_Dark2.apk"
-        web_fetch -d "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_Pill_Empty2.apk" "$MODPATH/system/product/overlay/TeamFiles_Pill_Empty2.apk"
-        web_fetch -d "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_Pill_Light2.apk" "$MODPATH/system/product/overlay/TeamFiles_Pill_Light2.apk"
-        web_fetch -d "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_Pill_Light_Accent2.apk" "$MODPATH/system/product/overlay/TeamFiles_Pill_Light_Accent2.apk"
-        web_fetch -d "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_UserChip.apk" "$MODPATH/system/product/overlay/TeamFiles_UserChip.apk"
-        web_fetch -d "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_UserCL.apk" "$MODPATH/system/product/overlay/TeamFiles_UserCL.apk"
-        web_fetch -d "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_UserLockscreen.apk" "$MODPATH/system/product/overlay/TeamFiles_UserLockscreen.apk"
-        web_fetch -d "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/priv-app/ExtendedSettings/ExtendedSettings.apk" "$MODPATH/system/product/priv-app/ExtendedSettings/ExtendedSettings.apk"
+        download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease10.apk" "$MODPATH/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease10.apk"
+        download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_Pill_Dark.apk" "$MODPATH/system/product/overlay/TeamFiles_Pill_Dark.apk"
+        download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_Pill_Empty.apk" "$MODPATH/system/product/overlay/TeamFiles_Pill_Empty.apk"
+        download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_Pill_Light.apk" "$MODPATH/system/product/overlay/TeamFiles_Pill_Light.apk"
+        download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_Pill_Light_Accent.apk" "$MODPATH/system/product/overlay/TeamFiles_Pill_Light_Accent.apk"
+        download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_Pill_Dark2.apk" "$MODPATH/system/product/overlay/TeamFiles_Pill_Dark2.apk"
+        download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_Pill_Empty2.apk" "$MODPATH/system/product/overlay/TeamFiles_Pill_Empty2.apk"
+        download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_Pill_Light2.apk" "$MODPATH/system/product/overlay/TeamFiles_Pill_Light2.apk"
+        download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_Pill_Light_Accent2.apk" "$MODPATH/system/product/overlay/TeamFiles_Pill_Light_Accent2.apk"
+        download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_UserChip.apk" "$MODPATH/system/product/overlay/TeamFiles_UserChip.apk"
+        download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_UserCL.apk" "$MODPATH/system/product/overlay/TeamFiles_UserCL.apk"
+        download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_UserLockscreen.apk" "$MODPATH/system/product/overlay/TeamFiles_UserLockscreen.apk"
+        download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/priv-app/ExtendedSettings/ExtendedSettings.apk" "$MODPATH/system/product/priv-app/ExtendedSettings/ExtendedSettings.apk"
 
       elif [[ "$FCTEXTAD1" == "Glance Greetings Style 2" ]]; then
-        web_fetch -d "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease20.apk" "$MODPATH/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease20.apk"
-        web_fetch -d "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_Pill_Dark.apk" "$MODPATH/system/product/overlay/TeamFiles_Pill_Dark.apk"
-        web_fetch -d "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_Pill_Empty.apk" "$MODPATH/system/product/overlay/TeamFiles_Pill_Empty.apk"
-        web_fetch -d "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_Pill_Light.apk" "$MODPATH/system/product/overlay/TeamFiles_Pill_Light.apk"
-        web_fetch -d "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_Pill_Light_Accent.apk" "$MODPATH/system/product/overlay/TeamFiles_Pill_Light_Accent.apk"
-        web_fetch -d "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_Pill_Dark2.apk" "$MODPATH/system/product/overlay/TeamFiles_Pill_Dark2.apk"
-        web_fetch -d "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_Pill_Empty2.apk" "$MODPATH/system/product/overlay/TeamFiles_Pill_Empty2.apk"
-        web_fetch -d "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_Pill_Light2.apk" "$MODPATH/system/product/overlay/TeamFiles_Pill_Light2.apk"
-        web_fetch -d "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_Pill_Light_Accent2.apk" "$MODPATH/system/product/overlay/TeamFiles_Pill_Light_Accent2.apk"
-        web_fetch -d "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_UserChip.apk" "$MODPATH/system/product/overlay/TeamFiles_UserChip.apk"
-        web_fetch -d "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_UserCL.apk" "$MODPATH/system/product/overlay/TeamFiles_UserCL.apk"
-        web_fetch -d "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_UserLockscreen.apk" "$MODPATH/system/product/overlay/TeamFiles_UserLockscreen.apk"
-        web_fetch -d "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/priv-app/ExtendedSettings/ExtendedSettings.apk" "$MODPATH/system/product/priv-app/ExtendedSettings/ExtendedSettings.apk"
+        download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease20.apk" "$MODPATH/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease20.apk"
+        download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_Pill_Dark.apk" "$MODPATH/system/product/overlay/TeamFiles_Pill_Dark.apk"
+        download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_Pill_Empty.apk" "$MODPATH/system/product/overlay/TeamFiles_Pill_Empty.apk"
+        download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_Pill_Light.apk" "$MODPATH/system/product/overlay/TeamFiles_Pill_Light.apk"
+        download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_Pill_Light_Accent.apk" "$MODPATH/system/product/overlay/TeamFiles_Pill_Light_Accent.apk"
+        download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_Pill_Dark2.apk" "$MODPATH/system/product/overlay/TeamFiles_Pill_Dark2.apk"
+        download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_Pill_Empty2.apk" "$MODPATH/system/product/overlay/TeamFiles_Pill_Empty2.apk"
+        download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_Pill_Light2.apk" "$MODPATH/system/product/overlay/TeamFiles_Pill_Light2.apk"
+        download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_Pill_Light_Accent2.apk" "$MODPATH/system/product/overlay/TeamFiles_Pill_Light_Accent2.apk"
+        download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_UserChip.apk" "$MODPATH/system/product/overlay/TeamFiles_UserChip.apk"
+        download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_UserCL.apk" "$MODPATH/system/product/overlay/TeamFiles_UserCL.apk"
+        download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_UserLockscreen.apk" "$MODPATH/system/product/overlay/TeamFiles_UserLockscreen.apk"
+        download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/priv-app/ExtendedSettings/ExtendedSettings.apk" "$MODPATH/system/product/priv-app/ExtendedSettings/ExtendedSettings.apk"
       fi
 
     elif [[ "$FCTEXTAD1" == "No" ]]; then
-      web_fetch -d "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease00.apk" "$MODPATH/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease00.apk"
+      download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease00.apk" "$MODPATH/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease00.apk"
       rm -rf "$MODPATH/system/product/etc/permissions/privapp-permissions-com.domain.liranazuz5.extendedsettings.xml"
     fi
 
@@ -385,38 +406,38 @@ init_main() {
       ui_print ""
 
       if [[ "$FCTEXTAD1" == "Glance Greetings Style 1" ]]; then
-        web_fetch -d "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease11.apk" "$MODPATH/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease11.apk"
-        web_fetch -d "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_Pill_Dark.apk" "$MODPATH/system/product/overlay/TeamFiles_Pill_Dark.apk"
-        web_fetch -d "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_Pill_Empty.apk" "$MODPATH/system/product/overlay/TeamFiles_Pill_Empty.apk"
-        web_fetch -d "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_Pill_Light.apk" "$MODPATH/system/product/overlay/TeamFiles_Pill_Light.apk"
-        web_fetch -d "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_Pill_Light_Accent.apk" "$MODPATH/system/product/overlay/TeamFiles_Pill_Light_Accent.apk"
-        web_fetch -d "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_Pill_Dark2.apk" "$MODPATH/system/product/overlay/TeamFiles_Pill_Dark2.apk"
-        web_fetch -d "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_Pill_Empty2.apk" "$MODPATH/system/product/overlay/TeamFiles_Pill_Empty2.apk"
-        web_fetch -d "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_Pill_Light2.apk" "$MODPATH/system/product/overlay/TeamFiles_Pill_Light2.apk"
-        web_fetch -d "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_Pill_Light_Accent2.apk" "$MODPATH/system/product/overlay/TeamFiles_Pill_Light_Accent2.apk"
-        web_fetch -d "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_UserChip.apk" "$MODPATH/system/product/overlay/TeamFiles_UserChip.apk"
-        web_fetch -d "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_UserCL.apk" "$MODPATH/system/product/overlay/TeamFiles_UserCL.apk"
-        web_fetch -d "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_UserLockscreen.apk" "$MODPATH/system/product/overlay/TeamFiles_UserLockscreen.apk"
-        web_fetch -d "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/priv-app/ExtendedSettings/ExtendedSettings.apk" "$MODPATH/system/product/priv-app/ExtendedSettings/ExtendedSettings.apk"
+        download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease11.apk" "$MODPATH/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease11.apk"
+        download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_Pill_Dark.apk" "$MODPATH/system/product/overlay/TeamFiles_Pill_Dark.apk"
+        download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_Pill_Empty.apk" "$MODPATH/system/product/overlay/TeamFiles_Pill_Empty.apk"
+        download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_Pill_Light.apk" "$MODPATH/system/product/overlay/TeamFiles_Pill_Light.apk"
+        download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_Pill_Light_Accent.apk" "$MODPATH/system/product/overlay/TeamFiles_Pill_Light_Accent.apk"
+        download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_Pill_Dark2.apk" "$MODPATH/system/product/overlay/TeamFiles_Pill_Dark2.apk"
+        download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_Pill_Empty2.apk" "$MODPATH/system/product/overlay/TeamFiles_Pill_Empty2.apk"
+        download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_Pill_Light2.apk" "$MODPATH/system/product/overlay/TeamFiles_Pill_Light2.apk"
+        download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_Pill_Light_Accent2.apk" "$MODPATH/system/product/overlay/TeamFiles_Pill_Light_Accent2.apk"
+        download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_UserChip.apk" "$MODPATH/system/product/overlay/TeamFiles_UserChip.apk"
+        download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_UserCL.apk" "$MODPATH/system/product/overlay/TeamFiles_UserCL.apk"
+        download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_UserLockscreen.apk" "$MODPATH/system/product/overlay/TeamFiles_UserLockscreen.apk"
+        download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/priv-app/ExtendedSettings/ExtendedSettings.apk" "$MODPATH/system/product/priv-app/ExtendedSettings/ExtendedSettings.apk"
 
       elif [[ "$FCTEXTAD1" == "Glance Greetings Style 2" ]]; then
-        web_fetch -d "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease21.apk" "$MODPATH/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease21.apk"
-        web_fetch -d "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_Pill_Dark.apk" "$MODPATH/system/product/overlay/TeamFiles_Pill_Dark.apk"
-        web_fetch -d "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_Pill_Empty.apk" "$MODPATH/system/product/overlay/TeamFiles_Pill_Empty.apk"
-        web_fetch -d "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_Pill_Light.apk" "$MODPATH/system/product/overlay/TeamFiles_Pill_Light.apk"
-        web_fetch -d "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_Pill_Light_Accent.apk" "$MODPATH/system/product/overlay/TeamFiles_Pill_Light_Accent.apk"
-        web_fetch -d "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_Pill_Dark2.apk" "$MODPATH/system/product/overlay/TeamFiles_Pill_Dark2.apk"
-        web_fetch -d "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_Pill_Empty2.apk" "$MODPATH/system/product/overlay/TeamFiles_Pill_Empty2.apk"
-        web_fetch -d "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_Pill_Light2.apk" "$MODPATH/system/product/overlay/TeamFiles_Pill_Light2.apk"
-        web_fetch -d "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_Pill_Light_Accent2.apk" "$MODPATH/system/product/overlay/TeamFiles_Pill_Light_Accent2.apk"
-        web_fetch -d "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_UserChip.apk" "$MODPATH/system/product/overlay/TeamFiles_UserChip.apk"
-        web_fetch -d "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_UserCL.apk" "$MODPATH/system/product/overlay/TeamFiles_UserCL.apk"
-        web_fetch -d "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_UserLockscreen.apk" "$MODPATH/system/product/overlay/TeamFiles_UserLockscreen.apk"
-        web_fetch -d "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/priv-app/ExtendedSettings/ExtendedSettings.apk" "$MODPATH/system/product/priv-app/ExtendedSettings/ExtendedSettings.apk"
+        download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease21.apk" "$MODPATH/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease21.apk"
+        download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_Pill_Dark.apk" "$MODPATH/system/product/overlay/TeamFiles_Pill_Dark.apk"
+        download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_Pill_Empty.apk" "$MODPATH/system/product/overlay/TeamFiles_Pill_Empty.apk"
+        download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_Pill_Light.apk" "$MODPATH/system/product/overlay/TeamFiles_Pill_Light.apk"
+        download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_Pill_Light_Accent.apk" "$MODPATH/system/product/overlay/TeamFiles_Pill_Light_Accent.apk"
+        download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_Pill_Dark2.apk" "$MODPATH/system/product/overlay/TeamFiles_Pill_Dark2.apk"
+        download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_Pill_Empty2.apk" "$MODPATH/system/product/overlay/TeamFiles_Pill_Empty2.apk"
+        download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_Pill_Light2.apk" "$MODPATH/system/product/overlay/TeamFiles_Pill_Light2.apk"
+        download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_Pill_Light_Accent2.apk" "$MODPATH/system/product/overlay/TeamFiles_Pill_Light_Accent2.apk"
+        download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_UserChip.apk" "$MODPATH/system/product/overlay/TeamFiles_UserChip.apk"
+        download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_UserCL.apk" "$MODPATH/system/product/overlay/TeamFiles_UserCL.apk"
+        download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_UserLockscreen.apk" "$MODPATH/system/product/overlay/TeamFiles_UserLockscreen.apk"
+        download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/priv-app/ExtendedSettings/ExtendedSettings.apk" "$MODPATH/system/product/priv-app/ExtendedSettings/ExtendedSettings.apk"
       fi
 
     elif [[ "$FCTEXTAD1" == "No" ]]; then
-      web_fetch -d "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease01.apk" "$MODPATH/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease01.apk"
+      download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease01.apk" "$MODPATH/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease01.apk"
       rm -rf "$MODPATH/system/product/etc/permissions/privapp-permissions-com.domain.liranazuz5.extendedsettings.xml"
     fi
   elif [ $PATCH_LEVEL -ge 202303 ]; then
@@ -537,38 +558,38 @@ init_main() {
       ui_print ""
 
       if [[ "$FCTEXTAD1" == "Glance Greetings Style 1" ]]; then
-        web_fetch -d "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease12.apk" "$MODPATH/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease12.apk"
-        web_fetch -d "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_Pill_Dark.apk" "$MODPATH/system/product/overlay/TeamFiles_Pill_Dark.apk"
-        web_fetch -d "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_Pill_Empty.apk" "$MODPATH/system/product/overlay/TeamFiles_Pill_Empty.apk"
-        web_fetch -d "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_Pill_Light.apk" "$MODPATH/system/product/overlay/TeamFiles_Pill_Light.apk"
-        web_fetch -d "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_Pill_Light_Accent.apk" "$MODPATH/system/product/overlay/TeamFiles_Pill_Light_Accent.apk"
-        web_fetch -d "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_Pill_Dark2.apk" "$MODPATH/system/product/overlay/TeamFiles_Pill_Dark2.apk"
-        web_fetch -d "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_Pill_Empty2.apk" "$MODPATH/system/product/overlay/TeamFiles_Pill_Empty2.apk"
-        web_fetch -d "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_Pill_Light2.apk" "$MODPATH/system/product/overlay/TeamFiles_Pill_Light2.apk"
-        web_fetch -d "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_Pill_Light_Accent2.apk" "$MODPATH/system/product/overlay/TeamFiles_Pill_Light_Accent2.apk"
-        web_fetch -d "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_UserChip.apk" "$MODPATH/system/product/overlay/TeamFiles_UserChip.apk"
-        web_fetch -d "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_UserCL.apk" "$MODPATH/system/product/overlay/TeamFiles_UserCL.apk"
-        web_fetch -d "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_UserLockscreen.apk" "$MODPATH/system/product/overlay/TeamFiles_UserLockscreen.apk"
-        web_fetch -d "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/priv-app/ExtendedSettings/ExtendedSettings.apk" "$MODPATH/system/product/priv-app/ExtendedSettings/ExtendedSettings.apk"
+        download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease12.apk" "$MODPATH/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease12.apk"
+        download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_Pill_Dark.apk" "$MODPATH/system/product/overlay/TeamFiles_Pill_Dark.apk"
+        download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_Pill_Empty.apk" "$MODPATH/system/product/overlay/TeamFiles_Pill_Empty.apk"
+        download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_Pill_Light.apk" "$MODPATH/system/product/overlay/TeamFiles_Pill_Light.apk"
+        download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_Pill_Light_Accent.apk" "$MODPATH/system/product/overlay/TeamFiles_Pill_Light_Accent.apk"
+        download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_Pill_Dark2.apk" "$MODPATH/system/product/overlay/TeamFiles_Pill_Dark2.apk"
+        download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_Pill_Empty2.apk" "$MODPATH/system/product/overlay/TeamFiles_Pill_Empty2.apk"
+        download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_Pill_Light2.apk" "$MODPATH/system/product/overlay/TeamFiles_Pill_Light2.apk"
+        download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_Pill_Light_Accent2.apk" "$MODPATH/system/product/overlay/TeamFiles_Pill_Light_Accent2.apk"
+        download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_UserChip.apk" "$MODPATH/system/product/overlay/TeamFiles_UserChip.apk"
+        download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_UserCL.apk" "$MODPATH/system/product/overlay/TeamFiles_UserCL.apk"
+        download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_UserLockscreen.apk" "$MODPATH/system/product/overlay/TeamFiles_UserLockscreen.apk"
+        download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/priv-app/ExtendedSettings/ExtendedSettings.apk" "$MODPATH/system/product/priv-app/ExtendedSettings/ExtendedSettings.apk"
 
       elif [[ "$FCTEXTAD1" == "Glance Greetings Style 2" ]]; then
-        web_fetch -d "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease22.apk" "$MODPATH/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease22.apk"
-        web_fetch -d "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_Pill_Dark.apk" "$MODPATH/system/product/overlay/TeamFiles_Pill_Dark.apk"
-        web_fetch -d "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_Pill_Empty.apk" "$MODPATH/system/product/overlay/TeamFiles_Pill_Empty.apk"
-        web_fetch -d "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_Pill_Light.apk" "$MODPATH/system/product/overlay/TeamFiles_Pill_Light.apk"
-        web_fetch -d "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_Pill_Light_Accent.apk" "$MODPATH/system/product/overlay/TeamFiles_Pill_Light_Accent.apk"
-        web_fetch -d "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_Pill_Dark2.apk" "$MODPATH/system/product/overlay/TeamFiles_Pill_Dark2.apk"
-        web_fetch -d "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_Pill_Empty2.apk" "$MODPATH/system/product/overlay/TeamFiles_Pill_Empty2.apk"
-        web_fetch -d "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_Pill_Light2.apk" "$MODPATH/system/product/overlay/TeamFiles_Pill_Light2.apk"
-        web_fetch -d "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_Pill_Light_Accent2.apk" "$MODPATH/system/product/overlay/TeamFiles_Pill_Light_Accent2.apk"
-        web_fetch -d "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_UserChip.apk" "$MODPATH/system/product/overlay/TeamFiles_UserChip.apk"
-        web_fetch -d "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_UserCL.apk" "$MODPATH/system/product/overlay/TeamFiles_UserCL.apk"
-        web_fetch -d "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_UserLockscreen.apk" "$MODPATH/system/product/overlay/TeamFiles_UserLockscreen.apk"
-        web_fetch -d "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/priv-app/ExtendedSettings/ExtendedSettings.apk" "$MODPATH/system/product/priv-app/ExtendedSettings/ExtendedSettings.apk"
+        download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease22.apk" "$MODPATH/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease22.apk"
+        download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_Pill_Dark.apk" "$MODPATH/system/product/overlay/TeamFiles_Pill_Dark.apk"
+        download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_Pill_Empty.apk" "$MODPATH/system/product/overlay/TeamFiles_Pill_Empty.apk"
+        download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_Pill_Light.apk" "$MODPATH/system/product/overlay/TeamFiles_Pill_Light.apk"
+        download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_Pill_Light_Accent.apk" "$MODPATH/system/product/overlay/TeamFiles_Pill_Light_Accent.apk"
+        download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_Pill_Dark2.apk" "$MODPATH/system/product/overlay/TeamFiles_Pill_Dark2.apk"
+        download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_Pill_Empty2.apk" "$MODPATH/system/product/overlay/TeamFiles_Pill_Empty2.apk"
+        download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_Pill_Light2.apk" "$MODPATH/system/product/overlay/TeamFiles_Pill_Light2.apk"
+        download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_Pill_Light_Accent2.apk" "$MODPATH/system/product/overlay/TeamFiles_Pill_Light_Accent2.apk"
+        download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_UserChip.apk" "$MODPATH/system/product/overlay/TeamFiles_UserChip.apk"
+        download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_UserCL.apk" "$MODPATH/system/product/overlay/TeamFiles_UserCL.apk"
+        download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_UserLockscreen.apk" "$MODPATH/system/product/overlay/TeamFiles_UserLockscreen.apk"
+        download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/priv-app/ExtendedSettings/ExtendedSettings.apk" "$MODPATH/system/product/priv-app/ExtendedSettings/ExtendedSettings.apk"
       fi
 
     elif [[ "$FCTEXTAD1" == "No" ]]; then
-      web_fetch -d "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease02.apk" "$MODPATH/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease02.apk"
+      download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease02.apk" "$MODPATH/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease02.apk"
       rm -rf "$MODPATH/system/product/etc/permissions/privapp-permissions-com.domain.liranazuz5.extendedsettings.xml"
     fi
   fi
@@ -654,7 +675,7 @@ init_main() {
   ui_print ""
 
   if [[ "$FCTEXTAD1" == "Yes" ]]; then
-    web_fetch -d "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/priv-app/PixelLauncherMods/PixelLauncherMods.apk" "$MODPATH/system/product/priv-app/PixelLauncherMods/PixelLauncherMods.apk"
+    download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/priv-app/PixelLauncherMods/PixelLauncherMods.apk" "$MODPATH/system/product/priv-app/PixelLauncherMods/PixelLauncherMods.apk"
 
   elif [[ "$FCTEXTAD1" == "No" ]]; then
     rm -rf "$MODPATH/system/product/priv-app/PixelLauncherMods"
@@ -695,23 +716,23 @@ init_main() {
   ui_print ""
 
   if [[ "$FCTEXTAD1" == "Yes" ]]; then
-    web_fetch -d "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_we_Cloudy.apk" "$MODPATH/system/product/overlay/TeamFiles_we_Cloudy.apk"
-    web_fetch -d "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_we_Cylinder.apk" "$MODPATH/system/product/overlay/TeamFiles_we_Cylinder.apk"
-    web_fetch -d "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_we_Flower.apk" "$MODPATH/system/product/overlay/TeamFiles_we_Flower.apk"
-    web_fetch -d "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_we_Hexagon.apk" "$MODPATH/system/product/overlay/TeamFiles_we_Hexagon.apk"
-    web_fetch -d "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_we_Leaf.apk" "$MODPATH/system/product/overlay/TeamFiles_we_Leaf.apk"
-    web_fetch -d "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_we_Mallow.apk" "$MODPATH/system/product/overlay/TeamFiles_we_Mallow.apk"
-    web_fetch -d "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_we_Pebble.apk" "$MODPATH/system/product/overlay/TeamFiles_we_Pebble.apk"
-    web_fetch -d "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_we_RoundedHexagon.apk" "$MODPATH/system/product/overlay/TeamFiles_we_RoundedHexagon.apk"
-    web_fetch -d "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_we_RoundedRectangle.apk" "$MODPATH/system/product/overlay/TeamFiles_we_RoundedRectangle.apk"
-    web_fetch -d "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_we_Square.apk" "$MODPATH/system/product/overlay/TeamFiles_we_Square.apk"
-    web_fetch -d "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_we_Squircle.apk" "$MODPATH/system/product/overlay/TeamFiles_we_Squircle.apk"
-    web_fetch -d "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_we_Stretched.apk" "$MODPATH/system/product/overlay/TeamFiles_we_Stretched.apk"
-    web_fetch -d "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_we_TaperedRectangular.apk" "$MODPATH/system/product/overlay/TeamFiles_we_TaperedRectangular.apk"
-    web_fetch -d "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_we_Teardrops.apk" "$MODPATH/system/product/overlay/TeamFiles_we_Teardrops.apk"
-    web_fetch -d "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_we_Vessel.apk" "$MODPATH/system/product/overlay/TeamFiles_we_Vessel.apk"
-    web_fetch -d "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_we_Samsung.apk" "$MODPATH/system/product/overlay/TeamFiles_we_Samsung.apk"
-    web_fetch -d "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/priv-app/IconShapeChanger/IconShapeChanger.apk" "$MODPATH/system/product/priv-app/IconShapeChanger/IconShapeChanger.apk"
+    download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_we_Cloudy.apk" "$MODPATH/system/product/overlay/TeamFiles_we_Cloudy.apk"
+    download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_we_Cylinder.apk" "$MODPATH/system/product/overlay/TeamFiles_we_Cylinder.apk"
+    download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_we_Flower.apk" "$MODPATH/system/product/overlay/TeamFiles_we_Flower.apk"
+    download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_we_Hexagon.apk" "$MODPATH/system/product/overlay/TeamFiles_we_Hexagon.apk"
+    download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_we_Leaf.apk" "$MODPATH/system/product/overlay/TeamFiles_we_Leaf.apk"
+    download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_we_Mallow.apk" "$MODPATH/system/product/overlay/TeamFiles_we_Mallow.apk"
+    download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_we_Pebble.apk" "$MODPATH/system/product/overlay/TeamFiles_we_Pebble.apk"
+    download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_we_RoundedHexagon.apk" "$MODPATH/system/product/overlay/TeamFiles_we_RoundedHexagon.apk"
+    download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_we_RoundedRectangle.apk" "$MODPATH/system/product/overlay/TeamFiles_we_RoundedRectangle.apk"
+    download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_we_Square.apk" "$MODPATH/system/product/overlay/TeamFiles_we_Square.apk"
+    download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_we_Squircle.apk" "$MODPATH/system/product/overlay/TeamFiles_we_Squircle.apk"
+    download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_we_Stretched.apk" "$MODPATH/system/product/overlay/TeamFiles_we_Stretched.apk"
+    download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_we_TaperedRectangular.apk" "$MODPATH/system/product/overlay/TeamFiles_we_TaperedRectangular.apk"
+    download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_we_Teardrops.apk" "$MODPATH/system/product/overlay/TeamFiles_we_Teardrops.apk"
+    download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_we_Vessel.apk" "$MODPATH/system/product/overlay/TeamFiles_we_Vessel.apk"
+    download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_we_Samsung.apk" "$MODPATH/system/product/overlay/TeamFiles_we_Samsung.apk"
+    download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/priv-app/IconShapeChanger/IconShapeChanger.apk" "$MODPATH/system/product/priv-app/IconShapeChanger/IconShapeChanger.apk"
 
   elif [[ "$FCTEXTAD1" == "No" ]]; then
     rm -rf "$MODPATH/system/product/etc/permissions/privapp-permissions-com.saitama.iconshape.xml"
@@ -797,10 +818,10 @@ init_main() {
   ui_print ""
 
   if [[ "$FCTEXTAD1" == "Yes" ]]; then
-    web_fetch -d "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/system_ext/priv-app/WallpaperPickerGoogleRelease/WallpaperPickerGoogleReleaseNew.apk" "$MODPATH/system/system_ext/priv-app/WallpaperPickerGoogleRelease/WallpaperPickerGoogleReleaseNew.apk"
+    download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/system_ext/priv-app/WallpaperPickerGoogleRelease/WallpaperPickerGoogleReleaseNew.apk" "$MODPATH/system/system_ext/priv-app/WallpaperPickerGoogleRelease/WallpaperPickerGoogleReleaseNew.apk"
 
   elif [[ "$FCTEXTAD1" == "No" ]]; then
-    web_fetch -d "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/system_ext/priv-app/WallpaperPickerGoogleRelease/WallpaperPickerGoogleRelease.apk" "$MODPATH/system/system_ext/priv-app/WallpaperPickerGoogleRelease/WallpaperPickerGoogleRelease.apk"
+    download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/system_ext/priv-app/WallpaperPickerGoogleRelease/WallpaperPickerGoogleRelease.apk" "$MODPATH/system/system_ext/priv-app/WallpaperPickerGoogleRelease/WallpaperPickerGoogleRelease.apk"
   fi
 
   ui_print "[*] Clearing system cache to make it work properly..."
@@ -827,4 +848,5 @@ init_main() {
   sleep 2
 
   touch "$MODPATH/first"
+
 }
