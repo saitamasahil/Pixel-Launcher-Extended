@@ -6,7 +6,6 @@
         <permission name="android.permission.CHANGE_OVERLAY_PACKAGES"/>
         <permission name="android.permission.CUSTOMIZE_SYSTEM_UI"/>
         <permission name="android.permission.INTERNET"/>
-        <permission name="android.permission.INTERACT_ACROSS_USERS_FULL"/>
         <permission name="android.permission.LAUNCH_MULTI_PANE_SETTINGS_DEEP_LINK"/>
         <permission name="android.permission.MODIFY_DAY_NIGHT_MODE"/>
         <permission name="android.permission.READ_DEVICE_CONFIG"/>
@@ -20,19 +19,14 @@
         <permission name="android.permission.WAKE_LOCK"/>
         <permission name="android.permission.WRITE_EXTERNAL_STORAGE"/>
         <permission name="android.permission.WRITE_SECURE_SETTINGS"/>
-        <permission name="android.permission.QUERY_ALL_PACKAGES"/>
         <permission name="com.breel.wallpapers19.APPLY_SETTINGS"/>
         <permission name="com.google.android.apps.wallpaper.CHANGE_DOCKED_CLOCK_FACE"/>
         <permission name="com.google.android.apps.wallpaper.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"/>
-        <permission name="com.android.wallpaper.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"/>
         <permission name="com.google.android.apps.wallpaper.NOTIFY_ROTATING_WALLPAPER_CHANGED"/>
-        <permission name="com.android.wallpaper.NOTIFY_ROTATING_WALLPAPER_CHANGED"/>
         <permission name="com.google.android.c2dm.permission.RECEIVE"/>
         <permission name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
         <permission name="com.google.android.wallpaper.effects.GENERATE_EFFECT"/>
         <permission name="com.google.android.wallpaper.effects.QUERY_EFFECT"/>
         <permission name="com.google.pixel.livewallpaper.permission.DOWNLOAD_LIVE_WALLPAPER"/>
-        <permission name="com.android.launcher3.permission.READ_SETTINGS"/>
-        <permission name="com.android.launcher3.permission.WRITE_SETTINGS"/>
     </privapp-permissions>
 </permissions>
