@@ -107,7 +107,8 @@ download_file() {
     fi
   else
     echo "Download failed."
-    echo "Please check your internet connection. If it is okay, you may need to use a VPN to download from GitHub."
+    echo "Please check your internet connection."
+    echo "If it is okay, you may need to use a VPN to download files."
     exit 1
   fi
 
@@ -290,6 +291,8 @@ init_main() {
       fi
 
     elif [[ "$FCTEXTAD1" == "No" ]]; then
+      ui_print "Downloading..."
+      ui_print ""
       download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease00.apk" "$MODPATH/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease00.apk"
       rm -rf "$MODPATH/system/product/etc/permissions/privapp-permissions-com.domain.liranazuz5.extendedsettings.xml"
     fi
@@ -447,6 +450,8 @@ init_main() {
       fi
 
     elif [[ "$FCTEXTAD1" == "No" ]]; then
+      ui_print "Downloading..."
+      ui_print ""
       download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease01.apk" "$MODPATH/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease01.apk"
       rm -rf "$MODPATH/system/product/etc/permissions/privapp-permissions-com.domain.liranazuz5.extendedsettings.xml"
     fi
@@ -604,6 +609,8 @@ init_main() {
       fi
 
     elif [[ "$FCTEXTAD1" == "No" ]]; then
+      ui_print "Downloading..."
+      ui_print ""
       download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease02.apk" "$MODPATH/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease02.apk"
       rm -rf "$MODPATH/system/product/etc/permissions/privapp-permissions-com.domain.liranazuz5.extendedsettings.xml"
     fi
@@ -690,6 +697,8 @@ init_main() {
   ui_print ""
 
   if [[ "$FCTEXTAD1" == "Yes" ]]; then
+    ui_print "Downloading..."
+    ui_print ""
     download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/priv-app/PixelLauncherMods/PixelLauncherMods.apk" "$MODPATH/system/product/priv-app/PixelLauncherMods/PixelLauncherMods.apk"
 
   elif [[ "$FCTEXTAD1" == "No" ]]; then
@@ -835,15 +844,21 @@ init_main() {
   ui_print ""
 
   if [[ "$FCTEXTAD1" == "Pixel Wallpaper Picker" ]]; then
+    ui_print "Downloading..."
+    ui_print ""
     rm -rf "$MODPATH/system/system_ext/etc/permissions/AOSP_Picker.xml"
     download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/system_ext/priv-app/WallpaperPickerGoogleRelease/WallpaperPickerGoogleRelease.apk" "$MODPATH/system/system_ext/priv-app/WallpaperPickerGoogleRelease/WallpaperPickerGoogleRelease.apk"
 
   elif [[ "$FCTEXTAD1" == "AOSP Wallpaper Picker" ]]; then
     rm -rf "$MODPATH/system/system_ext/etc/permissions/privapp-permissions-com.google.android.apps.wallpaper.xml"
     if [ $PATCH_LEVEL -le 202302 ]; then
+      ui_print "Downloading..."
+      ui_print ""
       download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/system_ext/priv-app/WallpaperPickerGoogleRelease/AOSPPicker1.apk" "$MODPATH/system/system_ext/priv-app/WallpaperPickerGoogleRelease/AOSPPicker1.apk"
 
     elif [ $PATCH_LEVEL -ge 202303 ]; then
+      ui_print "Downloading..."
+      ui_print ""
       download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/system_ext/priv-app/WallpaperPickerGoogleRelease/AOSPPicker2.apk" "$MODPATH/system/system_ext/priv-app/WallpaperPickerGoogleRelease/AOSPPicker2.apk"
     fi
   fi
