@@ -36,6 +36,7 @@ If you wanna implement Pixel Launcher Extended in your custom rom then [visit he
 ### Prerequisites
 - Compatible ROMs (**AOSP-based custom ROMs** or **Google Pixel stock ROM**) based on Android 13.
 - Device rooted by [Magisk latest stable](https://github.com/topjohnwu/Magisk/releases/latest).
+> It is strongly advised to only use the official version of Magisk, as there have been reports from users of various issues such as bootloops and other problems when using unofficial forks of the software. Therefore, it is highly recommended that users only download and install Magisk from the official source to ensure the stability of Pixel Launcher Extended.
 - [LSPosed](https://github.com/LSPosed/LSPosed) *(optional, if you want to use double tap to sleep feature)*
 
 **Disclaimer**
@@ -60,7 +61,7 @@ It's like offline installer but less in size. Installer zip size depends upon th
 ### Activating Double Tap to Sleep
 - Make sure you installed DT2S while flashing the module(or selected it while making in case of customize installer)
 - After rebooting device, open LSPosed and enable **Pixel Launcher DT2S**
-- Force-stop Pixel Launcher from Settings (or reboot device again)
+- Force-stop Pixel Launcher Extended from Settings (or reboot device again)
 - Double-tap once on home screen. Grant superuser permissions and enjoy
 
 ### Activating Developer Options In Launcher
@@ -105,7 +106,7 @@ If you don't get unified & universal search bar in Pixel Launcher Extended shown
 - [Looper](https://github.com/iamlooper)
 
 #### Hide Apps Feature
-You can enable the hide app feature in Pixel Launcher by using a third-party app called **Pixel Mods**. *(**LSPosed** is required for this add-on)*.
+You can enable the hide app feature in Pixel Launcher Extended by using a third-party app called **Pixel Mods**. *(**LSPosed** is required for this add-on)*.
 - Install the [Pixel Mods App](https://play.google.com/store/apps/details?id=com.metris.xposed.pmods)
 - Open LSPosed and click **Pixel Mods** from modules section. Toggle **Enable Module** and make sure **Pixel Launcher** has ticked
 - Reboot device
@@ -232,7 +233,7 @@ su -c settings delete secure theme_customization_overlay_packages
 Force-stop the app and relaunch.
 
 ### Pixel Launcher Extended crashes while going to recent tab
-Turn off **Overview suggestions** from Pixel Launcher's settings.
+Turn off **Overview suggestions** from Pixel Launcher Extended's settings.
 
 ### Quick Search Bar not opening
 Make sure your rom has proper GApps. Also if your rom doesn't have Google App then download it from play store.
