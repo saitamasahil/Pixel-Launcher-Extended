@@ -1,11 +1,3 @@
-**Version 1.6**
-- Updated permissions for wallpaper picker
-- Removed all themed icons choice. TeamFiles icons are now permanent
-- Removed push notifications service
-- Fixed crashing issue while tapping on Google Search Bar
-- Added new function to download files in online installer
-- Fixed crashing issue when user installs AOSP Wallpaper Picker in Android 13 QPR2
-
 **Version 1.5**
 - Added theme switcher background & updated icons in extended settings app
 - Added Icon Shape Changer app
@@ -17,6 +9,11 @@
 - Added auto-detection of Android 13's different variants in offline & online installers
 - Added material you support for Extended Settings app
 - Added support for March Security Patch, Android 13 QPR2
+- Updated permissions for wallpaper picker
+- Removed all themed icons choice. TeamFiles icons are now permanent
+- Removed push notifications service
+- Added new function to download files in online installer
+- Fixed crashing issue when user installs AOSP Wallpaper Picker in Android 13 QPR2
 
 **Version 1.4.1**
 - Fixed blank screen issue after flashing launcher in DerpFest
