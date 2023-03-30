@@ -317,26 +317,12 @@ elif [ $choice -eq 3 ]; then
   read -p "Enter your choice: " choice
 
   if [ $choice -eq 1 ]; then
-    mv -f "system/system_ext/priv-app/WallpaperPickerGoogleRelease/AOSPPicker1.apk" "system/system_ext/priv-app/WallpaperPickerGoogleRelease/temp/$file"
-    mv -f "system/system_ext/priv-app/WallpaperPickerGoogleRelease/AOSPPicker2.apk" "system/system_ext/priv-app/WallpaperPickerGoogleRelease/temp/$file"
+    mv -f "system/system_ext/priv-app/WallpaperPickerGoogleRelease/AOSPPicker.apk" "system/system_ext/priv-app/WallpaperPickerGoogleRelease/temp/$file"
     mv -f "system/system_ext/etc/permissions/AOSP_Picker.xml" "system/system_ext/etc/permissions/temp/$file"
 
   elif [ $choice -eq 2 ]; then
     mv -f "system/system_ext/priv-app/WallpaperPickerGoogleRelease/WallpaperPickerGoogleRelease.apk" "system/system_ext/priv-app/WallpaperPickerGoogleRelease/temp/$file"
     mv -f "system/system_ext/etc/permissions/privapp-permissions-com.google.android.apps.wallpaper.xml" "system/system_ext/etc/permissions/temp/$file"
-    echo $divider
-    echo -e "\033[38;5;208mSelect Your ROM's Security Patch\033[0m"
-    echo "1. February 2023 Security Patch or Below"
-    echo "2. March 2023 Security Patch or Above"
-    echo $divider
-    read -p "Enter your choice: " choice
-
-    if [ $choice -eq 1 ]; then
-      mv -f "system/system_ext/priv-app/WallpaperPickerGoogleRelease/AOSPPicker2.apk" "system/system_ext/priv-app/WallpaperPickerGoogleRelease/temp/$file"
-
-    elif [ $choice -eq 2 ]; then
-      mv -f "system/system_ext/priv-app/WallpaperPickerGoogleRelease/AOSPPicker1.apk" "system/system_ext/priv-app/WallpaperPickerGoogleRelease/temp/$file"
-    fi
   fi
 
   # Create zip file

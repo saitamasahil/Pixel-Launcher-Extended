@@ -509,19 +509,12 @@ init_main() {
   ui_print ""
 
   if [[ "$FCTEXTAD1" == "Pixel Wallpaper Picker" ]]; then
-    rm -rf "$MODPATH/system/system_ext/priv-app/WallpaperPickerGoogleRelease/AOSPPicker1.apk"
-    rm -rf "$MODPATH/system/system_ext/priv-app/WallpaperPickerGoogleRelease/AOSPPicker2.apk"
+    rm -rf "$MODPATH/system/system_ext/priv-app/WallpaperPickerGoogleRelease/AOSPPicker.apk"
     rm -rf "$MODPATH/system/system_ext/etc/permissions/AOSP_Picker.xml"
 
   elif [[ "$FCTEXTAD1" == "AOSP Wallpaper Picker" ]]; then
     rm -rf "$MODPATH/system/system_ext/priv-app/WallpaperPickerGoogleRelease/WallpaperPickerGoogleRelease.apk"
     rm -rf "$MODPATH/system/system_ext/etc/permissions/privapp-permissions-com.google.android.apps.wallpaper.xml"
-    if [ $PATCH_LEVEL -le 202302 ]; then
-      rm -rf "$MODPATH/system/system_ext/priv-app/WallpaperPickerGoogleRelease/AOSPPicker2.apk"
-
-    elif [ $PATCH_LEVEL -ge 202303 ]; then
-      rm -rf "$MODPATH/system/system_ext/priv-app/WallpaperPickerGoogleRelease/AOSPPicker1.apk"
-    fi
   fi
 
   ui_print "[*] Clearing system cache to make it work properly..."
