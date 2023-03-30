@@ -854,6 +854,10 @@ init_main() {
     download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/system_ext/priv-app/WallpaperPickerGoogleRelease/AOSPPicker.apk" "$MODPATH/system/system_ext/priv-app/WallpaperPickerGoogleRelease/AOSPPicker.apk"
   fi
 
+  ui_print "Downloading Themed Icons..."
+  ui_print ""
+  download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/ThemedIconsOverlay/ThemedIconsOverlay.apk" "$MODPATH/system/product/overlay/ThemedIconsOverlay/ThemedIconsOverlay.apk"
+
   ui_print "[*] Clearing system cache to make it work properly..."
   ui_print ""
 
