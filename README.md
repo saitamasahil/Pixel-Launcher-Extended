@@ -238,8 +238,8 @@ Turn off **Overview suggestions** from Pixel Launcher Extended's settings.
 ### Quick Search Bar not opening
 Make sure your rom has proper GApps. Also if your rom doesn't have Google App then download it from play store.
 
-### Pixel Launcher Extended not showing in default home settings
-Uninstall updates of the Pixel Launcher app and reboot your device.
+### Pixel Launcher Extended not showing in default home settings or no launcher showing after flashing PLE
+Uninstall updates of the Pixel Launcher app and reboot your device. Make sure PLE isn't in magisk's deny list.
 
 ## Donation Links
 If you have found this project helpful and would like to support its ongoing development, please consider making a donation. Your support is greatly appreciated and will help to ensure that this project can continue to be maintained and improved.
