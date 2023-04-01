@@ -1,49 +1,86 @@
 #!/usr/bin/bash
 
+# Error function
+throw_error () {
+	echo -e "\e[1;91mEncountered an error!:\n$1\e[;0m"
+	exit 1
+}
+# This func below finds array index
+##### USAGE: find_arr_index <Pattern> <Pattern to mat
+find_arr_index () {
+      # The base pattern
+      local PATTERN="${1}"
+      # The pattern to match against
+      local VAR=(${@:2})
+      # Check if Both Variables are empty
+      if [[ -z "$PATTERN" ]];
+        then
+            return
+      elif [[ -z "${VAR[@]}" ]];
+        then
+            return
+      fi
+      ## End - Check ##
+      for i in ${!VAR[@]}
+      do
+          if [ "${VAR[i]}" == "$PATTERN" ];
+              then
+                  echo "$i"
+                  return
+          fi
+      done
+}
 # Check for the Distro Type & Install necessary packages
 
 PACKAGE_MANAGERS=("pkg" "apt" "yum" "dnf" "pacman" "zypper")
 PACKAGES=("zip" "figlet")
-
 for PM in "${PACKAGE_MANAGERS[@]}"; do
-  if command -v "$PM" >/dev/null; then
+  if [[ "$(command -v "$PM")" ]] || [[ "$(which "$PM")" ]]; then
     case "$PM" in
-    "pkg") pkg install "${PACKAGES[@]}" ;;
-    "apt") sudo apt-get install "${PACKAGES[@]}" ;;
-    "yum") sudo yum install "${PACKAGES[@]}" ;;
-    "dnf") sudo dnf install "${PACKAGES[@]}" ;;
-    "pacman") sudo pacman -S "${PACKAGES[@]}" ;;
-    "zypper") sudo zypper install "${PACKAGES[@]}" ;;
+    "pkg") pkg install "${PACKAGES[@]}" || throw_error "Failed to install required packages: ${PACKAGES[@]} ; Using $PM"
+		break
+    ;;
+    "apt") sudo apt-get install "${PACKAGES[@]}" || throw_error "Failed to install required packages: ${PACKAGES[@]} ; Using $PM" 
+		break
+    ;;
+    "yum") sudo yum install "${PACKAGES[@]}" || throw_error "Failed to install required packages: ${PACKAGES[@]} ; Using $PM" 
+		break
+    ;;
+    "dnf") sudo dnf install "${PACKAGES[@]}" || throw_error "Failed to install required packages: ${PACKAGES[@]} ; Using $PM" 
+		break
+    ;;
+    "pacman") sudo pacman -S "${PACKAGES[@]}" || throw_error "Failed to install required packages: ${PACKAGES[@]} ; Using $PM" 
+		break
+    ;;
+    "zypper") sudo zypper install "${PACKAGES[@]}" || throw_error "Failed to install required packages: ${PACKAGES[@]} ; Using $PM" 
+		break
+    ;;
     esac
-    break
+    elif [ "$(find_arr_index "$PM" ${PACKAGE_MANAGERS[@]})" -eq "${#PACKAGE_MANAGERS[@]}" ];
+    	then
+    		throw_error "There are no available package managers to install required packages: ${PACKAGES[@]}"
   fi
 done
-
-if [ -f /etc/fedora-release ]; then
-  sudo dnf install "${PACKAGES[@]}"
-fi
-
 # Display "PLE Builder" in bigger fonts
 figlet "PLE Builder"
 
 # Check if zip is installed
-if ! command -v zip >/dev/null; then
-  echo "Error: zip is not installed. Please install it manually and try again."
-  exit 1
+if [ ! "$(command -v zip)" ] || [ ! "$(which zip)" ]; then
+  throw_error "Zip is not installed. Please install it manually and try again."
 fi
 
 # Read version from module.prop file
 version=$(grep "version=" module.prop | cut -d "=" -f 2)
 
 # ask user if they want to build online installer or offline installer
-echo -e "\033[38;5;208mDo you want to build Offline Installer, Online Installer or Customize Installer?\033[0m"
-echo "1. Offline Installer"
-echo "2. Online Installer"
-echo "3. Customize Installer"
-read -p "Enter your choice: " choice
+echo -e "\033[38;5;208mDo you want to build Offline Installer, Online Installer or Customize Installer?\033[0m
+1. Offline Installer
+2. Online Installer
+3. Customize Installer"
+read -ep "Enter your choice: " choice
 
-if [ $choice -eq 1 ]; then
-
+case $choice in
+1)
   # Delete already exists Offline Installer
   rm -rf Pixel\ Launcher\ Extended\ Offline*
 
@@ -62,9 +99,8 @@ if [ $choice -eq 1 ]; then
   zip -r -q "Pixel Launcher Extended Offline Installer $version.zip" . -x .git/\* Modifications/\* screenshots/\* autobuild.sh autobuild.ps1 banner.jpg banner2.jpg changelog.md codename.txt logo.png online_setup.sh offline_setup.sh customize_setup.sh README.md Pixel\ Launcher\ Extended* # Ignore specified files and folders because they are not needed for the module
   echo ""                                                                                                                                                                                                                                                                                       # make the output look easier to read
   echo ">> Done! You can find the module zip file in the current directory - '$(pwd)/Pixel Launcher Extended Offline Installer $version.zip'"
-
-elif [ $choice -eq 2 ]; then
-
+	;;
+2)
   # Delete already exists Online Installer
   rm -rf Pixel\ Launcher\ Extended\ Online*
 
@@ -83,9 +119,8 @@ elif [ $choice -eq 2 ]; then
   zip -r -q "Pixel Launcher Extended Online Installer $version.zip" . -x .git/\* Modifications/\* screenshots/\* autobuild.sh autobuild.ps1 banner.jpg banner2.jpg changelog.md codename.txt logo.png offline_setup.sh customize_setup.sh online_setup.sh README.md system/product/priv-app/NexusLauncherRelease/*\* system/product/priv-app/PixelLauncherMods/PixelLauncherMods.apk system/product/overlay/ThemedIconsOverlay/*\* system/system_ext/priv-app/WallpaperPickerGoogleRelease/* system/product/overlay/TeamFiles* system/product/priv-app/ExtendedSettings/ExtendedSettings.apk system/product/priv-app/IconShapeChanger/IconShapeChanger.apk Pixel\ Launcher\ Extended* # Ignore specified files and folders because they are not needed for the module
   echo ""                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             # make the output look easier to read
   echo ">> Done! You can find the module zip file in the current directory - '$(pwd)/Pixel Launcher Extended Online Installer $version.zip'"
-
-elif [ $choice -eq 3 ]; then
-
+	;;
+3)
   # Delete already exists Customize Installer
   rm -rf Pixel\ Launcher\ Extended\ Customize*
 
@@ -97,19 +132,23 @@ elif [ $choice -eq 3 ]; then
     echo "Error: Current directory is not valid. Make sure that you are in the right directory and try again."
     exit 1
   fi
-
+  ;;
+*)
+	throw_error "Invalid choice."
+;;
+esac
   # Dividers
   divider="------------------------------------------"
+  echo -e "$divider
+\033[38;5;208mWhich Android Version are you using?\033[0m
+1. Android 13(November Security Patch or Below)
+2. Android 13 QPR(December Security Patch or Above)
+3. Android 13 QPR2(March Security Patch or Above)
+$divider"
+  read -ep "Enter your choice: " choice
 
-  echo $divider
-  echo -e "\033[38;5;208mWhich Android Version are you using?\033[0m"
-  echo "1. Android 13(November Security Patch or Below)"
-  echo "2. Android 13 QPR(December Security Patch or Above)"
-  echo "3. Android 13 QPR2(March Security Patch or Above)"
-  echo $divider
-  read -p "Enter your choice: " choice
-
-  if [ $choice -eq 1 ]; then
+  case $choice in
+  1)
     mkdir system/product/priv-app/NexusLauncherRelease/temp
     mkdir system/product/priv-app/temp
     mkdir system/product/etc/permissions/temp
@@ -123,8 +162,8 @@ elif [ $choice -eq 3 ]; then
     mv -f "system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease02.apk" "system/product/priv-app/NexusLauncherRelease/temp/$file"
     mv -f "system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease12.apk" "system/product/priv-app/NexusLauncherRelease/temp/$file"
     mv -f "system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease22.apk" "system/product/priv-app/NexusLauncherRelease/temp/$file"
-
-  elif [ $choice -eq 2 ]; then
+	;;
+  2)
     mkdir system/product/priv-app/NexusLauncherRelease/temp
     mkdir system/product/priv-app/temp
     mkdir system/product/etc/permissions/temp
@@ -138,8 +177,8 @@ elif [ $choice -eq 3 ]; then
     mv -f "system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease02.apk" "system/product/priv-app/NexusLauncherRelease/temp/$file"
     mv -f "system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease12.apk" "system/product/priv-app/NexusLauncherRelease/temp/$file"
     mv -f "system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease22.apk" "system/product/priv-app/NexusLauncherRelease/temp/$file"
-
-  elif [ $choice -eq 3 ]; then
+	;;
+  3)
     mkdir system/product/priv-app/NexusLauncherRelease/temp
     mkdir system/product/priv-app/temp
     mkdir system/product/etc/permissions/temp
@@ -153,48 +192,58 @@ elif [ $choice -eq 3 ]; then
     mv -f "system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease01.apk" "system/product/priv-app/NexusLauncherRelease/temp/$file"
     mv -f "system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease11.apk" "system/product/priv-app/NexusLauncherRelease/temp/$file"
     mv -f "system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease21.apk" "system/product/priv-app/NexusLauncherRelease/temp/$file"
-  fi
-
-  echo $divider
-  echo -e "\033[38;5;208mDo you wanna add 'Material You Greetings In At A Glance' & install Extended Settings app?\033[0m"
-  echo "1. Yes"
-  echo "2. No"
-  echo $divider
-  read -p "Enter your choice: " choice
-
-  if [ $choice -eq 1 ]; then
+  	;;
+  	*)
+  	throw_error "Invalid choice."
+  	;;
+	esac
+  echo -e "$divider
+\033[38;5;208mDo you wanna add 'Material You Greetings In At A Glance' & install Extended Settings app?\033[0m
+1. Yes
+2. No
+$divider"
+  read -ep "Enter your choice: " choice
+# Ask user if they want to add MD3 Style
+case $choice in
+1)
     mv -f "system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease00.apk" "system/product/priv-app/NexusLauncherRelease/temp/$file" 2>/dev/null || true
     mv -f "system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease01.apk" "system/product/priv-app/NexusLauncherRelease/temp/$file" 2>/dev/null || true
     mv -f "system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease02.apk" "system/product/priv-app/NexusLauncherRelease/temp/$file" 2>/dev/null || true
-    echo $divider
-    echo -e "\033[38;5;208mDo you want to install Glance Greetings Style 1 or Glance Greetings Style 2?\033[0m"
-    echo -e "\033[38;5;2mExample Example Example Example Example\033[0m"
-    echo "Example Of Glance Greetings Style 1-"
-    echo "Line 1 - Material You Greetings,"
-    echo "Line 2 - Day & Date"
-    echo "Line 3 - Weather Information"
-    echo -e "\033[38;5;2mExample Example Example Example Example\033[0m"
-    echo "Example Of Glance Greetings Style 2-"
-    echo "Line 1 - Material You Greetings, Day & Date"
-    echo "Line 2 - Weather Information"
-    echo ""
-    echo "1. Glance Greetings Style 1"
-    echo "2. Glance Greetings Style 2"
-    echo $divider
-    read -p "Enter your choice: " choice
+    echo -e "$divider
+\033[38;5;208mDo you want to install Glance Greetings Style 1 or Glance Greetings Style 2?\033[0m
+\033[38;5;2mExample Example Example Example Example\033[0m
+Example Of Glance Greetings Style 1-
+Line 1 - Material You Greetings,
+Line 2 - Day & Date
+Line 3 - Weather Information
+\033[38;5;2mExample Example Example Example Example\033[0m
+Example Of Glance Greetings Style 2-
+Line 1 - Material You Greetings, Day & Date
+Line 2 - Weather Information
 
-    if [ $choice -eq 1 ]; then
+1. Glance Greetings Style 1
+2. Glance Greetings Style 2
+$divider"
+##### Ask for choice
+    read -ep "Enter your choice: " choice
+case $choice in
+1)
       mv -f "system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease20.apk" "system/product/priv-app/NexusLauncherRelease/temp/$file" 2>/dev/null || true
       mv -f "system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease21.apk" "system/product/priv-app/NexusLauncherRelease/temp/$file" 2>/dev/null || true
       mv -f "system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease22.apk" "system/product/priv-app/NexusLauncherRelease/temp/$file" 2>/dev/null || true
-
-    elif [ $choice -eq 2 ]; then
+	;;
+2)
       mv -f "system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease10.apk" "system/product/priv-app/NexusLauncherRelease/temp/$file" 2>/dev/null || true
       mv -f "system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease11.apk" "system/product/priv-app/NexusLauncherRelease/temp/$file" 2>/dev/null || true
       mv -f "system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease12.apk" "system/product/priv-app/NexusLauncherRelease/temp/$file" 2>/dev/null || true
-    fi
-
-  elif [ $choice -eq 2 ]; then
+    ;;
+*)
+	throw_error "Invalid choice."
+;;
+esac
+;;
+###########
+2)
     mv -f "system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease10.apk" "system/product/priv-app/NexusLauncherRelease/temp/$file" 2>/dev/null || true
     mv -f "system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease20.apk" "system/product/priv-app/NexusLauncherRelease/temp/$file" 2>/dev/null || true
     mv -f "system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease11.apk" "system/product/priv-app/NexusLauncherRelease/temp/$file" 2>/dev/null || true
@@ -214,57 +263,66 @@ elif [ $choice -eq 3 ]; then
     mv -f "system/product/overlay/TeamFiles_UserLockscreen.apk" "system/product/overlay/temp/$file"
     mv "system/product/priv-app/ExtendedSettings" "system/product/priv-app/temp/$folder"
     mv -f "system/product/etc/permissions/privapp-permissions-com.domain.liranazuz5.extendedsettings.xml" "system/product/etc/permissions/temp/$file"
-  fi
+  ;;
+esac
+  echo -e "$divider
+\033[38;5;208mDo you want to enable DT2S in Launcher?\033[0m
+\033[38;5;208mDT2S Means - Double Tap To Sleep Feature\033[0m
+\033[38;5;208mMake sure you have LSPosed Installed in your rom\033[0m
+\033[38;5;208mWithout LSPosed it won't work\033[0m
+\033[38;5;208mRead Documentation on GitHub to know more about activating it\033[0m
+1. Yes
+2. No
+$divider"
+  read -ep "Enter your choice: " choice
 
-  echo $divider
-  echo -e "\033[38;5;208mDo you want to enable DT2S in Launcher?\033[0m"
-  echo -e "\033[38;5;208mDT2S Means - Double Tap To Sleep Feature\033[0m"
-  echo -e "\033[38;5;208mMake sure you have LSPosed Installed in your rom\033[0m"
-  echo -e "\033[38;5;208mWithout LSPosed it won't work\033[0m"
-  echo -e "\033[38;5;208mRead Documentation on GitHub to know more about activating it\033[0m"
-  echo "1. Yes"
-  echo "2. No"
-  echo $divider
-  read -p "Enter your choice: " choice
-
-  if [ $choice -eq 1 ]; then
+	case $choice in
+1)
+# Execute null command
     :
-
-  elif [ $choice -eq 2 ]; then
+ 	;;
+2)
     mv "system/product/priv-app/PixelLauncherDT2S" "system/product/priv-app/temp/$folder"
     mv -f "system/product/etc/permissions/privapp-permissions-com.uragiristereo.pldt2s.xml" "system/product/etc/permissions/temp/$file"
-  fi
+  ;;
+*)
+	throw_error "Invalid choice."
+	;;
+ 	esac
 
-  echo $divider
-  echo -e "\033[38;5;208mDo you wanna install Pixel Launcher Mods app?\033[0m"
-  echo -e "\033[38;5;208mIt's by Developer KieronQuinn\033[0m"
-  echo -e "\033[38;5;208mYou will be able to apply Icon Packs using it\033[0m"
-  echo -e "\033[38;5;208mIt will also enable some more functionality to pixel launcher\033[0m"
-  echo "1. Yes"
-  echo "2. No"
-  echo $divider
-  read -p "Enter your choice: " choice
-
-  if [ $choice -eq 1 ]; then
+  echo -e "$divider
+\033[38;5;208mDo you wanna install Pixel Launcher Mods app?\033[0m
+\033[38;5;208mIt's by Developer KieronQuinn\033[0m
+\033[38;5;208mYou will be able to apply Icon Packs using it\033[0m
+\033[38;5;208mIt will also enable some more functionality to pixel launcher\033[0m
+1. Yes
+2. No
+$divider"
+  read -ep "Enter your choice: " choice
+case $choice in
+1)
     :
-
-  elif [ $choice -eq 2 ]; then
+	;;
+2)
     mv "system/product/priv-app/PixelLauncherMods" "system/product/priv-app/temp/$folder"
     mv -f "system/product/etc/permissions/privapp-permissions-com.kieronquinn.app.pixellaunchermods.xml" "system/product/etc/permissions/temp/$file"
     mv "system/product/overlay/PixelLauncherModsOverlay" "system/product/overlay/temp/$folder"
-  fi
-
-  echo $divider
-  echo -e "\033[38;5;208mDo you want to install Icon Shape Changer app?\033[0m"
-  echo "1. Yes"
-  echo "2. No"
-  echo $divider
-  read -p "Enter your choice: " choice
-
-  if [ $choice -eq 1 ]; then
+	;;
+*)
+	throw_error "Invalid choice."
+	;;
+esac
+  echo -e "$divider
+\033[38;5;208mDo you want to install Icon Shape Changer app?\033[0m
+1. Yes
+2. No
+$divider"
+  read -ep "Enter your choice: " choice
+case $choice in
+1)
     :
-
-  elif [ $choice -eq 2 ]; then
+	;;
+2)
     mv -f "system/product/overlay/TeamFiles_we_Cloudy.apk" "system/product/overlay/temp/$file"
     mv -f "system/product/overlay/TeamFiles_we_Cylinder.apk" "system/product/overlay/temp/$file"
     mv -f "system/product/overlay/TeamFiles_we_Flower.apk" "system/product/overlay/temp/$file"
@@ -283,54 +341,61 @@ elif [ $choice -eq 3 ]; then
     mv -f "system/product/overlay/TeamFiles_we_Samsung.apk" "system/product/overlay/temp/$file"
     mv "system/product/priv-app/IconShapeChanger" "system/product/priv-app/temp/$folder"
     mv -f "system/product/etc/permissions/privapp-permissions-com.saitama.iconshape.xml" "system/product/etc/permissions/temp/$file"
-  fi
+  ;;
+*)
+	throw_error "Invalid choice."
+;;
+esac
+  echo -e "$divider
+\033[38;5;208mDo you want to enable Developer Opions in launcher?\033[0m
+\033[31;1mWARNING: Your rom may cause Bootloop Issue if you enable this feature\033[0m
+\033[31;1mEnable at your own risk\033[0m
+1. Yes
+2. No
+$divider"
+  read -ep "Enter your choice: " choice
 
-  echo $divider
-  echo -e "\033[38;5;208mDo you want to enable Developer Opions in launcher?\033[0m"
-  echo -e "\033[31;1mWARNING: Your rom may cause Bootloop Issue if you enable this feature\033[0m"
-  echo -e "\033[31;1mEnable at your own risk\033[0m"
-  echo "1. Yes"
-  echo "2. No"
-  echo $divider
-  read -p "Enter your choice: " choice
-
-  if [ $choice -eq 1 ]; then
+case $choice in
+1)
     cp system2.prop system.prop
     mv -f "system1.prop" "temp/$file"
     mv -f "system2.prop" "temp/$file"
-
-  elif [ $choice -eq 2 ]; then
+;;
+2)
     cp system1.prop system.prop
     mv -f "system1.prop" "temp/$file"
     mv -f "system2.prop" "temp/$file"
     mv -f "sepolicy.rule" "temp/$file"
-  fi
-
-  echo $divider
-  echo -e "\033[38;5;208mWhich Wallpaper & style app you want to install?\033[0m"
-  echo -e "\033[31;1mNOTE: AOSP Wallpaper Picker is still in beta\033[0m"
-  echo -e "\033[31;1mIt comes with some features like font changer\033[0m"
-  echo -e "\033[31;1mIt depends upon your rom that how many fonts are available in your rom\033[0m"
-  echo "1. Pixel Wallpaper Picker"
-  echo "2. AOSP Wallpaper Picker"
-  echo $divider
-  read -p "Enter your choice: " choice
-
-  if [ $choice -eq 1 ]; then
+;;
+*)
+	throw_error "Invalid choice."
+;;
+esac
+  echo -e "$divider
+\033[38;5;208mWhich Wallpaper & style app you want to install?\033[0m
+\033[31;1mNOTE: AOSP Wallpaper Picker is still in beta\033[0m
+\033[31;1mIt comes with some features like font changer\033[0m
+\033[31;1mIt depends upon your rom that how many fonts are available in your rom\033[0m
+1. Pixel Wallpaper Picker
+2. AOSP Wallpaper Picker
+$divider"
+  read -ep "Enter your choice: " choice
+case $choice in
+1)
     mv -f "system/system_ext/priv-app/WallpaperPickerGoogleRelease/AOSPPicker.apk" "system/system_ext/priv-app/WallpaperPickerGoogleRelease/temp/$file"
     mv -f "system/system_ext/etc/permissions/AOSP_Picker.xml" "system/system_ext/etc/permissions/temp/$file"
-
-  elif [ $choice -eq 2 ]; then
+	;;
+2)
     mv -f "system/system_ext/priv-app/WallpaperPickerGoogleRelease/WallpaperPickerGoogleRelease.apk" "system/system_ext/priv-app/WallpaperPickerGoogleRelease/temp/$file"
     mv -f "system/system_ext/etc/permissions/privapp-permissions-com.google.android.apps.wallpaper.xml" "system/system_ext/etc/permissions/temp/$file"
-  fi
-
+;;
+*)
+	throw_error "Invalid choice."
+esac
   # Create zip file
-  echo ">> Creating Magisk Module"
-  echo ""                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      # make the output look easier to read
-  zip -r -q "Pixel Launcher Extended Customize Installer $version.zip" . -x .git/\* Modifications/\* screenshots/\* autobuild.sh autobuild.ps1 banner.jpg banner2.jpg changelog.md codename.txt logo.png online_setup.sh offline_setup.sh customize_setup.sh README.md Pixel\ Launcher\ Extended* system/product/priv-app/NexusLauncherRelease/temp/\* system/product/priv-app/temp/\* system/product/etc/permissions/temp/\* system/system_ext/etc/permissions/temp/\* system/product/overlay/temp/\* temp/\* system/system_ext/priv-app/WallpaperPickerGoogleRelease/temp/\* # Ignore specified files and folders because they are not needed for the module
-  echo ""                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      # make the output look easier to read
-  echo ">> Done! You can find the module zip file in the current directory - '$(pwd)/Pixel Launcher Extended Customize Installer $version.zip'"
+  echo -e ">> Creating Magisk Module\n"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     # make the output look easier to read
+  zip -r -q "Pixel Launcher Extended Customize Installer $version.zip" . -x .git/\* Modifications/\* screenshots/\* autobuild.sh autobuild.ps1 banner.jpg banner2.jpg changelog.md codename.txt logo.png online_setup.sh offline_setup.sh customize_setup.sh README.md Pixel\ Launcher\ Extended* system/product/priv-app/NexusLauncherRelease/temp/\* system/product/priv-app/temp/\* system/product/etc/permissions/temp/\* system/system_ext/etc/permissions/temp/\* system/product/overlay/temp/\* temp/\* system/system_ext/priv-app/WallpaperPickerGoogleRelease/temp/\* # Ignore specified files and folders because they are not needed for the module                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    # make the output look easier to read
+  echo -e "\n>> Done! You can find the module zip file in the current directory - '$(pwd)/Pixel Launcher Extended Customize Installer $version.zip'"
 
   # Move temp files & folders back to original location
   for file in system/product/priv-app/NexusLauncherRelease/temp/*; do
@@ -366,13 +431,6 @@ elif [ $choice -eq 3 ]; then
   rm -rf system/system_ext/priv-app/WallpaperPickerGoogleRelease/temp
   rm -rf temp
   rm -rf system/system_ext/etc/permissions/temp
-
-else
-  # if user enters invalid choice
-  echo "Error: Invalid choice. Please try again."
-  exit 1
-fi
-
 if [ -f "setup.sh" ]; then
   rm setup.sh
 fi
