@@ -1,5 +1,6 @@
 #!/usr/bin/bash
 
+######## FUNCTIONS ##########
 # Error function
 throw_error() {
   echo -e "\e[1;91mEncountered an error!:\n$1\e[;0m"
@@ -26,6 +27,62 @@ find_arr_index() {
     fi
   done
 }
+# This function below restores excluded files when using the customized zip option
+restore_content_ple() {
+  # Move temp files & folders back to original location
+  for file in system/product/priv-app/NexusLauncherRelease/temp/*; do
+    mv -f "$file" "system/product/priv-app/NexusLauncherRelease/$(basename $file)" 2>/dev/null || true
+  done
+  for file in system/product/etc/permissions/temp/*; do
+    mv -f "$file" "system/product/etc/permissions/$(basename $file)" 2>/dev/null || true
+  done
+  for file in temp/*; do
+    mv -f "$file" "$(basename $file)" 2>/dev/null || true
+  done
+  for file in system/product/overlay/temp/*; do
+    mv -f "$file" "system/product/overlay/$(basename $file)" 2>/dev/null || true
+  done
+  for file in system/system_ext/priv-app/WallpaperPickerGoogleRelease/temp/*; do
+    mv -f "$file" "system/system_ext/priv-app/WallpaperPickerGoogleRelease/$(basename $file)" 2>/dev/null || true
+  done
+  for file in system/system_ext/etc/permissions/temp/*; do
+    mv -f "$file" "system/system_ext/etc/permissions/$(basename $file)" 2>/dev/null || true
+  done
+  mv "system/product/priv-app/temp/PixelLauncherDT2S" "system/product/priv-app/$folder" 2>/dev/null || true
+  mv "system/product/priv-app/temp/PixelLauncherMods" "system/product/priv-app/$folder" 2>/dev/null || true
+  mv "system/product/overlay/temp/PixelLauncherModsOverlay" "system/product/overlay/$folder" 2>/dev/null || true
+  mv "system/product/overlay/temp/IconShape" "system/product/overlay/$folder" 2>/dev/null || true
+  mv "system/product/priv-app/temp/ExtendedSettings" "system/product/priv-app/$folder" 2>/dev/null || true
+  mv "system/product/priv-app/temp/IconShapeChanger" "system/product/priv-app/$folder" 2>/dev/null || true
+
+  # Delete temp folders
+  rm -rf system/product/priv-app/NexusLauncherRelease/temp
+  rm -rf system/product/priv-app/temp
+  rm -rf system/product/etc/permissions/temp
+  rm -rf system/product/overlay/temp
+  rm -rf system/system_ext/priv-app/WallpaperPickerGoogleRelease/temp
+  rm -rf temp
+  rm -rf system/system_ext/etc/permissions/temp
+
+  # Remove two files
+  if [ -f "setup.sh" ]; then
+    rm setup.sh
+  fi
+
+  if [ -f "system.prop" ]; then
+    rm system.prop
+  fi
+}
+# Make a function that only gets triggered on exit
+clean_exit() {
+  if [ "$CUSTOMIZED_INSTALLER" = "true" ]; then
+    restore_content_ple
+  fi
+}
+###################
+############ Main ##############
+# Invoke trap command
+trap clean_exit EXIT
 # Check for the Distro Type & Install necessary packages
 
 PACKAGE_MANAGERS=("pkg" "apt" "yum" "dnf" "pacman" "zypper")
@@ -122,6 +179,8 @@ case $choice in
   echo ">> Done! You can find the module zip file in the current directory - '$(pwd)/Pixel Launcher Extended Online Installer $version.zip'"
   ;;
 3)
+  # Set customized installee variable to true since 3rd option
+  CUSTOMIZED_INSTALLER="true"
   # Delete already exists Customize Installer
   rm -rf Pixel\ Launcher\ Extended\ Customize*
 
@@ -398,44 +457,5 @@ $divider"
   throw_error "Invalid choice."
   ;;
 esac
-# Move temp files & folders back to original location
-for file in system/product/priv-app/NexusLauncherRelease/temp/*; do
-  mv -f "$file" "system/product/priv-app/NexusLauncherRelease/$(basename $file)" 2>/dev/null || true
-done
-for file in system/product/etc/permissions/temp/*; do
-  mv -f "$file" "system/product/etc/permissions/$(basename $file)" 2>/dev/null || true
-done
-for file in temp/*; do
-  mv -f "$file" "$(basename $file)" 2>/dev/null || true
-done
-for file in system/product/overlay/temp/*; do
-  mv -f "$file" "system/product/overlay/$(basename $file)" 2>/dev/null || true
-done
-for file in system/system_ext/priv-app/WallpaperPickerGoogleRelease/temp/*; do
-  mv -f "$file" "system/system_ext/priv-app/WallpaperPickerGoogleRelease/$(basename $file)" 2>/dev/null || true
-done
-for file in system/system_ext/etc/permissions/temp/*; do
-  mv -f "$file" "system/system_ext/etc/permissions/$(basename $file)" 2>/dev/null || true
-done
-mv "system/product/priv-app/temp/PixelLauncherDT2S" "system/product/priv-app/$folder" 2>/dev/null || true
-mv "system/product/priv-app/temp/PixelLauncherMods" "system/product/priv-app/$folder" 2>/dev/null || true
-mv "system/product/overlay/temp/PixelLauncherModsOverlay" "system/product/overlay/$folder" 2>/dev/null || true
-mv "system/product/overlay/temp/IconShape" "system/product/overlay/$folder" 2>/dev/null || true
-mv "system/product/priv-app/temp/ExtendedSettings" "system/product/priv-app/$folder" 2>/dev/null || true
-mv "system/product/priv-app/temp/IconShapeChanger" "system/product/priv-app/$folder" 2>/dev/null || true
-
-# Delete temp folders
-rm -rf system/product/priv-app/NexusLauncherRelease/temp
-rm -rf system/product/priv-app/temp
-rm -rf system/product/etc/permissions/temp
-rm -rf system/product/overlay/temp
-rm -rf system/system_ext/priv-app/WallpaperPickerGoogleRelease/temp
-rm -rf temp
-rm -rf system/system_ext/etc/permissions/temp
-if [ -f "setup.sh" ]; then
-  rm setup.sh
-fi
-
-if [ -f "system.prop" ]; then
-  rm system.prop
-fi
+# invoke restore content ple function to move temp files & folders back to original location
+restore_content_ple
