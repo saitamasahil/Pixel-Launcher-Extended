@@ -129,14 +129,13 @@ fi
 
 # Read version from module.prop file
 version=$(grep "version=" module.prop | cut -d "=" -f 2)
-
 # ask user if they want to build online installer or offline installer
 echo -e "\033[38;5;208mDo you want to build Offline Installer, Online Installer or Customize Installer?\033[0m
 1. Offline Installer
 2. Online Installer
 3. Customize Installer"
 read -ep "Enter your choice: " choice
-
+###### Case statement 1 - START
 case $choice in
 1)
   # Delete already exists Offline Installer
@@ -201,7 +200,7 @@ case $choice in
 3. Android 13 QPR2(March Security Patch or Above)
 $divider"
   read -ep "Enter your choice: " choice
-
+  ####### Case statement 2 - START
   case $choice in
   1)
     mkdir system/product/priv-app/NexusLauncherRelease/temp
@@ -252,13 +251,15 @@ $divider"
     throw_error "Invalid choice."
     ;;
   esac
+  ######### Case statement 2 - END
   echo -e "$divider
 \033[38;5;208mDo you wanna add 'Material You Greetings In At A Glance' & install Extended Settings app?\033[0m
 1. Yes
 2. No
 $divider"
-  read -ep "Enter your choice: " choice
   # Ask user if they want to add MD3 Style
+  read -ep "Enter your choice: " choice
+  ######## Case statement 3 - START
   case $choice in
   1)
     mv -f "system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease00.apk" "system/product/priv-app/NexusLauncherRelease/temp/$file" 2>/dev/null || true
@@ -281,6 +282,7 @@ Line 2 - Weather Information
 $divider"
     ##### Ask for choice
     read -ep "Enter your choice: " choice
+    ###### Case statement (NESTED-1) --- START
     case $choice in
     1)
       mv -f "system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease20.apk" "system/product/priv-app/NexusLauncherRelease/temp/$file" 2>/dev/null || true
@@ -296,6 +298,7 @@ $divider"
       throw_error "Invalid choice."
       ;;
     esac
+    ###### Case statement (NESTED-1) --- END
     ;;
   ###########
   2)
@@ -319,7 +322,11 @@ $divider"
     mv "system/product/priv-app/ExtendedSettings" "system/product/priv-app/temp/$folder"
     mv -f "system/product/etc/permissions/privapp-permissions-com.domain.liranazuz5.extendedsettings.xml" "system/product/etc/permissions/temp/$file"
     ;;
+  *)
+    throw_error "Invalid choice."
+    ;;
   esac
+  ###### Case statement 3 - END
   echo -e "$divider
 \033[38;5;208mDo you want to enable DT2S in Launcher?\033[0m
 \033[38;5;208mDT2S Means - Double Tap To Sleep Feature\033[0m
@@ -330,7 +337,7 @@ $divider"
 2. No
 $divider"
   read -ep "Enter your choice: " choice
-
+  ####### Case statement 4 - START
   case $choice in
   1)
     # Execute null command
@@ -344,7 +351,7 @@ $divider"
     throw_error "Invalid choice."
     ;;
   esac
-
+  ####### Case statement 4 - END
   echo -e "$divider
 \033[38;5;208mDo you wanna install Pixel Launcher Mods app?\033[0m
 \033[38;5;208mIt's by Developer KieronQuinn\033[0m
@@ -354,6 +361,7 @@ $divider"
 2. No
 $divider"
   read -ep "Enter your choice: " choice
+  ####### Case statement 5 - START
   case $choice in
   1)
     :
@@ -367,12 +375,14 @@ $divider"
     throw_error "Invalid choice."
     ;;
   esac
+  ####### Case statement 5 - END
   echo -e "$divider
 \033[38;5;208mDo you want to install Icon Shape Changer app?\033[0m
 1. Yes
 2. No
 $divider"
   read -ep "Enter your choice: " choice
+  ####### Case statement 6 - START
   case $choice in
   1)
     :
@@ -401,6 +411,7 @@ $divider"
     throw_error "Invalid choice."
     ;;
   esac
+  ####### Case statement 6 - END
   echo -e "$divider
 \033[38;5;208mDo you want to enable Developer Opions in launcher?\033[0m
 \033[31;1mWARNING: Your rom may cause Bootloop Issue if you enable this feature\033[0m
@@ -409,7 +420,7 @@ $divider"
 2. No
 $divider"
   read -ep "Enter your choice: " choice
-
+  ####### Case statement 7 - START
   case $choice in
   1)
     cp system2.prop system.prop
@@ -426,6 +437,7 @@ $divider"
     throw_error "Invalid choice."
     ;;
   esac
+  ####### Case statement 7 - END
   echo -e "$divider
 \033[38;5;208mWhich Wallpaper & style app you want to install?\033[0m
 \033[31;1mNOTE: AOSP Wallpaper Picker is still in beta\033[0m
@@ -435,6 +447,7 @@ $divider"
 2. AOSP Wallpaper Picker
 $divider"
   read -ep "Enter your choice: " choice
+  ####### Case statement 8 - START
   case $choice in
   1)
     mv -f "system/system_ext/priv-app/WallpaperPickerGoogleRelease/AOSPPicker.apk" "system/system_ext/priv-app/WallpaperPickerGoogleRelease/temp/$file"
@@ -448,6 +461,7 @@ $divider"
     throw_error "Invalid choice."
     ;;
   esac
+  ####### Case statement 8 - END
   # Create zip file
   echo -e ">> Creating Magisk Module\n"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        # make the output look easier to read
   zip -r -q "Pixel Launcher Extended Customize Installer $version.zip" . -x .git/\* Modifications/\* screenshots/\* autobuild.sh autobuild.ps1 banner.jpg banner2.jpg changelog.md codename.txt logo.png online_setup.sh offline_setup.sh customize_setup.sh README.md Pixel\ Launcher\ Extended* system/product/priv-app/NexusLauncherRelease/temp/\* system/product/priv-app/temp/\* system/product/etc/permissions/temp/\* system/system_ext/etc/permissions/temp/\* system/product/overlay/temp/\* temp/\* system/system_ext/priv-app/WallpaperPickerGoogleRelease/temp/\* # Ignore specified files and folders because they are not needed for the module                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    # make the output look easier to read
@@ -456,6 +470,7 @@ $divider"
 *)
   throw_error "Invalid choice."
   ;;
+######## Case statement 1 - END
 esac
 # invoke restore content ple function to move temp files & folders back to original location
 restore_content_ple
