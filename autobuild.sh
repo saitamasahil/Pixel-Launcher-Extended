@@ -79,51 +79,84 @@ clean_exit() {
     restore_content_ple
   fi
 }
+# Make a function that checks if deps are already installed
+check_deps() {
+  # Define some vars
+  local total_deps=${#@}
+  local dep_count=0
+  for u in $@; do
+    local item_index=$(find_arr_index $u ${PACKAGES[@]})
+    # Check if the dep is already installed or not
+    if [ "$(command -v "$u" || which "$u")" ]; then
+      dep_count=$((dep_count + 1))
+      if [ ${#PACKAGES[@]} -eq 1 ]; then
+        # Set packages to empty array
+        PACKAGES=()
+        # Else keep unsetting
+      else
+        unset PACKAGES[item_index]
+      fi
+    fi
+  done
+  # Now check if deps count match with the count of total deps
+  if [ "$dep_count" -eq "$total_deps" ]; then
+    # Echo out 0 (as good)
+    check_dep_status="0"
+  # Else if not equal echo out 1
+  else
+    check_dep_status="1"
+  fi
+}
 ###################
+###### Variables
+PACKAGE_MANAGERS=("pkg" "apt" "yum" "dnf" "pacman" "zypper")
+PACKAGES=("zip" "figlet")
+#######
 ############ Main ##############
 # Invoke trap command
 trap clean_exit EXIT
-# Check for the Distro Type & Install necessary packages
-
-PACKAGE_MANAGERS=("pkg" "apt" "yum" "dnf" "pacman" "zypper")
-PACKAGES=("zip" "figlet")
-for PM in "${PACKAGE_MANAGERS[@]}"; do
-  if [[ "$(command -v "$PM")" ]] || [[ "$(which "$PM")" ]]; then
-    case "$PM" in
-    "pkg")
-      pkg install "${PACKAGES[@]}" || throw_error "Failed to install required packages: ${PACKAGES[@]} ; Using $PM"
-      break
-      ;;
-    "apt")
-      sudo apt-get install "${PACKAGES[@]}" || throw_error "Failed to install required packages: ${PACKAGES[@]} ; Using $PM"
-      break
-      ;;
-    "yum")
-      sudo yum install "${PACKAGES[@]}" || throw_error "Failed to install required packages: ${PACKAGES[@]} ; Using $PM"
-      break
-      ;;
-    "dnf")
-      sudo dnf install "${PACKAGES[@]}" || throw_error "Failed to install required packages: ${PACKAGES[@]} ; Using $PM"
-      break
-      ;;
-    "pacman")
-      sudo pacman -S "${PACKAGES[@]}" || throw_error "Failed to install required packages: ${PACKAGES[@]} ; Using $PM"
-      break
-      ;;
-    "zypper")
-      sudo zypper install "${PACKAGES[@]}" || throw_error "Failed to install required packages: ${PACKAGES[@]} ; Using $PM"
-      break
-      ;;
-    esac
-  elif [ "$(find_arr_index "$PM" ${PACKAGE_MANAGERS[@]})" -eq "${#PACKAGE_MANAGERS[@]}" ]; then
-    throw_error "There are no available package managers to install required packages: ${PACKAGES[@]}"
-  fi
-done
+# Before checking distron type and stuff for deps install
+check_deps ${PACKAGES[@]}
+if [[ "$check_dep_status" -eq 1 ]]; then
+  # Check for the Distro Type & Install necessary packages
+  for PM in "${PACKAGE_MANAGERS[@]}"; do
+    if [[ "$(command -v "$PM")" ]] || [[ "$(which "$PM")" ]]; then
+      case "$PM" in
+      "pkg")
+        pkg install "${PACKAGES[@]}" || throw_error "Failed to install required packages: ${PACKAGES[@]} ; Using $PM"
+        break
+        ;;
+      "apt")
+        sudo apt-get install "${PACKAGES[@]}" || throw_error "Failed to install required packages: ${PACKAGES[@]} ; Using $PM"
+        break
+        ;;
+      "yum")
+        sudo yum install "${PACKAGES[@]}" || throw_error "Failed to install required packages: ${PACKAGES[@]} ; Using $PM"
+        break
+        ;;
+      "dnf")
+        sudo dnf install "${PACKAGES[@]}" || throw_error "Failed to install required packages: ${PACKAGES[@]} ; Using $PM"
+        break
+        ;;
+      "pacman")
+        sudo pacman -S "${PACKAGES[@]}" || throw_error "Failed to install required packages: ${PACKAGES[@]} ; Using $PM"
+        break
+        ;;
+      "zypper")
+        sudo zypper install "${PACKAGES[@]}" || throw_error "Failed to install required packages: ${PACKAGES[@]} ; Using $PM"
+        break
+        ;;
+      esac
+    elif [ "$(find_arr_index "$PM" ${PACKAGE_MANAGERS[@]})" -eq "${#PACKAGE_MANAGERS[@]}" ]; then
+      throw_error "There are no available package managers to install required packages: ${PACKAGES[@]}"
+    fi
+  done
+fi
 # Display "PLE Builder" in bigger fonts
 figlet "PLE Builder"
 
 # Check if zip is installed
-if [ ! "$(command -v zip)" ] || [ ! "$(which zip)" ]; then
+if [ ! "$(command -v zip || which zip)" ]; then
   throw_error "Zip is not installed. Please install it manually and try again."
 fi
 
