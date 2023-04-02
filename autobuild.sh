@@ -1,9 +1,8 @@
 #!/usr/bin/bash
 
-# check if temp folders exist from an unexpected previous session
-if [ -d "system/product/priv-app/NexusLauncherRelease/temp" ] || [ -d "system/product/priv-app/temp" ] || [ -d "system/product/etc/permissions/temp" ] || [ -d "system/product/overlay/temp" ] || [ -d "system/system_ext/priv-app/WallpaperPickerGoogleRelease/temp" ] || [ -d "temp" ] || [ -d "system/system_ext/etc/permissions/temp" ] || [ -f "setup.sh" ] || [ -f "system.prop" ]; then
+# Define recover files & folders function
+recover_ple() {
   # Move temp files & folders back to original location
-  echo ">> Recovering files & folders from a previous unexpected session."
   for file in system/product/priv-app/NexusLauncherRelease/temp/*; do
     mv -f "$file" "system/product/priv-app/NexusLauncherRelease/$(basename $file)" 2>/dev/null || true
   done
@@ -38,6 +37,7 @@ if [ -d "system/product/priv-app/NexusLauncherRelease/temp" ] || [ -d "system/pr
   rm -rf temp
   rm -rf system/system_ext/etc/permissions/temp
 
+  # Delete temp files
   if [ -f "setup.sh" ]; then
     rm setup.sh
   fi
@@ -45,6 +45,12 @@ if [ -d "system/product/priv-app/NexusLauncherRelease/temp" ] || [ -d "system/pr
   if [ -f "system.prop" ]; then
     rm system.prop
   fi
+}
+
+# check if temp folders exist from an unexpected previous session
+if [ -d "system/product/priv-app/NexusLauncherRelease/temp" ] || [ -d "system/product/priv-app/temp" ] || [ -d "system/product/etc/permissions/temp" ] || [ -d "system/product/overlay/temp" ] || [ -d "system/system_ext/priv-app/WallpaperPickerGoogleRelease/temp" ] || [ -d "temp" ] || [ -d "system/system_ext/etc/permissions/temp" ] || [ -f "setup.sh" ] || [ -f "system.prop" ]; then
+  echo -e "\033[38;5;2m>> Recovering files & folders from a previous unexpected session.\033[0m"
+  recover_ple
   echo "Successfully recovered."
   echo "Run PLE Builder again."
   exit 1
@@ -107,11 +113,15 @@ if [ $choice -eq 1 ]; then
   fi
 
   # Create zip file
-  echo ">> Creating Magisk Module"
+  echo -e "\033[38;5;2m>> Creating Magisk Module\033[0m"
   echo ""                                                                                                                                                                                                                                                                                       # make the output look easier to read
   zip -r -q "Pixel Launcher Extended Offline Installer $version.zip" . -x .git/\* Modifications/\* screenshots/\* autobuild.sh autobuild.ps1 banner.jpg banner2.jpg changelog.md codename.txt logo.png online_setup.sh offline_setup.sh customize_setup.sh README.md Pixel\ Launcher\ Extended* # Ignore specified files and folders because they are not needed for the module
   echo ""                                                                                                                                                                                                                                                                                       # make the output look easier to read
-  echo ">> Done! You can find the module zip file in the current directory - '$(pwd)/Pixel Launcher Extended Offline Installer $version.zip'"
+  echo "Done! You can find the module zip file in the current directory - '$(pwd)/Pixel Launcher Extended Offline Installer $version.zip'"
+  # Delete temp file
+  if [ -f "setup.sh" ]; then
+    rm setup.sh
+  fi
 
 elif [ $choice -eq 2 ]; then
 
@@ -128,11 +138,15 @@ elif [ $choice -eq 2 ]; then
   fi
 
   # Create zip file
-  echo ">> Creating Magisk Module"
+  echo -e "\033[38;5;2m>> Creating Magisk Module\033[0m"
   echo ""                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             # make the output look easier to read
   zip -r -q "Pixel Launcher Extended Online Installer $version.zip" . -x .git/\* Modifications/\* screenshots/\* autobuild.sh autobuild.ps1 banner.jpg banner2.jpg changelog.md codename.txt logo.png offline_setup.sh customize_setup.sh online_setup.sh README.md system/product/priv-app/NexusLauncherRelease/*\* system/product/priv-app/PixelLauncherMods/PixelLauncherMods.apk system/product/overlay/ThemedIconsOverlay/*\* system/system_ext/priv-app/WallpaperPickerGoogleRelease/* system/product/overlay/TeamFiles* system/product/priv-app/ExtendedSettings/ExtendedSettings.apk system/product/priv-app/IconShapeChanger/IconShapeChanger.apk Pixel\ Launcher\ Extended* # Ignore specified files and folders because they are not needed for the module
   echo ""                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             # make the output look easier to read
-  echo ">> Done! You can find the module zip file in the current directory - '$(pwd)/Pixel Launcher Extended Online Installer $version.zip'"
+  echo "Done! You can find the module zip file in the current directory - '$(pwd)/Pixel Launcher Extended Online Installer $version.zip'"
+  # Delete temp file
+  if [ -f "setup.sh" ]; then
+    rm setup.sh
+  fi
 
 elif [ $choice -eq 3 ]; then
 
@@ -433,57 +447,17 @@ elif [ $choice -eq 3 ]; then
   done
 
   # Create zip file
-  echo ">> Creating Magisk Module"
+  echo -e "\033[38;5;2m>> Creating Magisk Module\033[0m"
   echo ""                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      # make the output look easier to read
   zip -r -q "Pixel Launcher Extended Customize Installer $version.zip" . -x .git/\* Modifications/\* screenshots/\* autobuild.sh autobuild.ps1 banner.jpg banner2.jpg changelog.md codename.txt logo.png online_setup.sh offline_setup.sh customize_setup.sh README.md Pixel\ Launcher\ Extended* system/product/priv-app/NexusLauncherRelease/temp/\* system/product/priv-app/temp/\* system/product/etc/permissions/temp/\* system/system_ext/etc/permissions/temp/\* system/product/overlay/temp/\* temp/\* system/system_ext/priv-app/WallpaperPickerGoogleRelease/temp/\* # Ignore specified files and folders because they are not needed for the module
   echo ""                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      # make the output look easier to read
-  echo ">> Done! You can find the module zip file in the current directory - '$(pwd)/Pixel Launcher Extended Customize Installer $version.zip'"
+  echo "Done! You can find the module zip file in the current directory - '$(pwd)/Pixel Launcher Extended Customize Installer $version.zip'"
 
   # Move temp files & folders back to original location
-  for file in system/product/priv-app/NexusLauncherRelease/temp/*; do
-    mv -f "$file" "system/product/priv-app/NexusLauncherRelease/$(basename $file)" 2>/dev/null || true
-  done
-  for file in system/product/etc/permissions/temp/*; do
-    mv -f "$file" "system/product/etc/permissions/$(basename $file)" 2>/dev/null || true
-  done
-  for file in temp/*; do
-    mv -f "$file" "$(basename $file)" 2>/dev/null || true
-  done
-  for file in system/product/overlay/temp/*; do
-    mv -f "$file" "system/product/overlay/$(basename $file)" 2>/dev/null || true
-  done
-  for file in system/system_ext/priv-app/WallpaperPickerGoogleRelease/temp/*; do
-    mv -f "$file" "system/system_ext/priv-app/WallpaperPickerGoogleRelease/$(basename $file)" 2>/dev/null || true
-  done
-  for file in system/system_ext/etc/permissions/temp/*; do
-    mv -f "$file" "system/system_ext/etc/permissions/$(basename $file)" 2>/dev/null || true
-  done
-  mv "system/product/priv-app/temp/PixelLauncherDT2S" "system/product/priv-app/$folder" 2>/dev/null || true
-  mv "system/product/priv-app/temp/PixelLauncherMods" "system/product/priv-app/$folder" 2>/dev/null || true
-  mv "system/product/overlay/temp/PixelLauncherModsOverlay" "system/product/overlay/$folder" 2>/dev/null || true
-  mv "system/product/overlay/temp/IconShape" "system/product/overlay/$folder" 2>/dev/null || true
-  mv "system/product/priv-app/temp/ExtendedSettings" "system/product/priv-app/$folder" 2>/dev/null || true
-  mv "system/product/priv-app/temp/IconShapeChanger" "system/product/priv-app/$folder" 2>/dev/null || true
-
-  # Delete temp folders
-  rm -rf system/product/priv-app/NexusLauncherRelease/temp
-  rm -rf system/product/priv-app/temp
-  rm -rf system/product/etc/permissions/temp
-  rm -rf system/product/overlay/temp
-  rm -rf system/system_ext/priv-app/WallpaperPickerGoogleRelease/temp
-  rm -rf temp
-  rm -rf system/system_ext/etc/permissions/temp
+  recover_ple
 
 else
   # if user enters invalid choice
   echo -e "\033[31;1mInvalid choice. Run PLE Builder again.\033[0m"
   exit 1
-fi
-
-if [ -f "setup.sh" ]; then
-  rm setup.sh
-fi
-
-if [ -f "system.prop" ]; then
-  rm system.prop
 fi
