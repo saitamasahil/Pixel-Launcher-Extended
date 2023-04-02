@@ -64,7 +64,6 @@ PACKAGES=("zip" "toilet")
 # Define a function to check if a package is installed
 check_package() {
   if command -v "$1" >/dev/null; then
-    echo "$1 is already installed."
     return 0
   else
     return 1
@@ -80,9 +79,10 @@ for PKG in "${PACKAGES[@]}"; do
   fi
 done
 
-# If there are no packages to install, exit the script
+# If there are no packages to install then just print all packages are already installed
 if [ ${#TO_INSTALL[@]} -eq 0 ]; then
-  echo "All packages are already installed."
+  echo -e "\033[38;5;2mAll required packages are already installed.\033[0m"
+  echo -e "\033[38;5;2mStarting PLE Builder...\033[0m"
 fi
 
 # Loop through the package managers and find the one that is available
