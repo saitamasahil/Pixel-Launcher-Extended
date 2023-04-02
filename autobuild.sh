@@ -59,7 +59,7 @@ fi
 # Check for the Distro Type & Install necessary packages
 
 PACKAGE_MANAGERS=("pkg" "apt" "yum" "dnf" "pacman" "zypper")
-PACKAGES=("zip" "figlet")
+PACKAGES=("zip" "toilet")
 
 # Define a function to check if a package is installed
 check_package() {
@@ -107,7 +107,7 @@ if [ -f /etc/fedora-release ]; then
 fi
 
 # Display "PLE Builder" in bigger fonts
-figlet "PLE Builder"
+toilet -f standard -F border "PLE Builder"
 
 # Check if zip is installed
 if ! command -v zip >/dev/null; then
