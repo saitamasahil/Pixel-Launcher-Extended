@@ -3,7 +3,7 @@
 # check if temp folders exist from an unexpected previous session
 if [ -d "system/product/priv-app/NexusLauncherRelease/temp" ] || [ -d "system/product/priv-app/temp" ] || [ -d "system/product/etc/permissions/temp" ] || [ -d "system/product/overlay/temp" ] || [ -d "system/system_ext/priv-app/WallpaperPickerGoogleRelease/temp" ] || [ -d "temp" ] || [ -d "system/system_ext/etc/permissions/temp" ]; then
   # Move temp files & folders back to original location
-  echo ">> Recovering things from a prior unexpected session."
+  echo ">> Recovering files & folders from a previous unexpected session."
   for file in system/product/priv-app/NexusLauncherRelease/temp/*; do
     mv -f "$file" "system/product/priv-app/NexusLauncherRelease/$(basename $file)" 2>/dev/null || true
   done
