@@ -1,5 +1,55 @@
 #!/usr/bin/bash
 
+# check if temp folders exist from an unexpected previous session
+if [ -d "system/product/priv-app/NexusLauncherRelease/temp" ] || [ -d "system/product/priv-app/temp" ] || [ -d "system/product/etc/permissions/temp" ] || [ -d "system/product/overlay/temp" ] || [ -d "system/system_ext/priv-app/WallpaperPickerGoogleRelease/temp" ] || [ -d "temp" ] || [ -d "system/system_ext/etc/permissions/temp" ]; then
+  # Move temp files & folders back to original location
+  echo ">> Recovering things from a prior unexpected session."
+  for file in system/product/priv-app/NexusLauncherRelease/temp/*; do
+    mv -f "$file" "system/product/priv-app/NexusLauncherRelease/$(basename $file)" 2>/dev/null || true
+  done
+  for file in system/product/etc/permissions/temp/*; do
+    mv -f "$file" "system/product/etc/permissions/$(basename $file)" 2>/dev/null || true
+  done
+  for file in temp/*; do
+    mv -f "$file" "$(basename $file)" 2>/dev/null || true
+  done
+  for file in system/product/overlay/temp/*; do
+    mv -f "$file" "system/product/overlay/$(basename $file)" 2>/dev/null || true
+  done
+  for file in system/system_ext/priv-app/WallpaperPickerGoogleRelease/temp/*; do
+    mv -f "$file" "system/system_ext/priv-app/WallpaperPickerGoogleRelease/$(basename $file)" 2>/dev/null || true
+  done
+  for file in system/system_ext/etc/permissions/temp/*; do
+    mv -f "$file" "system/system_ext/etc/permissions/$(basename $file)" 2>/dev/null || true
+  done
+  mv "system/product/priv-app/temp/PixelLauncherDT2S" "system/product/priv-app/$folder" 2>/dev/null || true
+  mv "system/product/priv-app/temp/PixelLauncherMods" "system/product/priv-app/$folder" 2>/dev/null || true
+  mv "system/product/overlay/temp/PixelLauncherModsOverlay" "system/product/overlay/$folder" 2>/dev/null || true
+  mv "system/product/overlay/temp/IconShape" "system/product/overlay/$folder" 2>/dev/null || true
+  mv "system/product/priv-app/temp/ExtendedSettings" "system/product/priv-app/$folder" 2>/dev/null || true
+  mv "system/product/priv-app/temp/IconShapeChanger" "system/product/priv-app/$folder" 2>/dev/null || true
+
+  # Delete temp folders
+  rm -rf system/product/priv-app/NexusLauncherRelease/temp
+  rm -rf system/product/priv-app/temp
+  rm -rf system/product/etc/permissions/temp
+  rm -rf system/product/overlay/temp
+  rm -rf system/system_ext/priv-app/WallpaperPickerGoogleRelease/temp
+  rm -rf temp
+  rm -rf system/system_ext/etc/permissions/temp
+
+  if [ -f "setup.sh" ]; then
+    rm setup.sh
+  fi
+
+  if [ -f "system.prop" ]; then
+    rm system.prop
+  fi
+  echo "Successfully recovered."
+  echo "Run PLE Builder again."
+  exit 1
+fi
+
 # Check for the Distro Type & Install necessary packages
 
 PACKAGE_MANAGERS=("pkg" "apt" "yum" "dnf" "pacman" "zypper")
