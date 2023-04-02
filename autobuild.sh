@@ -61,22 +61,49 @@ fi
 PACKAGE_MANAGERS=("pkg" "apt" "yum" "dnf" "pacman" "zypper")
 PACKAGES=("zip" "figlet")
 
+# Define a function to check if a package is installed
+check_package() {
+  if command -v "$1" >/dev/null; then
+    echo "$1 is already installed."
+    return 0
+  else
+    return 1
+  fi
+}
+
+# Loop through the packages and check if they are installed
+for PKG in "${PACKAGES[@]}"; do
+  check_package "$PKG"
+  # If not installed, add it to a list of packages to install
+  if [ $? -ne 0 ]; then
+    TO_INSTALL+=("$PKG")
+  fi
+done
+
+# If there are no packages to install, exit the script
+if [ ${#TO_INSTALL[@]} -eq 0 ]; then
+  echo "All packages are already installed."
+fi
+
+# Loop through the package managers and find the one that is available
 for PM in "${PACKAGE_MANAGERS[@]}"; do
   if command -v "$PM" >/dev/null; then
+    # Use the appropriate command to install the packages
     case "$PM" in
-    "pkg") pkg install "${PACKAGES[@]}" ;;
-    "apt") sudo apt-get install "${PACKAGES[@]}" ;;
-    "yum") sudo yum install "${PACKAGES[@]}" ;;
-    "dnf") sudo dnf install "${PACKAGES[@]}" ;;
-    "pacman") sudo pacman -S "${PACKAGES[@]}" ;;
-    "zypper") sudo zypper install "${PACKAGES[@]}" ;;
+    "pkg") pkg install "${TO_INSTALL[@]}" ;;
+    "apt") sudo apt-get install "${TO_INSTALL[@]}" ;;
+    "yum") sudo yum install "${TO_INSTALL[@]}" ;;
+    "dnf") sudo dnf install "${TO_INSTALL[@]}" ;;
+    "pacman") sudo pacman -S "${TO_INSTALL[@]}" ;;
+    "zypper") sudo zypper install "${TO_INSTALL[@]}" ;;
     esac
     break
   fi
 done
 
+# If the distribution is Fedora, use dnf to install the packages
 if [ -f /etc/fedora-release ]; then
-  sudo dnf install "${PACKAGES[@]}"
+  sudo dnf install "${TO_INSTALL[@]}"
 fi
 
 # Display "PLE Builder" in bigger fonts
