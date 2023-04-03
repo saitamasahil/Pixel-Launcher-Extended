@@ -14,6 +14,8 @@
 - Removed push notifications service
 - Added new function to download files in online installer
 - Fixed crashing issue when user installs AOSP Wallpaper Picker in Android 13 QPR2
+- Fixed crashing issue when tapping on Google search bar
+- Autobuild script improvements for Linux & Termux
 
 **Version 1.4.1**
 - Fixed blank screen issue after flashing launcher in DerpFest
