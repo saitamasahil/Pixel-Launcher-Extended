@@ -20,8 +20,22 @@
 - Push Notification Services.
 - And more!!
 
-### Screenshots
-- [Click Here](https://telegra.ph/Pixel-Launcher-Extended-Screenshots-01-22)
+### Preview
+<div align="center">
+    <img src="screenshots/preview1.png">
+</div>
+<div align="center">
+    <img src="screenshots/preview2.png">
+</div>
+<div align="center">
+    <img src="screenshots/preview3.png">
+</div>
+<div align="center">
+    <img src="screenshots/preview4.png">
+</div>
+<div align="center">
+    <img src="screenshots/preview5.png">
+</div>
 
 ### Compatibility
 This module is expected to work on ROMs which are based on fairly unmodified Android source code.
