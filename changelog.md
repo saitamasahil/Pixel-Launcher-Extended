@@ -12,7 +12,7 @@
 - Updated permissions for wallpaper picker
 - Removed all themed icons choice. TeamFiles icons are now permanent
 - Removed push notifications service
-- Added new function to download files in online installer
+- Added new function to download files in online installer. Now it will show download size & status of downloaded file.
 - Fixed crashing issue when user installs AOSP Wallpaper Picker in Android 13 QPR2
 - Fixed crashing issue when tapping on Google search bar
 - Autobuild script improvements for Linux & Termux
