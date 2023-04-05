@@ -5,10 +5,7 @@
 **Pixel Launcher Extended** is a Magisk module by **TeamFiles** with many cool features compared to original Pixel Launcher by Google.
 
 ### Features
-- Extra themed icons. Total of 1250+ icons.
-> **This feature is currently in beta due to Android 13 restrictions**  
-> Android 13 prefers themed icons made by apps, it looks through the apps first, only then it looks for themed icons overlay (which we use).  
-> TeamFiles icons are very closed to stock themed icons, so we recommend using them.
+- Extra themed icons. Total of 1250+ icons.  
 - More grids options, total of 14 grids. You can select these extra grids by going to **Wallpaper & style** > **App grid**. These are available for **Phones** only. Not available for **Tablets**.
 - Double tap to sleep *(LSPosed required)*.
 - You can choose different icons shapes using Icon Shape Changer app(It can be installed as a choice).
@@ -17,7 +14,6 @@
 - Add-ons, which can enhance and add more functionality.
 - Enable hidden flags & developer options.
 > These flags can enable some subtle features & bring improvements in launcher. [Some of the flags usage with detailed explanation](https://sameerasw.notion.site/Pixel-Launcher-Flags-0068085015c646dda6210b02a6f719a9).
-- Push Notification Services.
 - And more!!
 
 ### Preview
@@ -54,7 +50,7 @@ If you wanna implement Pixel Launcher Extended in your custom rom then [visit he
 - [LSPosed](https://github.com/LSPosed/LSPosed) *(optional, if you want to use double tap to sleep feature)*
 
 **Disclaimer**
-- Make sure you flashed the **Bootloop saver** module before flashing **Pixel Launcher Extended**. We **WON'T** be responsible if anything happens with your device. Bootloops are not expected, but you should always be prepared for the worst!
+- We **WON'T** be responsible if anything happens with your device. Bootloops are not expected, but you should always be prepared for the worst!
 
 ### Installation
 - Uninstall any other launcher if you're using one. Only keep the default launcher
