@@ -32,6 +32,9 @@
 <div align="center">
     <img src="screenshots/preview5.png">
 </div>
+<div align="center">
+    <img src="screenshots/preview6.png">
+</div>
 
 ### Compatibility
 This module is expected to work on ROMs which are based on fairly unmodified Android source code.
