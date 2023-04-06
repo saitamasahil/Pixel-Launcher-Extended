@@ -59,7 +59,7 @@ fi
 # Check for the Distro Type & Install necessary packages
 
 PACKAGE_MANAGERS=("pkg" "apt" "yum" "dnf" "pacman" "zypper")
-PACKAGES=("zip" "toilet")
+PACKAGES=("zip" "toilet" "figlet")
 
 # Define a function to check if a package is installed
 check_package() {
@@ -94,16 +94,26 @@ for PM in "${PACKAGE_MANAGERS[@]}"; do
     "apt") sudo apt-get install "${TO_INSTALL[@]}" ;;
     "yum") sudo yum install "${TO_INSTALL[@]}" ;;
     "dnf") sudo dnf install "${TO_INSTALL[@]}" ;;
-    "pacman") sudo pacman -S "${TO_INSTALL[@]}" ;;
+    "pacman") sudo pacman -S --needed "${TO_INSTALL[@]}" ;;
     "zypper") sudo zypper install "${TO_INSTALL[@]}" ;;
+    esac
+    # Reinstall figlet using the same package manager
+    case "$PM" in
+    "pkg") pkg install --force figlet ;;
+    "apt") sudo apt-get install --reinstall figlet ;;
+    "yum") sudo yum reinstall figlet ;;
+    "dnf") sudo dnf reinstall figlet ;;
+    "pacman") sudo pacman -S --overwrite '*' figlet ;;
+    "zypper") sudo zypper install --force figlet ;;
     esac
     break
   fi
 done
 
-# If the distribution is Fedora, use dnf to install the packages
+# If the distribution is Fedora, use dnf to install the packages and reinstall figlet
 if [ -f /etc/fedora-release ]; then
   sudo dnf install "${TO_INSTALL[@]}"
+  sudo dnf reinstall figlet
 fi
 
 # Display "PLE Builder" in bigger fonts
