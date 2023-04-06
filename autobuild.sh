@@ -59,7 +59,7 @@ fi
 # Check for the Distro Type & Install necessary packages
 
 PACKAGE_MANAGERS=("pkg" "apt" "yum" "dnf" "pacman" "zypper")
-PACKAGES=("zip" "toilet" "figlet")
+PACKAGES=("zip" "toilet")
 
 # Define a function to check if a package is installed
 check_package() {
@@ -97,15 +97,6 @@ for PM in "${PACKAGE_MANAGERS[@]}"; do
     "pacman") sudo pacman -S --needed "${TO_INSTALL[@]}" ;;
     "zypper") sudo zypper install "${TO_INSTALL[@]}" ;;
     esac
-    # Reinstall figlet using the same package manager
-    case "$PM" in
-    "pkg") pkg install --force figlet ;;
-    "apt") sudo apt-get install --reinstall figlet ;;
-    "yum") sudo yum reinstall figlet ;;
-    "dnf") sudo dnf reinstall figlet ;;
-    "pacman") sudo pacman -S --overwrite '*' figlet ;;
-    "zypper") sudo zypper install --force figlet ;;
-    esac
     break
   fi
 done
@@ -113,7 +104,21 @@ done
 # If the distribution is Fedora, use dnf to install the packages and reinstall figlet
 if [ -f /etc/fedora-release ]; then
   sudo dnf install "${TO_INSTALL[@]}"
-  sudo dnf reinstall figlet
+fi
+
+# Install latest version of figlet, As most distros come with very old version
+case "$PM" in
+"pkg") pkg install figlet ;;
+"apt") sudo apt-get install figlet ;;
+"yum") sudo yum figlet ;;
+"dnf") sudo dnf figlet ;;
+"pacman") sudo pacman -S --needed figlet ;;
+"zypper") sudo zypper install figlet ;;
+esac
+
+# If the distribution is Fedora, use dnf to install the packages and reinstall figlet
+if [ -f /etc/fedora-release ]; then
+  sudo dnf install figlet
 fi
 
 # Display "PLE Builder" in bigger fonts
