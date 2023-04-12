@@ -1,5 +1,11 @@
 #!/usr/bin/bash
 
+# Define some color variables
+GREEN='\033[1m\033[32m'
+ORANGE='\033[1m\033[38;5;214m'
+PURPLE='\033[1m\033[38;5;140m'
+NC='\033[0m' # No Color
+
 # Define recover files & folders function
 recover_ple() {
   # Move temp files & folders back to original location
@@ -49,7 +55,7 @@ recover_ple() {
 
 # check if temp folders exist from an unexpected previous session
 if [ -d "system/product/priv-app/NexusLauncherRelease/temp" ] || [ -d "system/product/priv-app/temp" ] || [ -d "system/product/etc/permissions/temp" ] || [ -d "system/product/overlay/temp" ] || [ -d "system/system_ext/priv-app/WallpaperPickerGoogleRelease/temp" ] || [ -d "temp" ] || [ -d "system/system_ext/etc/permissions/temp" ] || [ -f "setup.sh" ] || [ -f "system.prop" ]; then
-  echo -e "\033[38;5;2m>> Recovering files & folders from a previous unexpected session.\033[0m"
+  echo -e "${PURPLE}>> Recovering files & folders from a previous unexpected session.${NC}"
   recover_ple
   echo "Successfully recovered."
   echo "Run PLE Builder again."
@@ -59,7 +65,7 @@ fi
 # Check for the Distro Type & Install necessary packages
 
 PACKAGE_MANAGERS=("pkg" "apt" "yum" "dnf" "pacman" "zypper")
-PACKAGES=("zip" "toilet")
+PACKAGES=("zip")
 
 # Define a function to check if a package is installed
 check_package() {
@@ -81,8 +87,8 @@ done
 
 # If there are no packages to install then just print all packages are already installed
 if [ ${#TO_INSTALL[@]} -eq 0 ]; then
-  echo -e "\033[38;5;2mAll required packages are already installed.\033[0m"
-  echo -e "\033[38;5;2mStarting PLE Builder...\033[0m"
+  echo -e "${GREEN}zip is already installed.${NC}"
+  echo -e "${GREEN}Starting PLE Builder...${NC}"
 fi
 
 # Loop through the package managers and find the one that is available
@@ -101,7 +107,7 @@ for PM in "${PACKAGE_MANAGERS[@]}"; do
   fi
 done
 
-# If the distribution is Fedora, use dnf to install the packages and reinstall figlet
+# If the distribution is Fedora, use dnf to install the packages
 if [ -f /etc/fedora-release ]; then
   sudo dnf install "${TO_INSTALL[@]}"
 fi
@@ -116,13 +122,13 @@ case "$PM" in
 "zypper") sudo zypper install figlet ;;
 esac
 
-# If the distribution is Fedora, use dnf to install the packages and reinstall figlet
+# If the distribution is Fedora, use dnf to install figlet
 if [ -f /etc/fedora-release ]; then
   sudo dnf install figlet
 fi
 
 # Display "PLE Builder" in bigger fonts
-toilet -f standard -F border "PLE Builder"
+echo -e "${PURPLE}$(figlet "PLE Builder")${NC}"
 
 # Check if zip is installed
 if ! command -v zip >/dev/null; then
@@ -134,7 +140,7 @@ fi
 version=$(grep "version=" module.prop | cut -d "=" -f 2)
 
 # ask user if they want to build online installer or offline installer
-echo -e "\033[38;5;208mDo you want to build Offline Installer, Online Installer or Customize Installer?\033[0m"
+echo -e "${ORANGE}Do you want to build Offline Installer, Online Installer or Customize Installer?${NC}"
 echo "1. Offline Installer"
 echo "2. Online Installer"
 echo "3. Customize Installer"
@@ -155,7 +161,7 @@ if [ $choice -eq 1 ]; then
   fi
 
   # Create zip file
-  echo -e "\033[38;5;2m>> Creating Magisk Module\033[0m"
+  echo -e "${GREEN}>> Creating Magisk Module${NC}"
   echo ""                                                                                                                                                                                                                                                                                       # make the output look easier to read
   zip -r -q "Pixel Launcher Extended Offline Installer $version.zip" . -x .git/\* Modifications/\* screenshots/\* autobuild.sh autobuild.ps1 banner.jpg banner2.jpg changelog.md codename.txt logo.png online_setup.sh offline_setup.sh customize_setup.sh README.md Pixel\ Launcher\ Extended* # Ignore specified files and folders because they are not needed for the module
   echo ""                                                                                                                                                                                                                                                                                       # make the output look easier to read
@@ -180,7 +186,7 @@ elif [ $choice -eq 2 ]; then
   fi
 
   # Create zip file
-  echo -e "\033[38;5;2m>> Creating Magisk Module\033[0m"
+  echo -e "${GREEN}>> Creating Magisk Module${NC}"
   echo ""                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             # make the output look easier to read
   zip -r -q "Pixel Launcher Extended Online Installer $version.zip" . -x .git/\* Modifications/\* screenshots/\* autobuild.sh autobuild.ps1 banner.jpg banner2.jpg changelog.md codename.txt logo.png offline_setup.sh customize_setup.sh online_setup.sh README.md system/product/priv-app/NexusLauncherRelease/*\* system/product/priv-app/PixelLauncherMods/PixelLauncherMods.apk system/product/overlay/ThemedIconsOverlay/*\* system/system_ext/priv-app/WallpaperPickerGoogleRelease/* system/product/overlay/TeamFiles* system/product/priv-app/ExtendedSettings/ExtendedSettings.apk system/product/priv-app/IconShapeChanger/IconShapeChanger.apk Pixel\ Launcher\ Extended* # Ignore specified files and folders because they are not needed for the module
   echo ""                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             # make the output look easier to read
@@ -209,7 +215,7 @@ elif [ $choice -eq 3 ]; then
 
   while true; do
     echo $divider
-    echo -e "\033[38;5;208mWhich Android Version are you using?\033[0m"
+    echo -e "${ORANGE}Which Android Version are you using?${NC}"
     echo "1. Android 13(November Security Patch or Below)"
     echo "2. Android 13 QPR(December Security Patch or Above)"
     echo "3. Android 13 QPR2(March Security Patch or Above)"
@@ -265,13 +271,13 @@ elif [ $choice -eq 3 ]; then
       break
 
     else
-      echo -e "\033[31;1mInvalid choice. Please try again.\033[0m"
+      echo -e "${PURPLE}Invalid choice. Please try again.${NC}"
     fi
   done
 
   while true; do
     echo $divider
-    echo -e "\033[38;5;208mDo you wanna add 'Material You Greetings In At A Glance' & install Extended Settings app?\033[0m"
+    echo -e "${ORANGE}Do you wanna add 'Material You Greetings In At A Glance' & install Extended Settings app?${NC}"
     echo "1. Yes"
     echo "2. No"
     echo $divider
@@ -283,13 +289,13 @@ elif [ $choice -eq 3 ]; then
         mv -f "system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease01.apk" "system/product/priv-app/NexusLauncherRelease/temp/$file" 2>/dev/null || true
         mv -f "system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease02.apk" "system/product/priv-app/NexusLauncherRelease/temp/$file" 2>/dev/null || true
         echo $divider
-        echo -e "\033[38;5;208mDo you want to install Glance Greetings Style 1 or Glance Greetings Style 2?\033[0m"
-        echo -e "\033[38;5;2mExample Example Example Example Example\033[0m"
+        echo -e "${ORANGE}Do you want to install Glance Greetings Style 1 or Glance Greetings Style 2?${NC}"
+        echo -e "${PURPLE}Example Example Example Example Example${NC}"
         echo "Example Of Glance Greetings Style 1-"
         echo "Line 1 - Material You Greetings,"
         echo "Line 2 - Day & Date"
         echo "Line 3 - Weather Information"
-        echo -e "\033[38;5;2mExample Example Example Example Example\033[0m"
+        echo -e "${PURPLE}Example Example Example Example Example${NC}"
         echo "Example Of Glance Greetings Style 2-"
         echo "Line 1 - Material You Greetings, Day & Date"
         echo "Line 2 - Weather Information"
@@ -312,7 +318,7 @@ elif [ $choice -eq 3 ]; then
           break
 
         else
-          echo -e "\033[31;1mInvalid choice. Please try again.\033[0m"
+          echo -e "${PURPLE}Invalid choice. Please try again.${NC}"
         fi
       done
       break
@@ -340,17 +346,17 @@ elif [ $choice -eq 3 ]; then
       break
 
     else
-      echo -e "\033[31;1mInvalid choice. Please try again.\033[0m"
+      echo -e "${PURPLE}Invalid choice. Please try again.${NC}"
     fi
   done
 
   while true; do
     echo $divider
-    echo -e "\033[38;5;208mDo you want to enable DT2S in Launcher?\033[0m"
-    echo -e "\033[38;5;208mDT2S Means - Double Tap To Sleep Feature\033[0m"
-    echo -e "\033[38;5;208mMake sure you have LSPosed Installed in your rom\033[0m"
-    echo -e "\033[38;5;208mWithout LSPosed it won't work\033[0m"
-    echo -e "\033[38;5;208mRead Documentation on GitHub to know more about activating it\033[0m"
+    echo -e "${ORANGE}Do you want to enable DT2S in Launcher?${NC}"
+    echo -e "${ORANGE}DT2S Means - Double Tap To Sleep Feature${NC}"
+    echo -e "${ORANGE}Make sure you have LSPosed Installed in your rom${NC}"
+    echo -e "${ORANGE}Without LSPosed it won't work${NC}"
+    echo -e "${ORANGE}Read Documentation on GitHub to know more about activating it${NC}"
     echo "1. Yes"
     echo "2. No"
     echo $divider
@@ -366,16 +372,16 @@ elif [ $choice -eq 3 ]; then
       break
 
     else
-      echo -e "\033[31;1mInvalid choice. Please try again.\033[0m"
+      echo -e "${PURPLE}Invalid choice. Please try again.${NC}"
     fi
   done
 
   while true; do
     echo $divider
-    echo -e "\033[38;5;208mDo you wanna install Pixel Launcher Mods app?\033[0m"
-    echo -e "\033[38;5;208mIt's by Developer KieronQuinn\033[0m"
-    echo -e "\033[38;5;208mYou will be able to apply Icon Packs using it\033[0m"
-    echo -e "\033[38;5;208mIt will also enable some more functionality to pixel launcher\033[0m"
+    echo -e "${ORANGE}Do you wanna install Pixel Launcher Mods app?${NC}"
+    echo -e "${ORANGE}It's by Developer KieronQuinn${NC}"
+    echo -e "${ORANGE}You will be able to apply Icon Packs using it${NC}"
+    echo -e "${ORANGE}It will also enable some more functionality to pixel launcher${NC}"
     echo "1. Yes"
     echo "2. No"
     echo $divider
@@ -392,13 +398,13 @@ elif [ $choice -eq 3 ]; then
       break
 
     else
-      echo -e "\033[31;1mInvalid choice. Please try again.\033[0m"
+      echo -e "${PURPLE}Invalid choice. Please try again.${NC}"
     fi
   done
 
   while true; do
     echo $divider
-    echo -e "\033[38;5;208mDo you want to install Icon Shape Changer app?\033[0m"
+    echo -e "${ORANGE}Do you want to install Icon Shape Changer app?${NC}"
     echo "1. Yes"
     echo "2. No"
     echo $divider
@@ -430,15 +436,15 @@ elif [ $choice -eq 3 ]; then
       break
 
     else
-      echo -e "\033[31;1mInvalid choice. Please try again.\033[0m"
+      echo -e "${PURPLE}Invalid choice. Please try again.${NC}"
     fi
   done
 
   while true; do
     echo $divider
-    echo -e "\033[38;5;208mDo you want to enable Developer Opions in launcher?\033[0m"
-    echo -e "\033[31;1mWARNING: Your rom may cause Bootloop Issue if you enable this feature\033[0m"
-    echo -e "\033[31;1mEnable at your own risk\033[0m"
+    echo -e "${ORANGE}Do you want to enable Developer Opions in launcher?${NC}"
+    echo -e "${PURPLE}WARNING: Your rom may cause Bootloop Issue if you enable this feature${NC}"
+    echo -e "${PURPLE}Enable at your own risk${NC}"
     echo "1. Yes"
     echo "2. No"
     echo $divider
@@ -458,16 +464,16 @@ elif [ $choice -eq 3 ]; then
       break
 
     else
-      echo -e "\033[31;1mInvalid choice. Please try again.\033[0m"
+      echo -e "${PURPLE}Invalid choice. Please try again.${NC}"
     fi
   done
 
   while true; do
     echo $divider
-    echo -e "\033[38;5;208mWhich Wallpaper & style app you want to install?\033[0m"
-    echo -e "\033[31;1mNOTE: AOSP Wallpaper Picker is still in beta\033[0m"
-    echo -e "\033[31;1mIt comes with some features like font changer\033[0m"
-    echo -e "\033[31;1mIt depends upon your rom that how many fonts are available in your rom\033[0m"
+    echo -e "${ORANGE}Which Wallpaper & style app you want to install?${NC}"
+    echo -e "${PURPLE}NOTE: AOSP Wallpaper Picker is still in beta${NC}"
+    echo -e "${PURPLE}It comes with some features like font changer${NC}"
+    echo -e "${PURPLE}It depends upon your rom that how many fonts are available in your rom${NC}"
     echo "1. Pixel Wallpaper Picker"
     echo "2. AOSP Wallpaper Picker"
     echo $divider
@@ -484,12 +490,12 @@ elif [ $choice -eq 3 ]; then
       break
 
     else
-      echo -e "\033[31;1mInvalid choice. Please try again.\033[0m"
+      echo -e "${PURPLE}Invalid choice. Please try again.${NC}"
     fi
   done
 
   # Create zip file
-  echo -e "\033[38;5;2m>> Creating Magisk Module\033[0m"
+  echo -e "${GREEN}>> Creating Magisk Module${NC}"
   echo ""                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      # make the output look easier to read
   zip -r -q "Pixel Launcher Extended Customize Installer $version.zip" . -x .git/\* Modifications/\* screenshots/\* autobuild.sh autobuild.ps1 banner.jpg banner2.jpg changelog.md codename.txt logo.png online_setup.sh offline_setup.sh customize_setup.sh README.md Pixel\ Launcher\ Extended* system/product/priv-app/NexusLauncherRelease/temp/\* system/product/priv-app/temp/\* system/product/etc/permissions/temp/\* system/system_ext/etc/permissions/temp/\* system/product/overlay/temp/\* temp/\* system/system_ext/priv-app/WallpaperPickerGoogleRelease/temp/\* # Ignore specified files and folders because they are not needed for the module
   echo ""                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      # make the output look easier to read
@@ -500,6 +506,6 @@ elif [ $choice -eq 3 ]; then
 
 else
   # if user enters invalid choice
-  echo -e "\033[31;1mInvalid choice. Run PLE Builder again.\033[0m"
+  echo -e "${PURPLE}Invalid choice. Run PLE Builder again.${NC}"
   exit 1
 fi

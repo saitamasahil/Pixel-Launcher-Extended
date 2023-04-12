@@ -518,16 +518,6 @@ init_main() {
     rm -rf "$MODPATH/system/system_ext/etc/permissions/privapp-permissions-com.google.android.apps.wallpaper.xml"
   fi
 
-  ui_print "[*] Clearing system cache to make it work properly..."
-  ui_print ""
-
-  rm -rf "/data/system/package_cache"
-
-  sleep 0.5
-
-  ui_print "[*] Done!"
-  ui_print ""
-
   sleep 0.5
 
   ui_print " --- Notes --- "

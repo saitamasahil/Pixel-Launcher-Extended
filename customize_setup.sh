@@ -105,16 +105,6 @@ init_main() {
   ui_print ""
   ui_print "Finished Installing Pixel Launcher Extended"
 
-  ui_print "[*] Clearing system cache to make it work properly..."
-  ui_print ""
-
-  rm -rf "/data/system/package_cache"
-
-  sleep 0.5
-
-  ui_print "[*] Done!"
-  ui_print ""
-
   sleep 0.5
 
   ui_print " --- Notes --- "
