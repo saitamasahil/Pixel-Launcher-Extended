@@ -88,7 +88,7 @@ done
 # If there are no packages to install then just print all packages are already installed
 if [ ${#TO_INSTALL[@]} -eq 0 ]; then
   echo -e "${GREEN}zip is already installed.${NC}"
-  echo -e "${GREEN}Starting PLE Builder...${NC}"
+  echo -e "${GREEN}Starting PLE Builder.${NC}"
 fi
 
 # Loop through the package managers and find the one that is available
@@ -353,10 +353,10 @@ elif [ $choice -eq 3 ]; then
   while true; do
     echo $divider
     echo -e "${ORANGE}Do you want to enable DT2S in Launcher?${NC}"
-    echo -e "${ORANGE}DT2S Means - Double Tap To Sleep Feature${NC}"
-    echo -e "${ORANGE}Make sure you have LSPosed Installed in your rom${NC}"
-    echo -e "${ORANGE}Without LSPosed it won't work${NC}"
-    echo -e "${ORANGE}Read Documentation on GitHub to know more about activating it${NC}"
+    echo -e "${PURPLE}DT2S Means - Double Tap To Sleep Feature${NC}"
+    echo -e "${PURPLE}Make sure you have LSPosed Installed in your rom${NC}"
+    echo -e "${PURPLE}Without LSPosed it won't work${NC}"
+    echo -e "${PURPLE}Read Documentation on GitHub to know more about activating it${NC}"
     echo "1. Yes"
     echo "2. No"
     echo $divider
@@ -379,9 +379,9 @@ elif [ $choice -eq 3 ]; then
   while true; do
     echo $divider
     echo -e "${ORANGE}Do you wanna install Pixel Launcher Mods app?${NC}"
-    echo -e "${ORANGE}It's by Developer KieronQuinn${NC}"
-    echo -e "${ORANGE}You will be able to apply Icon Packs using it${NC}"
-    echo -e "${ORANGE}It will also enable some more functionality to pixel launcher${NC}"
+    echo -e "${PURPLE}It's by Developer KieronQuinn${NC}"
+    echo -e "${PURPLE}You will be able to apply Icon Packs using it${NC}"
+    echo -e "${PURPLE}It will also enable some more functionality to pixel launcher${NC}"
     echo "1. Yes"
     echo "2. No"
     echo $divider
