@@ -140,7 +140,7 @@ fi
 version=$(grep "version=" module.prop | cut -d "=" -f 2)
 
 # ask user if they want to build online installer or offline installer
-echo -e "${ORANGE}Do you want to build Offline Installer, Online Installer or Customize Installer?${NC}"
+echo -e "${ORANGE}Select Desired Installer:${NC}"
 echo "1. Offline Installer"
 echo "2. Online Installer"
 echo "3. Customize Installer"
@@ -444,7 +444,7 @@ elif [ $choice -eq 3 ]; then
     echo $divider
     echo -e "${ORANGE}Do you want to enable Developer Opions in launcher?${NC}"
     echo -e "${PURPLE}WARNING: Your rom may cause Bootloop Issue if you enable this feature${NC}"
-    echo -e "${PURPLE}Enable at your own risk${NC}"
+    echo -e "${PURPLE}It also may expose root in some banking apps in some custom roms${NC}"
     echo "1. Yes"
     echo "2. No"
     echo $divider
