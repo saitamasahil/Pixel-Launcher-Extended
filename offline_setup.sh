@@ -78,6 +78,8 @@ REPLACE="
 /system/product/overlay/ThemedIconsOverlay.apk
 /system/product/overlay/PixelLauncherIconsOverlay.apk
 /system/product/overlay/CustomPixelLauncherOverlay.apk
+/system/product/overlay/MiuiCameraOverlay/MiuiCameraOverlay.apk
+/system/product/overlay/MiuiGalleryOverlay/MiuiGalleryOverlay.apk
 "
 
 ############
