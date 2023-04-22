@@ -12,6 +12,7 @@
         <permission name="android.permission.REGISTER_STATS_PULL_ATOM"/>
         <permission name="android.permission.SET_UNRESTRICTED_KEEP_CLEAR_AREAS"/>
         <permission name="android.permission.BROADCAST_CLOSE_SYSTEM_DIALOGS"/>
+        <permission name="android.permission.CHANGE_WIFI_STATE" />
         <permission name="android.permission.CONTROL_REMOTE_APP_TRANSITION_ANIMATIONS"/>
         <permission name="android.permission.VIBRATE"/>
         <permission name="android.permission.QUERY_ALL_PACKAGES"/>
@@ -19,6 +20,7 @@
         <permission name="android.permission.REMOVE_TASKS"/>
         <permission name="android.permission.WRITE_SECURE_SETTINGS"/>
         <permission name="android.permission.MANAGE_ACTIVITY_TASKS"/>
+        <permission name="android.permission.PACKAGE_USAGE_STATS"/>
         <permission name="android.permission.STATUS_BAR"/>
         <permission name="android.permission.STOP_APP_SWITCHES"/>
         <permission name="android.permission.SET_ORIENTATION"/>
@@ -26,6 +28,7 @@
         <permission name="android.permission.MANAGE_ACCESSIBILITY"/>
         <permission name="android.permission.MONITOR_INPUT"/>
         <permission name="android.permission.ALLOW_SLIPPERY_TOUCHES"/>
+        <permission name="android.permission.ACCESS_SHORTCUTS" />
         <permission name="android.permission.SYSTEM_APPLICATION_OVERLAY"/>
         <permission name="android.permission.CALL_PHONE"/>
         <permission name="android.permission.SET_WALLPAPER"/>
@@ -37,6 +40,7 @@
         <permission name="android.permission.READ_DEVICE_CONFIG"/>
         <permission name="android.permission.ROTATE_SURFACE_FLINGER"/>
         <permission name="android.permission.POST_NOTIFICATIONS"/>
+        <permission name="android.permission.READ_HOME_APP_SEARCH_DATA" />
         <permission name="com.google.android.apps.nexuslauncher.permission.READ_SETTINGS"/>
         <permission name="com.google.android.apps.nexuslauncher.permission.WRITE_SETTINGS"/>
         <permission name="com.google.android.apps.nexuslauncher.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"/>
