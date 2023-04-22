@@ -19,6 +19,7 @@
         <permission name="android.permission.WAKE_LOCK"/>
         <permission name="android.permission.WRITE_EXTERNAL_STORAGE"/>
         <permission name="android.permission.WRITE_SECURE_SETTINGS"/>
+        <permission name="android.permission.MONITOR_INPUT"/>
         <permission name="com.breel.wallpapers19.APPLY_SETTINGS"/>
         <permission name="com.google.android.apps.wallpaper.CHANGE_DOCKED_CLOCK_FACE"/>
         <permission name="com.google.android.apps.wallpaper.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"/>
