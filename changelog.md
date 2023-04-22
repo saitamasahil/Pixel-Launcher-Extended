@@ -1,6 +1,7 @@
 **Version 1.6**
 - Fixed banner not showing while making launcher using PLE Builder
 - Fixed wallpaper app not opening in paranoid rom
+- Fixed crashing issue while applying live wallpaper in Android 13 QPR
 
 **Version 1.5**
 - Added theme switcher background & updated icons in extended settings app
