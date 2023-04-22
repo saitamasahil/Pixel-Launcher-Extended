@@ -850,7 +850,11 @@ init_main() {
     ui_print "Downloading..."
     ui_print ""
     rm -rf "$MODPATH/system/system_ext/etc/permissions/AOSP_Picker.xml"
-    download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/system_ext/priv-app/WallpaperPickerGoogleRelease/WallpaperPickerGoogleRelease.apk" "$MODPATH/system/system_ext/priv-app/WallpaperPickerGoogleRelease/WallpaperPickerGoogleRelease.apk"
+    if [ $PATCH_LEVEL -le 202302 ]; then
+      download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/system_ext/priv-app/WallpaperPickerGoogleRelease/WallpaperPickerGoogleReleaseOld.apk" "$MODPATH/system/system_ext/priv-app/WallpaperPickerGoogleRelease/WallpaperPickerGoogleReleaseOld.apk"
+    elif [ $PATCH_LEVEL -ge 202303 ]; then
+      download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/system_ext/priv-app/WallpaperPickerGoogleRelease/WallpaperPickerGoogleRelease.apk" "$MODPATH/system/system_ext/priv-app/WallpaperPickerGoogleRelease/WallpaperPickerGoogleRelease.apk"
+    fi
 
   elif [[ "$FCTEXTAD1" == "AOSP Wallpaper Picker" ]]; then
     rm -rf "$MODPATH/system/system_ext/etc/permissions/privapp-permissions-com.google.android.apps.wallpaper.xml"
