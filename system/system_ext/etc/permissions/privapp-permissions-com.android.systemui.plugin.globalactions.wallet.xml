@@ -1,0 +1,6 @@
+<permissions>
+  <privapp-permissions package="com.android.systemui.plugin.globalactions.wallet">
+    <permission name="com.android.systemui.permission.PLUGIN" />
+  <permission name="com.android.systemui.plugin.globalactions.wallet.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+  </privapp-permissions>
+</permissions>
