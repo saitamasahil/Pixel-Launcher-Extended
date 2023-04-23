@@ -541,11 +541,11 @@ elif [ $choice -eq 3 ]; then
   echo -e "${GREEN}>> Creating Magisk Module${NC}"
   echo ""                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      # make the output look easier to read
   zip -r -q "Pixel Launcher Extended Customize Installer $version.zip" . -x .git/\* Modifications/\* screenshots/\* autobuild.sh autobuild.ps1 banner.jpg banner2.jpg changelog.md codename.txt logo.png online_setup.sh offline_setup.sh customize_setup.sh README.md Pixel\ Launcher\ Extended* system/product/priv-app/NexusLauncherRelease/temp/\* system/product/priv-app/temp/\* system/product/etc/permissions/temp/\* system/system_ext/etc/permissions/temp/\* system/product/overlay/temp/\* temp/\* system/system_ext/priv-app/WallpaperPickerGoogleRelease/temp/\* # Ignore specified files and folders because they are not needed for the module
-  chmod +x autobuild.sh
-  ./autobuild.sh
 
   # Move temp files & folders back to original location
   recover_ple
+  chmod +x autobuild.sh
+  ./autobuild.sh
 
 elif [ $choice -eq 4 ]; then
   echo -e "${GREEN}>> Checking for updates${NC}"
