@@ -40,6 +40,9 @@ EOF
 else
   # Print an error message
   echo "."$shell"rc file not found"
+  touch ~/"$shell"rc
+  chmod +x autobuild.sh
+  ./autobuild.sh
 fi
 
 # Define temp directories making function
