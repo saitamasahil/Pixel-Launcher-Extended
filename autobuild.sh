@@ -139,6 +139,7 @@ if [ -f /etc/fedora-release ]; then
 fi
 
 # Display "PLE Builder" in bigger fonts
+clear
 echo -e "${PURPLE}$(figlet "PLE Builder")${NC}"
 
 # Check if zip is installed
