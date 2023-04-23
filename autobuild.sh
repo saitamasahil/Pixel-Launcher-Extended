@@ -6,6 +6,43 @@ ORANGE='\033[1m\033[38;5;214m'
 PURPLE='\033[1m\033[38;5;140m'
 NC='\033[0m' # No Color
 
+# This script adds the PLE function definition to the appropriate shell configuration file
+# Get the name of the current shell
+shell=$(basename "$SHELL")
+
+# Check if the configuration file exists
+if [ -f ~/."$shell"rc ]; then
+  # Check if the PLE function is already defined in the file
+  if grep -q "PLE ()" ~/."$shell"rc; then
+    # Delete the existing PLE function
+    sed -i '/PLE ()/,$d' ~/."$shell"rc
+  fi
+
+  # Get the current working directory of the script
+  pwd=$(pwd)
+
+  # Append the function definition to the end of the file
+  cat >>~/."$shell"rc <<EOF
+PLE () {
+  # Go to the saved directory
+  cd "$pwd"
+
+  # Check if autobuild.sh exists
+  if [ -f autobuild.sh ]; then
+    git pull
+    chmod +x autobuild.sh
+    ./autobuild.sh
+  else
+    echo "PLE Builder is not available in your system"
+  fi
+}
+EOF
+
+else
+  # Print an error message
+  echo "."$shell"rc file not found"
+fi
+
 # Define temp directories making function
 make_temp_dir() {
   mkdir system/product/etc/permissions/temp
@@ -177,11 +214,13 @@ if [ $choice -eq 1 ]; then
   echo ""                                                                                                                                                                                                                                                                                       # make the output look easier to read
   zip -r -q "Pixel Launcher Extended Offline Installer $version.zip" . -x .git/\* Modifications/\* screenshots/\* autobuild.sh autobuild.ps1 banner.jpg banner2.jpg changelog.md codename.txt logo.png online_setup.sh offline_setup.sh customize_setup.sh README.md Pixel\ Launcher\ Extended* # Ignore specified files and folders because they are not needed for the module
   echo ""                                                                                                                                                                                                                                                                                       # make the output look easier to read
-  echo "Done! You can find the module zip file in the current directory - '$(pwd)/Pixel Launcher Extended Offline Installer $version.zip'"
+  echo "Done! You can find the magisk module zip file in the current directory - '$(pwd)/Pixel Launcher Extended Offline Installer $version.zip'"
   # Delete temp file
   if [ -f "setup.sh" ]; then
     rm setup.sh
   fi
+  echo -e "${PURPLE}You can run PLE Builder again by typing 'PLE' in your terminal.${NC}"
+  echo -e "${PURPLE}Internet connection is required while running it. So, It could download latest updates if available.${NC}"
 
 elif [ $choice -eq 2 ]; then
 
@@ -202,11 +241,13 @@ elif [ $choice -eq 2 ]; then
   echo ""                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             # make the output look easier to read
   zip -r -q "Pixel Launcher Extended Online Installer $version.zip" . -x .git/\* Modifications/\* screenshots/\* autobuild.sh autobuild.ps1 banner.jpg banner2.jpg changelog.md codename.txt logo.png offline_setup.sh customize_setup.sh online_setup.sh README.md system/product/priv-app/NexusLauncherRelease/*\* system/product/priv-app/PixelLauncherMods/PixelLauncherMods.apk system/product/overlay/ThemedIconsOverlay/*\* system/system_ext/priv-app/WallpaperPickerGoogleRelease/* system/product/overlay/TeamFiles* system/product/priv-app/ExtendedSettings/ExtendedSettings.apk system/product/priv-app/IconShapeChanger/IconShapeChanger.apk Pixel\ Launcher\ Extended* # Ignore specified files and folders because they are not needed for the module
   echo ""                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             # make the output look easier to read
-  echo "Done! You can find the module zip file in the current directory - '$(pwd)/Pixel Launcher Extended Online Installer $version.zip'"
+  echo "Done! You can find the magisk module zip file in the current directory - '$(pwd)/Pixel Launcher Extended Online Installer $version.zip'"
   # Delete temp file
   if [ -f "setup.sh" ]; then
     rm setup.sh
   fi
+  echo -e "${PURPLE}You can run PLE Builder again by typing 'PLE' in your terminal.${NC}"
+  echo -e "${PURPLE}Internet connection is required while running it. So, It could download latest updates if available.${NC}"
 
 elif [ $choice -eq 3 ]; then
 
@@ -497,7 +538,9 @@ elif [ $choice -eq 3 ]; then
   echo ""                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      # make the output look easier to read
   zip -r -q "Pixel Launcher Extended Customize Installer $version.zip" . -x .git/\* Modifications/\* screenshots/\* autobuild.sh autobuild.ps1 banner.jpg banner2.jpg changelog.md codename.txt logo.png online_setup.sh offline_setup.sh customize_setup.sh README.md Pixel\ Launcher\ Extended* system/product/priv-app/NexusLauncherRelease/temp/\* system/product/priv-app/temp/\* system/product/etc/permissions/temp/\* system/system_ext/etc/permissions/temp/\* system/product/overlay/temp/\* temp/\* system/system_ext/priv-app/WallpaperPickerGoogleRelease/temp/\* # Ignore specified files and folders because they are not needed for the module
   echo ""                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      # make the output look easier to read
-  echo "Done! You can find the module zip file in the current directory - '$(pwd)/Pixel Launcher Extended Customize Installer $version.zip'"
+  echo "Done! You can find the magisk module zip file in the current directory - '$(pwd)/Pixel Launcher Extended Customize Installer $version.zip'"
+  echo -e "${PURPLE}You can run PLE Builder again by typing 'PLE' in your terminal.${NC}"
+  echo -e "${PURPLE}Internet connection is required while running it. So, It could download latest updates if available.${NC}"
 
   # Move temp files & folders back to original location
   recover_ple
