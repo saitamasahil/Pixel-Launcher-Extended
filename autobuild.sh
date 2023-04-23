@@ -553,7 +553,7 @@ elif [ $choice -eq 4 ]; then
 elif [ $choice -eq 5 ]; then
   echo -e "${GREEN}>> Moving magisk module to Internal Storage${NC}"
   mv Pixel\ Launcher\ Extended* /sdcard
-  FILE="/sdcard/Pixel Launcher Extended*"
+  FILE="/sdcard/Pixel\ Launcher\ Extended*"
   if [ -e "$FILE" ]; then
     echo "Moved Sucessfully."
   else
