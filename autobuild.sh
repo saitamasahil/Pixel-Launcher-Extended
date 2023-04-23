@@ -187,13 +187,17 @@ fi
 # Read version from module.prop file
 version=$(grep "version=" module.prop | cut -d "=" -f 2)
 
-# ask user if they want to build online installer or offline installer
+# ask user what option they want to choose
+echo -e "${GREEN}Notes:${NC}"
+echo -e "${GREEN}You will get the output magisk module in the directory where you cloned the repository.${NC}"
+echo -e "${GREEN}If you are using Termux then use option number 5 to move magisk module to your phone's Internal Storage.${NC}"
 echo -e "${ORANGE}Select Your Choice:${NC}"
 echo "1. Make Pixel Launcher Extended Offline Installer"
 echo "2. Make Pixel Launcher Extended Online Installer"
 echo "3. Make Pixel Launcher Extended Customize Installer"
 echo "4. Update PLE Builder(Internet Connection Required)"
-echo "5. Exit"
+echo "5. Move Magisk Module To Internal Storage(Termux Specific Option)"
+echo "6. Exit"
 read -p "Enter your choice: " choice
 
 if [ $choice -eq 1 ]; then
@@ -214,13 +218,12 @@ if [ $choice -eq 1 ]; then
   echo -e "${GREEN}>> Creating Magisk Module${NC}"
   echo ""                                                                                                                                                                                                                                                                                       # make the output look easier to read
   zip -r -q "Pixel Launcher Extended Offline Installer $version.zip" . -x .git/\* Modifications/\* screenshots/\* autobuild.sh autobuild.ps1 banner.jpg banner2.jpg changelog.md codename.txt logo.png online_setup.sh offline_setup.sh customize_setup.sh README.md Pixel\ Launcher\ Extended* # Ignore specified files and folders because they are not needed for the module
-  echo ""                                                                                                                                                                                                                                                                                       # make the output look easier to read
-  echo "Done! You can find the magisk module zip file in the current directory - '$(pwd)/Pixel Launcher Extended Offline Installer $version.zip'"
   # Delete temp file
   if [ -f "setup.sh" ]; then
     rm setup.sh
   fi
-  echo -e "${PURPLE}You can run PLE Builder again by typing 'PLE' in your terminal.${NC}"
+  chmod +x autobuild.sh
+  ./autobuild.sh
 
 elif [ $choice -eq 2 ]; then
 
@@ -240,13 +243,12 @@ elif [ $choice -eq 2 ]; then
   echo -e "${GREEN}>> Creating Magisk Module${NC}"
   echo ""                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             # make the output look easier to read
   zip -r -q "Pixel Launcher Extended Online Installer $version.zip" . -x .git/\* Modifications/\* screenshots/\* autobuild.sh autobuild.ps1 banner.jpg banner2.jpg changelog.md codename.txt logo.png offline_setup.sh customize_setup.sh online_setup.sh README.md system/product/priv-app/NexusLauncherRelease/*\* system/product/priv-app/PixelLauncherMods/PixelLauncherMods.apk system/product/overlay/ThemedIconsOverlay/*\* system/system_ext/priv-app/WallpaperPickerGoogleRelease/* system/product/overlay/TeamFiles* system/product/priv-app/ExtendedSettings/ExtendedSettings.apk system/product/priv-app/IconShapeChanger/IconShapeChanger.apk Pixel\ Launcher\ Extended* # Ignore specified files and folders because they are not needed for the module
-  echo ""                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             # make the output look easier to read
-  echo "Done! You can find the magisk module zip file in the current directory - '$(pwd)/Pixel Launcher Extended Online Installer $version.zip'"
   # Delete temp file
   if [ -f "setup.sh" ]; then
     rm setup.sh
   fi
-  echo -e "${PURPLE}You can run PLE Builder again by typing 'PLE' in your terminal.${NC}"
+  chmod +x autobuild.sh
+  ./autobuild.sh
 
 elif [ $choice -eq 3 ]; then
 
@@ -536,9 +538,8 @@ elif [ $choice -eq 3 ]; then
   echo -e "${GREEN}>> Creating Magisk Module${NC}"
   echo ""                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      # make the output look easier to read
   zip -r -q "Pixel Launcher Extended Customize Installer $version.zip" . -x .git/\* Modifications/\* screenshots/\* autobuild.sh autobuild.ps1 banner.jpg banner2.jpg changelog.md codename.txt logo.png online_setup.sh offline_setup.sh customize_setup.sh README.md Pixel\ Launcher\ Extended* system/product/priv-app/NexusLauncherRelease/temp/\* system/product/priv-app/temp/\* system/product/etc/permissions/temp/\* system/system_ext/etc/permissions/temp/\* system/product/overlay/temp/\* temp/\* system/system_ext/priv-app/WallpaperPickerGoogleRelease/temp/\* # Ignore specified files and folders because they are not needed for the module
-  echo ""                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      # make the output look easier to read
-  echo "Done! You can find the magisk module zip file in the current directory - '$(pwd)/Pixel Launcher Extended Customize Installer $version.zip'"
-  echo -e "${PURPLE}You can run PLE Builder again by typing 'PLE' in your terminal.${NC}"
+  chmod +x autobuild.sh
+  ./autobuild.sh
 
   # Move temp files & folders back to original location
   recover_ple
@@ -550,6 +551,16 @@ elif [ $choice -eq 4 ]; then
   ./autobuild.sh
 
 elif [ $choice -eq 5 ]; then
+  echo -e "${GREEN}>> Moving magisk module to Internal Storage${NC}"
+  mv Pixel\ Launcher\ Extended* /sdcard
+  FILE="/sdcard/Pixel Launcher Extended*"
+  if [ -e "$FILE" ]; then
+    echo "Moved Sucessfully."
+  else
+    echo "Failed to move! Please check if Termux has storage access."
+  fi
+
+elif [ $choice -eq 6 ]; then
   exit 0
 
 else

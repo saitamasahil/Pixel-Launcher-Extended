@@ -192,10 +192,7 @@ chmod +x autobuild.sh
 ./autobuild.sh
 ```
 - Choose `Offline Installer`, `Online Installer` or `Customize Installer` using number keys from PLE Builder.
-- To run PLE Builder again, Type this in Terminal.
-```sh
-PLE
-```
+- To run PLE Builder again, Type **PLE** in Terminal.
 
 ### For Termux
 - Open Termux, copy & paste this command:
@@ -212,20 +209,11 @@ git clone --depth=1 https://github.com/saitamasahil/Pixel-Launcher-Extended
 cd Pixel-Launcher-Extended
 chmod +x autobuild.sh
 ./autobuild.sh
-mv Pixel\ Launcher\ Extended* /sdcard
-echo "Your magisk module is available in Internal Storage"
 ```
 - Please make sure to grant storage permissions, if Termux asks you to do so, you will get Magisk module in your internal storage.
 - Choose `Offline Installer`, `Online Installer` or `Customize Installer` using number keys from PLE Builder.
 - Use [Termux From F-Droid](https://f-droid.org/en/packages/com.termux/) to perform these tasks.
-- To run PLE Builder again, Type this in Terminal.
-```sh
-PLE
-```
-- After making your desired installer, run below command to move magisk module into internal storage.
-```sh
-mv Pixel\ Launcher\ Extended* /sdcard
-```
+- To run PLE Builder again, Type **PLE** in Terminal.
 
 ## Troubleshooting
 If you face any issues while using Pixel Launcher Extended then look into this section first before asking in support group on Telegram.
