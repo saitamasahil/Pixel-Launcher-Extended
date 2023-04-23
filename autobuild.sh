@@ -29,7 +29,6 @@ PLE () {
 
   # Check if autobuild.sh exists
   if [ -f autobuild.sh ]; then
-    git pull
     chmod +x autobuild.sh
     ./autobuild.sh
   else
@@ -189,10 +188,12 @@ fi
 version=$(grep "version=" module.prop | cut -d "=" -f 2)
 
 # ask user if they want to build online installer or offline installer
-echo -e "${ORANGE}Select Desired Installer:${NC}"
-echo "1. Offline Installer"
-echo "2. Online Installer"
-echo "3. Customize Installer"
+echo -e "${ORANGE}Select Your Choice:${NC}"
+echo "1. Make Pixel Launcher Extended Offline Installer"
+echo "2. Make Pixel Launcher Extended Online Installer"
+echo "3. Make Pixel Launcher Extended Customize Installer"
+echo "4. Update PLE Builder(Internet Connection Required)"
+echo "5. Exit"
 read -p "Enter your choice: " choice
 
 if [ $choice -eq 1 ]; then
@@ -220,7 +221,6 @@ if [ $choice -eq 1 ]; then
     rm setup.sh
   fi
   echo -e "${PURPLE}You can run PLE Builder again by typing 'PLE' in your terminal.${NC}"
-  echo -e "${PURPLE}Internet connection is required while running it. So, It could download latest updates if available.${NC}"
 
 elif [ $choice -eq 2 ]; then
 
@@ -247,7 +247,6 @@ elif [ $choice -eq 2 ]; then
     rm setup.sh
   fi
   echo -e "${PURPLE}You can run PLE Builder again by typing 'PLE' in your terminal.${NC}"
-  echo -e "${PURPLE}Internet connection is required while running it. So, It could download latest updates if available.${NC}"
 
 elif [ $choice -eq 3 ]; then
 
@@ -540,10 +539,18 @@ elif [ $choice -eq 3 ]; then
   echo ""                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      # make the output look easier to read
   echo "Done! You can find the magisk module zip file in the current directory - '$(pwd)/Pixel Launcher Extended Customize Installer $version.zip'"
   echo -e "${PURPLE}You can run PLE Builder again by typing 'PLE' in your terminal.${NC}"
-  echo -e "${PURPLE}Internet connection is required while running it. So, It could download latest updates if available.${NC}"
 
   # Move temp files & folders back to original location
   recover_ple
+
+elif [ $choice -eq 4 ]; then
+  echo -e "${GREEN}>> Checking for updates${NC}"
+  git pull
+  chmod +x autobuild.sh
+  ./autobuild.sh
+
+elif [ $choice -eq 5 ]; then
+  exit 0
 
 else
   # if user enters invalid choice
