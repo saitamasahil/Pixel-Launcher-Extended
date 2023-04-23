@@ -6,6 +6,17 @@ ORANGE='\033[1m\033[38;5;214m'
 PURPLE='\033[1m\033[38;5;140m'
 NC='\033[0m' # No Color
 
+# Define temp directories making function
+make_temp_dir() {
+  mkdir system/product/etc/permissions/temp
+  mkdir system/product/overlay/temp
+  mkdir system/product/priv-app/NexusLauncherRelease/temp
+  mkdir system/product/priv-app/temp
+  mkdir system/system_ext/etc/permissions/temp
+  mkdir system/system_ext/priv-app/WallpaperPickerGoogleRelease/temp
+  mkdir temp
+}
+
 # Define recover files & folders function
 recover_ple() {
   # Move temp files & folders back to original location
@@ -223,13 +234,7 @@ elif [ $choice -eq 3 ]; then
     read -p "Enter your choice: " choice
 
     if [ $choice -eq 1 ]; then
-      mkdir system/product/priv-app/NexusLauncherRelease/temp
-      mkdir system/product/priv-app/temp
-      mkdir system/product/etc/permissions/temp
-      mkdir system/product/overlay/temp
-      mkdir system/system_ext/priv-app/WallpaperPickerGoogleRelease/temp
-      mkdir temp
-      mkdir system/system_ext/etc/permissions/temp
+      make_temp_dir
       mv -f "system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease01.apk" "system/product/priv-app/NexusLauncherRelease/temp/$file"
       mv -f "system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease11.apk" "system/product/priv-app/NexusLauncherRelease/temp/$file"
       mv -f "system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease21.apk" "system/product/priv-app/NexusLauncherRelease/temp/$file"
@@ -240,13 +245,7 @@ elif [ $choice -eq 3 ]; then
       break
 
     elif [ $choice -eq 2 ]; then
-      mkdir system/product/priv-app/NexusLauncherRelease/temp
-      mkdir system/product/priv-app/temp
-      mkdir system/product/etc/permissions/temp
-      mkdir system/product/overlay/temp
-      mkdir system/system_ext/priv-app/WallpaperPickerGoogleRelease/temp
-      mkdir temp
-      mkdir system/system_ext/etc/permissions/temp
+      make_temp_dir
       mv -f "system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease00.apk" "system/product/priv-app/NexusLauncherRelease/temp/$file"
       mv -f "system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease10.apk" "system/product/priv-app/NexusLauncherRelease/temp/$file"
       mv -f "system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease20.apk" "system/product/priv-app/NexusLauncherRelease/temp/$file"
@@ -257,13 +256,7 @@ elif [ $choice -eq 3 ]; then
       break
 
     elif [ $choice -eq 3 ]; then
-      mkdir system/product/priv-app/NexusLauncherRelease/temp
-      mkdir system/product/priv-app/temp
-      mkdir system/product/etc/permissions/temp
-      mkdir system/product/overlay/temp
-      mkdir system/system_ext/priv-app/WallpaperPickerGoogleRelease/temp
-      mkdir temp
-      mkdir system/system_ext/etc/permissions/temp
+      make_temp_dir
       mv -f "system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease00.apk" "system/product/priv-app/NexusLauncherRelease/temp/$file"
       mv -f "system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease10.apk" "system/product/priv-app/NexusLauncherRelease/temp/$file"
       mv -f "system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease20.apk" "system/product/priv-app/NexusLauncherRelease/temp/$file"
