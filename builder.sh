@@ -3,8 +3,7 @@
 # Check if zip, figlet and git are installed. If not then run builder_dependencies.sh to install them.
 for cmd in zip figlet git; do
   if ! command -v $cmd &>/dev/null; then
-    chmod +x builder_dependencies.sh
-    ./builder_dependencies.sh
+    chmod +x builder_dependencies.sh && ./builder_dependencies.sh
   fi
 done
 
@@ -12,6 +11,7 @@ done
 GREEN='\033[1m\033[32m'
 ORANGE='\033[1m\033[38;5;214m'
 PURPLE='\033[1m\033[38;5;140m'
+PEACH='\e[38;2;217;133;134m'
 NC='\033[0m' # No Color
 
 # This script adds the PLE function definition to the appropriate shell configuration file
@@ -37,8 +37,7 @@ PLE () {
 
   # Check if builder.sh exists
   if [ -f builder.sh ]; then
-    chmod +x builder.sh
-    ./builder.sh
+    chmod +x builder.sh && ./builder.sh
   else
     echo "PLE Builder is not available in your system"
   fi
@@ -46,11 +45,10 @@ PLE () {
 EOF
 
 else
-  # Print an error message
+  # Print an error message & make ."$shell"rc file
   echo "."$shell"rc file not found"
   touch ~/."$shell"rc
-  chmod +x builder.sh
-  ./builder.sh
+  chmod +x builder.sh && ./builder.sh
 fi
 
 # Define temp directories making function
@@ -134,7 +132,7 @@ echo "2. Make Online Installer"
 echo "3. Make Customize Installer"
 echo "4. Update PLE Builder"
 echo "5. Move Magisk Module To Internal Storage"
-echo "6. Uninstall PLE Builder"
+echo -e "${PEACH}6. Uninstall PLE Builder${NC}"
 echo "7. Exit"
 read -p "Enter your choice: " choice
 
@@ -167,8 +165,7 @@ if [ $choice -eq 1 ]; then
   read -p "Enter your choice: " choice
 
   if [ $choice -eq 1 ]; then
-    chmod +x builder.sh
-    ./builder.sh
+    chmod +x builder.sh && ./builder.sh
   elif [ $choice -eq 2 ]; then
     exit 0
   fi
@@ -202,8 +199,7 @@ elif [ $choice -eq 2 ]; then
   read -p "Enter your choice: " choice
 
   if [ $choice -eq 1 ]; then
-    chmod +x builder.sh
-    ./builder.sh
+    chmod +x builder.sh && ./builder.sh
   elif [ $choice -eq 2 ]; then
     exit 0
   fi
@@ -268,7 +264,7 @@ elif [ $choice -eq 3 ]; then
       break
 
     else
-      echo -e "${PURPLE}Invalid choice. Please try again.${NC}"
+      echo -e "${PEACH}Invalid choice. Please try again.${NC}"
     fi
   done
 
@@ -315,7 +311,7 @@ elif [ $choice -eq 3 ]; then
           break
 
         else
-          echo -e "${PURPLE}Invalid choice. Please try again.${NC}"
+          echo -e "${PEACH}Invalid choice. Please try again.${NC}"
         fi
       done
       break
@@ -343,7 +339,7 @@ elif [ $choice -eq 3 ]; then
       break
 
     else
-      echo -e "${PURPLE}Invalid choice. Please try again.${NC}"
+      echo -e "${PEACH}Invalid choice. Please try again.${NC}"
     fi
   done
 
@@ -369,7 +365,7 @@ elif [ $choice -eq 3 ]; then
       break
 
     else
-      echo -e "${PURPLE}Invalid choice. Please try again.${NC}"
+      echo -e "${PEACH}Invalid choice. Please try again.${NC}"
     fi
   done
 
@@ -395,7 +391,7 @@ elif [ $choice -eq 3 ]; then
       break
 
     else
-      echo -e "${PURPLE}Invalid choice. Please try again.${NC}"
+      echo -e "${PEACH}Invalid choice. Please try again.${NC}"
     fi
   done
 
@@ -433,7 +429,7 @@ elif [ $choice -eq 3 ]; then
       break
 
     else
-      echo -e "${PURPLE}Invalid choice. Please try again.${NC}"
+      echo -e "${PEACH}Invalid choice. Please try again.${NC}"
     fi
   done
 
@@ -461,7 +457,7 @@ elif [ $choice -eq 3 ]; then
       break
 
     else
-      echo -e "${PURPLE}Invalid choice. Please try again.${NC}"
+      echo -e "${PEACH}Invalid choice. Please try again.${NC}"
     fi
   done
 
@@ -488,7 +484,7 @@ elif [ $choice -eq 3 ]; then
       break
 
     else
-      echo -e "${PURPLE}Invalid choice. Please try again.${NC}"
+      echo -e "${PEACH}Invalid choice. Please try again.${NC}"
     fi
   done
 
@@ -506,8 +502,7 @@ elif [ $choice -eq 3 ]; then
   read -p "Enter your choice: " choice
 
   if [ $choice -eq 1 ]; then
-    chmod +x builder.sh
-    ./builder.sh
+    chmod +x builder.sh && ./builder.sh
   elif [ $choice -eq 2 ]; then
     exit 0
   fi
@@ -516,7 +511,7 @@ elif [ $choice -eq 4 ]; then
   echo -e "${GREEN}>> Downloading updates if available${NC}"
   git pull
   if [ $? -ne 0 ]; then
-    echo -e "${PURPLE}Checking for update failed! Possible reasons are:${NC}"
+    echo -e "${PEACH}Checking for update failed! Possible reasons are:${NC}"
     echo "• You made some changes with PLE Builder"
     echo "• You have no internet connection"
     echo "• The remote GitHub repository is not accessible"
@@ -527,8 +522,7 @@ elif [ $choice -eq 4 ]; then
   read -p "Enter your choice: " choice
 
   if [ $choice -eq 1 ]; then
-    chmod +x builder.sh
-    ./builder.sh
+    chmod +x builder.sh && ./builder.sh
   elif [ $choice -eq 2 ]; then
     exit 0
   fi
@@ -548,8 +542,7 @@ elif [ $choice -eq 5 ]; then
   read -p "Enter your choice: " choice
 
   if [ $choice -eq 1 ]; then
-    chmod +x builder.sh
-    ./builder.sh
+    chmod +x builder.sh && ./builder.sh
   elif [ $choice -eq 2 ]; then
     exit 0
   fi
@@ -569,6 +562,6 @@ elif [ $choice -eq 7 ]; then
 
 else
   # if user enters invalid choice
-  echo -e "${PURPLE}Invalid choice. Run PLE Builder again.${NC}"
+  echo -e "${PEACH}Invalid choice. Run PLE Builder again.${NC}"
   exit 1
 fi
