@@ -593,7 +593,11 @@ elif [ $choice -eq 5 ]; then
   echo -e "${PURPLE}This Operation is Termux Specific.${NC}"
   echo -e "${GREEN}>> Moving magisk module to Internal Storage${NC}"
   mv Pixel\ Launcher\ Extended* /sdcard
-  echo "Moved Successfully."
+  if [ $? -eq 0 ]; then
+    echo "Moved successfully"
+  else
+    echo "Failed!"
+  fi
   echo -e "${ORANGE}What would you like to do now?${NC}"
   echo "1. Run Builder Again"
   echo "2. Exit The Builder"
