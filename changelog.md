@@ -2,7 +2,9 @@
 - Fixed banner not showing while making launcher using PLE Builder
 - Fixed wallpaper app not opening in paranoid rom
 - Fixed crashing issue while applying live wallpaper in Android 13 QPR
+- Modified PLE Builder to make it more user friendly. Added more options in builder.
 - You can now run PLE Builder by typing 'PLE' in your terminal. Make sure to download & run PLE Builder for the first time. All instructions to run PLE Builder is available on GitHub.
+- Removed PLE Builder for Windows
 
 **Version 1.5**
 - Added theme switcher background & updated icons in extended settings app
