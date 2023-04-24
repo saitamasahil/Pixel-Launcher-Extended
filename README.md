@@ -155,26 +155,9 @@ If you want to enable or disable wallpaer zoom effect then use this add-on.
 
 ## Building from source
 
-If you don't want to download built module from mirrors above, then you can build magisk module yourself using PLE Builder. You can run PLE Builder in Windows, Linux based distros & Termux(F-Droid version).
+If you don't want to download built module from mirrors above, then you can build magisk module yourself using PLE Builder. You can run PLE Builder in Linux based distros & Termux(F-Droid version). This is one time process & It install PLE Builder into your system. You can run or update the builder in future by typing **PLE** in your Terminal/Termux & selecting **Update PLE Builder** option.
 
-### For Windows
-- PowerShell 5+ required.
-- Clone the repository with [GitHub Desktop](https://desktop.github.com) or using [Git app](https://git-scm.com/download/win).
-```bat
-:: ONLY RUN THIS IF YOU USE GIT AND HAVE IT INSTALLED
-git clone --depth=1 https://github.com/saitamasahil/Pixel-Launcher-Extended
-```
-- Go to the directory where you cloned & hold `Shift` key & right click.
-- Now click `Open PowerShell window here`.
-- Copy & paste this command.
-```bat
-powershell -ExecutionPolicy Bypass -File ./autobuild.ps1
-```
-- Select desired installer to make magisk module from PLE Builder.
-- Don't use git in command-line or powershell to clone repo. Some users reported that it's corrupting contents.
-> PLE Builder for Windows doesn't support making of Customize Installer yet. Use Linux or Termux to make Customize Installer.
-
-### For Ubuntu, Debian, and other Linux distributions
+### Install & run PLE Builder in Ubuntu, Debian, and other Linux distributions
 - Clone the repo using git.
 ```sh
 git clone --depth=1 https://github.com/saitamasahil/Pixel-Launcher-Extended
@@ -191,10 +174,11 @@ chmod +x autobuild.sh
 ```sh
 ./autobuild.sh
 ```
-- Choose `Offline Installer`, `Online Installer` or `Customize Installer` using number keys from PLE Builder.
+- Choose desired option using number keys.
 - To run PLE Builder again, Type **PLE** in Terminal.
+> After completing the above process for the first time, you must exit Terminal and restart it. Then you can use the 'PLE' command to launch PLE Builder again.
 
-### For Termux
+### Install & run PLE Builder in Termux
 - Open Termux, copy & paste this command:
 ```sh
 termux-setup-storage
@@ -211,9 +195,10 @@ chmod +x autobuild.sh
 ./autobuild.sh
 ```
 - Please make sure to grant storage permissions, if Termux asks you to do so, you will get Magisk module in your internal storage.
-- Choose `Offline Installer`, `Online Installer` or `Customize Installer` using number keys from PLE Builder.
+- Choose desired option using number keys.
 - Use [Termux From F-Droid](https://f-droid.org/en/packages/com.termux/) to perform these tasks.
 - To run PLE Builder again, Type **PLE** in Terminal.
+> After completing the above process for the first time, you must exit Terminal and restart it. Then you can use the 'PLE' command to launch PLE Builder again.
 
 ## Troubleshooting
 If you face any issues while using Pixel Launcher Extended then look into this section first before asking in support group on Telegram.
