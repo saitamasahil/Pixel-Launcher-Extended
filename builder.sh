@@ -1,9 +1,8 @@
 #!/usr/bin/bash
 
-# Check if zip, figlet and git are installed
+# Check if zip, figlet and git are installed. If not then run builder_dependencies.sh to install them.
 for cmd in zip figlet git; do
   if ! command -v $cmd &>/dev/null; then
-    echo "Error: $cmd is not installed."
     chmod +x builder_dependencies.sh
     ./builder_dependencies.sh
   fi
@@ -118,7 +117,7 @@ if [ -d "system/product/priv-app/NexusLauncherRelease/temp" ] || [ -d "system/pr
   recover_ple
   echo "Successfully recovered."
   echo "Run PLE Builder again."
-  exit 1
+  exit 0
 fi
 
 # Display "PLE Builder" in bigger fonts
@@ -135,7 +134,8 @@ echo "2. Make Online Installer"
 echo "3. Make Customize Installer"
 echo "4. Update PLE Builder"
 echo "5. Move Magisk Module To Internal Storage"
-echo "6. Exit"
+echo "6. Uninstall PLE Builder"
+echo "7. Exit"
 read -p "Enter your choice: " choice
 
 if [ $choice -eq 1 ]; then
@@ -540,7 +540,7 @@ elif [ $choice -eq 5 ]; then
   if [ $? -eq 0 ]; then
     echo "Moved successfully"
   else
-    echo "Failed!"
+    echo "Failed to move!"
   fi
   echo -e "${ORANGE}What would you like to do now?${NC}"
   echo "1. Run Builder Again"
@@ -555,6 +555,16 @@ elif [ $choice -eq 5 ]; then
   fi
 
 elif [ $choice -eq 6 ]; then
+  echo -e "${GREEN}>> Uninstalling PLE Builder${NC}"
+  sed -i '/PLE ()/,$d' ~/."$shell"rc
+  rm -rf "$pwd"
+  if [ $? -eq 0 ]; then # check the exit status of rm command
+    echo "Uninstalled successfully"
+  else
+    echo "Failed to uninstall!"
+  fi
+
+elif [ $choice -eq 7 ]; then
   exit 0
 
 else
