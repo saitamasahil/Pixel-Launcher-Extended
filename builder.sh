@@ -1,5 +1,14 @@
 #!/usr/bin/bash
 
+# Check if zip, figlet and git are installed
+for cmd in zip figlet git; do
+  if ! command -v $cmd &>/dev/null; then
+    echo "Error: $cmd is not installed."
+    chmod +x builder_dependencies.sh
+    ./builder_dependencies.sh
+  fi
+done
+
 # Define some color variables
 GREEN='\033[1m\033[32m'
 ORANGE='\033[1m\033[38;5;214m'
@@ -27,10 +36,10 @@ PLE () {
   # Go to the saved directory
   cd "$pwd"
 
-  # Check if autobuild.sh exists
-  if [ -f autobuild.sh ]; then
-    chmod +x autobuild.sh
-    ./autobuild.sh
+  # Check if builder.sh exists
+  if [ -f builder.sh ]; then
+    chmod +x builder.sh
+    ./builder.sh
   else
     echo "PLE Builder is not available in your system"
   fi
@@ -41,8 +50,8 @@ else
   # Print an error message
   echo "."$shell"rc file not found"
   touch ~/."$shell"rc
-  chmod +x autobuild.sh
-  ./autobuild.sh
+  chmod +x builder.sh
+  ./builder.sh
 fi
 
 # Define temp directories making function
@@ -112,80 +121,9 @@ if [ -d "system/product/priv-app/NexusLauncherRelease/temp" ] || [ -d "system/pr
   exit 1
 fi
 
-# Check for the Distro Type & Install necessary packages
-
-PACKAGE_MANAGERS=("pkg" "apt" "yum" "dnf" "pacman" "zypper")
-PACKAGES=("zip")
-
-# Define a function to check if a package is installed
-check_package() {
-  if command -v "$1" >/dev/null; then
-    return 0
-  else
-    return 1
-  fi
-}
-
-# Loop through the packages and check if they are installed
-for PKG in "${PACKAGES[@]}"; do
-  check_package "$PKG"
-  # If not installed, add it to a list of packages to install
-  if [ $? -ne 0 ]; then
-    TO_INSTALL+=("$PKG")
-  fi
-done
-
-# If there are no packages to install then just print all packages are already installed
-if [ ${#TO_INSTALL[@]} -eq 0 ]; then
-  echo -e "${GREEN}zip is already installed.${NC}"
-  echo -e "${GREEN}Starting PLE Builder.${NC}"
-fi
-
-# Loop through the package managers and find the one that is available
-for PM in "${PACKAGE_MANAGERS[@]}"; do
-  if command -v "$PM" >/dev/null; then
-    # Use the appropriate command to install the packages
-    case "$PM" in
-    "pkg") pkg install "${TO_INSTALL[@]}" ;;
-    "apt") sudo apt-get install "${TO_INSTALL[@]}" ;;
-    "yum") sudo yum install "${TO_INSTALL[@]}" ;;
-    "dnf") sudo dnf install "${TO_INSTALL[@]}" ;;
-    "pacman") sudo pacman -S --needed "${TO_INSTALL[@]}" ;;
-    "zypper") sudo zypper install "${TO_INSTALL[@]}" ;;
-    esac
-    break
-  fi
-done
-
-# If the distribution is Fedora, use dnf to install the packages
-if [ -f /etc/fedora-release ]; then
-  sudo dnf install "${TO_INSTALL[@]}"
-fi
-
-# Install latest version of figlet, As most distros come with very old version
-case "$PM" in
-"pkg") pkg install figlet ;;
-"apt") sudo apt-get install figlet ;;
-"yum") sudo yum figlet ;;
-"dnf") sudo dnf figlet ;;
-"pacman") sudo pacman -S --needed figlet ;;
-"zypper") sudo zypper install figlet ;;
-esac
-
-# If the distribution is Fedora, use dnf to install figlet
-if [ -f /etc/fedora-release ]; then
-  sudo dnf install figlet
-fi
-
 # Display "PLE Builder" in bigger fonts
 clear
 echo -e "${PURPLE}$(figlet "PLE Builder")${NC}"
-
-# Check if zip is installed
-if ! command -v zip >/dev/null; then
-  echo "Error: zip is not installed. Please install it manually and try again."
-  exit 1
-fi
 
 # Read version from module.prop file
 version=$(grep "version=" module.prop | cut -d "=" -f 2)
@@ -216,8 +154,8 @@ if [ $choice -eq 1 ]; then
 
   # Create zip file
   echo -e "${GREEN}>> Creating Magisk Module${NC}"
-  echo ""                                                                                                                                                                                                                                                                                       # make the output look easier to read
-  zip -r -q "Pixel Launcher Extended Offline Installer $version.zip" . -x .git/\* Modifications/\* screenshots/\* autobuild.sh banner.jpg banner2.jpg changelog.md codename.txt logo.png online_setup.sh offline_setup.sh customize_setup.sh README.md Pixel\ Launcher\ Extended* # Ignore specified files and folders because they are not needed for the module
+  echo ""                                                                                                                                                                                                                                                                                               # make the output look easier to read
+  zip -r -q "Pixel Launcher Extended Offline Installer $version.zip" . -x .git/\* Modifications/\* screenshots/\* builder.sh builder_dependencies.sh banner.jpg banner2.jpg changelog.md codename.txt logo.png online_setup.sh offline_setup.sh customize_setup.sh README.md Pixel\ Launcher\ Extended* # Ignore specified files and folders because they are not needed for the module
   # Delete temp file
   if [ -f "setup.sh" ]; then
     rm setup.sh
@@ -229,8 +167,8 @@ if [ $choice -eq 1 ]; then
   read -p "Enter your choice: " choice
 
   if [ $choice -eq 1 ]; then
-    chmod +x autobuild.sh
-    ./autobuild.sh
+    chmod +x builder.sh
+    ./builder.sh
   elif [ $choice -eq 2 ]; then
     exit 0
   fi
@@ -251,8 +189,8 @@ elif [ $choice -eq 2 ]; then
 
   # Create zip file
   echo -e "${GREEN}>> Creating Magisk Module${NC}"
-  echo ""                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             # make the output look easier to read
-  zip -r -q "Pixel Launcher Extended Online Installer $version.zip" . -x .git/\* Modifications/\* screenshots/\* autobuild.sh banner.jpg banner2.jpg changelog.md codename.txt logo.png offline_setup.sh customize_setup.sh online_setup.sh README.md system/product/priv-app/NexusLauncherRelease/*\* system/product/priv-app/PixelLauncherMods/PixelLauncherMods.apk system/product/overlay/ThemedIconsOverlay/*\* system/system_ext/priv-app/WallpaperPickerGoogleRelease/* system/product/overlay/TeamFiles* system/product/priv-app/ExtendedSettings/ExtendedSettings.apk system/product/priv-app/IconShapeChanger/IconShapeChanger.apk Pixel\ Launcher\ Extended* # Ignore specified files and folders because they are not needed for the module
+  echo ""                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     # make the output look easier to read
+  zip -r -q "Pixel Launcher Extended Online Installer $version.zip" . -x .git/\* Modifications/\* screenshots/\* builder.sh builder_dependencies.sh banner.jpg banner2.jpg changelog.md codename.txt logo.png offline_setup.sh customize_setup.sh online_setup.sh README.md system/product/priv-app/NexusLauncherRelease/*\* system/product/priv-app/PixelLauncherMods/PixelLauncherMods.apk system/product/overlay/ThemedIconsOverlay/*\* system/system_ext/priv-app/WallpaperPickerGoogleRelease/* system/product/overlay/TeamFiles* system/product/priv-app/ExtendedSettings/ExtendedSettings.apk system/product/priv-app/IconShapeChanger/IconShapeChanger.apk Pixel\ Launcher\ Extended* # Ignore specified files and folders because they are not needed for the module
   # Delete temp file
   if [ -f "setup.sh" ]; then
     rm setup.sh
@@ -264,8 +202,8 @@ elif [ $choice -eq 2 ]; then
   read -p "Enter your choice: " choice
 
   if [ $choice -eq 1 ]; then
-    chmod +x autobuild.sh
-    ./autobuild.sh
+    chmod +x builder.sh
+    ./builder.sh
   elif [ $choice -eq 2 ]; then
     exit 0
   fi
@@ -556,8 +494,8 @@ elif [ $choice -eq 3 ]; then
 
   # Create zip file
   echo -e "${GREEN}>> Creating Magisk Module${NC}"
-  echo ""                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      # make the output look easier to read
-  zip -r -q "Pixel Launcher Extended Customize Installer $version.zip" . -x .git/\* Modifications/\* screenshots/\* autobuild.sh banner.jpg banner2.jpg changelog.md codename.txt logo.png online_setup.sh offline_setup.sh customize_setup.sh README.md Pixel\ Launcher\ Extended* system/product/priv-app/NexusLauncherRelease/temp/\* system/product/priv-app/temp/\* system/product/etc/permissions/temp/\* system/system_ext/etc/permissions/temp/\* system/product/overlay/temp/\* temp/\* system/system_ext/priv-app/WallpaperPickerGoogleRelease/temp/\* # Ignore specified files and folders because they are not needed for the module
+  echo ""                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              # make the output look easier to read
+  zip -r -q "Pixel Launcher Extended Customize Installer $version.zip" . -x .git/\* Modifications/\* screenshots/\* builder.sh builder_dependencies.sh banner.jpg banner2.jpg changelog.md codename.txt logo.png online_setup.sh offline_setup.sh customize_setup.sh README.md Pixel\ Launcher\ Extended* system/product/priv-app/NexusLauncherRelease/temp/\* system/product/priv-app/temp/\* system/product/etc/permissions/temp/\* system/system_ext/etc/permissions/temp/\* system/product/overlay/temp/\* temp/\* system/system_ext/priv-app/WallpaperPickerGoogleRelease/temp/\* # Ignore specified files and folders because they are not needed for the module
 
   # Move temp files & folders back to original location
   recover_ple
@@ -568,8 +506,8 @@ elif [ $choice -eq 3 ]; then
   read -p "Enter your choice: " choice
 
   if [ $choice -eq 1 ]; then
-    chmod +x autobuild.sh
-    ./autobuild.sh
+    chmod +x builder.sh
+    ./builder.sh
   elif [ $choice -eq 2 ]; then
     exit 0
   fi
@@ -583,8 +521,8 @@ elif [ $choice -eq 4 ]; then
   read -p "Enter your choice: " choice
 
   if [ $choice -eq 1 ]; then
-    chmod +x autobuild.sh
-    ./autobuild.sh
+    chmod +x builder.sh
+    ./builder.sh
   elif [ $choice -eq 2 ]; then
     exit 0
   fi
@@ -593,19 +531,15 @@ elif [ $choice -eq 5 ]; then
   echo -e "${PURPLE}This Operation is Termux Specific.${NC}"
   echo -e "${GREEN}>> Moving magisk module to Internal Storage${NC}"
   mv Pixel\ Launcher\ Extended* /sdcard
-  if [ $? -eq 0 ]; then
-    echo "Moved successfully"
-  else
-    echo "Failed!"
-  fi
+  echo "Moved Successfully."
   echo -e "${ORANGE}What would you like to do now?${NC}"
   echo "1. Run Builder Again"
   echo "2. Exit The Builder"
   read -p "Enter your choice: " choice
 
   if [ $choice -eq 1 ]; then
-    chmod +x autobuild.sh
-    ./autobuild.sh
+    chmod +x builder.sh
+    ./builder.sh
   elif [ $choice -eq 2 ]; then
     exit 0
   fi
