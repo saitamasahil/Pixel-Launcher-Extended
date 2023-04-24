@@ -95,6 +95,7 @@ If your rom can't enable developer options even after enabling from module then 
 These are optional add-ons, they add extra functionality to Pixel Launcher Extended.
 
 #### At A Glance Enhancer
+**Warning: Several users reported that At A Glance Enhancer is causing heating issue & too much battery drain with Pixel Launcher Extended. We will try to fix it & will let you guys know. For now it is not recommended to flash it.**
 This addon will enhance **At A Glance** and will enable new settings such as Doorbell, Timer, Stopwatch, Bedtime, Fitness tracker, Torch suggestion, Connected devices and much more.  
 Made by [Pixelify](https://github.com/Kingsman44/Pixelify) developer, Kingsmanz. It also fixes the select feature, At A Glance weather if your ROM doesn't have proper GApps or due to some other reasons if you faced these issues.
 - [Download](https://www.pling.com/p/1938895/) the magisk module.
@@ -120,17 +121,6 @@ An add-on for Pixel Launcher running on **Android 13 QPR2**. This add-on enables
 **Credits**
 - Made by [saitamasahil](https://github.com/saitamasahil)
 - [GitHub](https://github.com/saitamasahil/QuickOpener)
-
-#### Auto Universal Search Bar Enabler
-If you don't get unified & universal search bar in Pixel Launcher Extended shown in these screenshots ([this](https://graph.org/file/ee8e311942af77de891c8.jpg) and [this](https://graph.org/file/dfe907c4aa1283a535aee.jpg)) then flash this module in Magisk. It will permanently enable universal search bar.  
-> NOTICE: You will get this feature by default after flashing **Pixel Launcher Extended**.  
-> Only in some ROMs, you won't get it. Flash only, **AND ONLY** if you don't get this feature.
-- [Download](https://pling.com/p/1898907/) the magisk module.
-- Flash in Magisk.
-- Reboot device.
-
-**Credits**
-- [Looper](https://github.com/iamlooper)
 
 #### Hide Apps Feature
 You can enable the hide app feature in Pixel Launcher Extended by using a third-party app called **Pixel Mods**. *(**LSPosed** is required for this add-on)*.
