@@ -158,13 +158,11 @@ cd Pixel-Launcher-Extended
 ```
 - Download required dependencies by running this command.
 ```sh
-chmod +x builder_dependencies.sh
-./builder_dependencies.sh
+chmod +x builder_dependencies.sh && ./builder_dependencies.sh
 ```
 - Give necessary permission to execute PLE Builder & run it.
 ```sh
-chmod +x builder.sh
-./builder.sh
+chmod +x builder.sh && ./builder.sh
 ```
 - Choose desired option using number keys.
 - To run PLE Builder again, Type **PLE** in Terminal.
@@ -183,10 +181,8 @@ pkg install -y git
 rm -rf Pixel-Launcher-Extended
 git clone --depth=1 https://github.com/saitamasahil/Pixel-Launcher-Extended
 cd Pixel-Launcher-Extended
-chmod +x builder_dependencies.sh
-./builder_dependencies.sh
-chmod +x builder.sh
-./builder.sh
+chmod +x builder_dependencies.sh && ./builder_dependencies.sh
+chmod +x builder.sh && ./builder.sh
 ```
 - Please make sure to grant storage permissions.
 - Choose desired option using number keys.
