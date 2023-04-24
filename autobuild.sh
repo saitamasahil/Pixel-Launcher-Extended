@@ -191,15 +191,12 @@ fi
 version=$(grep "version=" module.prop | cut -d "=" -f 2)
 
 # ask user what option they want to choose
-echo -e "${GREEN}Notes:${NC}"
-echo -e "${GREEN}You will get the output magisk module in the directory where you cloned the repository.${NC}"
-echo -e "${GREEN}If you are using Termux then use option number 5 to move magisk module to your phone's Internal Storage.${NC}"
 echo -e "${ORANGE}Select Your Choice:${NC}"
-echo "1. Make Pixel Launcher Extended Offline Installer"
-echo "2. Make Pixel Launcher Extended Online Installer"
-echo "3. Make Pixel Launcher Extended Customize Installer"
-echo "4. Update PLE Builder(Internet Connection Required)"
-echo "5. Move Magisk Module To Internal Storage(Termux Specific Option)"
+echo "1. Make Offline Installer"
+echo "2. Make Online Installer"
+echo "3. Make Customize Installer"
+echo "4. Update PLE Builder"
+echo "5. Move Magisk Module To Internal Storage"
 echo "6. Exit"
 read -p "Enter your choice: " choice
 
@@ -225,8 +222,18 @@ if [ $choice -eq 1 ]; then
   if [ -f "setup.sh" ]; then
     rm setup.sh
   fi
-  chmod +x autobuild.sh
-  ./autobuild.sh
+  echo "Done! You can find it here: '$(pwd)/Pixel Launcher Extended Offline Installer $version.zip'"
+  echo -e "${ORANGE}What would you like to do now?${NC}"
+  echo "1. Run Builder Again"
+  echo "2. Exit The Builder"
+  read -p "Enter your choice: " choice
+
+  if [ $choice -eq 1 ]; then
+    chmod +x autobuild.sh
+    ./autobuild.sh
+  elif [ $choice -eq 2 ]; then
+    exit 0
+  fi
 
 elif [ $choice -eq 2 ]; then
 
@@ -250,8 +257,18 @@ elif [ $choice -eq 2 ]; then
   if [ -f "setup.sh" ]; then
     rm setup.sh
   fi
-  chmod +x autobuild.sh
-  ./autobuild.sh
+  echo "Done! You can find it here: '$(pwd)/Pixel Launcher Extended Online Installer $version.zip'"
+  echo -e "${ORANGE}What would you like to do now?${NC}"
+  echo "1. Run Builder Again"
+  echo "2. Exit The Builder"
+  read -p "Enter your choice: " choice
+
+  if [ $choice -eq 1 ]; then
+    chmod +x autobuild.sh
+    ./autobuild.sh
+  elif [ $choice -eq 2 ]; then
+    exit 0
+  fi
 
 elif [ $choice -eq 3 ]; then
 
@@ -544,19 +561,50 @@ elif [ $choice -eq 3 ]; then
 
   # Move temp files & folders back to original location
   recover_ple
-  chmod +x autobuild.sh
-  ./autobuild.sh
+  echo "Done! You can find it here: '$(pwd)/Pixel Launcher Extended Customize Installer $version.zip'"
+  echo -e "${ORANGE}What would you like to do now?${NC}"
+  echo "1. Run Builder Again"
+  echo "2. Exit The Builder"
+  read -p "Enter your choice: " choice
+
+  if [ $choice -eq 1 ]; then
+    chmod +x autobuild.sh
+    ./autobuild.sh
+  elif [ $choice -eq 2 ]; then
+    exit 0
+  fi
 
 elif [ $choice -eq 4 ]; then
-  echo -e "${GREEN}>> Checking for updates${NC}"
+  echo -e "${GREEN}>> Downloading updates if available${NC}"
   git pull
-  chmod +x autobuild.sh
-  ./autobuild.sh
+  echo -e "${ORANGE}What would you like to do now?${NC}"
+  echo "1. Run Builder Again"
+  echo "2. Exit The Builder"
+  read -p "Enter your choice: " choice
+
+  if [ $choice -eq 1 ]; then
+    chmod +x autobuild.sh
+    ./autobuild.sh
+  elif [ $choice -eq 2 ]; then
+    exit 0
+  fi
 
 elif [ $choice -eq 5 ]; then
+  echo -e "${PURPLE}This Operation is Termux Specific.${NC}"
   echo -e "${GREEN}>> Moving magisk module to Internal Storage${NC}"
   mv Pixel\ Launcher\ Extended* /sdcard
   echo "Moved Successfully."
+  echo -e "${ORANGE}What would you like to do now?${NC}"
+  echo "1. Run Builder Again"
+  echo "2. Exit The Builder"
+  read -p "Enter your choice: " choice
+
+  if [ $choice -eq 1 ]; then
+    chmod +x autobuild.sh
+    ./autobuild.sh
+  elif [ $choice -eq 2 ]; then
+    exit 0
+  fi
 
 elif [ $choice -eq 6 ]; then
   exit 0
