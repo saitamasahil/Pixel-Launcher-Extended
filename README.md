@@ -171,7 +171,7 @@ cd Pixel-Launcher-Extended
 chmod +x builder_dependencies.sh
 ./builder_dependencies.sh
 ```
-- Give necessary permission to execute builder.sh & run it.
+- Give necessary permission to execute PLE Builder & run it.
 ```sh
 chmod +x builder.sh
 ./builder.sh

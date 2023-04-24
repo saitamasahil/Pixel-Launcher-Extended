@@ -515,6 +515,12 @@ elif [ $choice -eq 3 ]; then
 elif [ $choice -eq 4 ]; then
   echo -e "${GREEN}>> Downloading updates if available${NC}"
   git pull
+  if [ $? -ne 0 ]; then
+    echo -e "${PURPLE}Checking for update failed! Possible reasons are:${NC}"
+    echo "• You made some changes with PLE Builder"
+    echo "• You have no internet connection"
+    echo "• The remote GitHub repository is not accessible"
+  fi
   echo -e "${ORANGE}What would you like to do now?${NC}"
   echo "1. Run Builder Again"
   echo "2. Exit The Builder"
@@ -531,7 +537,11 @@ elif [ $choice -eq 5 ]; then
   echo -e "${PURPLE}This Operation is Termux Specific.${NC}"
   echo -e "${GREEN}>> Moving magisk module to Internal Storage${NC}"
   mv Pixel\ Launcher\ Extended* /sdcard
-  echo "Moved Successfully."
+  if [ $? -eq 0 ]; then
+    echo "Moved successfully"
+  else
+    echo "Failed!"
+  fi
   echo -e "${ORANGE}What would you like to do now?${NC}"
   echo "1. Run Builder Again"
   echo "2. Exit The Builder"
