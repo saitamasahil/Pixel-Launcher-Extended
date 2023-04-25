@@ -104,7 +104,7 @@ else
   # Print an error message & make ."$shell"rc file
   echo "."$shell"rc file not found"
   touch ~/."$shell"rc
-  chmod +x builder.sh && ./builder.sh
+  chmod +x builder_dependencies.sh && ./builder_dependencies.sh
 fi
 
 echo -e "${GREEN}PLE Builder has been successfully installed on your system.${NC}"
