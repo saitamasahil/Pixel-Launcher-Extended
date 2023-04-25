@@ -512,8 +512,8 @@ elif [ $choice -eq 4 ]; then
   git pull
   if [ $? -ne 0 ]; then
     echo -e "${PEACH}Checking for update failed! Possible reasons are:${NC}"
-    echo "• You made some changes with PLE Builder"
-    echo "• You have no internet connection"
+    echo "• You have made some changes with PLE Builder"
+    echo "• You do not have an internet connection"
     echo "• The remote GitHub repository is not accessible"
   fi
   echo -e "${ORANGE}What would you like to do now?${NC}"

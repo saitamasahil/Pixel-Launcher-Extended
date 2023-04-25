@@ -1,5 +1,10 @@
 #!/usr/bin/bash
 
+# Define some color variables
+GREEN='\033[1m\033[32m'
+PURPLE='\033[1m\033[38;5;140m'
+NC='\033[0m' # No Color
+
 # Check for the Distro Type & Install necessary packages
 
 PACKAGE_MANAGERS=("pkg" "apt" "yum" "dnf" "pacman" "zypper")
@@ -64,3 +69,43 @@ esac
 if [ -f /etc/fedora-release ]; then
   sudo dnf install figlet
 fi
+
+# This script adds the PLE function definition to the appropriate shell configuration file
+# Get the name of the current shell
+shell=$(basename "$SHELL")
+
+# Check if the configuration file exists
+if [ -f ~/."$shell"rc ]; then
+  # Check if the PLE function is already defined in the file
+  if grep -q "PLE ()" ~/."$shell"rc; then
+    # Delete the existing PLE function
+    sed -i '/PLE ()/,$d' ~/."$shell"rc
+  fi
+
+  # Get the current working directory of the script
+  pwd=$(pwd)
+
+  # Append the function definition to the end of the file
+  cat >>~/."$shell"rc <<EOF
+PLE () {
+  # Go to the saved directory
+  cd "$pwd"
+
+  # Check if builder.sh exists
+  if [ -f builder.sh ]; then
+    chmod +x builder.sh && ./builder.sh
+  else
+    echo "PLE Builder is not available in your system"
+  fi
+}
+EOF
+
+else
+  # Print an error message & make ."$shell"rc file
+  echo "."$shell"rc file not found"
+  touch ~/."$shell"rc
+  chmod +x builder.sh && ./builder.sh
+fi
+
+echo -e "${GREEN}PLE Builder has been successfully installed on your system.${NC}"
+echo -e "${PURPLE}To run PLE Builder, type 'PLE' after restarting your terminal/termux.${NC}"
