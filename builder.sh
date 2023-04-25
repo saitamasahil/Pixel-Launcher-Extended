@@ -160,8 +160,8 @@ if [ $choice -eq 1 ]; then
   fi
   echo "Done! You can find it here: '$(pwd)/Pixel Launcher Extended Offline Installer $version.zip'"
   echo -e "${ORANGE}What would you like to do now?${NC}"
-  echo "1. Run Builder Again"
-  echo "2. Exit The Builder"
+  echo "1. Continue to the builder"
+  echo "2. Exit the builder"
   read -p "Enter your choice: " choice
 
   if [ $choice -eq 1 ]; then
@@ -194,8 +194,8 @@ elif [ $choice -eq 2 ]; then
   fi
   echo "Done! You can find it here: '$(pwd)/Pixel Launcher Extended Online Installer $version.zip'"
   echo -e "${ORANGE}What would you like to do now?${NC}"
-  echo "1. Run Builder Again"
-  echo "2. Exit The Builder"
+  echo "1. Continue to the builder"
+  echo "2. Exit the builder"
   read -p "Enter your choice: " choice
 
   if [ $choice -eq 1 ]; then
@@ -497,8 +497,8 @@ elif [ $choice -eq 3 ]; then
   recover_ple
   echo "Done! You can find it here: '$(pwd)/Pixel Launcher Extended Customize Installer $version.zip'"
   echo -e "${ORANGE}What would you like to do now?${NC}"
-  echo "1. Run Builder Again"
-  echo "2. Exit The Builder"
+  echo "1. Continue to the builder"
+  echo "2. Exit the builder"
   read -p "Enter your choice: " choice
 
   if [ $choice -eq 1 ]; then
@@ -517,8 +517,8 @@ elif [ $choice -eq 4 ]; then
     echo "• The remote GitHub repository is not accessible"
   fi
   echo -e "${ORANGE}What would you like to do now?${NC}"
-  echo "1. Run Builder Again"
-  echo "2. Exit The Builder"
+  echo "1. Continue to the builder"
+  echo "2. Exit the builder"
   read -p "Enter your choice: " choice
 
   if [ $choice -eq 1 ]; then
@@ -537,8 +537,8 @@ elif [ $choice -eq 5 ]; then
     echo "Failed to move!"
   fi
   echo -e "${ORANGE}What would you like to do now?${NC}"
-  echo "1. Run Builder Again"
-  echo "2. Exit The Builder"
+  echo "1. Continue to the builder"
+  echo "2. Exit the builder"
   read -p "Enter your choice: " choice
 
   if [ $choice -eq 1 ]; then
@@ -564,8 +564,8 @@ elif [ $choice -eq 6 ]; then
   else
     echo "Bruh! You almost killed me."
     echo -e "${ORANGE}What would you like to do now?${NC}"
-    echo "1. Run Builder Again"
-    echo "2. Exit The Builder"
+    echo "1. Continue to the builder"
+    echo "2. Exit the builder"
     read -p "Enter your choice: " choice
 
     if [ $choice -eq 1 ]; then
