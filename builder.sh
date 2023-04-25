@@ -548,13 +548,31 @@ elif [ $choice -eq 5 ]; then
   fi
 
 elif [ $choice -eq 6 ]; then
-  echo -e "${GREEN}>> Uninstalling PLE Builder${NC}"
-  sed -i '/PLE ()/,$d' ~/."$shell"rc
-  rm -rf "$pwd"
-  if [ $? -eq 0 ]; then # check the exit status of rm command
-    echo "Uninstalled successfully"
+  echo -e "${ORANGE}Are you sure you want to uninstall PLE Builder? (Y/N)${NC}"
+  read answer
+
+  if [ "$answer" == "Y" ] || [ "$answer" == "y" ]
+  then
+    echo -e "${GREEN}>> Uninstalling PLE Builder${NC}"
+    sed -i '/PLE ()/,$d' ~/."$shell"rc
+    rm -rf "$pwd"
+    if [ $? -eq 0 ]; then # check the exit status of rm command
+      echo "Uninstalled successfully"
+    else
+      echo "Failed to uninstall!"
+    fi
   else
-    echo "Failed to uninstall!"
+    echo "Bruh! You almost killed me."
+    echo -e "${ORANGE}What would you like to do now?${NC}"
+    echo "1. Run Builder Again"
+    echo "2. Exit The Builder"
+    read -p "Enter your choice: " choice
+
+    if [ $choice -eq 1 ]; then
+      chmod +x builder.sh && ./builder.sh
+    elif [ $choice -eq 2 ]; then
+      exit 0
+    fi
   fi
 
 elif [ $choice -eq 7 ]; then
