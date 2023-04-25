@@ -95,7 +95,6 @@ If your rom can't enable developer options even after enabling from module then 
 These are optional add-ons, they add extra functionality to Pixel Launcher Extended.
 
 #### At A Glance Enhancer
-**Warning: Several users reported that At A Glance Enhancer is causing heating issue & too much battery drain with Pixel Launcher Extended. We will try to fix it & will let you guys know. For now it is not recommended to flash it.**
 This addon will enhance **At A Glance** and will enable new settings such as Doorbell, Timer, Stopwatch, Bedtime, Fitness tracker, Torch suggestion, Connected devices and much more.  
 Made by [Pixelify](https://github.com/Kingsman44/Pixelify) developer, Kingsmanz. It also fixes the select feature, At A Glance weather if your ROM doesn't have proper GApps or due to some other reasons if you faced these issues.
 - [Download](https://www.pling.com/p/1938895/) the magisk module.
