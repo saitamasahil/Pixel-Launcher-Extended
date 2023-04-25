@@ -155,17 +155,13 @@ git clone --depth=1 https://github.com/saitamasahil/Pixel-Launcher-Extended
 ```sh
 cd Pixel-Launcher-Extended
 ```
-- Download required dependencies by running this command.
+- To install PLE Builder type this command.
 ```sh
 chmod +x builder_dependencies.sh && ./builder_dependencies.sh
 ```
-- Give necessary permission to execute PLE Builder & run it.
-```sh
-chmod +x builder.sh && ./builder.sh
-```
+- Once you see the installation success message, exit the terminal and restart it. Then, use the 'PLE' command to launch PLE Builder.
 - Choose desired option using number keys.
 - To run PLE Builder again, Type **PLE** in Terminal.
-> After completing the above process for the first time, you must exit Terminal and restart it. Then you can use the 'PLE' command to launch PLE Builder anytime.
 
 ### Install & run PLE Builder in Termux
 - Open Termux, copy & paste this command:
@@ -173,7 +169,7 @@ chmod +x builder.sh && ./builder.sh
 termux-setup-storage
 ```
 and give Termux storage access. If you get this warning "It appears that directory '~/storage' already exists. This script is going to rebuild its structure from scratch, wiping all dangling files. The actual storage content is not going to be deleted" then just do press "y". It won't do any harm to your device.
-- Now copy & paste these commands.
+- Now copy & paste these commands to install PLE Builder.
 ```sh
 pkg upgrade || true
 pkg install -y git
@@ -181,14 +177,13 @@ rm -rf Pixel-Launcher-Extended
 git clone --depth=1 https://github.com/saitamasahil/Pixel-Launcher-Extended
 cd Pixel-Launcher-Extended
 chmod +x builder_dependencies.sh && ./builder_dependencies.sh
-chmod +x builder.sh && ./builder.sh
 ```
+- Once you see the installation success message, exit the termux and restart it. Then, use the 'PLE' command to launch PLE Builder.
 - Please make sure to grant storage permissions.
 - Choose desired option using number keys.
 - Use **Move Magisk Module To Internal Storage** option to move magisk module to Phone's Internal Storage after making it.
 - Use [Termux From F-Droid](https://f-droid.org/en/packages/com.termux/) to perform these tasks.
 - To run PLE Builder again, Type **PLE** in Terminal.
-> After completing the above process for the first time, you must exit Termux and restart it. Then you can use the 'PLE' command to launch PLE Builder anytime.
 
 ## Troubleshooting
 If you face any issues while using Pixel Launcher Extended then look into this section first before asking in support group on Telegram.
