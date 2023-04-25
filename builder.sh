@@ -111,7 +111,7 @@ recover_ple() {
 
 # check if temp folders exist from an unexpected previous session
 if [ -d "system/product/priv-app/NexusLauncherRelease/temp" ] || [ -d "system/product/priv-app/temp" ] || [ -d "system/product/etc/permissions/temp" ] || [ -d "system/product/overlay/temp" ] || [ -d "system/system_ext/priv-app/WallpaperPickerGoogleRelease/temp" ] || [ -d "temp" ] || [ -d "system/system_ext/etc/permissions/temp" ] || [ -f "setup.sh" ] || [ -f "system.prop" ]; then
-  echo -e "${PURPLE}>> Recovering files & folders from a previous unexpected session.${NC}"
+  echo -e "${GREEN}>> Recovering files & folders from a previous unexpected session.${NC}"
   recover_ple
   echo "Successfully recovered."
   echo "Run PLE Builder again."
