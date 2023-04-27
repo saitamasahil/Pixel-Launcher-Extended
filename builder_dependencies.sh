@@ -79,14 +79,14 @@ if [ -f ~/."$shell"rc ]; then
   # Check if the PLE function is already defined in the file
   if grep -q "PLE ()" ~/."$shell"rc; then
     # Delete the existing PLE function
-    sed -i '/PLE ()/,$d' ~/."$shell"rc
+    sed -i '/PLE ()/,/^}/d' ~/."$shell"rc
   fi
 
   # Get the current working directory of the script
   pwd=$(pwd)
 
   # Append the function definition to the end of the file
-  cat >>~/."$shell"rc <<EOF
+  tail -c1 ~/."$shell"rc | read -r _ || echo "" >>~/."$shell"rc && cat >>~/."$shell"rc <<EOF
 PLE () {
   # Go to the saved directory
   cd "$pwd"
