@@ -171,7 +171,7 @@ termux-setup-storage
 and give Termux storage access. If you get this warning "It appears that directory '~/storage' already exists. This script is going to rebuild its structure from scratch, wiping all dangling files. The actual storage content is not going to be deleted" then just do press "y". It won't do any harm to your device.
 - Now copy & paste these commands to install PLE Builder.
 ```sh
-pkg upgrade || true
+pkg update && pkg upgrade
 pkg install -y git
 rm -rf Pixel-Launcher-Extended
 git clone --depth=1 https://github.com/saitamasahil/Pixel-Launcher-Extended
