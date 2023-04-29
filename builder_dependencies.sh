@@ -108,4 +108,4 @@ else
 fi
 
 echo -e "${GREEN}PLE Builder has been successfully installed on your system.${NC}"
-echo -e "${PURPLE}To run PLE Builder, type 'PLE' after restarting your terminal/termux.${NC}"
+echo -e "${PURPLE}To run PLE Builder, exit the terminal/termux, reopen it & type 'PLE'.${NC}"
