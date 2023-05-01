@@ -551,8 +551,7 @@ elif [ $choice -eq 6 ]; then
   echo -e "${ORANGE}Are you sure you want to uninstall PLE Builder? (Y/N)${NC}"
   read answer
 
-  if [ "$answer" == "Y" ] || [ "$answer" == "y" ]
-  then
+  if [ "$answer" == "Y" ] || [ "$answer" == "y" ]; then
     echo -e "${GREEN}>> Uninstalling PLE Builder${NC}"
     sed -i '/PLE ()/,/^}/d' ~/."$shell"rc
     rm -rf "$pwd"
@@ -580,6 +579,15 @@ elif [ $choice -eq 7 ]; then
 
 else
   # if user enters invalid choice
-  echo -e "${PEACH}Invalid choice. Run PLE Builder again.${NC}"
-  exit 1
+  echo -e "${PEACH}Invalid choice.${NC}"
+  echo -e "${ORANGE}What would you like to do now?${NC}"
+  echo "1. Continue to the builder"
+  echo "2. Exit the builder"
+  read -p "Enter your choice: " choice
+
+  if [ $choice -eq 1 ]; then
+    chmod +x builder.sh && ./builder.sh
+  elif [ $choice -eq 2 ]; then
+    exit 0
+  fi
 fi
