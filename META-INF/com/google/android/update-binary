@@ -71,7 +71,7 @@ mkdir -p "$MODPATH"
 # Extract to $MODPATH
 unzip -o "$ZIPFILE" -d "$MODPATH" >&2
 
-# Load installation script
+# Load install script
 if [[ -f "$MODPATH/setup.sh" ]]; then
   source "$MODPATH/setup.sh"
 elif [[ -f "$MODPATH/customize.sh" ]]; then
@@ -104,7 +104,7 @@ set_permissions
 
 # Handle replace folders
 for TARGET in $REPLACE; do
-#  ui_print "[*] Replace target: $TARGET"
+  ui_print "[*] Replace target: $TARGET"
   mktouch "$MODPATH$TARGET/.replace"
 done
 

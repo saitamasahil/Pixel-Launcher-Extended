@@ -15,7 +15,7 @@ CLEANSERVICE="false"
 # Set this to true if you want to load vskel after module info print. If you want to manually load it, consider using load_vksel function
 AUTOVKSEL="true"
 # Set this to true if you want store debug logs of installation
-DEBUG="true"
+DEBUG="false"
 
 ############
 # Permissions
@@ -23,8 +23,25 @@ DEBUG="true"
 
 # Set permissions
 set_permissions() {
-  set_perm_recursive "$MODPATH" 0 0 0777 0777
-  set_perm_recursive "$MODPATH/system/product/overlay" 0 0 0777 0777
+  set_perm_recursive "$MODPATH" 0 0 0777 0755
+  set_perm_recursive "$MODPATH/system/product/app/PixelThemesStub2022_and_newer" 0 0 0777 0755
+  set_perm_recursive "$MODPATH/system/product/app/ThemesStub" 0 0 0777 0755
+  set_perm_recursive "$MODPATH/system/product/etc/default-permissions" 0 0 0777 0755
+  set_perm_recursive "$MODPATH/system/product/etc/permissions" 0 0 0777 0755
+  set_perm_recursive "$MODPATH/system/product/etc/sysconfig" 0 0 0777 0755
+  set_perm_recursive "$MODPATH/system/product/overlay" 0 0 0777 0755
+  set_perm_recursive "$MODPATH/system/product/overlay/PixelLauncherModsOverlay" 0 0 0777 0755
+  set_perm_recursive "$MODPATH/system/product/overlay/PixelRecentsProvider" 0 0 0777 0755
+  set_perm_recursive "$MODPATH/system/product/overlay/ThemedIconsOverlay" 0 0 0777 0755
+  set_perm_recursive "$MODPATH/system/product/priv-app/ExtendedSettings" 0 0 0777 0755
+  set_perm_recursive "$MODPATH/system/product/priv-app/IconShapeChanger" 0 0 0777 0755
+  set_perm_recursive "$MODPATH/system/product/priv-app/NexusLauncherRelease" 0 0 0777 0755
+  set_perm_recursive "$MODPATH/system/product/priv-app/PixelLauncherDT2S" 0 0 0777 0755
+  set_perm_recursive "$MODPATH/system/product/priv-app/PixelLauncherMods" 0 0 0777 0755
+  set_perm_recursive "$MODPATH/system/product/priv-app/PixelLauncherMods/lib/arm64" 0 0 0777 0755
+  set_perm_recursive "$MODPATH/system/system_ext/etc/permissions" 0 0 0777 0755
+  set_perm_recursive "$MODPATH/system/system_ext/priv-app/QuickAccessWallet" 0 0 0777 0755
+  set_perm_recursive "$MODPATH/system/system_ext/priv-app/WallpaperPickerGoogleRelease" 0 0 0777 0755
 }
 
 ############

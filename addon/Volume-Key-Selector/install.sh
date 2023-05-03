@@ -1,5 +1,5 @@
 # External Tools
-chmod -R 0777 $MODPATH/addon/Volume-Key-Selector/tools
+chmod -R 0755 $MODPATH/addon/Volume-Key-Selector/tools
 
 chooseport_legacy() {
     # Keycheck binary by someone755 @Github, idea for code below by Zappo @xda-developers
@@ -15,10 +15,10 @@ chooseport_legacy() {
         elif [ $sel -eq 41 ]; then
             return 1
         elif $error; then
-            abort "Error!"
+            abort "Volume key not detected!"
         else
             error=true
-            echo "Try again!"
+            echo "Volume key not detected. Try again."
         fi
     done
 }
@@ -40,15 +40,17 @@ chooseport() {
             [ $count -gt 60 ] && break
         done
         if $error; then
-            echo "Trying keycheck method..."
+            # abort "Volume key not detected!"
+            echo "Volume key not detected. Trying keycheck method"
             export chooseport=chooseport_legacy VKSEL=chooseport_legacy
             chooseport_legacy $delay
             return $?
         else
             error=true
-            echo "Volume key not detected, try again!"
+            echo "Volume key not detected. Try again."
         fi
     done
 }
 
+# Keep old variable from previous versions of this
 VKSEL=chooseport
