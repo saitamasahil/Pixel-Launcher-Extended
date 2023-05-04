@@ -78,11 +78,7 @@ It's like offline installer but less in size. Installer zip size depends upon th
 - Double-tap once on home screen. Grant superuser permissions and enjoy.
 
 ### Activating Developer Options In Launcher
-- Make sure you enabled developer options while flashing the launcher(or selected it while making in case of customize installer).
-- Now go to phone's setting>About phone>Build number & tap it 7-8 times. This will enable launcher's developer options along with rom's developer option.
-> Using PLE with developer options enabled may expose root in some banking apps in some custom roms. If you face this issue then don't enable developer options while flashing/building launcher.
-
-If your rom can't enable developer options even after enabling from module then tell ur rom maintainer to [use this commit](https://github.com/PixysOS/frameworks_base/commit/3ce7e0f5bffd90b0ec0cb6be44c01f5a73f70c13).
+- Go to phone's setting>About phone>Build number & tap it 7-8 times. This will enable launcher's developer options along with rom's developer option.
 
 ### Uninstallation
 - Simply uninstall module from Magisk.
