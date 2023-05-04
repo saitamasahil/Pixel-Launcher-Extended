@@ -785,50 +785,6 @@ init_main() {
   fi
 
   ui_print ""
-  ui_print "[*] Do you want to enable Developer Opions in launcher?"
-  ui_print "[*] WARNING: Your rom may cause Bootloop Issue if you enable this feature"
-  ui_print "[*] It also may expose root in some banking apps in some custom roms"
-  ui_print "[*] Press volume up to switch to another choice"
-  ui_print "[*] Press volume down to continue with that choice"
-  ui_print ""
-
-  sleep 0.5
-
-  ui_print "--------------------------------"
-  ui_print "[1] Yes"
-  ui_print "--------------------------------"
-  ui_print "[2] No"
-  ui_print "--------------------------------"
-
-  ui_print ""
-  ui_print "[*] Select your desired option:"
-
-  SM=1
-  while true; do
-    ui_print "  $SM"
-    "$VKSEL" && SM="$((SM + 1))" || break
-    [[ "$SM" -gt "2" ]] && SM=1
-  done
-
-  case "$SM" in
-  "1") FCTEXTAD1="Yes" ;;
-  "2") FCTEXTAD1="No" ;;
-  esac
-
-  ui_print "[*] Selected: $FCTEXTAD1"
-  ui_print ""
-
-  if [[ "$FCTEXTAD1" == "Yes" ]]; then
-    mv -f "$MODPATH/system2.prop" "$MODPATH/system.prop"
-    rm -rf "$MODPATH/system1.prop"
-
-  elif [[ "$FCTEXTAD1" == "No" ]]; then
-    mv -f "$MODPATH/system1.prop" "$MODPATH/system.prop"
-    rm -rf "$MODPATH/system2.prop"
-    rm -rf "$MODPATH/sepolicy.rule"
-  fi
-
-  ui_print ""
   ui_print "[*] Which Wallpaper & style app you want to install?"
   ui_print "[*] NOTE: AOSP Wallpaper Picker is still in beta"
   ui_print "[*] It comes with some features like font changer"

@@ -6,6 +6,8 @@
 - You can now run PLE Builder by typing 'PLE' in your terminal. Make sure to download & run PLE Builder for the first time. All instructions to run PLE Builder is available on GitHub.
 - Removed PLE Builder for Windows
 - Better response time
+- Fixed developer options not showing even after enabling it
+- Other minor fixes
 
 **Version 1.5**
 - Added theme switcher background & updated icons in extended settings app

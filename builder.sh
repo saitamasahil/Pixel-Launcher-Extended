@@ -59,7 +59,6 @@ make_temp_dir() {
   mkdir system/product/priv-app/temp
   mkdir system/system_ext/etc/permissions/temp
   mkdir system/system_ext/priv-app/WallpaperPickerGoogleRelease/temp
-  mkdir temp
 }
 
 # Define recover files & folders function
@@ -70,9 +69,6 @@ recover_ple() {
   done
   for file in system/product/etc/permissions/temp/*; do
     mv -f "$file" "system/product/etc/permissions/$(basename $file)" 2>/dev/null || true
-  done
-  for file in temp/*; do
-    mv -f "$file" "$(basename $file)" 2>/dev/null || true
   done
   for file in system/product/overlay/temp/*; do
     mv -f "$file" "system/product/overlay/$(basename $file)" 2>/dev/null || true
@@ -96,21 +92,16 @@ recover_ple() {
   rm -rf system/product/etc/permissions/temp
   rm -rf system/product/overlay/temp
   rm -rf system/system_ext/priv-app/WallpaperPickerGoogleRelease/temp
-  rm -rf temp
   rm -rf system/system_ext/etc/permissions/temp
 
   # Delete temp files
   if [ -f "setup.sh" ]; then
     rm setup.sh
   fi
-
-  if [ -f "system.prop" ]; then
-    rm system.prop
-  fi
 }
 
 # check if temp folders exist from an unexpected previous session
-if [ -d "system/product/priv-app/NexusLauncherRelease/temp" ] || [ -d "system/product/priv-app/temp" ] || [ -d "system/product/etc/permissions/temp" ] || [ -d "system/product/overlay/temp" ] || [ -d "system/system_ext/priv-app/WallpaperPickerGoogleRelease/temp" ] || [ -d "temp" ] || [ -d "system/system_ext/etc/permissions/temp" ] || [ -f "setup.sh" ] || [ -f "system.prop" ]; then
+if [ -d "system/product/priv-app/NexusLauncherRelease/temp" ] || [ -d "system/product/priv-app/temp" ] || [ -d "system/product/etc/permissions/temp" ] || [ -d "system/product/overlay/temp" ] || [ -d "system/system_ext/priv-app/WallpaperPickerGoogleRelease/temp" ] || [ -d "temp" ] || [ -d "system/system_ext/etc/permissions/temp" ] || [ -f "setup.sh" ]; then
   echo -e "${GREEN}>> Recovering files & folders from a previous unexpected session.${NC}"
   recover_ple
   echo "Successfully recovered."
@@ -435,34 +426,6 @@ elif [ $choice -eq 3 ]; then
 
   while true; do
     echo $divider
-    echo -e "${ORANGE}Do you want to enable Developer Opions in launcher?${NC}"
-    echo -e "${PURPLE}WARNING: Your rom may cause Bootloop Issue if you enable this feature${NC}"
-    echo -e "${PURPLE}It also may expose root in some banking apps in some custom roms${NC}"
-    echo "1. Yes"
-    echo "2. No"
-    echo $divider
-    read -p "Enter your choice: " choice
-
-    if [ $choice -eq 1 ]; then
-      cp system2.prop system.prop
-      mv -f "system1.prop" "temp/$file"
-      mv -f "system2.prop" "temp/$file"
-      break
-
-    elif [ $choice -eq 2 ]; then
-      cp system1.prop system.prop
-      mv -f "system1.prop" "temp/$file"
-      mv -f "system2.prop" "temp/$file"
-      mv -f "sepolicy.rule" "temp/$file"
-      break
-
-    else
-      echo -e "${PEACH}Invalid choice. Please try again.${NC}"
-    fi
-  done
-
-  while true; do
-    echo $divider
     echo -e "${ORANGE}Which Wallpaper & style app you want to install?${NC}"
     echo -e "${PURPLE}NOTE: AOSP Wallpaper Picker is still in beta${NC}"
     echo -e "${PURPLE}It comes with some features like font changer${NC}"
@@ -490,8 +453,8 @@ elif [ $choice -eq 3 ]; then
 
   # Create zip file
   echo -e "${GREEN}>> Creating Magisk Module${NC}"
-  echo ""                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              # make the output look easier to read
-  zip -r -q "Pixel Launcher Extended Customize Installer $version.zip" . -x .git/\* Modifications/\* screenshots/\* builder.sh builder_dependencies.sh banner.jpg banner2.jpg changelog.md codename.txt logo.png online_setup.sh offline_setup.sh customize_setup.sh README.md Pixel\ Launcher\ Extended* system/product/priv-app/NexusLauncherRelease/temp/\* system/product/priv-app/temp/\* system/product/etc/permissions/temp/\* system/system_ext/etc/permissions/temp/\* system/product/overlay/temp/\* temp/\* system/system_ext/priv-app/WallpaperPickerGoogleRelease/temp/\* # Ignore specified files and folders because they are not needed for the module
+  echo ""                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      # make the output look easier to read
+  zip -r -q "Pixel Launcher Extended Customize Installer $version.zip" . -x .git/\* Modifications/\* screenshots/\* builder.sh builder_dependencies.sh banner.jpg banner2.jpg changelog.md codename.txt logo.png online_setup.sh offline_setup.sh customize_setup.sh README.md Pixel\ Launcher\ Extended* system/product/priv-app/NexusLauncherRelease/temp/\* system/product/priv-app/temp/\* system/product/etc/permissions/temp/\* system/system_ext/etc/permissions/temp/\* system/product/overlay/temp/\* system/system_ext/priv-app/WallpaperPickerGoogleRelease/temp/\* # Ignore specified files and folders because they are not needed for the module
 
   # Move temp files & folders back to original location
   recover_ple

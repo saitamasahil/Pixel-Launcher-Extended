@@ -1,3 +1,0 @@
-ro.boot.vendor.overlay.static=false
-ro.debuggable=1
-ro.build.type=userdebug

@@ -1,2 +1,0 @@
-allow system_app logpersistd_logging_prop file { read }
-allow system_app logpersistd_logging_prop property_service { set }
