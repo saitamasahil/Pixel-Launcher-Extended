@@ -480,6 +480,8 @@ elif [ $choice -eq 3 ]; then
 
 elif [ $choice -eq 4 ]; then
   echo -e "${GREEN}>> Downloading updates if available${NC}"
+  sleep 1
+  echo ""
   git pull
   if [ $? -ne 0 ]; then
     echo -e "${PEACH}Checking for update failed! Possible reasons are:${NC}"
@@ -503,6 +505,8 @@ elif [ $choice -eq 4 ]; then
 elif [ $choice -eq 5 ]; then
   echo -e "${PURPLE}This Operation is Termux Specific.${NC}"
   echo -e "${GREEN}>> Moving magisk module to Internal Storage${NC}"
+  sleep 1
+  echo ""
   mv Pixel\ Launcher\ Extended* /sdcard
   if [ $? -eq 0 ]; then
     echo "Moved successfully"
