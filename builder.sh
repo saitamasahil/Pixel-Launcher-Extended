@@ -150,6 +150,8 @@ if [ $choice -eq 1 ]; then
     rm setup.sh
   fi
   echo "Done! You can find it here: '$(pwd)/Pixel Launcher Extended Offline Installer $version.zip'"
+  sleep 3
+  echo ""
   echo -e "${ORANGE}What would you like to do now?${NC}"
   echo "1. Continue to the builder"
   echo "2. Exit the builder"
@@ -184,6 +186,8 @@ elif [ $choice -eq 2 ]; then
     rm setup.sh
   fi
   echo "Done! You can find it here: '$(pwd)/Pixel Launcher Extended Online Installer $version.zip'"
+  sleep 3
+  echo ""
   echo -e "${ORANGE}What would you like to do now?${NC}"
   echo "1. Continue to the builder"
   echo "2. Exit the builder"
@@ -459,6 +463,8 @@ elif [ $choice -eq 3 ]; then
   # Move temp files & folders back to original location
   recover_ple
   echo "Done! You can find it here: '$(pwd)/Pixel Launcher Extended Customize Installer $version.zip'"
+  sleep 3
+  echo ""
   echo -e "${ORANGE}What would you like to do now?${NC}"
   echo "1. Continue to the builder"
   echo "2. Exit the builder"
@@ -479,6 +485,8 @@ elif [ $choice -eq 4 ]; then
     echo "• You do not have an internet connection"
     echo "• The remote GitHub repository is not accessible"
   fi
+  sleep 3
+  echo ""
   echo -e "${ORANGE}What would you like to do now?${NC}"
   echo "1. Continue to the builder"
   echo "2. Exit the builder"
@@ -499,6 +507,8 @@ elif [ $choice -eq 5 ]; then
   else
     echo "Failed to move!"
   fi
+  sleep 3
+  echo ""
   echo -e "${ORANGE}What would you like to do now?${NC}"
   echo "1. Continue to the builder"
   echo "2. Exit the builder"
@@ -525,6 +535,8 @@ elif [ $choice -eq 6 ]; then
     fi
   else
     echo "Bruh! You almost killed me."
+    sleep 3
+    echo ""
     echo -e "${ORANGE}What would you like to do now?${NC}"
     echo "1. Continue to the builder"
     echo "2. Exit the builder"
@@ -543,6 +555,8 @@ elif [ $choice -eq 7 ]; then
 else
   # if user enters invalid choice
   echo -e "${PEACH}Invalid choice.${NC}"
+  sleep 3
+  echo ""
   echo -e "${ORANGE}What would you like to do now?${NC}"
   echo "1. Continue to the builder"
   echo "2. Exit the builder"
