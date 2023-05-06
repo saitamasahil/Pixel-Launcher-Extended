@@ -576,9 +576,9 @@ elif [ $choice -eq 5 ]; then
 
 elif [ $choice -eq 6 ]; then
   echo -e "${ORANGE}Are you sure you want to uninstall PLE Builder? (Y/N)${NC}"
-  read answer
+  read -p "Enter your choice: " choice
 
-  if [ "$answer" == "Y" ] || [ "$answer" == "y" ]; then
+  if [ "$choice" == "Y" ] || [ "$choice" == "y" ]; then
     echo -e "${GREEN}>> Uninstalling PLE Builder${NC}"
     sed -i '/PLE ()/,/^}/d' ~/."$shell"rc
     rm -rf "$pwd"
