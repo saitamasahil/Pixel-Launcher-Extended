@@ -46,7 +46,9 @@ EOF
 
 else
   # Print an error message & make ."$shell"rc file
-  echo "."$shell"rc file not found"
+  echo -e "${PURPLE}."$shell"rc file not found.${NC}"
+  echo -e "${GREEN}Fixing this issue.${NC}"
+  sleep 3
   touch ~/."$shell"rc
   chmod +x builder.sh && ./builder.sh
 fi
