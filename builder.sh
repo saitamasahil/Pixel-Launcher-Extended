@@ -127,7 +127,11 @@ echo "1. Make Offline Installer"
 echo "2. Make Online Installer"
 echo "3. Make Customize Installer"
 echo "4. Update PLE Builder"
-echo "5. Move Magisk Module To Internal Storage"
+if ls Pixel\ Launcher*.zip 1> /dev/null 2>&1; then
+  echo -e "${GREEN}5. Move Magisk Module To Internal Storage${NC}"
+else
+  echo "5. Move Magisk Module To Internal Storage"
+fi
 echo -e "${PEACH}6. Uninstall PLE Builder${NC}"
 echo "7. Exit"
 read -p "Enter your choice: " choice
