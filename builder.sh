@@ -41,6 +41,9 @@ PLE () {
   else
     echo "PLE Builder is not available in your system"
   fi
+
+  # Go back to the home folder
+  cd ~
 }
 EOF
 
