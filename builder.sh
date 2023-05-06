@@ -157,17 +157,25 @@ if [ $choice -eq 1 ]; then
   echo "Done! You can find it here: '$(pwd)/Pixel Launcher Extended Offline Installer $version.zip'"
   sleep 3
   echo ""
-  echo -e "${ORANGE}What would you like to do now?${NC}"
-  echo "1. Continue to the builder"
-  echo "2. Exit the builder"
-  read -p "Enter your choice: " choice
+  while true; do
+    echo -e "${ORANGE}What would you like to do now?${NC}"
+    echo "1. Continue to the builder"
+    echo "2. Exit the builder"
+    read -p "Enter your choice: " choice
 
-  if [ $choice -eq 1 ]; then
-    chmod +x builder.sh && ./builder.sh
-  elif [ $choice -eq 2 ]; then
-    clear
-    exit 0
-  fi
+    if [ $choice -eq 1 ]; then
+      chmod +x builder.sh && ./builder.sh
+      break
+
+    elif [ $choice -eq 2 ]; then
+      clear
+      exit 0
+      break
+
+    else
+      echo -e "${PEACH}Invalid choice. Please try again.${NC}"
+    fi
+  done
 
 elif [ $choice -eq 2 ]; then
 
@@ -194,17 +202,25 @@ elif [ $choice -eq 2 ]; then
   echo "Done! You can find it here: '$(pwd)/Pixel Launcher Extended Online Installer $version.zip'"
   sleep 3
   echo ""
-  echo -e "${ORANGE}What would you like to do now?${NC}"
-  echo "1. Continue to the builder"
-  echo "2. Exit the builder"
-  read -p "Enter your choice: " choice
+  while true; do
+    echo -e "${ORANGE}What would you like to do now?${NC}"
+    echo "1. Continue to the builder"
+    echo "2. Exit the builder"
+    read -p "Enter your choice: " choice
 
-  if [ $choice -eq 1 ]; then
-    chmod +x builder.sh && ./builder.sh
-  elif [ $choice -eq 2 ]; then
-    clear
-    exit 0
-  fi
+    if [ $choice -eq 1 ]; then
+      chmod +x builder.sh && ./builder.sh
+      break
+
+    elif [ $choice -eq 2 ]; then
+      clear
+      exit 0
+      break
+
+    else
+      echo -e "${PEACH}Invalid choice. Please try again.${NC}"
+    fi
+  done
 
 elif [ $choice -eq 3 ]; then
 
@@ -472,17 +488,25 @@ elif [ $choice -eq 3 ]; then
   echo "Done! You can find it here: '$(pwd)/Pixel Launcher Extended Customize Installer $version.zip'"
   sleep 3
   echo ""
-  echo -e "${ORANGE}What would you like to do now?${NC}"
-  echo "1. Continue to the builder"
-  echo "2. Exit the builder"
-  read -p "Enter your choice: " choice
+  while true; do
+    echo -e "${ORANGE}What would you like to do now?${NC}"
+    echo "1. Continue to the builder"
+    echo "2. Exit the builder"
+    read -p "Enter your choice: " choice
 
-  if [ $choice -eq 1 ]; then
-    chmod +x builder.sh && ./builder.sh
-  elif [ $choice -eq 2 ]; then
-    clear
-    exit 0
-  fi
+    if [ $choice -eq 1 ]; then
+      chmod +x builder.sh && ./builder.sh
+      break
+
+    elif [ $choice -eq 2 ]; then
+      clear
+      exit 0
+      break
+
+    else
+      echo -e "${PEACH}Invalid choice. Please try again.${NC}"
+    fi
+  done
 
 elif [ $choice -eq 4 ]; then
   echo -e "${GREEN}>> Downloading updates if available${NC}"
@@ -497,17 +521,25 @@ elif [ $choice -eq 4 ]; then
   fi
   sleep 3
   echo ""
-  echo -e "${ORANGE}What would you like to do now?${NC}"
-  echo "1. Continue to the builder"
-  echo "2. Exit the builder"
-  read -p "Enter your choice: " choice
+  while true; do
+    echo -e "${ORANGE}What would you like to do now?${NC}"
+    echo "1. Continue to the builder"
+    echo "2. Exit the builder"
+    read -p "Enter your choice: " choice
 
-  if [ $choice -eq 1 ]; then
-    chmod +x builder.sh && ./builder.sh
-  elif [ $choice -eq 2 ]; then
-    clear
-    exit 0
-  fi
+    if [ $choice -eq 1 ]; then
+      chmod +x builder.sh && ./builder.sh
+      break
+
+    elif [ $choice -eq 2 ]; then
+      clear
+      exit 0
+      break
+
+    else
+      echo -e "${PEACH}Invalid choice. Please try again.${NC}"
+    fi
+  done
 
 elif [ $choice -eq 5 ]; then
   echo -e "${PURPLE}This Operation is Termux Specific.${NC}"
@@ -522,17 +554,25 @@ elif [ $choice -eq 5 ]; then
   fi
   sleep 3
   echo ""
-  echo -e "${ORANGE}What would you like to do now?${NC}"
-  echo "1. Continue to the builder"
-  echo "2. Exit the builder"
-  read -p "Enter your choice: " choice
+  while true; do
+    echo -e "${ORANGE}What would you like to do now?${NC}"
+    echo "1. Continue to the builder"
+    echo "2. Exit the builder"
+    read -p "Enter your choice: " choice
 
-  if [ $choice -eq 1 ]; then
-    chmod +x builder.sh && ./builder.sh
-  elif [ $choice -eq 2 ]; then
-    clear
-    exit 0
-  fi
+    if [ $choice -eq 1 ]; then
+      chmod +x builder.sh && ./builder.sh
+      break
+
+    elif [ $choice -eq 2 ]; then
+      clear
+      exit 0
+      break
+
+    else
+      echo -e "${PEACH}Invalid choice. Please try again.${NC}"
+    fi
+  done
 
 elif [ $choice -eq 6 ]; then
   echo -e "${ORANGE}Are you sure you want to uninstall PLE Builder? (Y/N)${NC}"
@@ -551,17 +591,25 @@ elif [ $choice -eq 6 ]; then
     echo "Bruh! You almost killed me."
     sleep 3
     echo ""
-    echo -e "${ORANGE}What would you like to do now?${NC}"
-    echo "1. Continue to the builder"
-    echo "2. Exit the builder"
-    read -p "Enter your choice: " choice
+    while true; do
+      echo -e "${ORANGE}What would you like to do now?${NC}"
+      echo "1. Continue to the builder"
+      echo "2. Exit the builder"
+      read -p "Enter your choice: " choice
 
-    if [ $choice -eq 1 ]; then
-      chmod +x builder.sh && ./builder.sh
-    elif [ $choice -eq 2 ]; then
-      clear
-      exit 0
-    fi
+      if [ $choice -eq 1 ]; then
+        chmod +x builder.sh && ./builder.sh
+        break
+
+      elif [ $choice -eq 2 ]; then
+        clear
+        exit 0
+        break
+
+      else
+        echo -e "${PEACH}Invalid choice. Please try again.${NC}"
+      fi
+    done
   fi
 
 elif [ $choice -eq 7 ]; then
@@ -571,17 +619,25 @@ elif [ $choice -eq 7 ]; then
 else
   # if user enters invalid choice
   echo -e "${PEACH}Invalid choice.${NC}"
-  sleep 3
+  sleep 1
   echo ""
-  echo -e "${ORANGE}What would you like to do now?${NC}"
-  echo "1. Continue to the builder"
-  echo "2. Exit the builder"
-  read -p "Enter your choice: " choice
+  while true; do
+    echo -e "${ORANGE}What would you like to do now?${NC}"
+    echo "1. Continue to the builder"
+    echo "2. Exit the builder"
+    read -p "Enter your choice: " choice
 
-  if [ $choice -eq 1 ]; then
-    chmod +x builder.sh && ./builder.sh
-  elif [ $choice -eq 2 ]; then
-    clear
-    exit 0
-  fi
+    if [ $choice -eq 1 ]; then
+      chmod +x builder.sh && ./builder.sh
+      break
+
+    elif [ $choice -eq 2 ]; then
+      clear
+      exit 0
+      break
+
+    else
+      echo -e "${PEACH}Invalid choice. Please try again.${NC}"
+    fi
+  done
 fi
