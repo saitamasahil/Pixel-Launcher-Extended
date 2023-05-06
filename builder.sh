@@ -165,6 +165,7 @@ if [ $choice -eq 1 ]; then
   if [ $choice -eq 1 ]; then
     chmod +x builder.sh && ./builder.sh
   elif [ $choice -eq 2 ]; then
+    clear
     exit 0
   fi
 
@@ -201,6 +202,7 @@ elif [ $choice -eq 2 ]; then
   if [ $choice -eq 1 ]; then
     chmod +x builder.sh && ./builder.sh
   elif [ $choice -eq 2 ]; then
+    clear
     exit 0
   fi
 
@@ -478,6 +480,7 @@ elif [ $choice -eq 3 ]; then
   if [ $choice -eq 1 ]; then
     chmod +x builder.sh && ./builder.sh
   elif [ $choice -eq 2 ]; then
+    clear
     exit 0
   fi
 
@@ -502,6 +505,7 @@ elif [ $choice -eq 4 ]; then
   if [ $choice -eq 1 ]; then
     chmod +x builder.sh && ./builder.sh
   elif [ $choice -eq 2 ]; then
+    clear
     exit 0
   fi
 
@@ -526,6 +530,7 @@ elif [ $choice -eq 5 ]; then
   if [ $choice -eq 1 ]; then
     chmod +x builder.sh && ./builder.sh
   elif [ $choice -eq 2 ]; then
+    clear
     exit 0
   fi
 
@@ -554,11 +559,13 @@ elif [ $choice -eq 6 ]; then
     if [ $choice -eq 1 ]; then
       chmod +x builder.sh && ./builder.sh
     elif [ $choice -eq 2 ]; then
+      clear
       exit 0
     fi
   fi
 
 elif [ $choice -eq 7 ]; then
+  clear
   exit 0
 
 else
@@ -574,6 +581,7 @@ else
   if [ $choice -eq 1 ]; then
     chmod +x builder.sh && ./builder.sh
   elif [ $choice -eq 2 ]; then
+    clear
     exit 0
   fi
 fi
