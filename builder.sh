@@ -191,7 +191,7 @@ notes() {
     echo "• While flashing in magisk, desired modifications can be selected using volume keys."
     sleep 3
     choices2
-  
+
   elif [ $choice -eq 3 ]; then
     echo ""
     echo -e "${BLUE}Here is the summary of Pixel Launcher Extended Customize Installer:${NC}"
