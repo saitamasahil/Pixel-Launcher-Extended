@@ -8,6 +8,7 @@
 - Better response time
 - Fixed developer options not showing even after enabling it
 - Removed asop wallpicker
+_ Fixed a bug where wallpaper picker isn't opening in some custom roms
 - Other minor fixes
 
 **Version 1.5**
