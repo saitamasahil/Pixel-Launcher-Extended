@@ -199,7 +199,7 @@ notes() {
     echo -e "${BLUE}Here is the summary of Pixel Launcher Extended Customize Installer:${NC}"
     echo "• It is one the of three variants of Pixel Launcher Extended."
     echo "• It is similar to offline installer but smaller in size. The size varies depending on the user’s choices of modifications during the process of making it."
-    echo "• This variant is suitable for those who have broken volume keys or who want to flash module without using volume keys."
+    echo "• This variant is suitable for those who have broken volume keys or those who want to flash module without using volume keys."
     echo "• After making this variant, it can be directly flashed in magisk without using volume keys."
     sleep 3
     choices2

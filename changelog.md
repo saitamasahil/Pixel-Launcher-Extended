@@ -1,15 +1,14 @@
 **Version 1.6**
 - Fixed banner not showing while making launcher using PLE Builder
-- Fixed wallpaper app not opening in paranoid rom
 - Fixed crashing issue while applying live wallpaper in Android 13 QPR
 - Modified PLE Builder to make it more user friendly.
-- You can now run PLE Builder by typing 'PLE' in your terminal. Make sure to download & run PLE Builder for the first time. All instructions to run PLE Builder is available on GitHub.
+- You can now run PLE Builder by typing 'PLE' in your terminal.
 - Removed PLE Builder for Windows
 - Better response time
 - Fixed developer options not showing even after enabling it
-- Removed asop wallpicker
+- Removed asop wallpaper picker
 - Fixed a bug where wallpaper picker isn't opening in some custom roms
-- Added Help & Notes section in PLE Builder
+- Added Notes & many more new sections in PLE Builder
 - Other minor fixes
 
 **Version 1.5**
