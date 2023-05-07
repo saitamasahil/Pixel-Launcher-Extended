@@ -452,51 +452,6 @@ init_main() {
     rm -rf "$MODPATH/system/product/etc/permissions/privapp-permissions-com.saitama.iconshape.xml"
   fi
 
-  ui_print ""
-  ui_print "[*] Which Wallpaper & style app you want to install?"
-  ui_print "[*] NOTE: AOSP Wallpaper Picker is still in beta"
-  ui_print "[*] It comes with some features like font changer"
-  ui_print "[*] It depends upon your rom that how many fonts are available in your rom"
-  ui_print "[*] Press volume up to switch to another choice"
-  ui_print "[*] Press volume down to continue with that choice"
-  ui_print ""
-
-  sleep 0.5
-
-  ui_print "--------------------------------"
-  ui_print "[1] Pixel Wallpaper Picker"
-  ui_print "--------------------------------"
-  ui_print "[2] AOSP Wallpaper Picker"
-  ui_print "--------------------------------"
-
-  ui_print ""
-  ui_print "[*] Select your desired option:"
-
-  SM=1
-  while true; do
-    ui_print "  $SM"
-    "$VKSEL" && SM="$((SM + 1))" || break
-    [[ "$SM" -gt "2" ]] && SM=1
-  done
-
-  case "$SM" in
-  "1") FCTEXTAD1="Pixel Wallpaper Picker" ;;
-  "2") FCTEXTAD1="AOSP Wallpaper Picker" ;;
-  esac
-
-  ui_print "[*] Selected: $FCTEXTAD1"
-  ui_print ""
-
-  if [[ "$FCTEXTAD1" == "Pixel Wallpaper Picker" ]]; then
-    rm -rf "$MODPATH/system/system_ext/priv-app/WallpaperPickerGoogleRelease/AOSPPicker.apk"
-    rm -rf "$MODPATH/system/system_ext/etc/permissions/AOSP_Picker.xml"
-
-  elif [[ "$FCTEXTAD1" == "AOSP Wallpaper Picker" ]]; then
-    rm -rf "$MODPATH/system/system_ext/priv-app/WallpaperPickerGoogleRelease/WallpaperPickerGoogleRelease.apk"
-    rm -rf "$MODPATH/system/system_ext/priv-app/WallpaperPickerGoogleRelease/WallpaperPickerGoogleReleaseOld.apk"
-    rm -rf "$MODPATH/system/system_ext/etc/permissions/privapp-permissions-com.google.android.apps.wallpaper.xml"
-  fi
-
   ui_print "[*] Clearing system cache to make it work properly..."
   ui_print ""
 

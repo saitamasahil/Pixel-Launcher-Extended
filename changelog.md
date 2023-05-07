@@ -7,6 +7,7 @@
 - Removed PLE Builder for Windows
 - Better response time
 - Fixed developer options not showing even after enabling it
+- Removed asop wallpicker
 - Other minor fixes
 
 **Version 1.5**

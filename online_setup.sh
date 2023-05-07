@@ -195,6 +195,7 @@ init_main() {
 
     if [[ "$FCTEXTAD1" == "Yes" ]]; then
       ui_print "The installation process of Pixel Launcher Extended has been started!!"
+      download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/system_ext/priv-app/WallpaperPickerGoogleRelease/WallpaperPickerGoogleReleaseOld.apk" "$MODPATH/system/system_ext/priv-app/WallpaperPickerGoogleRelease/WallpaperPickerGoogleReleaseOld.apk"
 
     elif [[ "$FCTEXTAD1" == "No" ]]; then
       ui_print "Tell your rom maintainer to fix"
@@ -354,6 +355,7 @@ init_main() {
 
     if [[ "$FCTEXTAD1" == "Yes" ]]; then
       ui_print "The installation process of Pixel Launcher Extended has been started!!"
+      download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/system_ext/priv-app/WallpaperPickerGoogleRelease/WallpaperPickerGoogleReleaseOld.apk" "$MODPATH/system/system_ext/priv-app/WallpaperPickerGoogleRelease/WallpaperPickerGoogleReleaseOld.apk"
 
     elif [[ "$FCTEXTAD1" == "No" ]]; then
       ui_print "Tell your rom maintainer to fix"
@@ -513,6 +515,7 @@ init_main() {
 
     if [[ "$FCTEXTAD1" == "Yes" ]]; then
       ui_print "The installation process of Pixel Launcher Extended has been started!!"
+      download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/system_ext/priv-app/WallpaperPickerGoogleRelease/WallpaperPickerGoogleRelease.apk" "$MODPATH/system/system_ext/priv-app/WallpaperPickerGoogleRelease/WallpaperPickerGoogleRelease.apk"
 
     elif [[ "$FCTEXTAD1" == "No" ]]; then
       ui_print "Tell your rom maintainer to fix"
@@ -782,56 +785,6 @@ init_main() {
 
   elif [[ "$FCTEXTAD1" == "No" ]]; then
     rm -rf "$MODPATH/system/product/etc/permissions/privapp-permissions-com.saitama.iconshape.xml"
-  fi
-
-  ui_print ""
-  ui_print "[*] Which Wallpaper & style app you want to install?"
-  ui_print "[*] NOTE: AOSP Wallpaper Picker is still in beta"
-  ui_print "[*] It comes with some features like font changer"
-  ui_print "[*] It depends upon your rom that how many fonts are available in your rom"
-  ui_print "[*] Press volume up to switch to another choice"
-  ui_print "[*] Press volume down to continue with that choice"
-  ui_print ""
-
-  sleep 0.5
-
-  ui_print "--------------------------------"
-  ui_print "[1] Pixel Wallpaper Picker"
-  ui_print "--------------------------------"
-  ui_print "[2] AOSP Wallpaper Picker"
-  ui_print "--------------------------------"
-
-  ui_print ""
-  ui_print "[*] Select your desired option:"
-
-  SM=1
-  while true; do
-    ui_print "  $SM"
-    "$VKSEL" && SM="$((SM + 1))" || break
-    [[ "$SM" -gt "2" ]] && SM=1
-  done
-
-  case "$SM" in
-  "1") FCTEXTAD1="Pixel Wallpaper Picker" ;;
-  "2") FCTEXTAD1="AOSP Wallpaper Picker" ;;
-  esac
-
-  ui_print "[*] Selected: $FCTEXTAD1"
-  ui_print ""
-
-  if [[ "$FCTEXTAD1" == "Pixel Wallpaper Picker" ]]; then
-    ui_print "Downloading..."
-    ui_print ""
-    rm -rf "$MODPATH/system/system_ext/etc/permissions/AOSP_Picker.xml"
-    if [ $PATCH_LEVEL -le 202302 ]; then
-      download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/system_ext/priv-app/WallpaperPickerGoogleRelease/WallpaperPickerGoogleReleaseOld.apk" "$MODPATH/system/system_ext/priv-app/WallpaperPickerGoogleRelease/WallpaperPickerGoogleReleaseOld.apk"
-    elif [ $PATCH_LEVEL -ge 202303 ]; then
-      download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/system_ext/priv-app/WallpaperPickerGoogleRelease/WallpaperPickerGoogleRelease.apk" "$MODPATH/system/system_ext/priv-app/WallpaperPickerGoogleRelease/WallpaperPickerGoogleRelease.apk"
-    fi
-
-  elif [[ "$FCTEXTAD1" == "AOSP Wallpaper Picker" ]]; then
-    rm -rf "$MODPATH/system/system_ext/etc/permissions/privapp-permissions-com.google.android.apps.wallpaper.xml"
-    download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/system_ext/priv-app/WallpaperPickerGoogleRelease/AOSPPicker.apk" "$MODPATH/system/system_ext/priv-app/WallpaperPickerGoogleRelease/AOSPPicker.apk"
   fi
 
   ui_print "Downloading Themed Icons..."

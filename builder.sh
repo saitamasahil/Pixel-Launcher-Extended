@@ -62,7 +62,6 @@ make_temp_dir() {
   mkdir system/product/overlay/temp
   mkdir system/product/priv-app/NexusLauncherRelease/temp
   mkdir system/product/priv-app/temp
-  mkdir system/system_ext/etc/permissions/temp
   mkdir system/system_ext/priv-app/WallpaperPickerGoogleRelease/temp
 }
 
@@ -81,9 +80,6 @@ recover_ple() {
   for file in system/system_ext/priv-app/WallpaperPickerGoogleRelease/temp/*; do
     mv -f "$file" "system/system_ext/priv-app/WallpaperPickerGoogleRelease/$(basename $file)" 2>/dev/null || true
   done
-  for file in system/system_ext/etc/permissions/temp/*; do
-    mv -f "$file" "system/system_ext/etc/permissions/$(basename $file)" 2>/dev/null || true
-  done
   mv "system/product/priv-app/temp/PixelLauncherDT2S" "system/product/priv-app/$folder" 2>/dev/null || true
   mv "system/product/priv-app/temp/PixelLauncherMods" "system/product/priv-app/$folder" 2>/dev/null || true
   mv "system/product/overlay/temp/PixelLauncherModsOverlay" "system/product/overlay/$folder" 2>/dev/null || true
@@ -97,7 +93,6 @@ recover_ple() {
   rm -rf system/product/etc/permissions/temp
   rm -rf system/product/overlay/temp
   rm -rf system/system_ext/priv-app/WallpaperPickerGoogleRelease/temp
-  rm -rf system/system_ext/etc/permissions/temp
 
   # Delete temp files
   if [ -f "setup.sh" ]; then
@@ -127,7 +122,7 @@ echo "1. Make Offline Installer"
 echo "2. Make Online Installer"
 echo "3. Make Customize Installer"
 echo "4. Update PLE Builder"
-if ls Pixel\ Launcher*.zip 1> /dev/null 2>&1; then
+if ls Pixel\ Launcher*.zip 1>/dev/null 2>&1; then
   echo -e "${GREEN}5. Move Magisk Module To Internal Storage${NC}"
 else
   echo "5. Move Magisk Module To Internal Storage"
@@ -455,37 +450,10 @@ elif [ $choice -eq 3 ]; then
     fi
   done
 
-  while true; do
-    echo $divider
-    echo -e "${ORANGE}Which Wallpaper & style app you want to install?${NC}"
-    echo -e "${PURPLE}NOTE: AOSP Wallpaper Picker is still in beta${NC}"
-    echo -e "${PURPLE}It comes with some features like font changer${NC}"
-    echo -e "${PURPLE}It depends upon your rom that how many fonts are available in your rom${NC}"
-    echo "1. Pixel Wallpaper Picker"
-    echo "2. AOSP Wallpaper Picker"
-    echo $divider
-    read -p "Enter your choice: " choice
-
-    if [ $choice -eq 1 ]; then
-      mv -f "system/system_ext/priv-app/WallpaperPickerGoogleRelease/AOSPPicker.apk" "system/system_ext/priv-app/WallpaperPickerGoogleRelease/temp/$file"
-      mv -f "system/system_ext/etc/permissions/AOSP_Picker.xml" "system/system_ext/etc/permissions/temp/$file"
-      break
-
-    elif [ $choice -eq 2 ]; then
-      mv -f "system/system_ext/priv-app/WallpaperPickerGoogleRelease/WallpaperPickerGoogleRelease.apk" "system/system_ext/priv-app/WallpaperPickerGoogleRelease/temp/$file" 2>/dev/null || true
-      mv -f "system/system_ext/priv-app/WallpaperPickerGoogleRelease/WallpaperPickerGoogleReleaseOld.apk" "system/system_ext/priv-app/WallpaperPickerGoogleRelease/temp/$file" 2>/dev/null || true
-      mv -f "system/system_ext/etc/permissions/privapp-permissions-com.google.android.apps.wallpaper.xml" "system/system_ext/etc/permissions/temp/$file"
-      break
-
-    else
-      echo -e "${PEACH}Invalid choice. Please try again.${NC}"
-    fi
-  done
-
   # Create zip file
   echo -e "${GREEN}>> Creating Magisk Module${NC}"
-  echo ""                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      # make the output look easier to read
-  zip -r -q "Pixel Launcher Extended Customize Installer $version.zip" . -x .git/\* Modifications/\* screenshots/\* builder.sh builder_dependencies.sh banner.jpg banner2.jpg changelog.md codename.txt logo.png online_setup.sh offline_setup.sh customize_setup.sh README.md Pixel\ Launcher\ Extended* system/product/priv-app/NexusLauncherRelease/temp/\* system/product/priv-app/temp/\* system/product/etc/permissions/temp/\* system/system_ext/etc/permissions/temp/\* system/product/overlay/temp/\* system/system_ext/priv-app/WallpaperPickerGoogleRelease/temp/\* # Ignore specified files and folders because they are not needed for the module
+  echo ""                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            # make the output look easier to read
+  zip -r -q "Pixel Launcher Extended Customize Installer $version.zip" . -x .git/\* Modifications/\* screenshots/\* builder.sh builder_dependencies.sh banner.jpg banner2.jpg changelog.md codename.txt logo.png online_setup.sh offline_setup.sh customize_setup.sh README.md Pixel\ Launcher\ Extended* system/product/priv-app/NexusLauncherRelease/temp/\* system/product/priv-app/temp/\* system/product/etc/permissions/temp/\* system/product/overlay/temp/\* system/system_ext/priv-app/WallpaperPickerGoogleRelease/temp/\* # Ignore specified files and folders because they are not needed for the module
 
   # Move temp files & folders back to original location
   recover_ple
