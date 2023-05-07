@@ -11,7 +11,8 @@ done
 GREEN='\033[1m\033[32m'
 ORANGE='\033[1m\033[38;5;214m'
 PURPLE='\033[1m\033[38;5;140m'
-PEACH='\e[38;2;217;133;134m'
+PEACH='\e[1;38;2;255;204;153m'
+BLUE='\e[1;1;34m'
 NC='\033[0m' # No Color
 
 # This script adds the PLE function definition to the appropriate shell configuration file
@@ -129,6 +130,7 @@ else
 fi
 echo -e "${PEACH}6. Uninstall PLE Builder${NC}"
 echo "7. Exit"
+echo -e "${BLUE}Note: Option number 5 is only for Termux users. You can use this option to move the Magisk Module to your internal storage after creating it.${NC}"
 read -p "Enter your choice: " choice
 
 if [ $choice -eq 1 ]; then
