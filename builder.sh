@@ -101,6 +101,148 @@ recover_ple() {
   fi
 }
 
+# Post-choices 1
+choices1() {
+  echo ""
+  while true; do
+    echo -e "${ORANGE}What would you like to do now?${NC}"
+    echo "1. Continue to the builder"
+    echo "2. Exit the builder"
+    read -p "Enter your choice: " choice
+
+    if [ $choice -eq 1 ]; then
+      chmod +x builder.sh && ./builder.sh
+      break
+
+    elif [ $choice -eq 2 ]; then
+      clear
+      exit 0
+      break
+
+    else
+      echo -e "${PEACH}Invalid choice. Please try again.${NC}"
+      echo ""
+    fi
+  done
+}
+
+# Post-choices 2
+choices2() {
+  echo ""
+  while true; do
+    echo -e "${ORANGE}What would you like to do now?${NC}"
+    echo "1. Continue to Notes & Help section"
+    echo "2. Go back to main menu"
+    echo "3. Exit the builder"
+    read -p "Enter your choice: " choice
+
+    if [ $choice -eq 1 ]; then
+      clear
+      notes
+      break
+
+    elif [ $choice -eq 2 ]; then
+      chmod +x builder.sh && ./builder.sh
+      break
+
+    elif [ $choice -eq 3 ]; then
+      clear
+      exit 0
+      break
+
+    else
+      echo -e "${PEACH}Invalid choice. Please try again.${NC}"
+      echo ""
+    fi
+  done
+}
+
+# Notes & Help
+notes() {
+  clear
+  echo -e "${BLUE}$(figlet "Notes & Help")${NC}"
+  echo -e "${ORANGE}Select Your Choice:${NC}"
+  echo "1. What is Offline Installer?"
+  echo "2. What is Online Installer?"
+  echo "3. What is Customize Installer?"
+  echo "4. How to update PLE Builder?"
+  echo "5. What does 'Move Magisk Module To Internal Storage' option do?"
+  echo "6. Why is 'Move Magisk Module To Internal Storage' option showing in green color?"
+  echo "7. How to exit PLE Builder?"
+  echo "8. How to uninstall PLE Builder?"
+  echo -e "${PEACH}9. Go back to main menu${NC}"
+  read -p "Enter your choice: " choice
+
+  if [ $choice -eq 1 ]; then
+    echo ""
+    echo -e "${BLUE}Here is the summary of Pixel Launcher Extended Offline Installer:${NC}"
+    echo "• It is one of the three variants of Pixel Launcher Extended."
+    echo "• It does not need an internet connection to install while flashing in magisk, but it's size is more than 100 MB."
+    echo "• While flashing in magisk, desired modifications can be selected using volume keys."
+    sleep 3
+    choices2
+
+  elif [ $choice -eq 2 ]; then
+    echo ""
+    echo -e "${BLUE}Here is the summary of Pixel Launcher Extended Online Installer:${NC}"
+    echo "• It is one of the three variants of Pixel Launcher Extended."
+    echo "• It needs internet to install while flashing in magisk and downloads only the files chosen by the user."
+    echo "• It is very small in size (less than 5 MB) but may take longer to install depending on the internet speed."
+    echo "• While flashing in magisk, desired modifications can be selected using volume keys."
+    sleep 3
+    choices2
+  
+  elif [ $choice -eq 3 ]; then
+    echo ""
+    echo -e "${BLUE}Here is the summary of Pixel Launcher Extended Customize Installer:${NC}"
+    echo "• It is one the of three variants of Pixel Launcher Extended."
+    echo "• It is similar to offline installer but smaller in size. The size varies depending on the user’s choices of modifications during the process of making it."
+    echo "• This variant is suitable for those who have broken volume keys or who want to flash module without using volume keys."
+    echo "• After making this variant, it can be directly flashed in magisk without using volume keys."
+    sleep 3
+    choices2
+
+  elif [ $choice -eq 4 ]; then
+    echo ""
+    echo -e "${BLUE}Select 'Update PLE Builder' option from main menu.${NC}"
+    sleep 3
+    choices2
+
+  elif [ $choice -eq 5 ]; then
+    echo ""
+    echo -e "${BLUE}This option is only for Termux users. You can use this option to move the Magisk Module to your internal storage after creating it.${NC}"
+    sleep 3
+    choices2
+
+  elif [ $choice -eq 6 ]; then
+    echo ""
+    echo -e "${BLUE}When a magisk module zip file is available in the system but not yet transferred to the internal storage, it displays that option in green color.${NC}"
+    sleep 3
+    choices2
+
+  elif [ $choice -eq 7 ]; then
+    echo ""
+    echo -e "${BLUE}Select 'Exit' option from main menu.${NC}"
+    sleep 3
+    choices2
+
+  elif [ $choice -eq 8 ]; then
+    echo ""
+    echo -e "${BLUE}Select 'Uninstall PLE Builder' option from main menu.${NC}"
+    sleep 3
+    choices2
+
+  elif [ $choice -eq 9 ]; then
+    chmod +x builder.sh && ./builder.sh
+
+  else
+    echo ""
+    echo -e "${PEACH}Invalid choice.${NC}"
+    sleep 1
+    choices2
+  fi
+}
+
 # check if temp folders exist from an unexpected previous session
 if [ -d "system/product/priv-app/NexusLauncherRelease/temp" ] || [ -d "system/product/priv-app/temp" ] || [ -d "system/product/etc/permissions/temp" ] || [ -d "system/product/overlay/temp" ] || [ -d "system/system_ext/priv-app/WallpaperPickerGoogleRelease/temp" ] || [ -d "temp" ] || [ -d "system/system_ext/etc/permissions/temp" ] || [ -f "setup.sh" ]; then
   echo -e "${GREEN}>> Recovering files & folders from a previous unexpected session.${NC}"
@@ -130,7 +272,7 @@ else
 fi
 echo -e "${PEACH}6. Uninstall PLE Builder${NC}"
 echo "7. Exit"
-echo -e "${BLUE}Note: Option number 5 is only for Termux users. You can use this option to move the Magisk Module to your internal storage after creating it.${NC}"
+echo "8. Notes & Help"
 read -p "Enter your choice: " choice
 
 if [ $choice -eq 1 ]; then
@@ -157,27 +299,7 @@ if [ $choice -eq 1 ]; then
   fi
   echo "Done! You can find it here: '$(pwd)/Pixel Launcher Extended Offline Installer $version.zip'"
   sleep 3
-  echo ""
-  while true; do
-    echo -e "${ORANGE}What would you like to do now?${NC}"
-    echo "1. Continue to the builder"
-    echo "2. Exit the builder"
-    read -p "Enter your choice: " choice
-
-    if [ $choice -eq 1 ]; then
-      chmod +x builder.sh && ./builder.sh
-      break
-
-    elif [ $choice -eq 2 ]; then
-      clear
-      exit 0
-      break
-
-    else
-      echo -e "${PEACH}Invalid choice. Please try again.${NC}"
-      echo ""
-    fi
-  done
+  choices1
 
 elif [ $choice -eq 2 ]; then
 
@@ -203,27 +325,7 @@ elif [ $choice -eq 2 ]; then
   fi
   echo "Done! You can find it here: '$(pwd)/Pixel Launcher Extended Online Installer $version.zip'"
   sleep 3
-  echo ""
-  while true; do
-    echo -e "${ORANGE}What would you like to do now?${NC}"
-    echo "1. Continue to the builder"
-    echo "2. Exit the builder"
-    read -p "Enter your choice: " choice
-
-    if [ $choice -eq 1 ]; then
-      chmod +x builder.sh && ./builder.sh
-      break
-
-    elif [ $choice -eq 2 ]; then
-      clear
-      exit 0
-      break
-
-    else
-      echo -e "${PEACH}Invalid choice. Please try again.${NC}"
-      echo ""
-    fi
-  done
+  choices1
 
 elif [ $choice -eq 3 ]; then
 
@@ -469,27 +571,7 @@ elif [ $choice -eq 3 ]; then
   recover_ple
   echo "Done! You can find it here: '$(pwd)/Pixel Launcher Extended Customize Installer $version.zip'"
   sleep 3
-  echo ""
-  while true; do
-    echo -e "${ORANGE}What would you like to do now?${NC}"
-    echo "1. Continue to the builder"
-    echo "2. Exit the builder"
-    read -p "Enter your choice: " choice
-
-    if [ $choice -eq 1 ]; then
-      chmod +x builder.sh && ./builder.sh
-      break
-
-    elif [ $choice -eq 2 ]; then
-      clear
-      exit 0
-      break
-
-    else
-      echo -e "${PEACH}Invalid choice. Please try again.${NC}"
-      echo ""
-    fi
-  done
+  choices1
 
 elif [ $choice -eq 4 ]; then
   echo -e "${GREEN}>> Downloading updates if available${NC}"
@@ -503,30 +585,9 @@ elif [ $choice -eq 4 ]; then
     echo "• The remote GitHub repository is not accessible"
   fi
   sleep 3
-  echo ""
-  while true; do
-    echo -e "${ORANGE}What would you like to do now?${NC}"
-    echo "1. Continue to the builder"
-    echo "2. Exit the builder"
-    read -p "Enter your choice: " choice
-
-    if [ $choice -eq 1 ]; then
-      chmod +x builder.sh && ./builder.sh
-      break
-
-    elif [ $choice -eq 2 ]; then
-      clear
-      exit 0
-      break
-
-    else
-      echo -e "${PEACH}Invalid choice. Please try again.${NC}"
-      echo ""
-    fi
-  done
+  choices1
 
 elif [ $choice -eq 5 ]; then
-  echo -e "${PURPLE}This Operation is Termux Specific.${NC}"
   echo -e "${GREEN}>> Moving magisk module to Internal Storage${NC}"
   sleep 1
   echo ""
@@ -537,27 +598,7 @@ elif [ $choice -eq 5 ]; then
     echo "Failed to move!"
   fi
   sleep 3
-  echo ""
-  while true; do
-    echo -e "${ORANGE}What would you like to do now?${NC}"
-    echo "1. Continue to the builder"
-    echo "2. Exit the builder"
-    read -p "Enter your choice: " choice
-
-    if [ $choice -eq 1 ]; then
-      chmod +x builder.sh && ./builder.sh
-      break
-
-    elif [ $choice -eq 2 ]; then
-      clear
-      exit 0
-      break
-
-    else
-      echo -e "${PEACH}Invalid choice. Please try again.${NC}"
-      echo ""
-    fi
-  done
+  choices1
 
 elif [ $choice -eq 6 ]; then
   echo -e "${ORANGE}Are you sure you want to uninstall PLE Builder? (Y/N)${NC}"
@@ -568,63 +609,26 @@ elif [ $choice -eq 6 ]; then
     sed -i '/PLE ()/,/^}/d' ~/."$shell"rc
     rm -rf "$pwd"
     if [ $? -eq 0 ]; then # check the exit status of rm command
-      echo "Uninstalled successfully"
+      echo "Uninstalled successfully."
+      echo -e "${PURPLE}To completely remove PLE Builder, you need to close the terminal/termux window once.${NC}"
     else
       echo "Failed to uninstall!"
     fi
   else
     echo "Bruh! You almost killed me."
     sleep 3
-    echo ""
-    while true; do
-      echo -e "${ORANGE}What would you like to do now?${NC}"
-      echo "1. Continue to the builder"
-      echo "2. Exit the builder"
-      read -p "Enter your choice: " choice
-
-      if [ $choice -eq 1 ]; then
-        chmod +x builder.sh && ./builder.sh
-        break
-
-      elif [ $choice -eq 2 ]; then
-        clear
-        exit 0
-        break
-
-      else
-        echo -e "${PEACH}Invalid choice. Please try again.${NC}"
-        echo ""
-      fi
-    done
+    choices1
   fi
 
 elif [ $choice -eq 7 ]; then
   clear
   exit 0
 
+elif [ $choice -eq 8 ]; then
+  notes
+
 else
-  # if user enters invalid choice
   echo -e "${PEACH}Invalid choice.${NC}"
   sleep 1
-  echo ""
-  while true; do
-    echo -e "${ORANGE}What would you like to do now?${NC}"
-    echo "1. Continue to the builder"
-    echo "2. Exit the builder"
-    read -p "Enter your choice: " choice
-
-    if [ $choice -eq 1 ]; then
-      chmod +x builder.sh && ./builder.sh
-      break
-
-    elif [ $choice -eq 2 ]; then
-      clear
-      exit 0
-      break
-
-    else
-      echo -e "${PEACH}Invalid choice. Please try again.${NC}"
-      echo ""
-    fi
-  done
+  choices1
 fi
