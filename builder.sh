@@ -120,8 +120,9 @@ choices1() {
       break
 
     else
-      echo -e "${PEACH}Invalid choice. Please try again.${NC}"
+      echo -e "${PEACH}Invalid choice.${NC}"
       echo ""
+      sleep 1
     fi
   done
 }
@@ -151,8 +152,9 @@ choices2() {
       break
 
     else
-      echo -e "${PEACH}Invalid choice. Please try again.${NC}"
+      echo -e "${PEACH}Invalid choice.${NC}"
       echo ""
+      sleep 1
     fi
   done
 }
