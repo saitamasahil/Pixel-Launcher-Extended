@@ -175,6 +175,7 @@ if [ $choice -eq 1 ]; then
 
     else
       echo -e "${PEACH}Invalid choice. Please try again.${NC}"
+      echo ""
     fi
   done
 
@@ -220,6 +221,7 @@ elif [ $choice -eq 2 ]; then
 
     else
       echo -e "${PEACH}Invalid choice. Please try again.${NC}"
+      echo ""
     fi
   done
 
@@ -284,6 +286,7 @@ elif [ $choice -eq 3 ]; then
 
     else
       echo -e "${PEACH}Invalid choice. Please try again.${NC}"
+      echo ""
     fi
   done
 
@@ -331,6 +334,7 @@ elif [ $choice -eq 3 ]; then
 
         else
           echo -e "${PEACH}Invalid choice. Please try again.${NC}"
+          echo ""
         fi
       done
       break
@@ -359,6 +363,7 @@ elif [ $choice -eq 3 ]; then
 
     else
       echo -e "${PEACH}Invalid choice. Please try again.${NC}"
+      echo ""
     fi
   done
 
@@ -385,6 +390,7 @@ elif [ $choice -eq 3 ]; then
 
     else
       echo -e "${PEACH}Invalid choice. Please try again.${NC}"
+      echo ""
     fi
   done
 
@@ -411,6 +417,7 @@ elif [ $choice -eq 3 ]; then
 
     else
       echo -e "${PEACH}Invalid choice. Please try again.${NC}"
+      echo ""
     fi
   done
 
@@ -449,6 +456,7 @@ elif [ $choice -eq 3 ]; then
 
     else
       echo -e "${PEACH}Invalid choice. Please try again.${NC}"
+      echo ""
     fi
   done
 
@@ -479,6 +487,7 @@ elif [ $choice -eq 3 ]; then
 
     else
       echo -e "${PEACH}Invalid choice. Please try again.${NC}"
+      echo ""
     fi
   done
 
@@ -512,6 +521,7 @@ elif [ $choice -eq 4 ]; then
 
     else
       echo -e "${PEACH}Invalid choice. Please try again.${NC}"
+      echo ""
     fi
   done
 
@@ -545,6 +555,7 @@ elif [ $choice -eq 5 ]; then
 
     else
       echo -e "${PEACH}Invalid choice. Please try again.${NC}"
+      echo ""
     fi
   done
 
@@ -582,6 +593,7 @@ elif [ $choice -eq 6 ]; then
 
       else
         echo -e "${PEACH}Invalid choice. Please try again.${NC}"
+        echo ""
       fi
     done
   fi
@@ -612,6 +624,7 @@ else
 
     else
       echo -e "${PEACH}Invalid choice. Please try again.${NC}"
+      echo ""
     fi
   done
 fi
