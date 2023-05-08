@@ -140,7 +140,7 @@ If you want to enable or disable wallpaer zoom effect then use this add-on.
 
 ## Building from source
 
-If you don't want to download built module from mirrors above, then you can build magisk module yourself using PLE Builder. You can run PLE Builder in Linux based distros & Termux(F-Droid version). This is one time process & It installs PLE Builder into your system. You can run or update the builder in future by typing **PLE** in your Terminal/Termux & selecting **Update PLE Builder** option.
+If you don't want to download built module from mirrors above, then you can build magisk module yourself using PLE Builder. You can run PLE Builder in Linux based distros & Termux(F-Droid version). This is one time process & It installs PLE Builder into your system. You can run or update the builder in future by typing **PLE** or **ple** in your Terminal/Termux & selecting **Update PLE Builder** option.
 
 ### Install & run PLE Builder in Ubuntu, Debian, and other Linux distributions
 - Clone the repo using git.
@@ -155,7 +155,7 @@ cd Pixel-Launcher-Extended
 ```sh
 chmod +x builder_dependencies.sh && ./builder_dependencies.sh
 ```
-- Once you see the installation success message, exit the terminal and restart it. Then, use the 'PLE' command to launch PLE Builder.
+- Once you see the installation success message, exit the terminal and restart it. Then, use the **PLE** or **ple** command to launch PLE Builder.
 - Choose desired option using number keys.
 - To run PLE Builder again, Type **PLE** or **ple** in Terminal.
 
@@ -174,7 +174,7 @@ git clone --depth=1 https://github.com/saitamasahil/Pixel-Launcher-Extended
 cd Pixel-Launcher-Extended
 chmod +x builder_dependencies.sh && ./builder_dependencies.sh
 ```
-- Once you see the installation success message, exit the termux and restart it. Then, use the 'PLE' command to launch PLE Builder.
+- Once you see the installation success message, exit the termux and restart it. Then, use the **PLE** or **ple** command to launch PLE Builder.
 - Please make sure to grant storage permissions.
 - Choose desired option using number keys.
 - Use **Move Magisk Module To Internal Storage** option to move magisk module to Phone's Internal Storage after making it.
