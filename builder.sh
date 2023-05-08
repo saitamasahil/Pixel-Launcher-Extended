@@ -594,9 +594,9 @@ elif [ $choice -eq 4 ]; then
   git pull
   if [ $? -ne 0 ]; then
     echo -e "${PEACH}Checking for update failed! Possible reasons are:${NC}"
-    echo "• You have made some changes with PLE Builder"
-    echo "• You do not have an internet connection"
-    echo "• The remote GitHub repository is not accessible"
+    echo "• You have made some changes with PLE Builder."
+    echo "• You do not have an internet connection."
+    echo "• The remote GitHub repository is not accessible."
   fi
   sleep 3
   choices1
@@ -607,7 +607,7 @@ elif [ $choice -eq 5 ]; then
   echo ""
   mv Pixel\ Launcher\ Extended* /sdcard
   if [ $? -eq 0 ]; then
-    echo "Moved successfully"
+    echo "Moved successfully."
   else
     echo "Failed to move!"
   fi
@@ -630,7 +630,7 @@ elif [ $choice -eq 6 ]; then
       echo "Failed to uninstall!"
     fi
   else
-    echo "Bruh! You almost killed me."
+    echo "Operation cancelled by user."
     sleep 3
     choices1
   fi
