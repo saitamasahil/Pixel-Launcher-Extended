@@ -609,7 +609,10 @@ elif [ $choice -eq 5 ]; then
   if [ $? -eq 0 ]; then
     echo "Moved successfully."
   else
-    echo "Failed to move!"
+    echo -e "${PEACH}Failed to move! Possible reasons are:${NC}"
+    echo "• You didn't give storage permission to termux."
+    echo "• You didn't make the magisk module yet using builder."
+    echo "• You aren't using Termux(Android)."
   fi
   sleep 3
   choices1
