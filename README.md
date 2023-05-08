@@ -157,7 +157,7 @@ chmod +x builder_dependencies.sh && ./builder_dependencies.sh
 ```
 - Once you see the installation success message, exit the terminal and restart it. Then, use the 'PLE' command to launch PLE Builder.
 - Choose desired option using number keys.
-- To run PLE Builder again, Type **PLE** in Terminal.
+- To run PLE Builder again, Type **PLE** or **ple** in Terminal.
 
 ### Install & run PLE Builder in Termux
 - Open Termux, copy & paste this command:
@@ -179,7 +179,7 @@ chmod +x builder_dependencies.sh && ./builder_dependencies.sh
 - Choose desired option using number keys.
 - Use **Move Magisk Module To Internal Storage** option to move magisk module to Phone's Internal Storage after making it.
 - Use [Termux From F-Droid](https://f-droid.org/en/packages/com.termux/) to perform these tasks.
-- To run PLE Builder again, Type **PLE** in Terminal.
+- To run PLE Builder again, Type **PLE** or **ple** in Terminal.
 
 ## Troubleshooting
 If you face any issues while using Pixel Launcher Extended then look into this section first before asking in support group on Telegram.

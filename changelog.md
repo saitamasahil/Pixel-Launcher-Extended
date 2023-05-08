@@ -2,7 +2,7 @@
 - Fixed banner not showing while making launcher using PLE Builder
 - Fixed crashing issue while applying live wallpaper in Android 13 QPR
 - Modified PLE Builder to make it more user friendly.
-- You can now run PLE Builder by typing 'PLE' in your terminal.
+- You can now run PLE Builder by typing 'PLE' or 'ple' in your terminal.
 - Removed PLE Builder for Windows
 - Better response time
 - Fixed developer options not showing even after enabling it

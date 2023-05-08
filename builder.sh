@@ -57,6 +57,18 @@ else
   chmod +x builder.sh && ./builder.sh
 fi
 
+# Define secondary alias 'ple'
+# Check if the configuration file exists
+if [ -f ~/."$shell"rc ]; then
+  # If it exists, check if the alias ple=PLE exists in the file
+  if grep -q "alias ple=PLE" ~/."$shell"rc; then
+  # If it exists, delete the line that contains the alias
+    sed -i '/alias ple=PLE/d' ~/."$shell"rc
+  fi
+  # If it exists, append the alias to the end of the file
+  echo "alias ple=PLE" >> ~/."$shell"rc
+fi
+
 # Define temp directories making function
 make_temp_dir() {
   mkdir system/product/etc/permissions/temp
@@ -609,6 +621,7 @@ elif [ $choice -eq 6 ]; then
   if [ "$choice" == "Y" ] || [ "$choice" == "y" ]; then
     echo -e "${GREEN}>> Uninstalling PLE Builder${NC}"
     sed -i '/PLE ()/,/^}/d' ~/."$shell"rc
+    sed -i '/alias ple=PLE/d' ~/."$shell"rc
     rm -rf "$pwd"
     if [ $? -eq 0 ]; then # check the exit status of rm command
       echo "Uninstalled successfully."
