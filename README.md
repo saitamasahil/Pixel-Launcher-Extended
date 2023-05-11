@@ -50,6 +50,7 @@ If you wanna implement Pixel Launcher Extended in your custom rom then [visit he
 - Compatible ROMs (**AOSP-based custom ROMs** or **Google Pixel stock ROM**) based on Android 13.
 - Device rooted by [Magisk latest stable](https://github.com/topjohnwu/Magisk/releases/latest).
 > It is strongly advised to only use the official version of Magisk, as there have been reports from users of various issues such as bootloops and other problems when using unofficial forks of the software. Therefore, it is highly recommended that users only download and install Magisk from the official source to ensure the stability of Pixel Launcher Extended.
+- If you are using KernelSU instead of Magisk then you can flash Customize Installer. However, you may have to give root access manually to some apps which install after flashing PLE. Offline & Online Installers aren't supported for KernelSU.
 - [LSPosed](https://github.com/LSPosed/LSPosed) *(optional, if you want to use double tap to sleep feature)*
 
 **Disclaimer**
