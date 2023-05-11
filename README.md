@@ -106,17 +106,6 @@ Made by [Pixelify](https://github.com/Kingsman44/Pixelify) developer, Kingsmanz.
 - [Video showcase](https://graph.org/file/5cd90b41ec3563e69c62f.mp4)
 - [Screenshots](https://graph.org/At-A-Glance-Enhancer-Screenshots-11-16)
 
-#### Quick Opener
-An add-on for Pixel Launcher running on **Android 13 QPR2**. This add-on enables a quick launch feature on pixel launcher's searchbar.
-- [Download](https://www.pling.com/p/2019569/) the magisk module.
-- Flash in Magisk.
-- Reboot device.
-- Check for the feature. If the feature doesn't appear then force stop launcher once.
-
-**Credits**
-- Made by [saitamasahil](https://github.com/saitamasahil)
-- [GitHub](https://github.com/saitamasahil/QuickOpener)
-
 #### Hide Apps Feature
 You can enable the hide app feature in Pixel Launcher Extended by using a third-party app called **Pixel Mods**. *(**LSPosed** is required for this add-on)*.
 - Install the [Pixel Mods App](https://play.google.com/store/apps/details?id=com.metris.xposed.pmods).

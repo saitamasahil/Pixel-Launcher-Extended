@@ -31,3 +31,6 @@ if [ -f $MODDIR/first ]; then
   fi
   rm -rf $MODDIR/first
 fi
+
+# Execute
+"$MODDIR/flags"

@@ -1,0 +1,19 @@
+#!/system/bin/sh
+# flags for PLE
+# Author: Saitama (saitamasahil @ github)
+
+# Main
+flags() {
+  while true; do
+    cmd device_config put launcher ENABLE_QUICK_LAUNCH_V2 true
+    cmd device_config put launcher GBOARD_UPDATE_ENTER_KEY true
+    cmd device_config put launcher enable_quick_launch_v2 true
+    cmd device_config put launcher enable_one_search true
+    cmd device_config put launcher ENABLE_LOCAL_RECOMMENDED_WIDGETS_FILTER true
+    cmd device_config put launcher ENABLE_SMARTSPACE_ENHANCED true
+    cmd device_config put launcher ENABLE_WIDGETS_PICKER_AIAI_SEARCH true
+  done
+}
+
+# Run as daemon
+(flags &) &
