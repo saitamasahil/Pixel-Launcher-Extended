@@ -675,7 +675,7 @@ init_main() {
   ui_print ""
 
   if [[ "$FCTEXTAD1" == "Yes" ]]; then
-    mv -f "$MODPATH/system/product/priv-app/PixelLauncherDT2S/PixelLauncherDT2S.apk" "$MODPATH/system/product/priv-app/PixelLauncherDT2S/PixelLauncherDT2S.apk"
+    :
 
   elif [[ "$FCTEXTAD1" == "No" ]]; then
     rm -rf "$MODPATH/system/product/priv-app/PixelLauncherDT2S"
