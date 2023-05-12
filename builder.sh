@@ -182,7 +182,7 @@ notes() {
   echo "4. What is Manual Installer?"
   echo "5. How to update PLE Builder?"
   echo "6. What does 'Move Magisk Module To Internal Storage' option do?"
-  echo "7. Why is 'Move Magisk Module To Internal Storage' option showing in green color?"
+  echo "7. Why is option 6 showing in green color or has a cross mark?"
   echo "8. How to exit PLE Builder?"
   echo "9. How to uninstall PLE Builder?"
   echo -e "${PEACH}10. Go back to main menu${NC}"
@@ -243,7 +243,7 @@ notes() {
 
   elif [ $choice -eq 7 ]; then
     echo ""
-    echo -e "${BLUE}When a magisk module zip file is available in the system but not yet transferred to the internal storage, it displays that option in green color.${NC}"
+    echo -e "${BLUE}Option 6 is 'Move Magisk Module To Internal Storage'. When a magisk module zip file is available in the system but not yet transferred to the internal storage, it displays that option in green color. It shows cross mark if you aren't using PLE Builder in Termux(Android) indicating that it's Termux specific option only.${NC}"
     sleep 3
     choices2
 
@@ -293,10 +293,15 @@ echo "2. Make Online Installer"
 echo "3. Make Customize Installer"
 echo "4. Make Manual Installer"
 echo "5. Update PLE Builder"
-if ls Pixel\ Launcher*.zip 1>/dev/null 2>&1; then
-  echo -e "${GREEN}6. Move Magisk Module To Internal Storage${NC}"
+# Check if it's termux or terminal
+if [ -d "$PREFIX" ]; then
+  if ls Pixel\ Launcher*.zip 1>/dev/null 2>&1; then
+    echo -e "${GREEN}6. Move Magisk Module To Internal Storage${NC}"
+  else
+    echo "6. Move Magisk Module To Internal Storage"
+  fi
 else
-  echo "6. Move Magisk Module To Internal Storage"
+  echo "6. Move Magisk Module To Internal Storage ❌"
 fi
 echo -e "${PEACH}7. Uninstall PLE Builder${NC}"
 echo "8. Exit"

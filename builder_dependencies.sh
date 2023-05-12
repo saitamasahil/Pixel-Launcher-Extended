@@ -81,8 +81,6 @@ if [ -f ~/."$shell"rc ]; then
     # Delete the existing PLE function
     sed -i '/PLE ()/,/^}/d' ~/."$shell"rc
   fi
-  echo -e "${GREEN}PLE Builder has been successfully installed on your system.${NC}"
-  echo -e "${PURPLE}To run PLE Builder, exit the terminal/termux, reopen it & type 'PLE' or 'ple'.${NC}"
 
   # Get the current working directory of the script
   pwd=$(pwd)
@@ -104,6 +102,8 @@ PLE () {
   cd ~
 }
 EOF
+  echo -e "${GREEN}PLE Builder has been successfully installed on your system.${NC}"
+  echo -e "${PURPLE}To run PLE Builder, exit the terminal/termux, reopen it & type 'PLE' or 'ple'.${NC}"
 
 else
   # Print an error message & make ."$shell"rc file
