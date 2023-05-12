@@ -19,6 +19,18 @@ NC='\033[0m' # No Color
 # Get the name of the current shell
 shell=$(basename "$SHELL")
 
+# Define secondary alias 'ple'
+# Check if the configuration file exists
+if [ -f ~/."$shell"rc ]; then
+  # If it exists, check if the alias ple=PLE exists in the file
+  if grep -q "alias ple=PLE" ~/."$shell"rc; then
+    # If it exists, delete the line that contains the alias
+    sed -i '/alias ple=PLE/d' ~/."$shell"rc
+  fi
+  # If it exists, append the alias to the end of the file
+  echo "alias ple=PLE" >>~/."$shell"rc
+fi
+
 # Check if the configuration file exists
 if [ -f ~/."$shell"rc ]; then
   # Check if the PLE function is already defined in the file
@@ -55,18 +67,6 @@ else
   sleep 3
   touch ~/."$shell"rc
   chmod +x builder.sh && ./builder.sh
-fi
-
-# Define secondary alias 'ple'
-# Check if the configuration file exists
-if [ -f ~/."$shell"rc ]; then
-  # If it exists, check if the alias ple=PLE exists in the file
-  if grep -q "alias ple=PLE" ~/."$shell"rc; then
-    # If it exists, delete the line that contains the alias
-    sed -i '/alias ple=PLE/d' ~/."$shell"rc
-  fi
-  # If it exists, append the alias to the end of the file
-  echo "alias ple=PLE" >>~/."$shell"rc
 fi
 
 # Define temp directories making function
