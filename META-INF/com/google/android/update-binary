@@ -124,6 +124,7 @@ done
 rmtouch "$MODPATH/META-INF"
 rmtouch "$MODPATH/addon"
 rmtouch "$MODPATH/setup.sh"
+rmtouch "$MODPATH/config.txt"
 rmtouch "$MODPATH/LICENSE"
 rmtouch "$MODPATH/README.md"
 rmtouch "$MODPATH/system/bin/placeholder"

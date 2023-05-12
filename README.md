@@ -50,7 +50,7 @@ If you wanna implement Pixel Launcher Extended in your custom rom then [visit he
 - Compatible ROMs (**AOSP-based custom ROMs** or **Google Pixel stock ROM**) based on Android 13.
 - Device rooted by [Magisk latest stable](https://github.com/topjohnwu/Magisk/releases/latest).
 > It is strongly advised to only use the official version of Magisk, as there have been reports from users of various issues such as bootloops and other problems when using unofficial forks of the software. Therefore, it is highly recommended that users only download and install Magisk from the official source to ensure the stability of Pixel Launcher Extended.
-- If you are using KernelSU instead of Magisk then you can flash Customize Installer. However, you may have to give root access manually to some apps which install after flashing PLE. Offline & Online Installers aren't supported for KernelSU.
+- If you are using KernelSU instead of Magisk then you can flash Customize Installer. However, you may have to give root access manually to some apps which install after flashing PLE. Offline, Online & Manual Installers aren't supported for KernelSU.
 - [LSPosed](https://github.com/LSPosed/LSPosed) *(optional, if you want to use double tap to sleep feature)*
 
 **Disclaimer**
@@ -63,17 +63,21 @@ If you wanna implement Pixel Launcher Extended in your custom rom then [visit he
 - Reboot your device and go to **Settings** > **Apps** > **Default apps** > **Home app** and make sure **Pixel Launcher Extended** is selected
 
 #### Variants
+Choose from the four variants that are available and match your needs. These 4 variants are:
 **Offline Installer**  
-It doesn't require internet while flashing, but it's 100+ MB in size. It's available for download from [Download Links](#download-links) below. You can build it yourself too by following instructions from [Building from source](#building-from-source) section.
+It doesn't require internet while flashing, but it is 100+ MB in size. It's available for download from [Download Links](#download-links) below. You can build it yourself too by following instructions from [Building from source](#building-from-source) section.
 
 **Online Installer**  
-It requires internet while flashing and downloads only selected files by user during installation. It's less than 5 MB in size. Depending upon your internet this variant may take more time in flashing compared to offline installer. It's available for download from [Download Links](#download-links) below. You can build it yourself too by following instructions from [Building from source](#building-from-source) section.
+It requires internet while flashing and downloads only selected files by user during installation. It is less than 5 MB in size. Depending upon your internet this variant may take more time in flashing compared to offline installer. It's available for download from [Download Links](#download-links) below. You can build it yourself too by following instructions from [Building from source](#building-from-source) section.
 
 **Customize Installer**  
 It's like offline installer but less in size. Installer zip size depends upon the modifications a user chooses while making the zip. It's not available for download from download links below. However, You can build it yourself by following instructions from [Building from source](#building-from-source) section. This variant is good for those whose phone's volume keys are broken or if they don't want to follow long instructions involving volume key presses(multiple times) while flashing in Magisk.
 
+**Manual Installer**
+It's a mixture of offline & customize installer. It is 100+ MB in size. You can modify the installation options(like customize installer) by editing the config.txt file in the installer zip. To learn how to edit config.txt and flash the manual installer, [click here](https://github.com/saitamasahil/Pixel-Launcher-Extended/blob/main/manual_installer_instructions.md). It's available for download from [Download Links](#download-links) below. You can build it yourself too by following instructions from [Building from source](#building-from-source) section. This variant is good for those whose phone's volume keys are broken or if they don't want to follow long instructions involving volume key presses(multiple times) while flashing in Magisk. Also, you can edit config.txt file again to choose different modifications & installation options and flash it again in magisk.
+
 ### Activating Double Tap to Sleep
-- Make sure you installed DT2S while flashing the module(or selected it while making in case of customize installer).
+- Make sure you installed DT2S while flashing the module(or selected it while making in case of customize or manual installer).
 - After rebooting device, open LSPosed and enable **Pixel Launcher DT2S**.
 - Force-stop Pixel Launcher Extended from Settings (or reboot device again).
 - Double-tap once on home screen. Grant superuser permissions and enjoy.

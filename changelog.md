@@ -12,6 +12,7 @@
 - Added required flags
 - Customize installer now supports KernelSU. Make sure to give root access manually to extended setting and icon shape changer app
 - Quick Opener is now built into PLE. No need to flash additional module
+- Added Manual Installer(check Github for more information)
 - Other minor fixes
 
 **Version 1.5**

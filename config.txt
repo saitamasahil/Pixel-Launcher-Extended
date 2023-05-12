@@ -1,0 +1,5 @@
+LAUNCHER=
+DT2S=
+Pixel_Launcher_Mods_App=
+Icon_Shape_Changer_App=
+# Don't modify anything after this

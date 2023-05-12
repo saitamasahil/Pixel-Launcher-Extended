@@ -62,11 +62,11 @@ fi
 if [ -f ~/."$shell"rc ]; then
   # If it exists, check if the alias ple=PLE exists in the file
   if grep -q "alias ple=PLE" ~/."$shell"rc; then
-  # If it exists, delete the line that contains the alias
+    # If it exists, delete the line that contains the alias
     sed -i '/alias ple=PLE/d' ~/."$shell"rc
   fi
   # If it exists, append the alias to the end of the file
-  echo "alias ple=PLE" >> ~/."$shell"rc
+  echo "alias ple=PLE" >>~/."$shell"rc
 fi
 
 # Define temp directories making function
@@ -179,18 +179,19 @@ notes() {
   echo "1. What is Offline Installer?"
   echo "2. What is Online Installer?"
   echo "3. What is Customize Installer?"
-  echo "4. How to update PLE Builder?"
-  echo "5. What does 'Move Magisk Module To Internal Storage' option do?"
-  echo "6. Why is 'Move Magisk Module To Internal Storage' option showing in green color?"
-  echo "7. How to exit PLE Builder?"
-  echo "8. How to uninstall PLE Builder?"
-  echo -e "${PEACH}9. Go back to main menu${NC}"
+  echo "4. What is Manual Installer?"
+  echo "5. How to update PLE Builder?"
+  echo "6. What does 'Move Magisk Module To Internal Storage' option do?"
+  echo "7. Why is 'Move Magisk Module To Internal Storage' option showing in green color?"
+  echo "8. How to exit PLE Builder?"
+  echo "9. How to uninstall PLE Builder?"
+  echo -e "${PEACH}10. Go back to main menu${NC}"
   read -p "Enter your choice: " choice
 
   if [ $choice -eq 1 ]; then
     echo ""
     echo -e "${BLUE}Here is the summary of Pixel Launcher Extended Offline Installer:${NC}"
-    echo "• It is one of the three variants of Pixel Launcher Extended."
+    echo "• It is one of the four variants of Pixel Launcher Extended."
     echo "• It does not need an internet connection to install while flashing in magisk, but it's size is more than 100 MB."
     echo "• While flashing in magisk, desired modifications can be selected using volume keys."
     sleep 3
@@ -199,7 +200,7 @@ notes() {
   elif [ $choice -eq 2 ]; then
     echo ""
     echo -e "${BLUE}Here is the summary of Pixel Launcher Extended Online Installer:${NC}"
-    echo "• It is one of the three variants of Pixel Launcher Extended."
+    echo "• It is one of the four variants of Pixel Launcher Extended."
     echo "• It needs internet to install while flashing in magisk and downloads only the files chosen by the user."
     echo "• It is very small in size (less than 5 MB) but may take longer to install depending on the internet speed."
     echo "• While flashing in magisk, desired modifications can be selected using volume keys."
@@ -209,7 +210,7 @@ notes() {
   elif [ $choice -eq 3 ]; then
     echo ""
     echo -e "${BLUE}Here is the summary of Pixel Launcher Extended Customize Installer:${NC}"
-    echo "• It is one the of three variants of Pixel Launcher Extended."
+    echo "• It is one the of four variants of Pixel Launcher Extended."
     echo "• It is similar to offline installer but smaller in size. The size varies depending on the user’s choices of modifications during the process of making it."
     echo "• This variant is suitable for those who have broken volume keys or those who want to flash module without using volume keys."
     echo "• After making this variant, it can be directly flashed in magisk without using volume keys."
@@ -218,35 +219,47 @@ notes() {
 
   elif [ $choice -eq 4 ]; then
     echo ""
-    echo -e "${BLUE}Select 'Update PLE Builder' option from main menu.${NC}"
+    echo -e "${BLUE}Here is the summary of Pixel Launcher Extended Manual Installer:${NC}"
+    echo "• It is one of the four variants of Pixel Launcher Extended."
+    echo "• It's a mixture of offline & customize installer."
+    echo "• It's size is more than 100 MB."
+    echo "• This variant is suitable for those who have broken volume keys or those who want to flash module without using volume keys."
+    echo "• You can modify the installation options by editing the config.txt file in the installer zip."
+    echo "• Check README on GitHub to learn how to edit config.txt and flash the manual installer."
     sleep 3
     choices2
 
   elif [ $choice -eq 5 ]; then
     echo ""
-    echo -e "${BLUE}This option is only for Termux users. You can use this option to move the Magisk Module to your internal storage after creating it.${NC}"
+    echo -e "${BLUE}Select 'Update PLE Builder' option from main menu.${NC}"
     sleep 3
     choices2
 
   elif [ $choice -eq 6 ]; then
     echo ""
-    echo -e "${BLUE}When a magisk module zip file is available in the system but not yet transferred to the internal storage, it displays that option in green color.${NC}"
+    echo -e "${BLUE}This option is only for Termux users. You can use this option to move the Magisk Module to your internal storage after creating it.${NC}"
     sleep 3
     choices2
 
   elif [ $choice -eq 7 ]; then
     echo ""
-    echo -e "${BLUE}Select 'Exit' option from main menu.${NC}"
+    echo -e "${BLUE}When a magisk module zip file is available in the system but not yet transferred to the internal storage, it displays that option in green color.${NC}"
     sleep 3
     choices2
 
   elif [ $choice -eq 8 ]; then
     echo ""
-    echo -e "${BLUE}Select 'Uninstall PLE Builder' option from main menu.${NC}"
+    echo -e "${BLUE}Select 'Exit' option from main menu.${NC}"
     sleep 3
     choices2
 
   elif [ $choice -eq 9 ]; then
+    echo ""
+    echo -e "${BLUE}Select 'Uninstall PLE Builder' option from main menu.${NC}"
+    sleep 3
+    choices2
+
+  elif [ $choice -eq 10 ]; then
     chmod +x builder.sh && ./builder.sh
 
   else
@@ -278,15 +291,16 @@ echo -e "${ORANGE}Select Your Choice:${NC}"
 echo "1. Make Offline Installer"
 echo "2. Make Online Installer"
 echo "3. Make Customize Installer"
-echo "4. Update PLE Builder"
+echo "4. Make Manual Installer"
+echo "5. Update PLE Builder"
 if ls Pixel\ Launcher*.zip 1>/dev/null 2>&1; then
-  echo -e "${GREEN}5. Move Magisk Module To Internal Storage${NC}"
+  echo -e "${GREEN}6. Move Magisk Module To Internal Storage${NC}"
 else
-  echo "5. Move Magisk Module To Internal Storage"
+  echo "6. Move Magisk Module To Internal Storage"
 fi
-echo -e "${PEACH}6. Uninstall PLE Builder${NC}"
-echo "7. Exit"
-echo "8. Notes & Help"
+echo -e "${PEACH}7. Uninstall PLE Builder${NC}"
+echo "8. Exit"
+echo "9. Notes & Help"
 read -p "Enter your choice: " choice
 
 if [ $choice -eq 1 ]; then
@@ -305,8 +319,8 @@ if [ $choice -eq 1 ]; then
 
   # Create zip file
   echo -e "${GREEN}>> Creating Magisk Module${NC}"
-  echo ""                                                                                                                                                                                                                                                                                               # make the output look easier to read
-  zip -r -q "Pixel Launcher Extended Offline Installer $version.zip" . -x .git/\* Modifications/\* screenshots/\* builder.sh builder_dependencies.sh banner.jpg banner2.jpg changelog.md codename.txt logo.png online_setup.sh offline_setup.sh customize_setup.sh README.md Pixel\ Launcher\ Extended* # Ignore specified files and folders because they are not needed for the module
+  echo ""                                                                                                                                                                                                                                                                                                                                                           # make the output look easier to read
+  zip -r -q "Pixel Launcher Extended Offline Installer $version.zip" . -x .git/\* Modifications/\* screenshots/\* builder.sh builder_dependencies.sh banner.jpg banner2.jpg changelog.md codename.txt logo.png online_setup.sh offline_setup.sh manual_setup.sh config.txt customize_setup.sh manual_installer_instructions.md README.md Pixel\ Launcher\ Extended* # Ignore specified files and folders because they are not needed for the module
   # Delete temp file
   if [ -f "setup.sh" ]; then
     rm setup.sh
@@ -331,8 +345,8 @@ elif [ $choice -eq 2 ]; then
 
   # Create zip file
   echo -e "${GREEN}>> Creating Magisk Module${NC}"
-  echo ""                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     # make the output look easier to read
-  zip -r -q "Pixel Launcher Extended Online Installer $version.zip" . -x .git/\* Modifications/\* screenshots/\* builder.sh builder_dependencies.sh banner.jpg banner2.jpg changelog.md codename.txt logo.png offline_setup.sh customize_setup.sh online_setup.sh README.md system/product/priv-app/NexusLauncherRelease/*\* system/product/priv-app/PixelLauncherMods/PixelLauncherMods.apk system/product/overlay/ThemedIconsOverlay/*\* system/system_ext/priv-app/WallpaperPickerGoogleRelease/* system/product/overlay/TeamFiles* system/product/priv-app/ExtendedSettings/ExtendedSettings.apk system/product/priv-app/IconShapeChanger/IconShapeChanger.apk Pixel\ Launcher\ Extended* # Ignore specified files and folders because they are not needed for the module
+  echo ""                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 # make the output look easier to read
+  zip -r -q "Pixel Launcher Extended Online Installer $version.zip" . -x .git/\* Modifications/\* screenshots/\* builder.sh builder_dependencies.sh banner.jpg banner2.jpg changelog.md codename.txt logo.png offline_setup.sh customize_setup.sh online_setup.sh manual_setup.sh manual_installer_instructions.md config.txt README.md system/product/priv-app/NexusLauncherRelease/*\* system/product/priv-app/PixelLauncherMods/PixelLauncherMods.apk system/product/overlay/ThemedIconsOverlay/*\* system/system_ext/priv-app/WallpaperPickerGoogleRelease/* system/product/overlay/TeamFiles* system/product/priv-app/ExtendedSettings/ExtendedSettings.apk system/product/priv-app/IconShapeChanger/IconShapeChanger.apk Pixel\ Launcher\ Extended* # Ignore specified files and folders because they are not needed for the module
   # Delete temp file
   if [ -f "setup.sh" ]; then
     rm setup.sh
@@ -578,8 +592,8 @@ elif [ $choice -eq 3 ]; then
 
   # Create zip file
   echo -e "${GREEN}>> Creating Magisk Module${NC}"
-  echo ""                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            # make the output look easier to read
-  zip -r -q "Pixel Launcher Extended Customize Installer $version.zip" . -x .git/\* Modifications/\* screenshots/\* builder.sh builder_dependencies.sh banner.jpg banner2.jpg changelog.md codename.txt logo.png online_setup.sh offline_setup.sh customize_setup.sh README.md Pixel\ Launcher\ Extended* system/product/priv-app/NexusLauncherRelease/temp/\* system/product/priv-app/temp/\* system/product/etc/permissions/temp/\* system/product/overlay/temp/\* system/system_ext/priv-app/WallpaperPickerGoogleRelease/temp/\* # Ignore specified files and folders because they are not needed for the module
+  echo ""                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        # make the output look easier to read
+  zip -r -q "Pixel Launcher Extended Customize Installer $version.zip" . -x .git/\* Modifications/\* screenshots/\* builder.sh builder_dependencies.sh banner.jpg banner2.jpg changelog.md codename.txt logo.png online_setup.sh offline_setup.sh customize_setup.sh manual_setup.sh manual_installer_instructions.md config.txt README.md Pixel\ Launcher\ Extended* system/product/priv-app/NexusLauncherRelease/temp/\* system/product/priv-app/temp/\* system/product/etc/permissions/temp/\* system/product/overlay/temp/\* system/system_ext/priv-app/WallpaperPickerGoogleRelease/temp/\* # Ignore specified files and folders because they are not needed for the module
 
   # Move temp files & folders back to original location
   recover_ple
@@ -588,6 +602,32 @@ elif [ $choice -eq 3 ]; then
   choices1
 
 elif [ $choice -eq 4 ]; then
+
+  # Delete already exists Manual Installer
+  rm -rf Pixel\ Launcher\ Extended\ Manual*
+
+  # Copy & Rename manual_setup.sh to setup.sh
+  cp manual_setup.sh setup.sh
+
+  # Check if the current directory has system folder and setup.sh to verify that current directory is valid
+  if [ ! -d "system" ] || [ ! -f "setup.sh" ]; then
+    echo "Error: Current directory is not valid. Make sure that you are in the right directory and try again."
+    exit 1
+  fi
+
+  # Create zip file
+  echo -e "${GREEN}>> Creating Magisk Module${NC}"
+  echo ""                                                                                                                                                                                                                                                                                                                                               # make the output look easier to read
+  zip -r -q "Pixel Launcher Extended Manual Installer $version.zip" . -x .git/\* Modifications/\* screenshots/\* builder.sh builder_dependencies.sh banner.jpg banner2.jpg changelog.md codename.txt logo.png online_setup.sh offline_setup.sh manual_setup.sh manual_installer_instructions.md customize_setup.sh README.md Pixel\ Launcher\ Extended* # Ignore specified files and folders because they are not needed for the module
+  # Delete temp file
+  if [ -f "setup.sh" ]; then
+    rm setup.sh
+  fi
+  echo "Done! You can find it here: '$(pwd)/Pixel Launcher Extended Manual Installer $version.zip'"
+  sleep 3
+  choices1
+
+elif [ $choice -eq 5 ]; then
   echo -e "${GREEN}>> Downloading updates if available${NC}"
   sleep 1
   echo ""
@@ -601,7 +641,7 @@ elif [ $choice -eq 4 ]; then
   sleep 3
   choices1
 
-elif [ $choice -eq 5 ]; then
+elif [ $choice -eq 6 ]; then
   echo -e "${GREEN}>> Moving magisk module to Internal Storage${NC}"
   sleep 1
   echo ""
@@ -617,7 +657,7 @@ elif [ $choice -eq 5 ]; then
   sleep 3
   choices1
 
-elif [ $choice -eq 6 ]; then
+elif [ $choice -eq 7 ]; then
   echo -e "${ORANGE}Are you sure you want to uninstall PLE Builder? (Y/N)${NC}"
   read -p "Enter your choice: " choice
 
@@ -638,11 +678,11 @@ elif [ $choice -eq 6 ]; then
     choices1
   fi
 
-elif [ $choice -eq 7 ]; then
+elif [ $choice -eq 8 ]; then
   clear
   exit 0
 
-elif [ $choice -eq 8 ]; then
+elif [ $choice -eq 9 ]; then
   notes
 
 else
