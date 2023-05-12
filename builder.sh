@@ -668,8 +668,8 @@ elif [ $choice -eq 7 ]; then
 
   if [ "$choice" == "Y" ] || [ "$choice" == "y" ]; then
     echo -e "${GREEN}>> Uninstalling PLE Builder${NC}"
-    sed -i '/PLE ()/,/^}/d' ~/."$shell"rc
     sed -i '/alias ple=PLE/d' ~/."$shell"rc
+    sed -i '/PLE ()/,/^}/d' ~/."$shell"rc
     rm -rf "$pwd"
     if [ $? -eq 0 ]; then # check the exit status of rm command
       echo "Uninstalled successfully."
