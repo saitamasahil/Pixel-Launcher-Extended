@@ -673,7 +673,12 @@ elif [ $choice -eq 7 ]; then
     rm -rf "$pwd"
     if [ $? -eq 0 ]; then # check the exit status of rm command
       echo "Uninstalled successfully."
-      echo -e "${PURPLE}To completely remove PLE Builder, you need to close the terminal/termux window once.${NC}"
+      echo ""
+      read -n 1 -s -r -p "Press any key to continue..."
+      echo
+      clear
+      cd ~
+      $shell
     else
       echo "Failed to uninstall!"
     fi
