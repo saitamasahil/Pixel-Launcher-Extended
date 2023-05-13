@@ -136,6 +136,18 @@ If you want to enable or disable wallpaer zoom effect then use this add-on.
 
 If you don't want to download built module from mirrors above, then you can build magisk module yourself using PLE Builder. You can run PLE Builder in Linux based distros & Termux(F-Droid version). This is one time process & It installs PLE Builder into your system. You can run or update the builder in future by typing **PLE** or **ple** in your Terminal/Termux & selecting **Update PLE Builder** option.
 
+---
+**NOTE**
+PLE Builder relies on an rc file to store and load its configuration settings & it supports the following shells that have rc files:
+- bash
+- zsh
+- csh
+- ksh
+- tcsh
+
+If you are using a different shell that does not have an rc file, you can switch to one of the supported shells.
+---
+
 ### Install & run PLE Builder in Ubuntu, Debian, and other Linux distributions
 - Clone the repo using git.
 ```sh
