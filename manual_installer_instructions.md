@@ -24,16 +24,16 @@ Value of x:
 - If x=1, then launcher contains material you glance greetings style 1.
 - If x=2, then launcher contains material you glance greetings style 2.
   - Example Of Glance Greetings Style 1:
-    ```ss
-    Line 1 - Material You Greetings
-    Line 2 - Day & Date
-    Line 3 - Weather Information
-    ```
+  ```ss
+  Line 1 - Material You Greetings
+  Line 2 - Day & Date
+  Line 3 - Weather Information
+  ```
   - Example Of Glance Greetings Style 2:
-    ```ss
-    Line 1 - Material You Greetings, Day & Date
-    Line 2 - Weather Information
-    ```
+  ```ss
+  Line 1 - Material You Greetings, Day & Date
+  Line 2 - Weather Information
+  ```
 
 Value of y:
 - If y=0, then launcher is for Android 13. Android 13 - November security patch or below.

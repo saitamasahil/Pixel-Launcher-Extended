@@ -146,6 +146,7 @@ PLE Builder relies on an rc file to store and load its configuration settings & 
 - tcsh
 
 If you are using a different shell that does not have an rc file, you can switch to one of the supported shells.
+
 ---
 
 ### Install & run PLE Builder in Ubuntu, Debian, and other Linux distributions
