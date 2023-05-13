@@ -138,6 +138,7 @@ If you don't want to download built module from mirrors above, then you can buil
 
 ---
 **NOTE**
+
 PLE Builder relies on an rc file to store and load its configuration settings & it supports the following shells that have rc files:
 - bash
 - zsh
@@ -250,6 +251,7 @@ Thank you for your generosity!
 - [selfmusing](https://github.com/selfmusing)
 - [Sameera](https://telegram.me/sameera_s_w)
 - [naokoshoto](https://github.com/naokoshoto)
+- [Ryuk](https://telegram.me/anonymousx97)
 
 Brought to you by [TeamFiles](https://github.com/TeamFiles)!
 
