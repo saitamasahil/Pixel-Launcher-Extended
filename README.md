@@ -43,6 +43,8 @@ This module is expected to work on ROMs which are based on fairly unmodified And
 - Android 13 QPR2 AOSP-based ROMs
 > Ensure your ROM is equipped with the necessary GApps, including Google apps and services. Without them, certain features may not function optimally on vanilla ROM. Make sure to flash proper GApps Package for your rom if you are using vanilla rom.
 
+> It may or may not work on stock roms provided by different OEMs. Try at your own risk.
+
 ### Implement In Custom ROMs
 If you wanna implement Pixel Launcher Extended in your custom rom then [visit here](https://github.com/StudioKeys/vendor_PixelLauncherExtended).
 
@@ -147,7 +149,7 @@ PLE Builder relies on an rc file to store and load its configuration settings & 
 - ksh
 - tcsh
 
-If you are using a different shell that does not have an rc file, you can switch to one of the supported shells.
+If you are using a different shell that does not have a rc file, you can switch to one of the supported shells.
 
 ---
 
