@@ -1,3 +1,6 @@
+**Version 1.7 Beta**
+- Removed unnecessary permissions. It may probably fix battery drain issue happening in some custom roms.
+
 **Version 1.6**
 - Fixed banner not showing while making launcher using PLE Builder
 - Fixed crashing issue while applying live wallpaper in Android 13 QPR
