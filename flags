@@ -15,5 +15,3 @@ flags() {
   done
 }
 
-# Run as daemon
-(flags &) &
