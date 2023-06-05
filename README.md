@@ -43,7 +43,7 @@ This module is expected to work on ROMs which are based on fairly unmodified And
 - Android 13 QPR2 AOSP-based ROMs
 > Ensure your ROM is equipped with the necessary GApps, including Google apps and services. Without them, certain features may not function optimally on vanilla ROM. Make sure to flash proper GApps Package for your rom if you are using vanilla rom.
 
-> It may or may not work on stock roms provided by different OEMs. Try at your own risk.
+> It may or may not work on stock roms provided by different OEMs. Try at your own risk. Make sure to use Customize Installer for different OEMs Stock Roms like Xperia UI by Sony & other Stock Roms provided by other OEMs.
 
 ### Implement In Custom ROMs
 If you wanna implement Pixel Launcher Extended in your custom rom then [visit here](https://github.com/StudioKeys/vendor_PixelLauncherExtended).
