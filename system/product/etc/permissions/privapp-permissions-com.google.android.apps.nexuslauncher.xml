@@ -15,6 +15,7 @@
         <permission name="android.permission.CHANGE_WIFI_STATE" />
         <permission name="android.permission.CONTROL_REMOTE_APP_TRANSITION_ANIMATIONS"/>
         <permission name="android.permission.VIBRATE"/>
+        <permission name="android.permission.BIND_QUICK_SETTINGS_TILE"/>
         <permission name="android.permission.QUERY_ALL_PACKAGES"/>
         <permission name="android.permission.START_TASKS_FROM_RECENTS"/>
         <permission name="android.permission.REMOVE_TASKS"/>
