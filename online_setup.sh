@@ -88,6 +88,8 @@ REPLACE="
 /system/system_ext/priv-app/Lawnchair
 /system/system_ext/priv-app/PixelLauncherRelease
 /system/system_ext/priv-app/Launcher3QuickStep
+/system/system_ext/priv-app/Launcher3QuickStepGoogle
+/system/system_ext/priv-app/Launcher3QuickStepMock
 /system/system_ext/priv-app/ArrowLauncher
 /system/system_ext/priv-app/WallpaperPickerGoogleRelease
 /system/product/overlay/ThemedIconsOverlay.apk
