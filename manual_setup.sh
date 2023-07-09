@@ -95,6 +95,8 @@ REPLACE="
 /system/product/overlay/CustomPixelLauncherOverlay
 /system/system_ext/priv-app/NexusLauncherRelease
 /system/system_ext/priv-app/TrebuchetQuickStep
+/system/system_ext/priv-app/Launcher3QuickStepGoogle
+/system/system_ext/priv-app/Launcher3QuickStepMock
 /system/system_ext/priv-app/Lawnchair
 /system/system_ext/priv-app/PixelLauncherRelease
 /system/system_ext/priv-app/Launcher3QuickStep
