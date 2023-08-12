@@ -2,6 +2,7 @@
 - Removed unnecessary permissions. It may probably fix battery drain issue happening in some custom roms.
 - Updated Extended Settings & Icon Shape Changer's library.
 - Updated Pixel Launcher Mods app to v2.5.
+- Updated dependent apks.
 
 **Version 1.6**
 - Fixed banner not showing while making launcher using PLE Builder
