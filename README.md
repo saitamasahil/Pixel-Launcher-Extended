@@ -6,7 +6,7 @@
 
 ### Features
 - Extra themed icons. Total of 1250+ icons.  
-- More grids options, total of 14 grids. You can select these extra grids by going to **Wallpaper & style** > **App grid**. These are available for **Phones** only. Not available for **Tablets**.
+- More grids options, total of 14 grids. You can select these extra grids by going to **Wallpaper & style** > **App grid**.
 - Double tap to sleep *(LSPosed required)*.
 - You can choose different icons shapes using Icon Shape Changer app(It can be installed as a choice).
 - Material You At A Glance greetings with Extended Settings app. Using this app you will be able to do some subtle modifications.
@@ -41,9 +41,12 @@ This module is expected to work on ROMs which are based on fairly unmodified And
 - Android 13 AOSP-based ROMs
 - Android 13 QPR AOSP-based ROMs
 - Android 13 QPR2 AOSP-based ROMs
+- Android 13 QPR3 AOSP-based ROMs
 > Ensure your ROM is equipped with the necessary GApps, including Google apps and services. Without them, certain features may not function optimally on vanilla ROM. Make sure to flash proper GApps Package for your rom if you are using vanilla rom.
 
 > It may or may not work on stock roms provided by different OEMs. Try at your own risk. Make sure to use Customize Installer for different OEMs Stock Roms like Xperia UI by Sony & other Stock Roms provided by other OEMs.
+
+> This is properly compatible with Phones. It may or may not work on Tablets & Foldable Phones.
 
 ### Implement In Custom ROMs
 If you wanna implement Pixel Launcher Extended in your custom rom then [visit here](https://github.com/StudioKeys/vendor_PixelLauncherExtended).
@@ -255,6 +258,7 @@ Thank you for your generosity!
 - [Sameera](https://telegram.me/sameera_s_w)
 - [naokoshoto](https://github.com/naokoshoto)
 - [Ryuk](https://telegram.me/anonymousx97)
+- [micky387](https://github.com/micky387)
 
 Brought to you by [TeamFiles](https://github.com/TeamFiles)!
 
