@@ -478,7 +478,7 @@ init_main() {
       rm -rf "$MODPATH/system/product/etc/permissions/privapp-permissions-com.domain.liranazuz5.extendedsettings.xml"
     fi
 
-  elif [ $PATCH_LEVEL -ge 202303 ]; then
+  elif [ $PATCH_LEVEL -le 202305 ]; then
     ui_print "Android 13 QPR2 detected!"
     ui_print "Security Patch - $PATCH_DATE"
     ui_print ""
@@ -635,6 +635,166 @@ init_main() {
       ui_print "Downloading..."
       ui_print ""
       download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease02.apk" "$MODPATH/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease02.apk"
+      rm -rf "$MODPATH/system/product/etc/permissions/privapp-permissions-com.domain.liranazuz5.extendedsettings.xml"
+    fi
+
+  elif [ $PATCH_LEVEL -ge 202306 ]; then
+    ui_print "Android 13 QPR3 detected!"
+    ui_print "Security Patch - $PATCH_DATE"
+    ui_print ""
+    ui_print "[*] If the information displayed above is accurate?"
+    ui_print "[*] Press volume up to switch to another choice"
+    ui_print "[*] Press volume down to continue with that choice"
+    ui_print ""
+
+    sleep 0.5
+
+    ui_print "--------------------------------"
+    ui_print "[1] Yes"
+    ui_print "--------------------------------"
+    ui_print "[2] No"
+    ui_print "--------------------------------"
+
+    ui_print ""
+    ui_print "[*] Select your desired option:"
+
+    SM=1
+    while true; do
+      ui_print "  $SM"
+      "$VKSEL" && SM="$((SM + 1))" || break
+      [[ "$SM" -gt "2" ]] && SM=1
+    done
+
+    case "$SM" in
+    "1") FCTEXTAD1="Yes" ;;
+    "2") FCTEXTAD1="No" ;;
+    esac
+
+    ui_print "[*] Selected: $FCTEXTAD1"
+    ui_print ""
+
+    if [[ "$FCTEXTAD1" == "Yes" ]]; then
+      ui_print "The installation process of Pixel Launcher Extended has been started!!"
+      download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/system_ext/priv-app/WallpaperPickerGoogleRelease/WallpaperPickerGoogleRelease.apk" "$MODPATH/system/system_ext/priv-app/WallpaperPickerGoogleRelease/WallpaperPickerGoogleRelease.apk"
+
+    elif [[ "$FCTEXTAD1" == "No" ]]; then
+      ui_print "Tell your rom maintainer to fix"
+      ui_print "'getprop ro.build.version.security_patch - $PATCH_DATE' value"
+      ui_print "or make Customize Installer from GitHub"
+      exit 1
+    fi
+
+    ui_print ""
+    ui_print "[*] Do you wanna add 'Material You Greetings In At A Glance'"
+    ui_print "& install Extended Settings app?"
+    ui_print "[*] Press volume up to switch to another choice"
+    ui_print "[*] Press volume down to continue with that choice"
+    ui_print ""
+
+    sleep 0.5
+
+    ui_print "--------------------------------"
+    ui_print "[1] Yes"
+    ui_print "--------------------------------"
+    ui_print "[2] No"
+    ui_print "--------------------------------"
+
+    ui_print ""
+    ui_print "[*] Select your desired option:"
+
+    SM=1
+    while true; do
+      ui_print "  $SM"
+      "$VKSEL" && SM="$((SM + 1))" || break
+      [[ "$SM" -gt "2" ]] && SM=1
+    done
+
+    case "$SM" in
+    "1") FCTEXTAD1="Yes" ;;
+    "2") FCTEXTAD1="No" ;;
+    esac
+
+    ui_print "[*] Selected: $FCTEXTAD1"
+    ui_print ""
+
+    if [[ "$FCTEXTAD1" == "Yes" ]]; then
+      ui_print "[*] Do you want to install Glance Greetings Style 1 or Glance Greetings Style 2?"
+      ui_print "[*] Press volume up to switch to another choice"
+      ui_print "[*] Press volume down to continue with that choice"
+      ui_print ""
+
+      sleep 0.5
+
+      ui_print "--------------------------------"
+      ui_print "[1] Glance Greetings Style 1"
+      ui_print "Example Of Style 1-"
+      ui_print "Line 1 - Material You Greetings,"
+      ui_print "Line 2 - Day & Date"
+      ui_print "Line 3 - Weather Information"
+      ui_print "--------------------------------"
+      ui_print "[2] Glance Greetings Style 2"
+      ui_print "Example Of Style 2-"
+      ui_print "Line 1 - Material You Greetings, Day & Date"
+      ui_print "Line 2 - Weather Information"
+      ui_print "--------------------------------"
+
+      ui_print ""
+      ui_print "[*] Select your desired option:"
+
+      SM="1"
+      while true; do
+        ui_print "  $SM"
+        "$VKSEL" && SM="$((SM + 1))" || break
+        [[ "$SM" -gt "2" ]] && SM="1"
+      done
+
+      case "$SM" in
+      "1") FCTEXTAD1="Glance Greetings Style 1" ;;
+      "2") FCTEXTAD1="Glance Greetings Style 2" ;;
+      esac
+
+      ui_print "[*] Selected: $FCTEXTAD1"
+      ui_print ""
+
+      if [[ "$FCTEXTAD1" == "Glance Greetings Style 1" ]]; then
+        ui_print "Downloading required dependencies..."
+        ui_print ""
+        download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease13.apk" "$MODPATH/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease13.apk"
+        download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_Pill_Dark.apk" "$MODPATH/system/product/overlay/TeamFiles_Pill_Dark.apk"
+        download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_Pill_Empty.apk" "$MODPATH/system/product/overlay/TeamFiles_Pill_Empty.apk"
+        download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_Pill_Light.apk" "$MODPATH/system/product/overlay/TeamFiles_Pill_Light.apk"
+        download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_Pill_Light_Accent.apk" "$MODPATH/system/product/overlay/TeamFiles_Pill_Light_Accent.apk"
+        download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_Pill_Dark2.apk" "$MODPATH/system/product/overlay/TeamFiles_Pill_Dark2.apk"
+        download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_Pill_Empty2.apk" "$MODPATH/system/product/overlay/TeamFiles_Pill_Empty2.apk"
+        download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_Pill_Light2.apk" "$MODPATH/system/product/overlay/TeamFiles_Pill_Light2.apk"
+        download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_Pill_Light_Accent2.apk" "$MODPATH/system/product/overlay/TeamFiles_Pill_Light_Accent2.apk"
+        download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_UserChip.apk" "$MODPATH/system/product/overlay/TeamFiles_UserChip.apk"
+        download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_UserCL.apk" "$MODPATH/system/product/overlay/TeamFiles_UserCL.apk"
+        download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_UserLockscreen.apk" "$MODPATH/system/product/overlay/TeamFiles_UserLockscreen.apk"
+        download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/priv-app/ExtendedSettings/ExtendedSettings.apk" "$MODPATH/system/product/priv-app/ExtendedSettings/ExtendedSettings.apk"
+
+      elif [[ "$FCTEXTAD1" == "Glance Greetings Style 2" ]]; then
+        ui_print "Downloading required dependencies..."
+        ui_print ""
+        download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease23.apk" "$MODPATH/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease23.apk"
+        download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_Pill_Dark.apk" "$MODPATH/system/product/overlay/TeamFiles_Pill_Dark.apk"
+        download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_Pill_Empty.apk" "$MODPATH/system/product/overlay/TeamFiles_Pill_Empty.apk"
+        download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_Pill_Light.apk" "$MODPATH/system/product/overlay/TeamFiles_Pill_Light.apk"
+        download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_Pill_Light_Accent.apk" "$MODPATH/system/product/overlay/TeamFiles_Pill_Light_Accent.apk"
+        download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_Pill_Dark2.apk" "$MODPATH/system/product/overlay/TeamFiles_Pill_Dark2.apk"
+        download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_Pill_Empty2.apk" "$MODPATH/system/product/overlay/TeamFiles_Pill_Empty2.apk"
+        download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_Pill_Light2.apk" "$MODPATH/system/product/overlay/TeamFiles_Pill_Light2.apk"
+        download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_Pill_Light_Accent2.apk" "$MODPATH/system/product/overlay/TeamFiles_Pill_Light_Accent2.apk"
+        download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_UserChip.apk" "$MODPATH/system/product/overlay/TeamFiles_UserChip.apk"
+        download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_UserCL.apk" "$MODPATH/system/product/overlay/TeamFiles_UserCL.apk"
+        download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/overlay/TeamFiles_UserLockscreen.apk" "$MODPATH/system/product/overlay/TeamFiles_UserLockscreen.apk"
+        download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/priv-app/ExtendedSettings/ExtendedSettings.apk" "$MODPATH/system/product/priv-app/ExtendedSettings/ExtendedSettings.apk"
+      fi
+
+    elif [[ "$FCTEXTAD1" == "No" ]]; then
+      ui_print "Downloading..."
+      ui_print ""
+      download_file "https://raw.githubusercontent.com/saitamasahil/Pixel-Launcher-Extended/main/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease03.apk" "$MODPATH/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease03.apk"
       rm -rf "$MODPATH/system/product/etc/permissions/privapp-permissions-com.domain.liranazuz5.extendedsettings.xml"
     fi
   fi

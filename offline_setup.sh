@@ -132,6 +132,9 @@ init_main() {
     rm -rf "$MODPATH/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease02.apk"
     rm -rf "$MODPATH/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease12.apk"
     rm -rf "$MODPATH/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease22.apk"
+    rm -rf "$MODPATH/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease03.apk"
+    rm -rf "$MODPATH/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease13.apk"
+    rm -rf "$MODPATH/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease23.apk"
     rm -rf "$MODPATH/system/system_ext/priv-app/WallpaperPickerGoogleRelease/WallpaperPickerGoogleRelease.apk"
 
   elif [ $PATCH_LEVEL -le 202302 ]; then
@@ -143,9 +146,12 @@ init_main() {
     rm -rf "$MODPATH/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease02.apk"
     rm -rf "$MODPATH/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease12.apk"
     rm -rf "$MODPATH/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease22.apk"
+    rm -rf "$MODPATH/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease03.apk"
+    rm -rf "$MODPATH/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease13.apk"
+    rm -rf "$MODPATH/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease23.apk"
     rm -rf "$MODPATH/system/system_ext/priv-app/WallpaperPickerGoogleRelease/WallpaperPickerGoogleRelease.apk"
 
-  elif [ $PATCH_LEVEL -ge 202303 ]; then
+  elif [ $PATCH_LEVEL -le 202305 ]; then
     ui_print "Android 13 QPR2 detected!"
     ui_print "Security Patch - $PATCH_DATE"
     rm -rf "$MODPATH/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease00.apk"
@@ -154,6 +160,23 @@ init_main() {
     rm -rf "$MODPATH/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease01.apk"
     rm -rf "$MODPATH/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease11.apk"
     rm -rf "$MODPATH/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease21.apk"
+    rm -rf "$MODPATH/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease03.apk"
+    rm -rf "$MODPATH/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease13.apk"
+    rm -rf "$MODPATH/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease23.apk"
+    rm -rf "$MODPATH/system/system_ext/priv-app/WallpaperPickerGoogleRelease/WallpaperPickerGoogleReleaseOld.apk"
+
+  elif [ $PATCH_LEVEL -ge 202306 ]; then
+    ui_print "Android 13 QPR3 detected!"
+    ui_print "Security Patch - $PATCH_DATE"
+    rm -rf "$MODPATH/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease00.apk"
+    rm -rf "$MODPATH/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease10.apk"
+    rm -rf "$MODPATH/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease20.apk"
+    rm -rf "$MODPATH/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease01.apk"
+    rm -rf "$MODPATH/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease11.apk"
+    rm -rf "$MODPATH/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease21.apk"
+    rm -rf "$MODPATH/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease02.apk"
+    rm -rf "$MODPATH/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease12.apk"
+    rm -rf "$MODPATH/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease22.apk"
     rm -rf "$MODPATH/system/system_ext/priv-app/WallpaperPickerGoogleRelease/WallpaperPickerGoogleReleaseOld.apk"
   fi
 
@@ -236,6 +259,7 @@ init_main() {
     rm -rf "$MODPATH/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease00.apk"
     rm -rf "$MODPATH/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease01.apk"
     rm -rf "$MODPATH/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease02.apk"
+    rm -rf "$MODPATH/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease03.apk"
     ui_print "[*] Do you want to install Glance Greetings Style 1 or Glance Greetings Style 2?"
     ui_print "[*] Press volume up to switch to another choice"
     ui_print "[*] Press volume down to continue with that choice"
@@ -278,11 +302,13 @@ init_main() {
       rm -rf "$MODPATH/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease20.apk"
       rm -rf "$MODPATH/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease21.apk"
       rm -rf "$MODPATH/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease22.apk"
+      rm -rf "$MODPATH/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease23.apk"
 
     elif [[ "$FCTEXTAD1" == "Glance Greetings Style 2" ]]; then
       rm -rf "$MODPATH/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease10.apk"
       rm -rf "$MODPATH/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease11.apk"
       rm -rf "$MODPATH/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease12.apk"
+      rm -rf "$MODPATH/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease13.apk"
     fi
 
   elif [[ "$FCTEXTAD1" == "No" ]]; then
@@ -292,6 +318,8 @@ init_main() {
     rm -rf "$MODPATH/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease21.apk"
     rm -rf "$MODPATH/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease12.apk"
     rm -rf "$MODPATH/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease22.apk"
+    rm -rf "$MODPATH/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease13.apk"
+    rm -rf "$MODPATH/system/product/priv-app/NexusLauncherRelease/NexusLauncherRelease23.apk"
     rm -rf "$MODPATH/system/product/overlay/TeamFiles_Pill_Dark.apk"
     rm -rf "$MODPATH/system/product/overlay/TeamFiles_Pill_Dark2.apk"
     rm -rf "$MODPATH/system/product/overlay/TeamFiles_Pill_Empty.apk"

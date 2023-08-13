@@ -3,6 +3,8 @@
 - Updated Extended Settings & Icon Shape Changer's library.
 - Updated Pixel Launcher Mods app to v2.5.
 - Updated dependent apks.
+- Added support for Android 13 QPR3.
+- Fixed screenshot crashing issue while tapping screenshot button from recent panel.
 
 **Version 1.6**
 - Fixed banner not showing while making launcher using PLE Builder

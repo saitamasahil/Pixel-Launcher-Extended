@@ -38,7 +38,8 @@ Value of x:
 Value of y:
 - If y=0, then launcher is for Android 13. Android 13 - November security patch or below.
 - If y=1, then launcher is for Android 13 QPR. Android 13 QPR - December to February security patch.
-- If y=2, then launcher is for Android 13 QPR2. Android 13 QPR2 - March security patch or above.
+- If y=2, then launcher is for Android 13 QPR2. Android 13 QPR2 - March to May security patch.
+- If y=3, then launcher is for Android 13 QPR3. Android 13 QPR3 - June security patch or above.
 
 So, now we have defined values of x & y. We need to put these values in config.txt. Suppose you want **glance greetings style 1**  and using **Android 13 QPR2** then `the value x will be 1` & `the value of y will be 2`. So, we will edit config.txt like this:
 ```sh
