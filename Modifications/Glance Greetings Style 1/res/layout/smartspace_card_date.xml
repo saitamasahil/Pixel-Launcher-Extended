@@ -16,7 +16,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
         <TextView
-            android:textSize="24.0sp"
+            android:textSize="23.0sp"
             android:textColor="@android:color/system_accent1_100"
             android:id="@id/hint"
             android:focusable="true"
@@ -35,7 +35,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="24.0dip">
             <TextView
-                android:textSize="22.599976sp"
+                android:textSize="21.0sp"
                 android:textColor="@android:color/system_accent1_100"
                 android:id="@id/hint"
                 android:focusable="true"
@@ -49,14 +49,14 @@
                 android:layout_marginEnd="5.0dip"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentEnd="true" />
-            <com.google.android.systemui.smartspace.IcuDateTextView
-                android:id="@id/date"
-                android:focusable="true"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentEnd="true"
-                style="@style/EnhancedSmartspaceTextTitle" />
+        <com.google.android.systemui.smartspace.IcuDateTextView
+            android:id="@id/date"
+            android:focusable="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            style="@style/EnhancedSmartspaceTextTitle" />
         </LinearLayout>
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@id/smartspace_subtitle_group"

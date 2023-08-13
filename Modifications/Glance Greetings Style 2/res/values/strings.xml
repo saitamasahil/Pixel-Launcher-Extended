@@ -91,7 +91,7 @@
     <string name="allow_rotation_title">Allow home screen rotation</string>
     <string name="allset_button_hint">Tap the home button to go to your home screen</string>
     <string name="allset_description_generic">You’re ready to start using your %1$s</string>
-    <string name="allset_hint">Swipe up to go Home</string>
+    <string name="allset_hint">Swipe up to go home</string>
     <string name="allset_navigation_settings"><annotation id="link">System navigation settings</annotation></string>
     <string name="allset_title">All set!</string>
     <string name="androidx_startup">androidx.startup</string>
@@ -120,6 +120,7 @@
     <string name="back_gesture_intro_title">Swipe to go back</string>
     <string name="back_gesture_spoken_intro_subtitle">To go back to the last screen, swipe with 2 fingers from the left or right edge to the middle of the screen.</string>
     <string name="back_gesture_tutorial_confirm_subtitle">To change the sensitivity of the back gesture, go to Settings</string>
+    <string name="back_gesture_tutorial_title">Go back</string>
     <string name="blocked_by_policy">"This action isn't allowed by the app or your organization"</string>
     <string name="bottom_sheet_behavior">com.google.android.material.bottomsheet.BottomSheetBehavior</string>
     <string name="bottomsheet_action_collapse">Collapse the bottom sheet</string>
@@ -202,6 +203,8 @@
     <string name="home_gesture_intro_subtitle">Swipe up from the bottom of your screen. This gesture always takes you to the Home screen.</string>
     <string name="home_gesture_intro_title">Swipe to go home</string>
     <string name="home_gesture_spoken_intro_subtitle">Swipe up with 2 fingers from the bottom of the screen. This gesture always takes you to the Home screen.</string>
+    <string name="home_gesture_tutorial_subtitle">To go to your home screen at any time, swipe up from the bottom of your screen</string>
+    <string name="home_gesture_tutorial_title">Go home</string>
     <string name="home_screen">Home</string>
     <string name="hotsaet_tip_prediction_disabled">App suggestions are disabled</string>
     <string name="hotsaet_tip_prediction_enabled">App suggestions enabled</string>
@@ -277,6 +280,7 @@
     <string name="material_timepicker_pm">PM</string>
     <string name="material_timepicker_select_time">Select time</string>
     <string name="material_timepicker_text_input_mode_description">Switch to text input mode for the time input.</string>
+    <string name="menu_item_text_delete">Delete</string>
     <string name="model_delegate_class">com.google.android.apps.nexuslauncher.model.NexusLauncherModelDelegate</string>
     <string name="more_share_options">More</string>
     <string name="move_drop_target_bottom_or_right">Move to bottom/right</string>
@@ -287,7 +291,7 @@
     <string name="msg_disable_allapps_suggestions_prompt">"Actions you've previously hidden from All Apps will be able to appear again."</string>
     <string name="msg_disabled_by_admin">Disabled by your admin</string>
     <string name="msg_minus_one_on_left">From home screen, swipe left to open Google app</string>
-    <string name="msg_minus_one_on_right">From home screen, swipe right to open Google app</string>
+    <string name="msg_minus_one_on_right">From home screen, swipe right to open %1$s app</string>
     <string name="msg_missing_notification_access">To show Notification Dots, turn on app notifications for %1$s</string>
     <string name="msg_no_phone_permission">%1$s is not allowed to make phone calls</string>
     <string name="mtrl_badge_numberless_content_description">New notification</string>
@@ -358,6 +362,7 @@
     <string name="overview_gesture_intro_subtitle">To switch between apps, swipe up from the bottom of your screen, hold, then release.</string>
     <string name="overview_gesture_intro_title">Swipe to switch apps</string>
     <string name="overview_gesture_spoken_intro_subtitle">To switch between apps, swipe up with 2 fingers from the bottom of your screen, hold, then release.</string>
+    <string name="overview_gesture_tutorial_title">Switch apps</string>
     <string name="overview_selection_pref_desc">When switching apps, touch &amp; hold text and images to see actions</string>
     <string name="overview_selection_pref_title">Overview selection</string>
     <string name="overview_suggestions_settings_summary">Show suggested actions and indicators in Overview</string>
@@ -382,8 +387,10 @@
     <string name="qsb_search_edu_body">Search now includes content from apps, in addition to web. Android System Intelligence searches supported apps to provide results.</string>
     <string name="qsb_search_edu_title">Search web &amp; apps</string>
     <string name="query_builder_content_description">Show predictions for %1$s</string>
-    <string name="quick_launch_chip_text_app">" • open"</string>
-    <string name="quick_launch_separator_corpus_text">" • %1$s open"</string>
+    <string name="quick_launch_chip_text_app">" open"</string>
+    <string name="quick_launch_separator_corpus_text">" %1$s open"</string>
+    <string name="quick_switch_overflow">{count, plural, =1{Show # more app.} other{Show # more apps.} }</string>
+    <string name="quick_switch_split_task">%1$s and %2$s</string>
     <string name="recent_task_option_freeform">Freeform</string>
     <string name="recent_task_option_pin">Pin</string>
     <string name="recent_task_option_split_screen">Split screen</string>
@@ -435,29 +442,31 @@
     <string name="search_pref_result_chrometab_title">Chrome Tab</string>
     <string name="search_pref_result_memory_title">Memory</string>
     <string name="search_pref_result_navvysite_title">Navigational Site</string>
+    <string name="search_pref_result_on_device_results_desc">History-based device results and suggestions</string>
+    <string name="search_pref_result_on_device_results_title">Device results</string>
     <string name="search_pref_result_people_desc">From your contacts, conversations, and more</string>
     <string name="search_pref_result_people_tile_title">People Tile</string>
     <string name="search_pref_result_people_title">People</string>
-    <string name="search_pref_result_play_desc">Sourced from the Play store</string>
-    <string name="search_pref_result_play_title">Play store</string>
+    <string name="search_pref_result_play_desc">From the %1$s app</string>
+    <string name="search_pref_result_play_title">%1$s suggestions</string>
     <string name="search_pref_result_screenshot_title">Screenshot</string>
     <string name="search_pref_result_settings_title">Settings</string>
     <string name="search_pref_result_shortcuts_desc">Show shortcuts for apps and people</string>
     <string name="search_pref_result_shortcuts_title">Shortcuts</string>
     <string name="search_pref_result_superpacks_settings_title">Superpacks Settings</string>
     <string name="search_pref_result_tips_title">Tips</string>
-    <string name="search_pref_result_web_desc">Start searching the web when swiping up from your home screen and see web results in the Google app</string>
+    <string name="search_pref_result_web_desc">From the %1$s app</string>
     <string name="search_pref_result_websuggest_aga_title">Suggest from AGA</string>
     <string name="search_pref_result_websuggest_on_default_browser_title">Open search in default browser</string>
-    <string name="search_pref_result_websuggest_title">Search the web</string>
+    <string name="search_pref_result_websuggest_title">Web suggestions</string>
     <string name="search_pref_result_widgets_title">Widgets</string>
-    <string name="search_pref_screen_desc">Search your device from all apps</string>
+    <string name="search_pref_screen_desc">"Choose what shows in search results when you swipe up on your phone's home screen"</string>
     <string name="search_pref_screen_title">Search your phone</string>
     <string name="search_pref_screen_title_tablet">Search your tablet</string>
     <string name="search_pref_show_hidden_targets_title">Show hidden targets</string>
     <string name="search_pref_show_inline_label_title">Label inline results</string>
     <string name="search_pref_web_settings">Manage search preferences</string>
-    <string name="search_pref_web_settings_desc">Manage your search history and more in the Google app</string>
+    <string name="search_pref_web_settings_desc">Manage your search history and more in the %1$s app</string>
     <string name="search_session_manager_class">com.google.android.apps.nexuslauncher.allapps.OneSearchSessionManager</string>
     <string name="search_tall_card_buttonn_text">See more</string>
     <string name="secondary_display_predictions_class">com.android.launcher3.secondarydisplay.SecondaryDisplayPredictionsImpl</string>
@@ -468,6 +477,7 @@
     <string name="settings">Settings</string>
     <string name="settings_button_text">Home settings</string>
     <string name="settings_fragment_name">com.google.android.apps.nexuslauncher.settings.MySettingsFragment</string>
+    <string name="setup_wizard_pkg">com.google.android.setupwizard</string>
     <string name="shortcut_not_available">"Shortcut isn't available"</string>
     <string name="shortcuts_count">{count, plural, =1{# shortcut} other{# shortcuts}}</string>
     <string name="shortcuts_menu_with_notifications_description">Shortcuts and notifications</string>
@@ -496,13 +506,11 @@
     <string name="smartspace_preferences_turn_on_title">Turn on %1$s</string>
     <string name="smartspace_shopping_list_overflow">+ %1$d more</string>
     <string name="split_app_info_accessibility">App info for %1$s</string>
-    <string name="split_screen_position_left">Split left</string>
-    <string name="split_screen_position_right">Split right</string>
-    <string name="split_screen_position_top">Split top</string>
     <string name="stats_log_manager_class">com.android.quickstep.logging.StatsLogCompatManager</string>
     <string name="status_bar_notification_info_overflow">999+</string>
     <string name="styles_wallpaper_button_text">Wallpaper &amp; style</string>
     <string name="suggested_action_content_description">%1$s opens in %2$s</string>
+    <string name="suggested_widgets_header_title">Suggestions</string>
     <string name="suggestion_pref_screen_desc">For all apps and home screen suggestions</string>
     <string name="suggestion_pref_screen_title">Suggestions</string>
     <string name="summary_app_suggestions">In Overview &amp; at the top of your All Apps list</string>
@@ -510,6 +518,8 @@
     <string name="task_contents_description_with_remaining_time">%1$s, %2$s</string>
     <string name="task_overlay_factory_class">com.google.android.apps.nexuslauncher.quickstep.TaskOverlayFactoryImpl</string>
     <string name="task_view_closed">Task Closed</string>
+    <string name="taskbar_a11y_hidden_title">Taskbar hidden</string>
+    <string name="taskbar_a11y_shown_title">Taskbar shown</string>
     <string name="taskbar_a11y_title">Taskbar</string>
     <string name="taskbar_button_a11y">Accessibility</string>
     <string name="taskbar_button_back">Back</string>
@@ -522,12 +532,14 @@
     <string name="taskbar_edu_close">Close</string>
     <string name="taskbar_edu_closed">Taskbar education closed</string>
     <string name="taskbar_edu_done">Done</string>
+    <string name="taskbar_edu_features">Do more with the Taskbar</string>
     <string name="taskbar_edu_next">Next</string>
     <string name="taskbar_edu_opened">Taskbar education appeared</string>
     <string name="taskbar_edu_previous">Back</string>
-    <string name="taskbar_edu_splitscreen">Drag to the side to use 2 apps at once</string>
-    <string name="taskbar_edu_stashing">Short swipe up to show the taskbar</string>
-    <string name="taskbar_edu_suggestions">The taskbar suggests apps based on your routine</string>
+    <string name="taskbar_edu_settings_persistent">Turn on gesture navigation in Settings to auto-hide the Taskbar</string>
+    <string name="taskbar_edu_splitscreen">Drag an app to the side to use 2 apps at once</string>
+    <string name="taskbar_edu_stashing">Slow-swipe up to show the Taskbar</string>
+    <string name="taskbar_edu_suggestions">Get app suggestions based on your routine</string>
     <string name="taskbar_phone_a11y_title">Navigation bar</string>
     <string name="test_information_handler_class">com.android.quickstep.QuickstepTestInformationHandler</string>
     <string name="time_left_for_app">%1$s left today</string>
@@ -536,9 +548,9 @@
     <string name="title_content_push_chooser">Choose device</string>
     <string name="title_disable_allapps_suggestions_prompt">Reset action preferences?</string>
     <string name="title_missing_notification_access">Notification access needed</string>
-    <string name="title_show_google_app">Swipe to access Google app</string>
+    <string name="title_show_google_app">Swipe to access %1$s app</string>
     <string name="toast_split_app_unsupported">Choose another app to use split screen</string>
-    <string name="toast_split_select_app">Tap another app to use splitscreen</string>
+    <string name="toast_split_select_app">Tap another app to use split screen</string>
     <string name="undo">Undo</string>
     <string name="uninstall_drop_target_label">Uninstall</string>
     <string name="uninstall_system_app_text">"This is a system app and can't be uninstalled."</string>

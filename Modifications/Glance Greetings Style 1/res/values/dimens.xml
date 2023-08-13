@@ -114,20 +114,20 @@
     <dimen name="action_view_compound_drawable_padding">5.0dip</dimen>
     <dimen name="all_apps_action_spacing">8.0dip</dimen>
     <dimen name="all_apps_additional_top_padding_floating_search">16.0dip</dimen>
-    <dimen name="all_apps_bottom_sheet_horizontal_padding">0.0dip</dimen>
     <dimen name="all_apps_content_fade_in_offset">150.0dip</dimen>
     <dimen name="all_apps_divider_height">2.0dip</dimen>
     <dimen name="all_apps_divider_margin_vertical">8.0dip</dimen>
     <dimen name="all_apps_divider_width">128.0dip</dimen>
     <dimen name="all_apps_empty_search_message_top_offset">40.0dip</dimen>
     <dimen name="all_apps_extra_search_padding">8.0dip</dimen>
+    <dimen name="all_apps_floating_search_background_hairline_radius">42.0dip</dimen>
+    <dimen name="all_apps_floating_search_background_hairline_width">1.0dip</dimen>
+    <dimen name="all_apps_floating_search_background_padding_top">11.0dip</dimen>
+    <dimen name="all_apps_floating_search_background_radius">43.0dip</dimen>
     <dimen name="all_apps_header_bottom_adjustment">4.0dip</dimen>
     <dimen name="all_apps_header_bottom_padding">14.0dip</dimen>
-    <dimen name="all_apps_header_max_elevation">3.0dip</dimen>
     <dimen name="all_apps_header_pill_corner_radius">12.0dip</dimen>
     <dimen name="all_apps_header_pill_height">48.0dip</dimen>
-    <dimen name="all_apps_header_scroll_to_elevation">16.0dip</dimen>
-    <dimen name="all_apps_header_shadow_height">6.0dip</dimen>
     <dimen name="all_apps_header_tab_height">48.0dip</dimen>
     <dimen name="all_apps_header_top_adjustment">6.0dip</dimen>
     <dimen name="all_apps_header_top_margin">33.0dip</dimen>
@@ -168,7 +168,7 @@
     <dimen name="arrow_toast_corner_radius">2.0dip</dimen>
     <dimen name="arrow_toast_elevation">2.0dip</dimen>
     <dimen name="base_swift_detector_fling_release_velocity">1.0dip</dimen>
-    <dimen name="bg_popup_item_height">56.0dip</dimen>
+    <dimen name="bg_popup_item_height">52.0dip</dimen>
     <dimen name="bg_popup_item_vertical_padding">12.0dip</dimen>
     <dimen name="bg_popup_item_width">216.0dip</dimen>
     <dimen name="bg_popup_padding">2.0dip</dimen>
@@ -223,15 +223,15 @@
     <dimen name="compat_control_corner_material">2.0dip</dimen>
     <dimen name="compat_notification_large_icon_max_height">320.0dip</dimen>
     <dimen name="compat_notification_large_icon_max_width">320.0dip</dimen>
-    <item type="dimen" name="config_wallpaperMaxScale">@android:dimen/config_wallpaperMaxScale</item>
+    <item type="dimen" name="config_wallpaperMaxScale">@android:dimen/control_inset_material</item>
     <dimen name="deep_shortcut_drag_handle_size">16.0dip</dimen>
-    <dimen name="deep_shortcut_drawable_padding">12.0dip</dimen>
+    <dimen name="deep_shortcut_drawable_padding">16.0dip</dimen>
     <dimen name="deep_shortcut_icon_size">32.0dip</dimen>
     <dimen name="deep_shortcuts_elevation">2.0dip</dimen>
     <dimen name="deep_shortcuts_start_drag_threshold">16.0dip</dimen>
-    <dimen name="deep_shortcuts_text_padding_start">52.0dip</dimen>
+    <dimen name="deep_shortcuts_text_padding_start">54.0dip</dimen>
     <dimen name="def_drawer_elevation">10.0dip</dimen>
-    <dimen name="default_dialog_corner_radius">8.0dip</dimen>
+    <dimen name="default_dialog_corner_radius">26.0dip</dimen>
     <dimen name="default_icon_bitmap_size">56.0dip</dimen>
     <dimen name="default_task_dismiss_drag_velocity">1.5dip</dimen>
     <dimen name="default_task_dismiss_drag_velocity_grid">1.0dip</dimen>
@@ -315,7 +315,6 @@
     <dimen name="dynamic_grid_edge_margin">10.769989dip</dimen>
     <dimen name="dynamic_grid_hotseat_bottom_tall_padding">0.0dip</dimen>
     <dimen name="dynamic_grid_hotseat_side_padding">0.0dip</dimen>
-    <dimen name="dynamic_grid_icon_drawable_padding">7.0dip</dimen>
     <dimen name="dynamic_grid_left_right_margin">8.0dip</dimen>
     <dimen name="dynamic_grid_spring_loaded_min_next_space_visible">24.0dip</dimen>
     <dimen name="easy_fling_threshold_velocity">400.0dip</dimen>
@@ -348,6 +347,7 @@
     <dimen name="enhanced_smartspace_title_size">20.0sp</dimen>
     <dimen name="entity_image_corner_radius">4.0dip</dimen>
     <dimen name="entity_image_size">40.0dip</dimen>
+    <dimen name="fastscroll_bottom_margin_floating_search">4.0dip</dimen>
     <dimen name="fastscroll_default_thickness">8.0dip</dimen>
     <dimen name="fastscroll_end_margin">-26.0dip</dimen>
     <dimen name="fastscroll_margin">0.0dip</dimen>
@@ -377,6 +377,8 @@
     <dimen name="folder_footer_horiz_padding">20.0dip</dimen>
     <item type="dimen" name="folder_label_text_scale">1.14</item>
     <dimen name="folder_top_padding_default">24.0dip</dimen>
+    <dimen name="gesture_tutorial_back_gesture_end_corner_radius">36.0dip</dimen>
+    <dimen name="gesture_tutorial_back_gesture_exiting_app_margin">8.0dip</dimen>
     <dimen name="gesture_tutorial_conversation_bottom_padding">66.0dip</dimen>
     <dimen name="gesture_tutorial_conversation_icon_corner_radius">100.0dip</dimen>
     <dimen name="gesture_tutorial_conversation_icon_size">56.0dip</dimen>
@@ -402,6 +404,16 @@
     <dimen name="gesture_tutorial_hotseat_width">-1.0px</dimen>
     <dimen name="gesture_tutorial_input_margin_end">24.0dip</dimen>
     <dimen name="gesture_tutorial_input_margin_start">34.0dip</dimen>
+    <dimen name="gesture_tutorial_menu_back_shape_bottom_margin">0.0dip</dimen>
+    <dimen name="gesture_tutorial_menu_button_height">0.0dip</dimen>
+    <dimen name="gesture_tutorial_menu_button_radius">28.0dip</dimen>
+    <dimen name="gesture_tutorial_menu_button_spacing">16.0dip</dimen>
+    <dimen name="gesture_tutorial_menu_done_button_margin">0.0dip</dimen>
+    <dimen name="gesture_tutorial_menu_done_button_spacing">72.0dip</dimen>
+    <dimen name="gesture_tutorial_menu_done_button_top_spacing">0.0dip</dimen>
+    <dimen name="gesture_tutorial_menu_padding_bottom">24.0dip</dimen>
+    <dimen name="gesture_tutorial_menu_padding_horizontal">24.0dip</dimen>
+    <dimen name="gesture_tutorial_menu_padding_top">31.0dip</dimen>
     <dimen name="gesture_tutorial_message_icon_corner_radius">100.0dip</dimen>
     <dimen name="gesture_tutorial_message_icon_size">44.0dip</dimen>
     <dimen name="gesture_tutorial_message_input_margin_top">36.0dip</dimen>
@@ -427,9 +439,13 @@
     <dimen name="gesture_tutorial_tablet_message_padding_start_end">126.0dip</dimen>
     <dimen name="gesture_tutorial_tablet_reply_1_margin">241.0dip</dimen>
     <dimen name="gesture_tutorial_tablet_reply_2_margin">273.0dip</dimen>
+    <dimen name="gesture_tutorial_taskbar_all_apps_mini_size">7.0dip</dimen>
+    <dimen name="gesture_tutorial_taskbar_corner_radius">100.0dip</dimen>
     <dimen name="gesture_tutorial_taskbar_icon_corner_radius">100.0dip</dimen>
-    <dimen name="gesture_tutorial_taskbar_icon_size">44.0dip</dimen>
-    <dimen name="gesture_tutorial_taskbar_padding_start_end">52.0dip</dimen>
+    <dimen name="gesture_tutorial_taskbar_icon_size">52.0dip</dimen>
+    <dimen name="gesture_tutorial_taskbar_icon_spacing">24.0dip</dimen>
+    <dimen name="gesture_tutorial_taskbar_margin_bottom">24.0dip</dimen>
+    <dimen name="gesture_tutorial_taskbar_padding">12.0dip</dimen>
     <dimen name="gesture_tutorial_top_bar_button_margin_end">24.0dip</dimen>
     <dimen name="gesture_tutorial_top_bar_margin_end">211.0dip</dimen>
     <dimen name="gesture_tutorial_top_bar_margin_start">34.0dip</dimen>
@@ -493,6 +509,16 @@
     <dimen name="key_text_shadow_dy">0.5dip</dimen>
     <dimen name="key_text_shadow_radius">0.5dip</dimen>
     <dimen name="keyboard_drag_stroke_width">4.0dip</dimen>
+    <dimen name="keyboard_quick_switch_border_width">4.0dip</dimen>
+    <dimen name="keyboard_quick_switch_margin_ends">16.0dip</dimen>
+    <dimen name="keyboard_quick_switch_margin_top">56.0dip</dimen>
+    <dimen name="keyboard_quick_switch_recents_icon_size">20.0dip</dimen>
+    <dimen name="keyboard_quick_switch_split_view_spacing">2.0dip</dimen>
+    <dimen name="keyboard_quick_switch_task_view_radius">16.0dip</dimen>
+    <dimen name="keyboard_quick_switch_taskview_height">134.0dip</dimen>
+    <dimen name="keyboard_quick_switch_taskview_width">104.0dip</dimen>
+    <dimen name="keyboard_quick_switch_view_radius">28.0dip</dimen>
+    <dimen name="keyboard_quick_switch_view_spacing">16.0dip</dimen>
     <dimen name="long_press_detection_size_x">20.0dip</dimen>
     <dimen name="long_press_detection_size_y">20.0dip</dimen>
     <dimen name="m3_alert_dialog_action_bottom_padding">14.0dip</dimen>
@@ -954,21 +980,25 @@
     <dimen name="notification_action_text_size">13.0sp</dimen>
     <dimen name="notification_big_circle_margin">12.0dip</dimen>
     <dimen name="notification_circle_icon_size">24.0dip</dimen>
+    <dimen name="notification_container_height">104.0dip</dimen>
     <dimen name="notification_content_margin_start">0.0dip</dimen>
     <dimen name="notification_header_count_text_size">12.0sp</dimen>
+    <dimen name="notification_header_padding_start">14.0dip</dimen>
     <dimen name="notification_header_text_size">14.0sp</dimen>
-    <dimen name="notification_icon_padding">12.0dip</dimen>
+    <dimen name="notification_icon_padding_start">10.0dip</dimen>
     <dimen name="notification_icon_size">32.0dip</dimen>
     <dimen name="notification_large_icon_height">64.0dip</dimen>
     <dimen name="notification_large_icon_width">64.0dip</dimen>
     <dimen name="notification_main_column_padding_top">0.0dip</dimen>
-    <dimen name="notification_main_text_padding_start">56.0dip</dimen>
+    <dimen name="notification_main_text_padding_start">54.0dip</dimen>
     <dimen name="notification_main_text_size">14.0sp</dimen>
     <dimen name="notification_main_title_size">14.0sp</dimen>
     <dimen name="notification_max_trans">8.0dip</dimen>
     <dimen name="notification_media_narrow_margin">12.0dip</dimen>
-    <dimen name="notification_padding">16.0dip</dimen>
-    <dimen name="notification_padding_top">18.0dip</dimen>
+    <dimen name="notification_padding_bottom">12.0dip</dimen>
+    <dimen name="notification_padding_end">16.0dip</dimen>
+    <dimen name="notification_padding_header_top">16.0dip</dimen>
+    <dimen name="notification_padding_top">12.0dip</dimen>
     <dimen name="notification_right_icon_size">16.0dip</dimen>
     <dimen name="notification_right_side_padding_top">4.0dip</dimen>
     <dimen name="notification_small_icon_background_padding">3.0dip</dimen>
@@ -998,6 +1028,7 @@
     <dimen name="padded_rounded_button_padding">8.0dip</dimen>
     <dimen name="page_indicator_dot_margin">3.0dip</dimen>
     <dimen name="page_indicator_dot_size">6.0dip</dimen>
+    <dimen name="page_indicator_dot_size_v2">6.0dip</dimen>
     <dimen name="page_indicator_padding_top">10.0dip</dimen>
     <dimen name="page_indicator_size">10.0dip</dimen>
     <dimen name="page_indicator_width">16.0dip</dimen>
@@ -1013,7 +1044,7 @@
     <dimen name="popup_arrow_vertical_offset">-1.0dip</dimen>
     <dimen name="popup_arrow_width">12.0dip</dimen>
     <dimen name="popup_margin">2.0dip</dimen>
-    <dimen name="popup_padding_end">16.0dip</dimen>
+    <dimen name="popup_padding_end">14.0dip</dimen>
     <dimen name="popup_padding_start">10.0dip</dimen>
     <dimen name="popup_single_item_radius">100.0dip</dimen>
     <dimen name="popup_smaller_radius">4.0dip</dimen>
@@ -1071,16 +1102,29 @@
     <dimen name="search_box_child_offset">4.0dip</dimen>
     <dimen name="search_box_container_height">60.0dip</dimen>
     <dimen name="search_box_height">52.0dip</dimen>
+    <dimen name="search_chevron_right_size">20.0dip</dimen>
     <dimen name="search_decoration_padding">1.0dip</dimen>
     <dimen name="search_group_radius">28.0dip</dimen>
     <dimen name="search_hero_inline_button_text_size">12.0sp</dimen>
+    <dimen name="search_input_text_line_height">24.0sp</dimen>
     <dimen name="search_input_text_size">20.0sp</dimen>
+    <dimen name="search_input_vertical_padding">14.0dip</dimen>
     <dimen name="search_result_anim_y_translation">6.0dip</dimen>
     <dimen name="search_result_big_icon_padding">12.0dip</dimen>
     <dimen name="search_result_hero_subtitle_size">14.0sp</dimen>
     <dimen name="search_result_hero_title_size">16.0sp</dimen>
+    <dimen name="search_result_icon_container_padding">16.0dip</dimen>
     <dimen name="search_result_margin">8.0dip</dimen>
     <dimen name="search_result_padding">16.0dip</dimen>
+    <dimen name="search_result_qs_tile_height">80.0dip</dimen>
+    <dimen name="search_result_qs_tile_image_size">20.0dip</dimen>
+    <dimen name="search_result_qs_tile_margin_end">12.0dip</dimen>
+    <dimen name="search_result_qs_tile_margin_start">16.0dip</dimen>
+    <dimen name="search_result_qs_tile_margin_vertical">10.0dip</dimen>
+    <dimen name="search_result_qs_tile_padding_vertical">20.0dip</dimen>
+    <dimen name="search_result_qs_tile_text_height">40.0dip</dimen>
+    <dimen name="search_result_qs_tile_text_width">106.0dip</dimen>
+    <dimen name="search_result_qs_tile_width">186.0dip</dimen>
     <dimen name="search_result_radius">4.0dip</dimen>
     <dimen name="search_result_row_height">88.0dip</dimen>
     <dimen name="search_result_row_medium_height">72.0dip</dimen>
@@ -1092,6 +1136,9 @@
     <dimen name="search_result_text_header_profile_badge_size">12.0dip</dimen>
     <dimen name="search_result_text_header_row_height">48.0dip</dimen>
     <dimen name="search_result_thumbnail_corner_radius">14.0dip</dimen>
+    <dimen name="search_result_thumbnail_label_padding_one_column">64.0dip</dimen>
+    <dimen name="search_result_thumbnail_label_padding_three_column">4.0dip</dimen>
+    <dimen name="search_result_thumbnail_label_padding_two_column">16.0dip</dimen>
     <dimen name="search_result_thumbnail_padding">6.0dip</dimen>
     <dimen name="search_result_thumbnail_padding_endings">10.0dip</dimen>
     <dimen name="search_row_icon_size">48.0dip</dimen>
@@ -1121,10 +1168,6 @@
     <dimen name="snackbar_padding">8.0dip</dimen>
     <dimen name="split_instructions_bottom_margin_phone_landscape">24.0dip</dimen>
     <dimen name="split_instructions_bottom_margin_phone_portrait">60.0dip</dimen>
-    <dimen name="split_instructions_bottom_margin_tablet_landscape">32.0dip</dimen>
-    <dimen name="split_instructions_bottom_margin_tablet_portrait">44.0dip</dimen>
-    <dimen name="split_instructions_bottom_margin_twopanels_landscape">33.0dip</dimen>
-    <dimen name="split_instructions_bottom_margin_twopanels_portrait">51.0dip</dimen>
     <dimen name="split_instructions_elevation">1.0dip</dimen>
     <dimen name="split_instructions_horizontal_padding">24.0dip</dimen>
     <dimen name="split_instructions_radius">22.0dip</dimen>
@@ -1164,20 +1207,23 @@
     <item type="dimen" name="swipe_up_rect_xy_fling_friction">1.5</item>
     <item type="dimen" name="swipe_up_rect_xy_stiffness">200.0</item>
     <item type="dimen" name="swipe_up_scale_start">0.88</item>
-    <dimen name="system_shortcut_header_height">56.0dip</dimen>
+    <dimen name="system_shortcut_header_height">52.0dip</dimen>
     <dimen name="system_shortcut_header_icon_padding">14.0dip</dimen>
+    <dimen name="system_shortcut_header_icon_padding_inner">12.0dip</dimen>
+    <dimen name="system_shortcut_header_icon_padding_outer">16.0dip</dimen>
     <dimen name="system_shortcut_header_icon_touch_size">48.0dip</dimen>
     <dimen name="system_shortcut_icon_size">20.0dip</dimen>
     <dimen name="system_shortcut_margin_start">16.0dip</dimen>
-    <dimen name="tall_card_button_chevron_size">20.0dip</dimen>
     <dimen name="tall_card_button_height">48.0dip</dimen>
+    <dimen name="tall_card_button_list_margin_bottom">4.0dip</dimen>
     <dimen name="tall_card_button_padding_end">12.0dip</dimen>
-    <dimen name="tall_card_button_text_padding_end">8.0dip</dimen>
+    <dimen name="tall_card_button_text_vertical_padding">8.0dip</dimen>
     <dimen name="tall_card_header_padding_bottom">12.0dip</dimen>
-    <dimen name="tall_card_header_text_size">32.0sp</dimen>
-    <dimen name="tall_card_height">128.0dip</dimen>
-    <dimen name="tall_card_image_size">96.0dip</dimen>
-    <dimen name="tall_card_padding_bottom">10.0dip</dimen>
+    <dimen name="tall_card_header_text_size">22.0sp</dimen>
+    <dimen name="tall_card_height">120.0dip</dimen>
+    <dimen name="tall_card_image_size">88.0dip</dimen>
+    <dimen name="tall_card_padding_bottom">6.0dip</dimen>
+    <dimen name="tall_card_text_padding_bottom">10.0dip</dimen>
     <dimen name="task_card_margin">8.0dip</dimen>
     <dimen name="task_card_menu_option_vertical_padding">16.0dip</dimen>
     <dimen name="task_card_menu_shadow_height">3.0dip</dimen>
@@ -1194,28 +1240,38 @@
     <dimen name="task_thumbnail_icon_drawable_size">44.0dip</dimen>
     <dimen name="task_thumbnail_icon_drawable_size_grid">0.0dip</dimen>
     <dimen name="task_thumbnail_icon_size">48.0dip</dimen>
-    <dimen name="taskbar_app_window_threshold">150.0dip</dimen>
-    <dimen name="taskbar_app_window_threshold_v2">100.0dip</dimen>
+    <dimen name="taskbar_all_apps_button_translation_x_offset">6.0dip</dimen>
+    <dimen name="taskbar_app_window_threshold">88.0dip</dimen>
     <dimen name="taskbar_back_button_left_margin_kids">48.0dip</dimen>
     <dimen name="taskbar_button_margin_6_5">75.0dip</dimen>
     <dimen name="taskbar_button_margin_default">48.0dip</dimen>
     <dimen name="taskbar_button_margin_split">48.0dip</dimen>
     <dimen name="taskbar_button_space_inbetween">24.0dip</dimen>
     <dimen name="taskbar_button_space_inbetween_phone">40.0dip</dimen>
-    <dimen name="taskbar_catch_up_threshold">300.0dip</dimen>
+    <dimen name="taskbar_catch_up_threshold">264.0dip</dimen>
     <dimen name="taskbar_contextual_button_margin">120.0dip</dimen>
     <dimen name="taskbar_contextual_button_padding">16.0dip</dimen>
     <dimen name="taskbar_contextual_buttons_size">35.0dip</dimen>
     <dimen name="taskbar_contextual_padding_top">8.0dip</dimen>
+    <dimen name="taskbar_edu_features_horizontal_spacing">24.0dip</dimen>
+    <dimen name="taskbar_edu_features_lottie_height">106.0dip</dimen>
+    <dimen name="taskbar_edu_features_lottie_width">170.0dip</dimen>
     <dimen name="taskbar_edu_horizontal_margin">112.0dip</dimen>
+    <dimen name="taskbar_edu_swipe_lottie_height">217.0dip</dimen>
+    <dimen name="taskbar_edu_swipe_lottie_width">348.0dip</dimen>
+    <dimen name="taskbar_edu_tooltip_elevation">14.0dip</dimen>
+    <dimen name="taskbar_edu_tooltip_enter_y_delta">20.0dip</dimen>
+    <dimen name="taskbar_edu_tooltip_exit_y_delta">-10.0dip</dimen>
+    <dimen name="taskbar_edu_tooltip_horizontal_margin">32.0dip</dimen>
+    <dimen name="taskbar_edu_tooltip_vertical_margin">24.0dip</dimen>
     <dimen name="taskbar_folder_margin">16.0dip</dimen>
+    <dimen name="taskbar_from_nav_threshold">40.0dip</dimen>
     <dimen name="taskbar_home_button_left_margin_kids">48.0dip</dimen>
-    <dimen name="taskbar_home_overview_threshold">225.0dip</dimen>
-    <dimen name="taskbar_home_overview_threshold_v2">200.0dip</dimen>
+    <dimen name="taskbar_home_overview_threshold">156.0dip</dimen>
     <dimen name="taskbar_hotseat_nav_spacing">24.0dip</dimen>
     <dimen name="taskbar_icon_drag_icon_size">54.0dip</dimen>
     <dimen name="taskbar_icon_min_touch_size">48.0dip</dimen>
-    <dimen name="taskbar_icon_size">44.0dip</dimen>
+    <item type="dimen" name="taskbar_icon_size">44.0</item>
     <dimen name="taskbar_icon_size_kids">32.0dip</dimen>
     <dimen name="taskbar_icon_spacing">12.0dip</dimen>
     <dimen name="taskbar_ime_size">48.0dip</dimen>
@@ -1223,9 +1279,7 @@
     <dimen name="taskbar_nav_buttons_height_kids">40.0dip</dimen>
     <dimen name="taskbar_nav_buttons_size">44.0dip</dimen>
     <dimen name="taskbar_nav_buttons_width_kids">88.0dip</dimen>
-    <dimen name="taskbar_nav_threshold">40.0dip</dimen>
-    <dimen name="taskbar_nav_threshold_v2">30.0dip</dimen>
-    <item type="dimen" name="taskbar_size">@android:dimen/taskbar_frame_height</item>
+    <item type="dimen" name="taskbar_size">@android:dimen/text_size_body_2_material</item>
     <dimen name="taskbar_split_instructions_margin">48.0dip</dimen>
     <dimen name="taskbar_stashed_handle_height">4.0dip</dimen>
     <dimen name="taskbar_stashed_handle_width">220.0dip</dimen>
@@ -1233,6 +1287,12 @@
     <dimen name="taskbar_stashed_small_screen">108.0dip</dimen>
     <dimen name="taskbar_suw_frame">48.0dip</dimen>
     <dimen name="taskbar_suw_insets">48.0dip</dimen>
+    <item type="dimen" name="taskbar_swipe_up_rect_scale_stiffness">200.0</item>
+    <item type="dimen" name="taskbar_swipe_up_rect_x_damping">0.9</item>
+    <item type="dimen" name="taskbar_swipe_up_rect_x_stiffness">350.0</item>
+    <item type="dimen" name="taskbar_swipe_up_rect_y_damping">0.78</item>
+    <item type="dimen" name="taskbar_swipe_up_rect_y_stiffness">200.0</item>
+    <dimen name="taskbar_to_nav_threshold">24.0dip</dimen>
     <dimen name="taskbar_unstash_input_area">316.0dip</dimen>
     <dimen name="theme_icon_size">24.0dip</dimen>
     <dimen name="tooltip_corner_radius">2.0dip</dimen>
@@ -1243,16 +1303,23 @@
     <dimen name="tooltip_vertical_padding">6.5dip</dimen>
     <dimen name="tooltip_y_offset_non_touch">0.0dip</dimen>
     <dimen name="tooltip_y_offset_touch">16.0dip</dimen>
+    <dimen name="transient_taskbar_all_apps_button_translation_x_offset">4.0dip</dimen>
+    <dimen name="transient_taskbar_bottom_margin">24.0dip</dimen>
     <dimen name="transient_taskbar_clamped_offset_bound">16.0dip</dimen>
-    <dimen name="transient_taskbar_icon_size">48.0dip</dimen>
     <dimen name="transient_taskbar_key_shadow_distance">10.0dip</dimen>
-    <dimen name="transient_taskbar_margin">24.0dip</dimen>
+    <dimen name="transient_taskbar_min_width">150.0dip</dimen>
+    <dimen name="transient_taskbar_padding">12.0dip</dimen>
     <dimen name="transient_taskbar_shadow_blur">40.0dip</dimen>
-    <dimen name="transient_taskbar_size">72.0dip</dimen>
-    <dimen name="transient_taskbar_stashed_size">32.0dip</dimen>
+    <dimen name="transient_taskbar_stash_spring_velocity_dp_per_s">400.0dip</dimen>
+    <dimen name="transient_taskbar_stashed_height">32.0dip</dimen>
     <dimen name="unlock_staggered_velocity_dp_per_s">2.0dip</dimen>
     <dimen name="wallpaper_carousel_height">120.0dip</dimen>
     <dimen name="wallpaper_reveal_blur_radius">75.0dip</dimen>
+    <dimen name="weather_dream_complication_icon_dimen">36.0dip</dimen>
+    <dimen name="weather_dream_complication_icon_inset">1.0dip</dimen>
+    <dimen name="weather_dream_complication_text_descent_extra_padding">1.0dip</dimen>
+    <dimen name="weather_dream_overlay_complication_line_height">52.0dip</dimen>
+    <dimen name="weather_dream_overlay_complication_text_size">45.0dip</dimen>
     <dimen name="widget_apps_tabs_vertical_padding">6.0dip</dimen>
     <dimen name="widget_cell_font_size">14.0sp</dimen>
     <dimen name="widget_cell_horizontal_padding">16.0dip</dimen>
@@ -1262,6 +1329,7 @@
     <dimen name="widget_list_entry_spacing">2.0dip</dimen>
     <dimen name="widget_list_header_view_vertical_padding">20.0dip</dimen>
     <dimen name="widget_list_horizontal_margin">16.0dip</dimen>
+    <dimen name="widget_list_horizontal_margin_large_screen">24.0dip</dimen>
     <dimen name="widget_list_top_bottom_corner_radius">28.0dip</dimen>
     <dimen name="widget_picker_education_tip_max_width">308.0dip</dimen>
     <dimen name="widget_picker_education_tip_min_margin">4.0dip</dimen>
@@ -1283,6 +1351,7 @@
     <dimen name="widget_section_vertical_padding">8.0dip</dimen>
     <dimen name="widget_tabs_button_horizontal_padding">4.0dip</dimen>
     <dimen name="widget_tabs_horizontal_padding">16.0dip</dimen>
+    <dimen name="work_apps_paused_button_stroke">1.0dip</dimen>
     <dimen name="work_card_button_height">52.0dip</dimen>
     <dimen name="work_card_margin">24.0dip</dimen>
     <dimen name="work_card_padding_horizontal">10.0dip</dimen>
@@ -1303,7 +1372,7 @@
     <dimen name="workspace_page_indicator_overlap_workspace">12.0dip</dimen>
     <dimen name="x_icon_padding">4.0dip</dimen>
     <dimen name="x_icon_size">16.0dip</dimen>
-    <dimen name="pill_margin">-6.0dip</dimen>
-    <dimen name="pill_margin_top_doubleline">44.0dip</dimen>
     <dimen name="pill_margin_top_singleline">26.0dip</dimen>
+    <dimen name="pill_margin_top_doubleline">44.0dip</dimen>
+    <dimen name="pill_margin">-6.0dip</dimen>
 </resources>
