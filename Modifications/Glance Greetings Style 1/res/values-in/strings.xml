@@ -482,7 +482,7 @@
     <string name="work_profile_toggle_label">Profil kerja</string>
     <string name="workspace_new_page">Halaman layar utama baru</string>
     <string name="workspace_scroll_format">Layar utama %1$d dari %2$d</string>
-    <string name="hello_greeting">नमस्ते!</string>
-    <string name="qsb_greeting">खोजें या कुछ कहें...</string>
-    <string name="hello_greeting_b">आज है</string>
+    <string name="hello_greeting">Hai!</string>
+    <string name="qsb_greeting">Cari atau katakan sesuatu...</string>
+    <string name="hello_greeting_b">Hari ini</string>
 </resources>
