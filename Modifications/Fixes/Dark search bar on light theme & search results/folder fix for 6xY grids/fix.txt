@@ -1,0 +1,6 @@
+    change value of Folder6x5Style in values/styles
+    
+    <style name="Folder6x5Style" parent="@style/FolderStyleDefault">
+        <item name="folderCellHeight">68.0dp</item>
+        <item name="folderCellWidth">47.0dp</item>
+    </style>
