@@ -104,7 +104,7 @@ set_permissions
 
 # Handle replace folders
 for TARGET in $REPLACE; do
-  ui_print "[*] Replace target: $TARGET"
+  # ui_print "[*] Replace target: $TARGET"
   mktouch "$MODPATH$TARGET/.replace"
 done
 
@@ -116,7 +116,7 @@ done
 
 # Copy over custom sepolicy rules
 [[ -f "$MODPATH/sepolicy.rule" ]] && {
-  ui_print "[*] Installing custom sepolicy rules..."
+  # ui_print "[*] Installing custom sepolicy rules..."
   copy_sepolicy_rules
 }
 
